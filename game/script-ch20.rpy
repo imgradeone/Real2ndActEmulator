@@ -225,269 +225,269 @@ label ch20_main2:
     n "...大概吧。"
     "Natsuki 勉勉强强同意了。"
     "这样几个完全不同的女生，却都对同样的事物感兴趣...."
-    "Monika must have worked really hard just to find these two."
-    "Yuri returns to the table, carrying a tea set."
-    "She carefully places a teacup in front of each of us before setting down the teapot in the middle."
+    "Monika 为了找这两个成员，一定花了不少功夫。"
+    "Yuri 带着一套茶具回到了桌子。"
+    "她小心地在每个人面前放了一个茶杯，之后在桌子中间放了一个茶壶。"
     show natsuki at thide zorder 1
     show monika at thide zorder 1
     hide natsuki
     hide monika
     show yuri 1a at t21 zorder 2
-    mc "You keep a whole tea set in this classroom?"
-    y "Don't worry, the teachers gave us permission."
-    y "After all, doesn't a hot cup of tea help you enjoy a good book?"
-    mc "Ah... I-I guess..."
+    mc "你在这个教室里放了一整套茶具吗？"
+    y "别担心，老师已经同意了。"
+    y "而且，读书的时候配上一杯暖茶，不是很好嘛？"
+    mc "啊...大-大概吧..."
     show monika 4a at f22 zorder 3
-    m "Ehehe, don't let yourself get intimidated, Yuri's just trying to impress you."
+    m "诶嘿嘿，别被吓到了，Yuri 只是想给你留个好印象。"
     show monika at t22 zorder 2
     show yuri at hf21
-    y 3n "Eh?! T-That's not..."
-    "Insulted, Yuri looks away."
-    y 4b "I meant that, you know..."
+    y 3n "诶？！不-不是的..."
+    "Yuri 红着脸，看向一边。"
+    y 4b "我的意思是，那个..."
     show yuri at t21 zorder 2
-    mc "I believe you."
-    mc "Well, tea and reading might not be a pastime for me, but I at least enjoy tea."
+    mc "我相信你。"
+    mc "嗯，虽然阅读和品茶并不是我的消遣活动，但至少我也喜欢喝茶。"
     show yuri at f21 zorder 3
-    y 2u "I'm glad..."
+    y 2u "那就好..."
     show yuri at t21 zorder 2
-    "Yuri faintly smiles to herself in relief."
+    "Yuri 宽慰地微微一笑。"
     show monika at thide zorder 1
     hide monika
     show yuri 1a at t32 zorder 2
-    y "So, [player], what kinds of things do you like to read?"
-    mc "Well... Ah..."
-    "Considering how little I've read these past few years, I don't really have a good way of answering that."
-    mc "...Manga..."
-    "I mutter quietly to myself, half-joking."
+    y "所以，[player]，你平时都有读些什么呢？"
+    mc "这个...啊..."
+    "考虑到我过去几年匮乏的阅读量，我真的不知道该如何回答。"
+    mc "...漫画..."
+    "我半开玩笑地小声嘀咕着。"
     show natsuki 1c at t41 zorder 2
-    "Natsuki's head suddenly perks up."
-    "It looks like she wants to say something, but she keeps quiet."
+    "Natsuki 的头突然扬了起来。"
+    "她似乎想说些什么，不过最后还是选择了沉默。"
     show natsuki at thide zorder 1
     hide natsuki
-    y 3u "N-Not much of a reader, I guess..."
-    mc "...Well, that can change..."
-    "What am I saying?"
-    "I spoke without thinking after seeing Yuri's sad smile."
-    mc "Anyway, what about you, Yuri?"
-    y 1l "Well, let's see..."
-    "Yuri traces the rim of her teacup with her finger."
-    y 1a "My favorites are usually novels that build deep and complex fantasy worlds."
-    y "The level of creativity and craftsmanship behind them is amazing to me."
-    y 1f "And telling a good story in such a foreign world is equally impressive."
-    "Yuri goes on, clearly passionate about her reading."
-    "She seemed so reserved and timid since the moment I walked in, but it's obvious by the way her eyes light up that she finds her comfort in the world of books, not people."
-    y 2m "But you know, I like a lot of things."
-    y "Stories with deep psychological elements usually immerse me as well."
-    y 2a "Isn't it amazing how a writer can so deliberately take advantage of your own lack of imagination to completely throw you for a loop?"
-    y "Anyway, I've been reading a lot of horror lately..."
-    mc "Ah, I read a horror book once..."
-    "I desperately grasp something I can relate to at the minimal level."
-    "At this rate, Yuri might as well be having a conversation with a rock."
+    y 3u "不-不算是一个阅读爱好者呢，我猜..."
+    mc "...嗯，这也是可以改变的.."
+    "我在说什么？"
+    "我一看见 Yuri 难过的微笑，就想都没想地说了出来。"
+    mc "话说回来，Yuri，你喜欢读些什么呢？"
+    y 1l "嗯，让我想想..."
+    "Yuri 的指尖描划着茶杯边缘。"
+    y 1a "我最喜欢的是那种构建了深邃复杂世界的幻想小说。"
+    y "它们背后的创造力和匠心水平，真的是让我大开眼界。"
+    y 1f "并且在那种陌生的世界观下，能叙述好一个故事的能力也很令人钦佩。"
+    "Yuri 继续说着，很明显对她的阅读抱有热烈的情感。"
+    "从我走进社团以来，她似乎一直很害羞和沉默，但从她亮起来的眼神可以看出，比起现实的人际关系，她更喜欢在书中寻找自己的恬静。"
+    y 2m "但我也喜欢很多其他的类型。"
+    y "有深入的心理元素的故事也能让我沉浸其中。"
+    y 2a "作者利用你在想象力上的缺乏，将你完全丢入到循环中，不觉得这样很神奇吗？"
+    y "不过，最近我倒是读了不少恐怖小说呢..."
+    mc "啊，我以前也读过一本..."
+    "我好不容易抓住了一点我至少曾涉及过的东西。"
+    "不然再这样下去，Yuri 就要像是在和一块石头说话了。"
     show monika 1j at f33 zorder 3
-    m "Ahaha. I'd expect that from you, Yuri."
-    m 1a "It suits your personality."
+    m "啊哈哈，确实很像你呢，Yuri。"
+    m 1a "这很符合你的性格。"
     show monika at t33 zorder 2
     show yuri at f32 zorder 3
-    y 1a "Oh, is that so?"
-    y "Really, if a story makes me think, or takes me to another world, then I really can't put it down."
-    y "Surreal horror is often very successful at changing the way you look at the world, if only for a brief moment."
+    y 1a "哦，真的吗？"
+    y "真的，如果这个故事可以让我引起思考，或者将我带到了另一个世界，那么我真的会手不释卷。"
+    y "超现实主义的恐怖小说会改变你看待世界的方式，哪怕只有一小会。"
     show yuri at t32 zorder 2
     show natsuki 5q at f31 zorder 3
-    n "Ugh, I hate horror..."
+    n "唔，我讨厌恐怖..."
     show natsuki at t31 zorder 2
     show yuri at f32 zorder 3
-    y 1f "Oh? Why's that?"
+    y 1f "哦？为什么？"
     show yuri at t32 zorder 2
     show natsuki at f31 zorder 3
-    n 5c "Well, I just..."
-    "Natsuki's eyes dart over to me for a split second."
-    n 5q "Never mind."
+    n 5c "好吧，我只是..."
+    "Natsuki 短暂地撇了我一眼。"
+    n 5q "没什么。"
     show natsuki at t31 zorder 2
     show monika at f33 zorder 3
-    m 1a "That's right, you usually like to write about cute things, don't you, Natsuki?"
+    m 1a "这就对了，你平常更喜欢写可爱的东西，不是吗，Natsuki？"
     show monika at t33 zorder 2
     show natsuki 1o at f31 zorder 3
-    n "W-What?"
-    n "What gives you that idea?"
+    n "什-什么？"
+    n "你从哪里冒出来的这种想法？"
     show natsuki at t31 zorder 2
     show monika at f33 zorder 3
-    m 3b "You left a piece of scrap paper behind last club meeting."
-    m "It looked like you were working on a poem called--"
+    m 3b "上次社团会议结束后，你掉了一张便签纸在教室里。"
+    m "好像你正在写一首诗，叫做--"
     show monika at t33 zorder 2
     show natsuki 1p at f31 zorder 3
-    n "Don't say it out loud!!"
-    n "And give that back!"
+    n "别讲那么大声！！"
+    n "把纸条还给我！"
     show natsuki at t31 zorder 2
     show monika at f33 zorder 3
-    m 1j "Fine, fine~"
+    m 1j "好吧，好吧～"
     show monika 1a at t33 zorder 2
-    mc "Natsuki, you write your own poems?"
+    mc "Natsuki，你会自己写诗？"
     show natsuki at f31 zorder 3
-    n 1c "Eh? Well, I guess sometimes."
-    n "Why do you care?"
+    n 1c "诶？对，偶尔。"
+    n "你问这个干嘛？"
     show natsuki at t31 zorder 2
-    mc "I think that's impressive."
-    mc "Why don't you share them sometime?"
+    mc "我觉得这很了不起啊。"
+    mc "为什么不偶尔给大家看一下呢？"
     show natsuki at f31 zorder 3
-    n 5q "N-No!"
-    "Natsuki averts her eyes."
-    n "You wouldn't...like them..."
+    n 5q "不-不行！"
+    "Natsuki 的眼神游移着。"
+    n "你们不会...喜欢的..."
     show natsuki at t31 zorder 2
-    mc "Ah...not a very confident writer yet?"
+    mc "啊...对自己的水平还不够自信吗？"
     show yuri at f32 zorder 3
-    y 2f "I understand how Natsuki feels."
-    y "Sharing that level of writing takes more than just confidence."
-    y 2k "The truest form of writing is writing to oneself."
-    y "You must be willing to open up to your readers, exposing your vulnerabilities and showing even the deepest reaches of your heart."
+    y 2f "我理解夏树的感受。"
+    y "分享那种水平的文字需要的可不仅仅是自信。"
+    y 2k "最真挚的文字是写给自己的。"
+    y "所以分享的前提是，作者必须要愿意向读者敞开心扉，暴露出自己的弱点，甚至抵达心灵的最深处。"
     show yuri at t32 zorder 2
     show monika 2a at f33 zorder 3
-    m "Do you have writing experience too, Yuri?"
-    m "Maybe if you share some of your work, you can set an example and help Natsuki feel comfortable enough to share hers."
+    m "所以 Yuri，你也有写作的经验吗？"
+    m "如果你愿意分享一下你的作品，没准在榜样作用下，夏树也会愿意分享的。"
     show yuri at s32
     y 3o "..."
-    mc "I guess it's the same for Yuri..."
-    "We all sit in silence for a moment."
+    mc "似乎 Yuri 也是这样想的..."
+    "气氛短时间陷入了沉默。"
     show monika at f33 zorder 3
-    m 5a "Hey, I just got an idea!"
-    m "How about this?"
+    m 5a "嘿，我突然有个主意！"
+    m "这样如何？"
     show monika at t33 zorder 2
     show natsuki 2k at f31 zorder 3
     show yuri 3e at f32 zorder 3
-    ny "...?"
-    "Natsuki and Yuri look quizzically at Monika."
+    ny "...？"
+    "Natsuki 和 Yuri 迷惑地望着莫妮卡。"
     show natsuki at t31 zorder 2
     show yuri at t32 zorder 2
     show monika at f33 zorder 3
-    m 2b "Let's all go home and write a poem of our own!"
-    m "Then, next time we meet, we'll all share them with each other."
-    m "That way, everyone is even!"
+    m 2b "我们每个人回家写一首自己的诗吧！"
+    m "这样的话，在下次活动的时候，我们就可以彼此分享了。"
+    m "这样的话，大家就扯平了！"
     show monika 2a at t33 zorder 2
     show natsuki at f31 zorder 3
-    n 5q "U-Um..."
+    n 5q "唔-唔..."
     show natsuki at t31 zorder 2
     show yuri 3v at f32 zorder 3
     y "..."
     show yuri at t32 zorder 2
     show monika 2m at f33 zorder 3
-    m "Ah..."
-    m "I mean, I thought it was a good idea..."
+    m "啊..."
+    m "我是说，我觉得这是个好主意..."
     show monika at t33 zorder 2
     show yuri at f32 zorder 3
-    y 2l "Well..."
-    y "...I think you're right, Monika."
-    y 2f "We should probably start finding activities for all of us to participate in together."
-    y 2h "I did decide to take on the responsibility of Vice President, after all..."
-    y "I need to do my best to nurture the club as well as its members."
-    y 2a "Besides, now that we have a new member..."
-    y "It seems like a good step for us to take."
-    y "Do you agree as well, [player]?"
+    y 2l "那个..."
+    y "...Monika，你说得对。"
+    y 2f "我们或许应该开始找一些可以让全员参与的活动了。"
+    y 2h "毕竟作为副部长，我也要负起责任来..."
+    y "我也要尽力培养社团和社团的成员。"
+    y 2a "况且，既然我们有了一个新成员..."
+    y "迈出这一步似乎也不错。"
+    y "你也同意吗，[player]?"
     show yuri at t32 zorder 2
-    mc "Hold on...there's still one problem."
+    mc "等一下...还有一个问题。"
     show monika at f33 zorder 3
-    m 1d "Eh? What's that?"
-    "Now that we've reached the most important topic, I bluntly come forth with what's been on my mind the entire time."
+    m 1d "诶？还有什么问题？"
+    "既然已经提到了最重要的话题，我终于能够坦率地说出我一直以来的想法。"
     show monika at t33 zorder 2
-    mc "I never said I would join this club!"
-    mc "Monika may have convinced me to stop by, but I never made any decision."
-    mc "I still have other clubs to look at, and...um..."
+    mc "我从来都没说过我要入部！"
+    mc "虽然莫妮卡说服了我来看看，但我从没下过任何决定。"
+    mc "我还有别的一些社团要看看，并且...唔..."
     show monika 1g
     show natsuki 4g
     show yuri 2e
-    "I lose my train of thought."
-    "All three girls stare back at me with dejected eyes."
+    "我的思路断掉了。"
+    "三个女生都用失落的眼神看着我。"
     show monika at s33
-    m 1p "B-But..."
+    m 1p "但-但是..."
     show yuri at s32
-    y 2v "I'm sorry, I thought..."
+    y 2v "抱歉，我以为..."
     show natsuki at s31
-    n 5s "Hmph."
-    mc "Eh...?"
-    "The girls exchange glances before Monika turns back to me."
+    n 5s "哼唧。"
+    mc "诶...？"
+    "女孩们相互交换了一下眼神，之后莫妮卡转向了我。"
     show monika at f33 zorder 3
-    m 1m "I...guess I need to tell you the truth, [player]."
-    m "The thing is..."
-    m 1p "...We don't have enough members yet to form an official club."
-    m "We need four..."
-    m "And I've been trying really, really hard to find new members."
-    m "And if we don't find one more before the festival..."
+    m 1m "我...我猜我需要告诉你真相，[player]."
+    m "事实上..."
+    m 1p "...我们甚至还没有达到组建一个正式社团的最低人数要求。"
+    m "我们至少需要四个人..."
+    m "而且我已经非常、非常尽力地去寻找新成员了。"
+    m "而如果我们没能在学园祭之前再找到一个的话..."
     show monika at t33 zorder 2
     mc "..."
-    "I...I'm defenseless against these girls."
-    "How am I supposed to make a clear-headed decision when it's like this?"
-    "I would feel terrible for letting everyone down in this situation..."
-    "And besides, the club itself seems pretty relaxed..."
-    "So, if writing poems is the price I need to pay in order to spend every day with these beautiful girls..."
-    mc "...Right."
-    mc "Okay, I've decided, then."
-    mc "I'll join the Literature Club."
+    "我...我对可爱的女孩子超没辙的。"
+    "这种情况下我怎么做一个头脑清醒的决定啊？"
+    "在这种情况下，我还让她们失望的话，我会感到很难受的..."
+    "更何况，这个社团本身看上去还挺轻松的..."
+    "所以，如果只要写写诗，我就能每天和这些可爱的女生待在一起..."
+    mc "...好吧。"
+    mc "好吧，那我决定了。"
+    mc "我要加入文学部。"
     show monika 1e at t33 zorder 2
     show yuri 3f at t32 zorder 2
     show natsuki 1k at t31 zorder 2
-    "One by one, the girls' eyes light up."
+    "女生们的眼神一个接一个地亮了起来。"
     show monika at f33 zorder 3
-    m "Oh my goodness, really?"
-    m "Do you really mean that, [player]?"
+    m "我的天啊，真的吗？"
+    m "你真的确定吗，[player]?"
     show monika at t33 zorder 2
-    mc "Yeah..."
-    mc "It could be fun, right?"
+    mc "是的..."
+    mc "应该会挺有意思的，对吧？"
     show yuri at f32 zorder 3
-    y 1m "You really did scare me for a moment..."
+    y 1m "你有一瞬间真的吓到我了..."
     show yuri at t32 zorder 2
     show natsuki at f31 zorder 3
-    n 5q "I mean, if you really just left after all this, I would be super pissed."
+    n 5q "如果你真的就这么走了，我真的会超生气的。"
     show natsuki at t31 zorder 2
     show monika at f33 zorder 3
-    m "[player], I'm so happy..."
-    m 1k "We can become an official club now!"
-    m 1e "Thank you so much for this. You're really amazing."
-    m "I'll do everything I can to give you a great time, okay?"
+    m "[player], 我非常高兴..."
+    m 1k "我们终于可以成为正式社团了！"
+    m 1e "真的非常感谢你。你很了不起。"
+    m "我会尽一切努力让你在这里的时间变得有意义的，可以吗？"
     show monika at t33 zorder 2
-    mc "Ah...thanks, I guess."
+    mc "啊...谢谢你。"
     show yuri at thide zorder 1
     show natsuki at thide zorder 1
     show monika at t11 zorder 2
     hide yuri
     hide natsuki
-    m 3b "Okay, everyone!"
-    m "I think with that, we can officially end today's meeting on a good note."
-    m "Everyone remember tonight's assignment:"
-    m "Write a poem to bring to the next meeting, so we can all share!"
-    "Monika looks over at me once more."
-    m 1a "[player], I look forward to seeing how you express yourself."
+    m 3b "好了，各位！"
+    m "我想, 今天的社团活动到这里就正式结束了。"
+    m "各位要记得每个人今晚的任务:"
+    m "每个人写一首明天带过来的诗，这样我们就可以分享了！"
+    "Monika 再一次看向了我。"
+    m 1a "[player]，期待你的表现哦。"
     show monika 5 at hop
-    m "Ehehe~"
-    mc "Y-Yeah..."
+    m "诶嘿嘿～"
+    mc "好-好的..."
     show monika at thide zorder 1
     hide monika
-    "Can I really impress the class star Monika with my mediocre writing skills?"
-    "I already feel the anxiety welling up inside me."
-    "Meanwhile, the girls continue to chit-chat as Yuri cleans up the tea set."
-    mc "I guess I'll be on my way, then..."
+    "我真的能用我那平庸的写作水平打动校园明星 Monika 么?"
+    "焦虑已经在我的心中开始翻涌了。"
+    "与此同时，女孩们也在继续着她们的闲聊，Yuri 还在一边清理她的茶具。"
+    mc "那我就回家了..."
     show monika 5a at t11 zorder 2
-    m "Okay!"
-    m "I'll see you tomorrow, then."
-    m "I can't wait!"
+    m "好的！"
+    m "那么我们明天见。"
+    m "我都等不及了！"
 
     scene bg residential_day
     with wipeleft_scene
 
-    "With that, I depart the clubroom and make my way home."
-    "The whole way, my mind wanders back and forth between the three girls:"
+    "就这样，我从部室离开了，踏上了回家的路。"
+    "一路上，我的思绪都在三位女孩间游转："
     show natsuki 4a at t31 zorder 2
-    "Natsuki,"
+    "Natsuki，"
     show yuri 1a at t32 zorder 2
-    "Yuri,"
+    "Yuri，"
     show monika 1a at t33 zorder 2
-    "and, of course, Monika."
-    "Will I really be happy spending every day after school in a literature club?"
-    "Perhaps I'll have the chance to grow closer to one of these girls..."
+    "当然，还有 Monika。"
+    "每天在放学后去文学部，我会一直非常开心的吧？"
+    "说不定我还有机会能和三个女生中的一个...变得更亲密..."
     hide natsuki
     hide yuri
     hide monika
     with wipeleft
-    "Alright!"
-    "I'll just need to make the most of my circumstances, and I'm sure good fortune will find me."
-    "And I guess that starts with writing a poem tonight..."
+    "好的！"
+    "我只要充分利用条件就行了，好运总有一天会来的。"
+    "看来我要从今晚的写诗开始了..."
 
     stop music fadeout 2.0
     scene black with dissolve_scene_full
@@ -495,7 +495,7 @@ label ch20_main2:
     $ config.allow_skipping = False
     $ allow_skipping = False
 
-    call screen confirm("You have unlocked a special poem.\nWould you like to read it?", Return(True), Return(False))
+    call screen confirm("你解锁了一首特殊诗歌。\n是否查看？\n有概率获得成就哦！", Return(True), Return(False))
     if _return:
         call expression "poem_special_" + str(persistent.special_poems[0])
     else:

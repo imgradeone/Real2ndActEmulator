@@ -9,9 +9,9 @@ label ch21_main:
         subpixel True
         truecenter
         linear 240 rotate 8 zoom 1.30
-    m "Hi again, [player]!"
-    m "Glad to see you didn't run away on us. Hahaha!"
-    mc "Nah, don't worry."
+    m "[player]，欢迎回来！"
+    m "我还以为你会被我们吓跑呢。哈哈哈！"
+    mc "呐，别担心。"
     mc "This might be a little strange for me, but I at least keep my word."
     show monika at thide zorder 1
     hide monika

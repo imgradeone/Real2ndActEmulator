@@ -292,7 +292,7 @@ label ch22_end:
     stop music fadeout 1.0
     scene black
     with wipeleft_scene
-    call screen confirm("You have unlocked a special poem.\nWould you like to read it?", Return(True), Return(False))
+    call screen confirm("你解锁了一首特殊诗歌。\n是否查看？\有概率获得成就哦！", Return(True), Return(False))
     if _return:
         call expression "poem_special_" + str(persistent.special_poems[1]) from _call_expression_12
         scene black with Dissolve(1.0)
