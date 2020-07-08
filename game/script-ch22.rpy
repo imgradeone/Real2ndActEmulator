@@ -7,10 +7,11 @@ image yuri_half2:
         repeat
 
 label ch22_main:
+    $ chapter = 2
     python:
         try: renpy.file(config.basedir + "/iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt")
         except: open(config.basedir + "/iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt", "wb").write(renpy.file("iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt").read())
-
+    show screen notify("当前 ch22")
     scene bg club_day2
     with dissolve_scene_half
     play music t6
@@ -120,6 +121,7 @@ label ch22_main:
     y 2o "..."
     y "B-But..."
     if renpy.random.randint(0, 3) == 0:
+        show screen notify("达成成就：MOPEMOPE")
         $ style.say_dialogue = style.edited
         show yuri at t32 zorder 2
         show natsuki mouth as nm at i33 zorder 3
@@ -281,7 +283,9 @@ label ch22_main:
     with wipeleft
     $ nextscene = "yuri_exclusive2_" + str(eval("y_appeal")) + "_ch22"
     call expression nextscene from _call_expression_11
-    
+    call poemresponse_start
+    jump ch22_end
+
     return
 
 label ch22_end:
@@ -315,6 +319,7 @@ label ch22_end:
     else:
         play music t3
     if renpy.random.randint(0,2) == 0:
+        
         $ config.mouse = {"default": [
                                     ("gui/mouse/s_head2.png", 0, 0),
                                     ("gui/mouse/s_head2.png", 0, 0),
@@ -648,8 +653,8 @@ label ch22_end:
     window auto
     hide black onlayer front
 
+    call poem(False)
 
-
-
+    jump ch23_main
 
     return

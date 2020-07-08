@@ -66,6 +66,6 @@ jobs:
         uses: skx/github-action-publish-binaries@master
         if: github.event.release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
           args: ${{ format('{0}/{1}-Mod.zip', steps.buildseq.outputs.dir, steps.buildseq.outputs.version) }}

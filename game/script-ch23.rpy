@@ -25,6 +25,7 @@ image noface2:
 # 铁 骨 铮 铮 Sayori（
 
 label ch23_main:
+    show screen notify("当前 ch23")
     # 来点更刺激的
     if renpy.random.randint(0,15) == 0:
         $ quick_menu = False
@@ -41,7 +42,7 @@ label ch23_main:
     else:
         scene bg club_day2
         with dissolve_scene_half
-
+    $ chapter = 3
     play music t6
     show yuri 2y5 at t11 zorder 2
     y "Hi, [player]!"
@@ -202,7 +203,9 @@ label ch23_main:
     scene bg club_day2
     show yuri 3 at t11 zorder 2
     with wipeleft_scene
-    call yuri_exclusive2_2_ch22 from _call_yuri_exclusive2_2_ch22
+    call yuri_exclusive2_2_ch22
+    call poemresponse_start2
+    jump ch23_end
 
     return
 
@@ -214,7 +217,7 @@ label ch23_end:
     with wipeleft_scene
     call screen confirm("", Return(True), Return(True))
     if _return:
-        call expression "poem_special_" + str(persistent.special_poems[2]) from _call_expression_25
+        call expression "poem_special_" + str(persistent.special_poems[2])
         scene black with Dissolve(1.0)
     else:
         pass
@@ -339,6 +342,7 @@ label ch23_end:
     # 我们会强制把你的鼠标挪动 Monika 上。你大可以试试强行选另外两个。
     # 下面是后果。
     if madechoice != "monika":
+        show screen notify("达成成就：但是我拒绝！")
         window hide(None)
         $ musicpos = get_pos()
         stop music
@@ -502,7 +506,6 @@ label yuri_kill:
     $ in_yuri_kill = True
 label yuri_kill_1:
     window auto
-    $ persistent.autoload = "yuri_kill_1"
     $ quick_menu = False
     stop music
     scene bg club_day
@@ -553,7 +556,6 @@ label yuri_kill_1:
     with dissolve_cg
 label yuri_kill_2:
     $ quick_menu = True
-    $ persistent.autoload = "yuri_kill_2"
     python:
         _history_list = []
         m.add_history(None, "", """Welcome to the Literature Club! It's always been a dream of mine to make something special out of the things I love. Now that you're a club member, you can help me make that dream come true in this cute game!Every day is full of chit-chat and fun activities with all of my adorable and unique club members:Sayori, the youthful bundle of sunshine who values happiness the most;Natsuki, the deceivingly cute girl who packs an assertive punch;Yuri, the timid and mysterious one who finds comfort in the world of books;...And, of course, Monika, the leader of the club! That's me!I'm super excited for you to make friends with everyone and help the Literature Club become a more intimate place for all my members. But I can tell already that you're a sweetheart—will you promise to spend the most time with me?Welcome to the Literature Club! It's always been a dream of mine to make something special out of the things I love. Now that you're a club member, you can help me make that dream come true in this cute game!Every day is full of chit-chat and fun activities with all of my adorable and unique club members:Sayori, the youthful bundle of sunshine who values happiness the most;Natsuki, the deceivingly cute girl who packs an assertive punch;Yuri, the timid and mysterious one who finds comfort in the world of books;...And, of course, Monika, the leader of the club! That's me!I'm super excited for you to make friends with everyone and help the Literature Club become a more intimate place for all my members. But I can tell already that you're a sweetheart—will you promise to spend the most time with me?Welcome to the Literature Club! It's always been a dream of mine to make something special out of the things I love. Now that you're a club member, you can help me make that dream come true in this cute game!Every day is full of chit-chat and fun activities with all of my adorable and unique club members:Sayori, the youthful bundle of sunshine who values happiness the most;Natsuki, the deceivingly cute girl who packs an assertive punch;Yuri, the timid and mysterious one who finds comfort in the world of books;...And, of course, Monika, the leader of the club! That's me!I'm super excited for you to make friends with everyone and help the Literature Club become a more intimate place for all my members. But I can tell already that you're a sweetheart—will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with""")
@@ -581,7 +583,6 @@ label yuri_kill_2:
             jump yuri_kill_3
 
 label yuri_kill_3:
-    $ persistent.autoload = "yuri_kill_3"
     $ config.skipping = False
     $ config.allow_skipping = False
     $ allow_skipping = False
@@ -650,10 +651,9 @@ label yuri_kill_3:
     pause 1.5
 
     $ delete_all_saves()
-    $ persistent.playthrough = 3
     $ persistent.anticheat = renpy.random.randint(100000, 999999)
-    $ persistent.autoload = "ch30_main"
     $ renpy.utter_restart()
+
     return
 
 

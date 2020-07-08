@@ -7,7 +7,7 @@ define config.name = "全真二周目模拟器"
 define gui.show_name = False
 
 # 版本号
-define config.version = "0.0.1-trial-indev-20200708"
+define config.version = "0.0.1-trial-indev-20200708.1"
 
 # text placed on about screen
 define gui.about = _("感谢您下载全真二周目模拟器。这是 DDLC 中文 Mod 模板的新 Demo。")
@@ -148,7 +148,7 @@ init python:
     build.classify("game/submods/**", "submods")
     build.classify('game/**.rpyc', "scripts")
     build.classify('game/advanced_scripts/**', "scripts")
-    build.classify('game/original_story_scripts/**', "scripts")
+    build.classify('game/**.txt', "mod_assets")
 
     # stuff to ignore
     build.classify('**~', None)

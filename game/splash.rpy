@@ -267,14 +267,13 @@ label splashscreen:
             filepath = renpy.file("firstrun").name
             open(filepath, "a").close()
 
-    if not persistent.special_poems:
-        python hide:
-            persistent.special_poems = [0,0,0]
-            a = range(1,12)
-            for i in range(3):
-                b = renpy.random.choice(a)
-                persistent.special_poems[i] = b
-                a.remove(b)
+    python hide:
+        persistent.special_poems = [0,0,0]
+        a = range(1,12)
+        for i in range(3):
+            b = renpy.random.choice(a)
+            persistent.special_poems[i] = b
+            a.remove(b)
 
 
     default persistent.first_run = False

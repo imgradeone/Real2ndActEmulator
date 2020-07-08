@@ -1,5 +1,6 @@
 label ch21_main:
     $ chapter = 1
+    show screen notify("当前 ch21")
     scene bg club_day2
     with dissolve_scene_half
     play music t2g3
@@ -89,8 +90,8 @@ label ch21_main:
     
     #Call exclusive scene
     $ nextscene = poemwinner[0] + "_exclusive2_" + str(eval(poemwinner[0][0] + "_appeal"))
-    call expression nextscene from _call_expression_13
-    call poemresponse_start from _call_poemresponse_start
+    call expression nextscene
+    call poemresponse_start
     jump ch21_end
 
     return
@@ -454,8 +455,6 @@ label ch21_end:
     window auto
 
     call poem(False)
-
     jump ch22_main
-    $ chapter = 2
     return
 

@@ -41,7 +41,6 @@ label fakeintro:
     window auto
     scene black with trueblack
     $ delete_all_saves() # 记忆清除
-    show screen notify("存档已删除。您现在已经进入真正的二周目。")
     $ persistent.playthrough = 2
     $ persistent.anticheat = renpy.random.randint(100000, 999999)
     $ anticheat = persistent.anticheat

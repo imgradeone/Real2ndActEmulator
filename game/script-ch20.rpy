@@ -2,6 +2,7 @@ label ch20_from_ch10:
     scene bg residential_day
     with dissolve_scene_half
     play music t2
+    show screen notify("存档已删除。您现在已经进入真正的二周目。")
     jump ch20_main2
 
 label ch20_main:
@@ -9,6 +10,7 @@ label ch20_main:
     scene bg residential_day
     with dissolve_scene_full
     play music t2
+    show screen notify("二周目...是停不下来的！！！")
     jump ch20_main2
 
 label ch20_main2:
@@ -495,16 +497,15 @@ label ch20_main2:
 
     call screen confirm("You have unlocked a special poem.\nWould you like to read it?", Return(True), Return(False))
     if _return:
-        show screen notify("达成成就：HEPPY THXXXXOUGHTS")
-        call expression "poem_special_1" 
+        call expression "poem_special_" + str(persistent.special_poems[0])
     else:
         pass
 
     call poem
-
-    jump ch21_main
     python:
         try: renpy.file(config.basedir + "/CAN YOU HEAR ME.txt")
         except: open(config.basedir + "/CAN YOU HEAR ME.txt", "wb").write(renpy.file("CAN YOU HEAR ME.txt").read())
+
+    jump ch21_main
 
     return
