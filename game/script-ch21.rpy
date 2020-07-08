@@ -1,4 +1,5 @@
 label ch21_main:
+    $ chapter = 1
     scene bg club_day2
     with dissolve_scene_half
     play music t2g3
@@ -25,8 +26,9 @@ label ch21_main:
     n "I don't know if you plan to just come here and hang out, or what..."
     n "But if you don't take us seriously, then you won't see the end of it."
     show monika 2b at l41 onlayer front
-    m "Natsuki, you certainly have a big mouth for someone who keeps her manga collection in the clubroom."
-    n 4o "M-M-M...!!"
+    m "有一说一，Natsuki，作为一个在部室私藏漫画的人，你这么说是想等着被禁言？？？"
+
+    n 4o "M-M-M...！！"
     show monika at lhide onlayer front
     hide monika onlayer front
     "Natsuki finds herself stuck between saying \"Monika\" and \"Manga\"."
@@ -88,6 +90,8 @@ label ch21_main:
     #Call exclusive scene
     $ nextscene = poemwinner[0] + "_exclusive2_" + str(eval(poemwinner[0][0] + "_appeal"))
     call expression nextscene from _call_expression_13
+    call poemresponse_start from _call_poemresponse_start
+    jump ch21_end
 
     return
 
@@ -449,5 +453,9 @@ label ch21_end:
     window hide(None)
     window auto
 
+    call poem(False)
+
+    jump ch22_main
+    $ chapter = 2
     return
 

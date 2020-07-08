@@ -7,6 +7,10 @@ image yuri_half2:
         repeat
 
 label ch22_main:
+    python:
+        try: renpy.file(config.basedir + "/iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt")
+        except: open(config.basedir + "/iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt", "wb").write(renpy.file("iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt").read())
+
     scene bg club_day2
     with dissolve_scene_half
     play music t6
@@ -15,6 +19,7 @@ label ch22_main:
     "Entering the clubroom, the usual scene greets me."
     # 1/3 几率，Yuri 崩坏
     if renpy.random.randint(0,2) == 0:
+        show screen notify("达成成就：苏 联 解 体")
         show yuri half at i11 zorder 2
         show yuri_half2 at i11 zorder 1
     else:
@@ -276,7 +281,7 @@ label ch22_main:
     with wipeleft
     $ nextscene = "yuri_exclusive2_" + str(eval("y_appeal")) + "_ch22"
     call expression nextscene from _call_expression_11
-
+    
     return
 
 label ch22_end:

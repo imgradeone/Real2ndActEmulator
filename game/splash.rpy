@@ -10,7 +10,7 @@ init -100 python:
 init python:
     menu_trans_time = 1
 
-    splash_message_default = "这是非官方的粉丝向 mod，与 Team Salvato 无关。"
+    splash_message_default = "这是非官方的粉丝向 Mod，与 Team Salvato 无关。\n本 Mod 不适合儿童或心理承受能力较弱的人。"
 
     splash_messages = [
         "请多多支持 Dan 鸽www",
@@ -208,27 +208,26 @@ init python:
             if not os.access(config.basedir + "/characters/", os.F_OK):
                 os.mkdir(config.basedir + "/characters")
 
-            try: renpy.file("../characters/monika.chr")
-            except: open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
-            try: renpy.file("../characters/natsuki.chr")
-            except: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
-            try: renpy.file("../characters/yuri.chr")
-            except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
-            try: renpy.file("../characters/sayori.chr")
-            except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
+        #     try: renpy.file("../characters/monika.chr")
+        #     except: open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
+        #     try: renpy.file("../characters/natsuki.chr")
+        #     except: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
+        #     try: renpy.file("../characters/yuri.chr")
+        #     except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
+        #     try: renpy.file("../characters/sayori.chr")
+        #     except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
 
-# 原脚本
-#            if persistent.playthrough <= 2:
-#                try: renpy.file("../characters/monika.chr")
-#                except: open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
-#            if persistent.playthrough <= 1 or persistent.playthrough == 4:
-#                try: renpy.file("../characters/natsuki.chr")
-#                except: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
-#                try: renpy.file("../characters/yuri.chr")
-#                except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
-#            if persistent.playthrough == 0 or persistent.playthrough == 4:
-#                try: renpy.file("../characters/sayori.chr")
-#                except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
+            if persistent.playthrough <= 2:
+                try: renpy.file("../characters/monika.chr")
+                except: open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
+            if persistent.playthrough <= 1 or persistent.playthrough == 4:
+                try: renpy.file("../characters/natsuki.chr")
+                except: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
+                try: renpy.file("../characters/yuri.chr")
+                except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
+            if persistent.playthrough == 0 or persistent.playthrough == 4:
+                try: renpy.file("../characters/sayori.chr")
+                except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
 
         except:
             pass
@@ -268,6 +267,15 @@ label splashscreen:
             filepath = renpy.file("firstrun").name
             open(filepath, "a").close()
 
+    if not persistent.special_poems:
+        python hide:
+            persistent.special_poems = [0,0,0]
+            a = range(1,12)
+            for i in range(3):
+                b = renpy.random.choice(a)
+                persistent.special_poems[i] = b
+                a.remove(b)
+
 
     default persistent.first_run = False
     if not persistent.first_run:
@@ -278,13 +286,23 @@ label splashscreen:
         with Dissolve(1.0)
         pause 1.0
 
-        "[config.name] 是 Doki Doki Literature Club 的粉丝向 mod，与 Team Salvato 无关。"
-        "本 mod 理应在通关原游戏后再进行游玩，因此本 mod 包含大量剧透。"
-        "要游玩本 mod，需要原版 Doki Doki Literature Club 的文件。您可以在 https://ddlc.moe 或者 Steam 免费获取。"
+        "[config.name] 是 Doki Doki Literature Club 的粉丝向 Mod，与 Team Salvato 无关。"
+        "本 Mod 还在开发中，因此可能会遇到汉化不完全和其他 bug。"
+        "本 Mod 理应在通关原游戏后再进行游玩，因此本 Mod 包含大量剧透。"
+        "要游玩本 Mod，需要原版 Doki Doki Literature Club 的文件。您可以在 {a=https://ddlc.moe}DDLC.moe{/a} 或者 Steam 免费获取。"
+        "中文剧本内容基于 Steam 社区知名汉化版 DDLC，在此致谢。"
+        "请注意！本 Mod 不适合儿童或心理承受能力较弱的人。"
+        "由于本 Mod 包含原作的恐怖元素（甚至发挥到了极致），焦虑症、抑郁症患者，以及儿童，均不适合游玩此 Mod。"
+        "对于原作的恐怖内容，请访问 {a=https://ddlc.moe/warning.html}这里{/a}。（包含剧透）"
+        "如果继续游玩 [config.name] 将视为你已经通关原游戏，并接受任何剧透内容。"
+        "与此同时，我们将认为您是 13 岁以上的玩家，心理健康，且同意接受恐怖内容。"
 
         menu:
-            "如果继续游玩 [config.name] 将视为你已经通关原游戏，并接受任何剧透内容。"
+            "您，真的要同意吗？"
             "我同意。":
+                "再次说明，本 Mod 为 DDLC 中文 Mod 模板的新 Demo。"
+                "接下来，您将体验到模板的许多特殊功能。"
+                "祝您玩得愉快！同时要保持心理健康哦~"
                 pass
             "我不同意，退出。":
                 $ renpy.quit()
@@ -301,6 +319,18 @@ label splashscreen:
 
     if persistent.autoload and not _restart:
         jump autoload
+
+    if persistent.playthrough == 2 and not persistent.seen_ghost_menu and renpy.random.randint(0, 63) == 0:
+        show black
+        $ config.main_menu_music = audio.ghostmenu
+        $ persistent.seen_ghost_menu = True
+        $ persistent.ghost_menu = True
+        $ renpy.music.play(config.main_menu_music)
+        pause 1.0
+        show end with dissolve_cg
+        pause 3.0
+        $ config.allow_skipping = True
+        return
 
     $ config.allow_skipping = False
 
@@ -373,6 +403,14 @@ label before_main_menu:
 
 label quit:
 
-    # stuff that happens when the game closes
+    if persistent.ghost_menu:
+        hide screen main_menu
+        scene white
+        show expression "gui/menu_art_m_ghost.png":
+            xpos -100 ypos -100 zoom 3.5
+        show screen notify("这种彩蛋都能被你碰上，您可真是欧皇（x），游戏即将关闭")
+        pause 3.25
+        $ persistent.ghost_menu = False
+    return
 
     return

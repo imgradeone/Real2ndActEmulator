@@ -1,11 +1,6 @@
-# DDLC 中文 Mod 模板
-嘿，你想用中文写 DDLC Mod？**那你来对地方了！**
+# 全真二周目模拟器
 
-这里是 DDLC 中文 Mod 模板！本模板基于 Monika After Story 团队的 [DDLCModTemplate](https://github.com/Monika-After-Story/DDLCModTemplate)，并进行了一系列汉化，以及功能追加。使用本模板制作 Mod 时，请遵循 [Team Salvato 的 IP Guidelines](http://teamsalvato.com/ip-guidelines/)。
-
-本模板实际上是从 [Inside The Dark Mod](https://github.com/imgradeone/InsideTheDark) 的中文版中衍生出来的。
-
-> 请注意：当前版本的中文模板可能尚不完善，且**尚缺乏繁体中文支持**。部分 GUI 元素暂未被汉化。
+DDLC 中文 Mod 模板 新 Demo
 
 ## 中文字体
 
@@ -35,48 +30,15 @@
 
 [MediaFire](http://www.mediafire.com/file/6juwd7h0venrg7f/font%25282%2529.zip/file) | [Google 云端硬盘](https://drive.google.com/file/d/1LClyzgxq-les-N5egLXm1aK7ULATDpex/view?usp=sharing) | GitHub (later)
 
-## 下载 Demo
+## 下载
 
-您可以在 [Releases 页面](https://github.com/imgradeone/DDLCModTemplete-Chinese/releases) 获取 Demo。
-
-## 开始使用模板
-
-1. 去 Ren'Py 官网下载 [Ren'Py SDK 6.99.12](https://www.renpy.org/release/6.99.12)。**注意：由于模板历史原因和兼容性考虑，请务必使用 Ren'Py SDK 6.99.12 进行 Mod 制作，不要使用 Ren'Py SDK 7，这可能会导致 Mod 出现兼容性问题。** <!-- 因 Mod 而异 -->
-2. 前往 Releases 页面下载稳定版模板。如需开发版，可以点击页面上的 "Clone" -> "Download ZIP"。当然，我们已经将此 Repo 设置为模板，所以你也可以点击绿色的 `Use this template`，然后使用开发版模板创建新 Repo，再 Clone 到本地。
-3. 将模板文件解压到刚刚你解压 Ren'Py SDK 的文件夹里，或者在你指定的工程目录里。（默认情况下，是 `renpy-6.99.12.4-sdk`）
-4. 前往 [DDLC.moe](https://ddlc.moe) 或者 Steam 下载 DDLC 游戏本体，并将游戏目录下 `game` 文件夹内的 `audio.rpa`、`images.rpa` 和 `fonts.rpa` 复制到工程文件夹（即你解压模板文件的地方）。（千万不要把 `scripts.rpa` 一并复制过去，会出现冲突）
-5. 下载中文字体包，请查看 [中文字体](#中文字体) 小节。
-6. 现在，打开 Ren'Py SDK，启动工程。正常情况下，工程将会完美启动。如果出错，请检查有没有忘记导入什么东西。
-7. 接下来，开始你的写 Mod 之旅吧！
-
-> 注意：写 Mod 的时候，如果有额外资源，请务必存放在 `mod_assets` 文件夹，否则打包时资源将不会被包含在内，除非你自定义 `options.rpy`。
+您可以在 [Releases 页面](https://github.com/imgradeone/Real2ndActEmulator/releases) 获取。
 
 ## 打包 Mod
 
 1. 打开 Ren'Py SDK，点击 “Build Distributions” / “生成分发版”。
 1. 在 “Build Packages:” / “生成分发包：” 选项中勾选 “DDLC Compatible Mod”，然后开始构建。
 1. 构建完成后，系统将自动打开文件管理器，展示打包后的 Mod。建议先自行安装 Mod 并测试后，再分发到各个平台。
-
-## 模板特色功能
-
-1. 绝赞中文化（目前是简体中文）
-1. 绝赞字体优化
-1. ~~绝赞咕咕咕~~
-1. 默认在 `/characters` 文件夹下保留所有 `.chr` 文件，全角色厨的福利
-1. 首次启动 Mod 时加入“不同意”选项
-1. Doki Doki Mod Manager 联动
-
-## 注意事项
-
-由于这是 Mod 模板，因此如果你是 Mod 作者，请不要将 DDLC 游戏本体包含在你分发的 ZIP 里，这是违反 IP Guidelines 的行为。
-
-## TODO
-
-- [ ] 教程翻译
-- [ ] 恢复原模板移除的功能，如 `ghostmenu`
-- [ ] Ren'Py 7 支持（有生之年？）
-- [ ] 无尽存档位按钮展示
-- [ ] 成就支持（原生 + DDMM）
 
 ## 特别感谢
 
@@ -85,6 +47,10 @@
 - 所有中文字体作者
 - Sayo-nika Team
 - Doki Doki Mod Manager Team
+- 汉化版作者
+
+本 Demo 采用了知名汉化版的翻译，在此感谢。[Steam 社区原帖](https://steamcommunity.com/sharedfiles/filedetails/?id=1176221672)
+
 
 ## 开源许可
 

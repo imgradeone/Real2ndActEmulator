@@ -298,6 +298,7 @@ label poem(transition=True):
             else:
                 r = random.randint(0, 10)
                 if r == 0 and not played_baa: #您有 1/11 的机会让游戏喊你“爸”（迫真），但只能触发 1 次
+                    renpy.show_screen("notify","达成成就：被叫爸爸的感觉怎么样（")
                     renpy.play("gui/sfx/baa.ogg")
                     played_baa = True
                 elif r <= 5: renpy.play(gui.activate_sound_glitch)
@@ -340,6 +341,7 @@ label poem(transition=True):
 
     #1/6 chance that we'll see creepy Happy Thoughts pic after the game in Act 2
     if persistent.playthrough == 2 and persistent.seen_eyes == None and renpy.random.randint(0,5) == 0:
+        show screen notify("达成成就：今日你迫害 Sayori 了吗（")
         $ seen_eyes_this_chapter = True
         $ quick_menu = False
         play sound "sfx/eyes.ogg"

@@ -1,6 +1,8 @@
 # Entry point
 label start:
 
+    # 注册成就（原生）
+
     # ID of this playtrhoguh
     $ anticheat = persistent.anticheat
 
@@ -23,10 +25,12 @@ label start:
     $ config.allow_skipping = True
     
     # 确定好 label，然后改动下面几行
-    if persistent.example_seen:
-        call tutorial_selection from _call_tutorial_selection
+    if persistent.playthrough == 0:
+        call warning from _call_warning
+    elif persistent.playthrough == 1:
+        call fakeintro from _call_fakeintro
     else:
-        call example_chapter from _call_example_chapter
+        call ch20_main from _call_ch20_main
     # 就动注释夹起来的这几行
 
     # 对于教程，直接使用下面一行：

@@ -25,7 +25,8 @@ image noface2:
 # 铁 骨 铮 铮 Sayori（
 
 label ch23_main:
-    if renpy.random.randint(0,15) == 0 and not seen_eyes_this_chapter:
+    # 来点更刺激的
+    if renpy.random.randint(0,15) == 0:
         $ quick_menu = False
         scene white
         show noface1
@@ -36,6 +37,7 @@ label ch23_main:
         $ quick_menu = True
         scene bg club_day2
         show yuri 2 at i11 zorder 2
+        show screen notify("达成成就：死 不 瞑 目 沙 师 弟")
     else:
         scene bg club_day2
         with dissolve_scene_half

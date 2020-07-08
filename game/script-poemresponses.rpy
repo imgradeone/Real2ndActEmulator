@@ -19,9 +19,9 @@ label poemresponse_start:
         else:
             $ pt = ""
         if poemsread == 0:
-            $ menutext = "Whom should I show my poem to first?"
+            $ menutext = "Who should I show my poem to first?"
         else:
-            $ menutext = "Whom should I show my poem to next?"
+            $ menutext = "Who should I show my poem to next?"
 
         menu:
             "[menutext]"

@@ -1,19 +1,19 @@
 # 部分注释参照 https://github.com/GanstaKingofSA/DDLCModTemplate2.0
 
 # 在这里命名你的 Mod
-define config.name = "DDLC 中文 Mod 模板"
+define config.name = "全真二周目模拟器"
 
 # 在主界面展示项目名、版本号 (True or False)
 define gui.show_name = False
 
 # 版本号
-define config.version = "1.2.0"
+define config.version = "0.0.1-trial-indev-20200708"
 
 # text placed on about screen
-define gui.about = _("")
+define gui.about = _("感谢您下载全真二周目模拟器。这是 DDLC 中文 Mod 模板的新 Demo。")
 
 # 构建名，不要使用中文、数字、空格、分隔符，只使用英文
-define build.name = "DDLCModTempCN"
+define build.name = "RealActTwoEmulator"
 
 # 控制设置菜单中的音量设置显示
 define config.has_sound = True
@@ -63,7 +63,7 @@ default preferences.sfx_volume = 0.75
 #   Linux: $HOME/.renpy/<config.save_directory>
 #
 # must be a literal string
-define config.save_directory = "DDLCModTempCN"
+define config.save_directory = "Real 2nd Act Emulator"
 
 # 任务栏图标
 define config.window_icon = "gui/window_icon.png"

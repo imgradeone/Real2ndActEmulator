@@ -79,9 +79,9 @@ label natsuki_exclusive2_1:
     $ style.say_dialogue = style.normal
     mc "You looking for something in there?"
     $ style.say_dialogue = style.edited
-    n 4x "fucking monikammmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm" # 爆粗口的 Natsuki 是屑（
+    n 4x "monika我丢雷楼某mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm" # 爆粗口的 Natsuki 是屑（
     $ style.say_dialogue = style.normal
-    $ _history_list[-1].what = "Freaking Monika..." # 放心，历史记录被我们改了
+    $ _history_list[-1].what = "Monika 讨厌鬼..." # 放心，历史记录被我们改了
     n "She never puts my stuff back in the right spot!"
     n "What's the point in keeping your collection organized if someone else is just gonna mess it up?"
     "Natsuki slides a bunch of stacked books and boxes across the shelf."

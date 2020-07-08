@@ -449,7 +449,7 @@ screen navigation():
             if main_menu:
 
                 if persistent.playthrough == 1:
-                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                    textbutton _("二周目启动sndsdfiusfbsidcsodf") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
                 else:
                     textbutton _("新游戏") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
 
@@ -541,23 +541,26 @@ screen main_menu():
             text "[config.version]":
                 style "main_menu_version"
 
-    if not persistent.ghost_menu:
-        add "menu_particles"
-        add "menu_particles"
-        add "menu_particles"
-        add "menu_logo"
     if persistent.ghost_menu:
         add "menu_art_s_ghost"
         add "menu_art_m_ghost"
+    
     else:
         if persistent.playthrough == 1 or persistent.playthrough == 2:
             add "menu_art_s_glitch"
         else:
             add "menu_art_s"
-    add "menu_particles"
-    if persistent.playthrough != 4:
+
+    if not persistent.ghost_menu:
+        add "menu_particles"
+        add "menu_particles"
+        add "menu_particles"
+        add "menu_logo"
+    
+    if persistent.playthrough != 4 and not persistent.ghost_menu:
         add "menu_art_m"
         add "menu_fade"
+        
 
     key "K_ESCAPE" action Quit(confirm=False)
 
@@ -604,8 +607,10 @@ style main_menu_title:
 ## transcluded (placed) inside it.
 
 screen game_menu_m():
-    $ persistent.menu_bg_m = True
+    #$ persistent.menu_bg_m = True
     add "gui/menu_bg_m.png" # 血 溅 文 学 部（
+    $ ddmm_earn_achievement("BLOOD_MONIKA")
+    timer 0.3 action Show(screen="dialog", message="恭喜你解锁成就：血 溅 毛 二 力。\n我们暂时没有显示成就列表的功能。\n没想到吧，这 2% 的几率被你撞上了 XDD\n该彩蛋不会再次显示。", ok_action=Hide("dialog"))
     timer 0.3 action Hide("game_menu_m")
 
 screen game_menu(title, scroll=None):
