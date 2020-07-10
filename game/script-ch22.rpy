@@ -508,7 +508,7 @@ label ch22_end:
     $ style.say_dialogue = style.edited
     $ currentpos = get_pos() / 2.07
     play music "<from " + str(currentpos) + " loop 1.532>bgm/9g.ogg"
-    y "Who cares about that obnoxious brat?"
+    y "谁在乎那个死玻璃心小鬼啊？"
     $ style.say_dialogue = style.normal
     $ currentpos = get_pos() * 2.07
     play music "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
@@ -525,7 +525,7 @@ label ch22_end:
     $ style.say_dialogue = style.edited
     $ currentpos = get_pos() / 2.07
     play music "<from " + str(currentpos) + " loop 1.532>bgm/9g.ogg"
-    y "Nobody would cry if she killed herself."
+    y "她就算是自裁了，也不会有人会为她哭。"
     $ style.say_dialogue = style.normal
     $ currentpos = get_pos() * 2.07
     stop music
@@ -645,10 +645,10 @@ label ch22_end:
         alpha 0.0
         0.25
         linear 3.0 alpha 1.00
-    m "So that's why--\"{space=5000}{w=0.75}{nw}"
-    m 1g "Wait, not yet!\"{space=5000}{w=0.5}{nw}"
-    m "No!\"{space=5000}{w=0.5}{nw}"
-    m "Stop it!\"{space=5000}{w=1.0}{nw}"
+    m "所以这就是为什么--\"{space=5000}{w=0.75}{nw}"
+    m 1g "等等，我还没说完啊！\"{space=5000}{w=0.5}{nw}"
+    m "别！\"{space=5000}{w=0.5}{nw}"
+    m "快停下！\"{space=5000}{w=1.0}{nw}"
     window hide(None)
     window auto
     hide black onlayer front

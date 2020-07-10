@@ -68,22 +68,22 @@ image n_rects_ghost5:
 label natsuki_exclusive2_1:
     scene bg club_day
     with wipeleft_scene
-    n "Ugh...!"
+    n "呃...!"
     "I hear Natsuki utter an exasperated sigh from within the closet."
-    "She seems to be annoyed by something."
+    "看起来她正在烦恼着什么。"
     "I approach her, in case she needs a hand."
     play music t6 fadeout 1
     scene bg closet
     show natsuki 4r at t11 zorder 2
     with wipeleft_scene
     $ style.say_dialogue = style.normal
-    mc "You looking for something in there?"
+    mc "你在这里找什么吗？"
     $ style.say_dialogue = style.edited
     n 4x "monika我丢雷楼某mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm" # 爆粗口的 Natsuki 是屑（
     $ style.say_dialogue = style.normal
     $ _history_list[-1].what = "Monika 讨厌鬼..." # 放心，历史记录被我们改了
-    n "She never puts my stuff back in the right spot!"
-    n "What's the point in keeping your collection organized if someone else is just gonna mess it up?"
+    n "从来都不把我的东西放回去！"
+    n "如果有人老是把你的东西乱放，那整理起来又有什么意义啊？wdnmd！"
     "Natsuki slides a bunch of stacked books and boxes across the shelf."
     mc "Manga..."
     n 2c "You read manga, right?"
@@ -114,10 +114,10 @@ label natsuki_exclusive2_1:
     n 5c "It was the tone of your voice."
     $ style.say_dialogue = style.normal
     n "But I'll tell you one thing, [player]."
-    n 4l "Consider this a lesson straight from the Literature Club:{nw}"
-    $ _history_list[-1].what = "Consider this a lesson straight from the Literature Club: Don't judge a book by its cover!" # 我们必须假装 bug 没有发生过 
+    n 4l "这句话也适用于整个文学部：{nw}"
+    $ _history_list[-1].what = "这句话也适用于整个文学部：不要光凭封面就评判一本书！" # 我们必须假装 bug 没有发生过 
     $ style.say_dialogue = style.edited
-    n "don't judge a bookkkkkkkkkkkkkkkkk kkkkk kk{space=20}k{space=40}k{space=120}k{space=160}k{space=200}k"
+    n "不要光凭封封封封封封封封封封封封封封封封 就就就就就就 价价价{space=20}书{space=40}书{space=120}书{space=160}书{space=200}书"
     $ style.say_dialogue = style.normal
     $ _history_list.pop()
     n "In fact--"

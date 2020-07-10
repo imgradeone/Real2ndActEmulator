@@ -303,7 +303,7 @@ label ch23_end:
     y "Please."
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
-    n 1o "Like {i}you{/i} would fucking know!" # 爆粗口的 Natsuki 是屑（
+    n 1o "说得好像{i}你{/i} TND 知道一样！" # 爆粗口的 Natsuki 是屑（
     n 1x "All you care about now is dragging [player] around with you and your stupid books."
     n 1f "You {i}and{/i} Monika!"
     show natsuki at t31 zorder 2
@@ -331,10 +331,10 @@ label ch23_end:
     n 3c "We can just--"
     show natsuki at t31 zorder 2
     show yuri at f33 zorder 3
-    y 2r "Natsuki, shut your fucking mouth and let him decide for himself." # 爆粗口的 Yuri 是屑（
+    y 2r "Natsuki，闭上你的臭嘴，让他自己做决定好吗？" # 爆粗口的 Yuri 是屑（
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
-    n 1o "{i}You{/i} shut your mouth!"
+    n 1o "{i}你{/i} TM 才该闭嘴！"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
     m 1r "Jesus christ..."
@@ -399,7 +399,7 @@ label ch23_end:
     m "I promise it'll be fun."
     m "Is Sunday okay with you?"
     show natsuki 1e at f31 zorder 3
-    n "Are you fucking kidding me?" # 爆粗口的 Natsuki 是屑（
+    n "你他娘的在逗我吗？" # 爆粗口的 Natsuki 是屑（
     n "This isn't fair at all!"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
@@ -418,15 +418,15 @@ label ch23_end:
     stop music
     show monika at t32 zorder 2
     show yuri at f33 zorder 3
-    y 2y4 "I'm being unreasonable?"
-    y 2y3 "Ahahaha!"
+    y 2y4 "我又不讲道理了？"
+    y 2y3 "啊哈哈哈哈哈！"
     y "Monika, I can't believe how delusional and self-important you are!"
-    y "Pulling [player] away from me every single time you're not included in something."
-    y 1y1 "Are you jealous?"
+    y "每次你没能参与进来就把 [player] 从我身边拖走，次次如此。"
+    y 1y1 "你是嫉妒吧？"
     y "Crazy?"
     y 1y3 "Or maybe you just hate yourself so much that you take it out on others?"
-    y 1y4 "Here's a suggestion. Have you considered killing yourself?"
-    y "It would be beneficial to your mental health."
+    y 1y4 "我给你个建议。考虑一下自裁怎么样？"
+    y "对你的精神健康会有很大帮助。"
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
     n 5u "Yuri, you're scaring me a little..."
@@ -602,9 +602,9 @@ label yuri_kill_3:
     n "Alright, it's festival time!"
     show natsuki 4k at t11 zorder 2
     n "Wow, you got here before me?"
-    n "I thought I was pretty ea--{nw}"
+    n "我觉得我已经够zao--{nw}"
     show natsuki scream at h11
-    n "EYAH!"
+    n "噫啊！"
     n "AAAAAAAAAAAAAAAHHHH!!!"
     pause 1.0
     show natsuki scream at h11
@@ -632,13 +632,11 @@ label yuri_kill_3:
     m 2e "I'll make it up to you, okay?"
     m "Just gimme a sec..."
     $ consolehistory = []
-    call updateconsole("os.remove(\"characters/yuri.chr\")", "yuri.chr deleted successfully.") from _call_updateconsole_18
-    $ delete_character("yuri")
+    call updateconsole("os.remove(\"characters/yuri.chr\")", "ACCESS DENIED: No permission in emulator")
     pause 1.0
-    call updateconsole("os.remove(\"characters/natsuki.chr\")", "natsuki.chr deleted successfully.") from _call_updateconsole_19
-    $ delete_character("natsuki")
+    call updateconsole("os.remove(\"characters/natsuki.chr\")", "ACCESS DENIED: No permission in emulator")
     pause 1.0
-    # 死 DEATH
+
     m 2a "I'm almost done."
     m 2j "I just want to have a cupcake real quick!"
     $ gtext = glitchtext(10)
@@ -653,9 +651,7 @@ label yuri_kill_3:
     show screen tear(8, offtimeMult=1, ontimeMult=10)
     pause 1.5
 
-    $ delete_all_saves()
-    $ persistent.anticheat = renpy.random.randint(100000, 999999)
-    $ renpy.utter_restart()
+#TODO
 
     return
 
