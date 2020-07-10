@@ -99,6 +99,7 @@ label yuri_exclusive2_1_ch22:
     mc "In fact..."
     mc "I might as well get started reading it, right?"
     play sound "sfx/glitch3.ogg"
+    show screen notify("达成成就：七 龙 珠")
     y dragon "Y-Yes!"
     y 3n "I-I mean, you don't have to, but...!"
     mc "Ahaha, what are you saying?"

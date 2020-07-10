@@ -4,16 +4,16 @@ label poemtest:
         "测试选项？"
 
         "Monika":
-            call showpoem(poem_cn_m1, music=False) from _call_showpoem_7
+            call showpoem(poem_cn_m1, music=False)
             pass
         "Sayori":
-            call showpoem(poem_cn_s1, music=False) from _call_showpoem_8
+            call showpoem(poem_cn_s1, music=False)
             pass
         "Yuri":
-            call showpoem(poem_cn_y1, music=False) from _call_showpoem_22
+            call showpoem(poem_cn_y1, music=False)
             pass
         "Natsuki":
-            call showpoem(poem_cn_n1, music=False) from _call_showpoem_23
+            call showpoem(poem_cn_n1, music=False)
             pass
 
     return

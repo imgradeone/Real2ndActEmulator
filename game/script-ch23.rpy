@@ -204,7 +204,10 @@ label ch23_main:
     show yuri 3 at t11 zorder 2
     with wipeleft_scene
     call yuri_exclusive2_2_ch22
-    call poemresponse_start2
+    if y_appeal >= 3:
+        call poemresponse_start2 from _call_poemresponse_start2
+    else:
+        call poemresponse_start from _call_poemresponse_start_5
     jump ch23_end
 
     return

@@ -57,16 +57,16 @@ label _ddmm_test:
         "重新测试在线状态":
             pass # 像我们没做什么一样
         "注册成就": # TODO: 在 init -10 块中添加 call 之后移除这个选择
-            call _reg_achievements from _call__reg_achievements
+            call _reg_achievements
             "已注册成就。"
         "达成 测试成就":
-            call ddmm_earn_achievement("TEST_ACHIEVEMENT") from _call_ddmm_earn_achievement
+            call ddmm_earn_achievement("TEST_ACHIEVEMENT")
         "测试成就 (Ren'Py)":
             $ achievement.grant("测试成就")
         "达成 只要 Monika":
-            call ddmm_earn_achievement("MONIKA_ROUTE_COMPLETE") from _call_ddmm_earn_achievement_1
+            call ddmm_earn_achievement("MONIKA_ROUTE_COMPLETE")
         "退出":
             return
             # pass
-    call _ddmm_test from _call_ddmm_test_2
+    call _ddmm_test
     return

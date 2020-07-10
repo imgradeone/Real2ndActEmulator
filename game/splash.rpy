@@ -267,15 +267,6 @@ label splashscreen:
             filepath = renpy.file("firstrun").name
             open(filepath, "a").close()
 
-    python hide:
-        persistent.special_poems = [0,0,0]
-        a = range(1,12)
-        for i in range(3):
-            b = renpy.random.choice(a)
-            persistent.special_poems[i] = b
-            a.remove(b)
-
-
     default persistent.first_run = False
     if not persistent.first_run:
         $ quick_menu = False
@@ -338,10 +329,6 @@ label splashscreen:
     $ splash_message = splash_message_default
     $ config.main_menu_music = audio.t1
     $ renpy.music.play(config.main_menu_music)
-    # Team Salvato Logo，不需要的话可以删除下面三行
-    show intro with Dissolve(0.5, alpha=True)
-    pause 2.5
-    hide intro with Dissolve(0.5, alpha=True)
 
     if persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
         $ splash_message = renpy.random.choice(splash_messages)

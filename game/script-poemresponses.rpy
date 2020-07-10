@@ -126,7 +126,7 @@ label poemresponse_monika:
     return
 
 label ch1_y_end:
-    call showpoem(poem_y1, img="yuri 3t") from _call_showpoem_9
+    call showpoem(poem_y1, img="yuri 3t")
     y 3t "..."
     y "I...I'm sorry I have such terrible handwriting!"
     mc "What??"
@@ -185,7 +185,7 @@ label ch1_y_end:
     return
 
 label ch2_y_end:
-    call showpoem(poem_y2) from _call_showpoem_10
+    call showpoem(poem_y2)
     y 2m "Um..."
     y "I was a little more daring with this one than yesterday's..."
     mc "I can see that."
@@ -252,7 +252,7 @@ label ch2_y_end:
 label ch3_y_end:
     if y_appeal >= 3:
         jump ch3_y_end_special
-    call showpoem(poem_y3, img="yuri 2v") from _call_showpoem_11
+    call showpoem(poem_y3, img="yuri 2v")
     y "Um..."
     y "I'm aware that the beach is kind of an inane thing to write about."
     y "But I did my best to take a metaphorical approach to it."
@@ -285,7 +285,7 @@ label ch3_y_end:
     mc "Thanks for sharing."
     return
 label ch3_y_end_special:
-    call showpoem(poem_y3b, img="yuri 4b") from _call_showpoem_12
+    call showpoem(poem_y3b, img="yuri 4b")
     "Finishing the poem, I start to hand it back to Yuri."
     "But instead of taking it from me, she looks away."
     y "..."
@@ -338,7 +338,7 @@ label ch3_y_end_special:
     return
 
 label ch1_n_end:
-    call showpoem(poem_n1, img="natsuki 2s") from _call_showpoem_13
+    call showpoem(poem_n1, img="natsuki 2s")
     n 2q "Yeah..."
     n "I told you that you weren't gonna like it."
     mc "I like it."
@@ -372,7 +372,7 @@ label ch1_n_end:
     return
 
 label ch2_n_end:
-    call showpoem(poem_n2) from _call_showpoem_14
+    call showpoem(poem_n2)
     n 2a "Not bad, right?"
     mc "It's quite a bit longer than yesterday's."
     n 2w "Yesterday's was way too short..."
@@ -444,7 +444,7 @@ label ch2_n_end:
 label ch3_n_end:
     if n_appeal >= 3:
         jump ch3_n_end_special
-    call showpoem(poem_n3) from _call_showpoem_15
+    call showpoem(poem_n3)
     n 2a "Yeah..."
     n "I felt like I kept writing about negative things, so I wanted to write something with a nice message for once."
     n 2z "Besides...the beach is awesome!"
@@ -473,7 +473,7 @@ label ch3_n_end:
     n "At the very least, it was good practice."
     return
 label ch3_n_end_special:
-    call showpoem(poem_n3b) from _call_showpoem_16
+    call showpoem(poem_n3b)
     n 1q "..."
     n "...Why are you looking at me like that?"
     n "If you don't like it, then just say it."
@@ -529,7 +529,7 @@ label ch3_n_end_special:
     return
 
 label ch1_s_end:
-    call showpoem(poem_s1) from _call_showpoem_17
+    call showpoem(poem_s1)
     mc "Sayori..."
     mc "This is just a guess, but..."
     mc "Did you wait until this morning to write this?"
@@ -563,7 +563,7 @@ label ch1_s_end:
     return
 
 label ch2_s_end:
-    call showpoem(poem_s2) from _call_showpoem_18
+    call showpoem(poem_s2)
     mc "Holy crap..."
     mc "Sayori, did you really write this?"
     s 2j "Of course I did!"
@@ -599,7 +599,7 @@ label ch3_s_end:
     return
 
 label ch1_m_end:
-    call showpoem(poem_m1) from _call_showpoem_19
+    call showpoem(poem_m1)
 label ch1_m_end2:
     m 1a "So...what do you think?"
     mc "Hmm...it's very...freeform, if that's what you call it."
@@ -630,7 +630,7 @@ label ch1_m_end2:
     return
 
 label ch2_m_end:
-    call showpoem(poem_m2) from _call_showpoem_20
+    call showpoem(poem_m2)
     mc "Hm..."
     mc "It's even more abstract than your last one, huh?"
     m 5 "Ahaha..."
@@ -662,7 +662,7 @@ label ch2_m_end:
     m "Thanks for listening~"
     return
 label ch3_m_end:
-    call showpoem(poem_m3) from _call_showpoem_21
+    call showpoem(poem_m3)
     m 1a "You know..."
     m "I feel like learning and looking for answers are the sorts of things that give life meaning."
     m 1e "Not to get too philosophical or anything..."

@@ -25,7 +25,7 @@ label ch20_main2:
     scene bg class_day
     with wipeleft_scene
 
-    "在学校的日子和往常一样平淡，不知不觉就结束了。"
+    "在学校的日子和往常一样枯燥，不知不觉就结束了。"
     "整理完书包，我茫然地盯着墙，完全没有半点动力。"
     mc "社团啊..."
     "真的没什么社团能让我提起兴趣。"
@@ -132,7 +132,7 @@ label ch20_main2:
     play music t3
 
     if renpy.random.randint(0, 2) == 0:
-        show screen notify("达成成就：GLITCHHHHHHHHHHHH")
+        show screen notify("达成成就：卡 姿 兰 大 眼 睛")
         show monika g1 at l31
     else:
         show monika 3b at l31
