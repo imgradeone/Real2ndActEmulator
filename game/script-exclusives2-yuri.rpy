@@ -65,14 +65,14 @@ label yuri_exclusive2_1_ch22:
     y "It's just that this kind of story..."
     y 1a "It's the kind that challenges you to look at life from a strange new perspective."
     $ style.say_dialogue = style.normal
-    y "When horrible things happen not just because someone wants to be evil..."
+    y "恐怖事件的起因，有时候并不仅仅只是有人想要作恶..."
     $ style.say_dialogue = style.edited
-    y "But because the world is full of horrible people, and we're all worthless anyway."
-    y "Then, suddenlyyyyyyyyyyyyyyyyyyyyyy yyyyyyyyyyyyyyyyyyyy{nw}"
+    y "而是因为世界上全是恶人，活着反正也没有任何价值。"
+    y "突然rrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrrrr{nw}"
     $ style.say_dialogue = style.normal
     y 3v "I'm...I'm rambling, aren't I...?"
-    y "Not again..."
-    y 4b "I'm sorry..."
+    y "下次绝不..."
+    y 4b "抱歉..."
     mc "Hey, don't apologize...!"
     mc "I haven't lost interest or anything."
     y "Well..."
@@ -82,7 +82,7 @@ label yuri_exclusive2_1_ch22:
     y "When I let things like books and writing fill my thoughts..."
     $ gtext = glitchtext(24)
     $ style.say_dialogue = style.edited
-    y "my whole body gets incredibly [gtext]{nw}"
+    y "我全身都会超级 [gtext]{nw}"
     $ style.say_dialogue = style.normal
     $ _history_list.pop()
     y "I kind of forget to pay attention to other people..."
@@ -134,9 +134,9 @@ label yuri_exclusive2_1_ch22:
     show yuri 3n at t11 zorder 2
     y "S-Sorry!"
     $ style.say_dialogue = style.normal
-    y "I was just--!{nw}"
+    y "我只是--！{nw}"
     $ style.say_dialogue = style.edited
-    y "I was just{fast} bathing in the feeling of your body heat tttttttttttttheat eattttttt{nw}"
+    y "我只是{fast}沐浴在你的体温wwwwwwwwwwwwwwww温 温wwwwwwwww体iiiiiiiiiiiiiiiiiiii{nw}"
     $ style.say_dialogue = style.normal
     $ _history_list.pop()
 
@@ -338,14 +338,14 @@ label yuri_exclusive2_2_ch22:
     "...What's that noise?"
     "It's coming from around the corner..."
     "It sounds like breathing."
-    y "Khhhhh--"
+    y "嘶--"
     "A sharp inhale, like someone is sucking the air through their teeth."
     "Are they in pain...?"
     "I reach the corner and peer around it."
-    mc "Yuri...?"
+    mc "Yuri...？"
     $ y_name = "Yuri"
     show yuri cuts at t11 zorder 2
-    y "Kya--!"
+    y "噫啊--！"
 
     $ currentpos = 45.264 - (get_pos() / 2.0)
     $ audio.t6r = "<from " + str(currentpos) + " to 39.817 loop 0>bgm/6r.ogg"
@@ -356,7 +356,7 @@ label yuri_exclusive2_2_ch22:
     show vignette at vignetteflicker(-2.030) zorder 100
     show layer master at rewind
     $ y_name = "???"
-    mc "{cps=*3}Yuri...?{/cps}{nw}"
+    mc "{cps=*3}Yuri...？{/cps}{nw}"
     "{cps=*3}I reach the corner and peer around it.{/cps}{nw}"
     "{cps=*3}Are they in pain...?{/cps}{nw}"
     "{cps=*3}A sharp inhale, like someone is sucking the air through their teeth.{/cps}{nw}"
@@ -597,6 +597,7 @@ label yuri_exclusive2_2_ch23:
     pause 4.62
     scene bg corridor
     show yuri eyes_base
+    show screen notify("达成成就：O w O")
     pause 1.0
     show bg glitch:
         yoffset 480 ytile 2

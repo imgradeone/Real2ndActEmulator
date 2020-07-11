@@ -354,8 +354,13 @@ label after_load:
         scene black
         "存档无法加载。"
         "您是不是想作弊？XD"
-        show monika 1a at t11 zorder 1
-        m "[player]，您真可笑。"
+        $ m_name = "Monika"
+        show monika 1 at t11
+        if persistent.playername == "":
+            m "您真可笑。"
+        else:
+            m "[persistent.playername]，您真可笑。"
+        $ renpy.utter_restart()
 
         $ renpy.utter_restart()
     return
@@ -394,7 +399,7 @@ label quit:
         scene white
         show expression "gui/menu_art_m_ghost.png":
             xpos -100 ypos -100 zoom 3.5
-        show screen notify("这种彩蛋都能被你碰上，您可真是欧皇（x），游戏即将关闭")
+        $ renpy.call_screen("dialog", "这种彩蛋都能被你碰上，您可真是欧皇（x）", ok_action=Return())
         pause 3.25
         $ persistent.ghost_menu = False
     return

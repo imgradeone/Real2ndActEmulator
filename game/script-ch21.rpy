@@ -102,123 +102,123 @@ label ch21_end:
     with wipeleft_scene
     play music t3g
     queue music t3g2
-    mc "Phew..."
-    "I guess that's everyone."
-    "I glance around the room."
-    "That was a little more stressful than I anticipated."
-    "It's as if everyone is judging me for my mediocre writing abilities..."
-    "Even if they're just being nice, there's no way my poems can stand up to theirs."
-    "This is a literature club, after all."
-    "I sigh."
-    "I guess that's what I ended up getting myself into."
-    "Across the room, Monika is writing something in her notebook."
-    "My eyes land on Yuri and Natsuki."
+    mc "呼..."
+    "终于结束了。"
+    "我扫视了一下教室。"
+    "气氛比我预想中的更压抑一点。"
+    "就好像所有人都在审视我那平庸的写作水平..."
+    "哪怕她们都很宽容，我的诗还是完全没有办法与她们的作品相提并论。"
+    "毕竟，这里是文学部嘛。"
+    "我叹了口气。"
+    "这就是我不自量力的结果吧。"
+    "在教室的另一边，Monika 正在她的笔记本上写着些什么。"
+    "我的目光随后转移到了 Yuri 和 Natsuki 身上。"
     show yuri 2g at t21 zorder 2
     show natsuki 1g at t22 zorder 2
-    "They gingerly exchange sheets of paper, sharing their respective poems."
+    "她们慎重地交换了纸张，分享着各自的诗。"
     show yuri 2i at t21 zorder 2
-    "As they read in tandem, I watch each of their expressions change."
-    "Natsuki's eyebrows furrow in frustration."
-    "Meanwhile, Yuri smiles sadly."
+    "在她们一起阅读时，我在一旁注意着她们的表情变化。"
+    "Natsuki 的眉头皱了起来。"
+    "与此同时，Yuri 苦笑着。"
     show natsuki at f22 zorder 3
-    n 1q "{i}(What's with this language...?){/i}"
+    n 1q "{i}（这文笔是什么鬼啊...？）{/i}"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y 2f "Eh?"
-    y "Um...did you say something?"
+    y 2f "诶？"
+    y "emm...你刚刚说了什么吗？"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 2c "Oh, it's nothing."
-    "Natsuki dismissively returns the poem to the desk with one hand."
-    n "I guess you could say it's fancy."
+    n 2c "哦，没什么。"
+    "Natsuki 不屑一顾地单手把诗放回了桌子。"
+    n "用词上还蛮不错的。"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y 2i "Ah-- Thanks..."
-    y "Yours is...cute..."
+    n "用词上还蛮不错的。"
+    y "你的诗...挺可爱的..."
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 2h "Cute?"
-    n 1h "Did you completely miss the symbolism or something?"
-    n "It's clearly about the feeling of giving up."
-    n "How can that be cute?"
+    n 2h "可爱吗？"
+    n 1h "你是不是完全不懂这首诗的寓意？"
+    n "很明显它是描写放弃这种感受的。"
+    n "所以这怎么可爱了？？？"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y 3f "I-I know that!"
-    y "I just meant..."
-    y 3h "The language, I guess..."
-    y "I was trying to say something nice..."
+    y 3f "我-我当然懂啊！"
+    y "我只是说..."
+    y 3h "文笔方面，大概..."
+    y "我只是想说点好听的..."
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n "Eh?"
-    n 4w "You mean you have to try that hard to come up with something nice to say?"
-    n "Thanks, but it really didn't come out nice at all!"
+    n "诶？"
+    n 4w "你意思是，这首诗对于你来说，就连找点好听的话来形容都那么困难吗？"
+    n "那可谢谢你了，但是实际上一点都不好听！"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y 1i "Um..."
-    y "Well, I do have a couple suggestions..."
+    y 1i "唔..."
+    y "好吧，我确实有几个建议..."
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 5x "Hmph."
-    n "If I was looking for suggestions, I would have asked someone who actually liked it."
-    n "Which people {i}did{/i}, by the way."
-    n 5e "Monika liked it."
-    n "And [player] did, too!"
-    n "So based on that, I'll gladly give you some suggestions of my own."
-    n "First of all--"
+    n 5x "哼。"
+    n "如果我想要建议，那么我就会去找喜欢这首诗的人。"
+    n "顺便告诉你，都有谁{i}已经{/i}喜欢了。"
+    n 5e "Monika 喜欢。"
+    n "[player] 也喜欢！"
+    n "所以基于这些，我也乐意给你我的一点建议。"
+    n "首先--"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y 2l "Excuse me..."
-    y "I appreciate the offer, but I've spent a long time establishing my writing style."
-    y 2h "I don't expect it to change anytime soon, unless of course I come across something particularly inspiring."
-    y "Which I haven't yet."
+    y 2l "等一下..."
+    y "你的心意我领了，不过我的写作风格是我花了大量时间建立起来的。"
+    y 2h "我不想短时间内改变它，除非我遇到了什么特别激发我灵感的事情。"
+    y "但迄今为止还没有。"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 1o "Nn...!"
+    n 1o "嗯...？!"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y 1k "And [player] liked my poem too, you know."
-    y "He even told me he was impressed by it."
+    y 1k "而且 [player] 其实也喜欢我的诗。"
+    y "他甚至还跟我说，我的诗给他留下了深刻的印象。"
     stop music fadeout 1.0
-    "Natsuki suddenly stands up."
+    "Natsuki 拍案而起。"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 4y "Oh?"
-    n "I didn't realize you were so invested in trying to impress our new member, Yuri."
+    n 4y "哦？"
+    n "Yuri，我才发现你为了取悦我们的新成员，简直费尽了心思。"
     play music t7a
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y 1n "E-Eh?!"
-    y "That's not what I...!"
-    y 1o "Uu..."
-    y "You...You're just..."
-    "Yuri stands up as well."
-    y 2r "Maybe you're just jealous that [player] appreciates my advice more than he appreciated yours!"
+    y 1n "诶-诶？！"
+    y "我不是那个意..."
+    y 1o "唔..."
+    y "你...你就是..."
+    "Yuri 也拍案而起。"
+    y 2r "也许你是嫉妒 [player] 更赞同我的建议，而不是你的！"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 1e "Huh! And how do you know he didn't appreciate {i}my{/i} advice more?"
-    n "Are you that full of yourself?"
+    n 1e "哈！你又知道他没有更重视{i}我{/i}的建议了？"
+    n "你是懂王吗？？？"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y 3h "I...!"
-    y "No..."
-    y "If I was full of myself..."
-    y 1r "...I would deliberately go out of my way to make everything I do overly cutesy!"
+    y 3h "我...！"
+    y "才没有..."
+    y "如果我真的是懂王..."
+    y 1r "...我就会变成做作的人！"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 1o "Uuuuuu...!"
-    n "Well, you know what?!"
-    n "I wasn't the one whose boobs magically grew a size bigger as soon as [player] started showing up!!"
+    n 1o "唔唔唔...！"
+    n "哼，你知道吗？！"
+    n "某些人啊，自从 [player] 一出现，欧派就神奇地多了一个零件！！"
     show yuri 3p at h21
     show natsuki at t22 zorder 2
-    y "N-Natsuki!!"
+    y "N-Natsuki！！"
     show yuri at t32 zorder 2
     show natsuki at t33 zorder 2
     show monika 3l at l41 behind yuri,natsuki
-    m "Um, Natsuki, that's a little--"
+    m "emm，Natsuki，咱能不能别开c--"
     show monika at h41
     show yuri 3p at f32 zorder 3
     show natsuki 1e at f33 zorder 3
-    ny "This doesn't involve you!"
+    ny "这跟你没关系！"
     show monika at lhide
     hide monika
     show yuri 2h at f21 zorder 2
@@ -229,67 +229,67 @@ label ch21_end:
     show vignette as flicker at vignetteflicker(timeleft) zorder 4
     show vignette at vignettefade(timeleft) zorder 4
     show layer master at layerflicker(timeleft)
-    y "Taking out your own insecurities on others like that..."
-    y "You really act as young as you look, Natsuki."
+    y "把自己的不安情绪投射到别人身上啊..."
+    y "Natsuki，你啊，还是 too young。"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 4o "{i}Me?{/i} Look who's talking, you wannabe edgy bitch!"
+    n 4o "{i}又是我了？？？{/i}看看现在是谁在逼逼赖赖，你这个欲求不满的死碧池！" # 祖安 Natsuki
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y "Edgy...?"
-    y 2r "Sorry that my lifestyle is too much for someone of your mental age to comprehend!"
+    y "死碧池...?"
+    y 2r "很抱歉，相对于你的心理年龄而言，想要理解我的生活方式，可能对你这种人来说太难了！"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 4f "See??"
-    n "Just saying that proves my point!"
-    n 4e "Most people learn to get over themselves after they graduate middle school, you know."
+    n 4f "看到了吧？？"
+    n "歪打正着！"
+    n 4f "看到了吧？？"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y "If you want to prove anything, then stop harassing others with your sickening attitude!"
-    y "You think you can counterbalance your toxic personality just by dressing and acting cute?"
-    y 1k "The only cute thing about you is how hard you try."
+    y "想要教训我的话，你先收起你那四处招惹人的弱智态度吧！"
+    y "你以为你可以通过自己可爱的穿着和行为，来掩盖你那糟糕的性格吗？"
+    y 1k "到最后你唯一看起来可爱的地方就只剩下你可怜地做这种无用功了。"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 2y "Whoa, be careful or you might cut yourself on that edge, Yuri."
-    n "Oh, my bad... You already do, don't you?"
+    n 2y "嚯，Yuri，说这种话的时候小心点，可小心话别太锋利，划伤了自己。"
+    n "哦，抱歉，我的错...你不是已经在划了吗？"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y 3n "D-Did you just accuse me of cutting myself??"
-    y 3r "What the fuck is wrong with your head?!"
+    y 3n "你-你刚刚是说我在割伤自己吗？？"
+    y 3r "你 TM 脑袋里都在想什么？？？"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 1e "Yeah, go on!"
-    n "Let [player] hear everything you really think!"
-    n "I'm sure he'll be head over heels for you after this!"
+    n 1e "来啊！继续啊！"
+    n "让 [player] 来听听你的真实想法！"
+    n "当他听完以后，一定会被您迷得神魂颠倒的咯！"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y 3n "A-Ah--!"
+    y 3n "啊-啊--！！！"
     show yuri at t21 zorder 2
-    "Suddenly, Yuri turns toward me, as if she just noticed I was standing here."
+    "突然，Yuri 转向了我，似乎她才注意到我一直站在这里。"
     show yuri at f21 zorder 3
     y 2n "[player]...!"
-    y "She-- She's just trying to make me look bad...!"
+    y "她--她想让我尬场...！"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 4w "That's not true!"
-    n "She started it!"
+    n 4w "你骗人！"
+    n "是她先挑起来的！"
     show yuri 1t at t21 zorder 2
     show natsuki 1g at t22 zorder 2
     $ style.say_dialogue = style.normal
     mc "..."
     $ style.say_dialogue = style.edited
-    "{cps=*2}How did I get dragged into this in the first place?!{/cps}{nw}"
-    "{cps=*2}It's not like I know anything about writing...{/cps}{nw}"
-    "{cps=*2}But whomever I agree with, they'll probably think more highly of me!{/cps}{nw}"
-    "{cps=*2}So, of course that's going to be...!{/cps}{nw}"
+    "{cps=*2}wdnmd，我当初怎么就被牵扯进来的呢？！{/cps}{nw}"
+    "{cps=*2}我对写作一窍不通啊...{/cps}{nw}"
+    "{cps=*2}不过不管我站在谁的一边，她对我的评价可能会更高吧！{/cps}"
+    "{cps=*2}所以，我肯定选择...！{/cps}{nw}"
     $ style.say_dialogue = style.normal
     $ menu_clicked = 0
     window hide(None)
     label ch21_end_menu:
         menu:
-            "Natsuki.":
+            "Natsuki。":
                 jump menu_click
-            "Yuri.":
+            "Yuri。":
                 jump menu_click
 
     label menu_click:
@@ -330,125 +330,126 @@ label ch21_end:
     show monika 1 at i11 onlayer front:
         zoom 1.00 + menu_clicked * menu_clicked * 0.06
         yalign 0.25
-    $ renpy.display_menu(items=[('Natsuki.', True), ('Yuri.', True)], interact=False, screen='choice')
+    $ renpy.display_menu(items=[('Natsuki。', True), ('Yuri。', True)], interact=False, screen='choice')
     m "..."
     show layer master
     show layer screens
     show monika 1 at i11 onlayer front
     window auto
-    $ renpy.display_menu(items=[('Natsuki.', True), ('Yuri.', True)], interact=False, screen='choice')
+    $ renpy.display_menu(items=[('Natsuki。', True), ('Yuri。', True)], interact=False, screen='choice')
     m "..."
-    $ renpy.display_menu(items=[('Natsuki.', True), ('Yuri.', True)], interact=False, screen='choice')
+    $ renpy.display_menu(items=[('Natsuki。', True), ('Yuri。', True)], interact=False, screen='choice')
     m "..."
     show monika 1m at i11 onlayer front
-    $ renpy.display_menu(items=[('Natsuki.', True), ('Yuri.', True)], interact=False, screen='choice')
-    m "Um..."
-    $ renpy.display_menu(items=[('Natsuki.', True), ('Yuri.', True)], interact=False, screen='choice')
-    m "Hey, [player]..."
+    $ renpy.display_menu(items=[('Natsuki。', True), ('Yuri。', True)], interact=False, screen='choice')
+    m "emm..."
+    $ renpy.display_menu(items=[('Natsuki。', True), ('Yuri。', True)], interact=False, screen='choice')
+    m "嘿，[player]..."
     show monika 1e at i11 onlayer front
-    $ renpy.display_menu(items=[('Natsuki.', True), ('Yuri.', True)], interact=False, screen='choice')
-    m "Why don't we\nstep outside for\na little bit?"
-    $ renpy.display_menu(items=[('Natsuki.', True), ('Yuri.', True)], interact=False, screen='choice')
-    m "Okay?"
+    $ renpy.display_menu(items=[('Natsuki。', True), ('Yuri。', True)], interact=False, screen='choice')
+    m "咱们要不要先\n出去一下下？"
+    $ renpy.display_menu(items=[('Natsuki。', True), ('Yuri。', True)], interact=False, screen='choice')
+    m "好伐？"
     scene bg corridor
     hide monika onlayer front
     show monika 1n at t11 onlayer master
     with wipeleft_scene
     $ quick_menu = True
-    m "Sorry about that..."
-    m "They really shouldn't have tried to get you involved."
-    m 1e "It's probably better for us to stay out of this..."
-    m "We'll go back inside once they're done yelling."
-    m 5 "Ahaha..."
-    m "Some president I am, right?"
-    m 1m "I can't even confront my own club members properly..."
-    m "I just wish I was able to be a little more assertive sometimes."
-    m "But I never have it in me to put my foot down against others..."
-    m 1e "You understand, right?"
-    m "Anyway..."
-    m 1a "If this makes you want to spend less time with the others, then that's fine."
-    m 1j "I'd be happy to spend time with you instead..."
+    m "肥肠抱歉..."
+    m "她们真的不应该把你也一并牵扯进来的。"
+    m 1e "咱还是别搅和吧..."
+    m "等她们不吵了我们再回去吧。"
+    m 5 "啊哈哈..."
+    m "真是个不称职的部长啊...w"
+    m 1m "我甚至都没办法正面处理部员的情绪..."
+    m "我有时候也希望自己变得更强硬一点。"
+    m "但是我实在不擅长反对别人..."
+    m 1e "你也懂吧？"
+    m "总之..."
+    m 1a "如果这能让你少花点时间在她们身上，那就太好了。"
+    m 1j "我很乐意多陪陪你..."
     show monika at thide zorder 1
     hide monika
-    "Suddenly, Natsuki runs out of the classroom."
+    "突然，Natsuki 跑出了教室。"
     show natsuki 12h at t11 zorder 2
     n "..."
     show natsuki 12f at lhide
+    show screen notify("Natsuki 哭了，都是你的错！哼唧（")
     $ pause(0.75)
     hide natsuki
-    "She quickly runs away."
+    "她很快跑走了。"
     show monika 1l at t11 zorder 2
-    m "Oh dear..."
-    m "...Well, it looks like they're done..."
+    m "天哪..."
+    m "...好吧，看来她们吵完了..."
     scene bg club_day2
     with wipeleft_scene
-    y "I didn't mean it..."
-    y "I didn't mean it..."
-    y "I didn't mean it..."
-    "Yuri is rocking back and forth in her desk with her palms on her forehead."
-    mc "Yuri...?"
+    y "我不是那个意思..."
+    y "我不是那个意思..."
+    y "我真的不是那个意思..."
+    "Yuri 用手捂着额头，不断地在她的座位前后摇摆着。"
+    mc "Yuri...？"
     show yuri 4d at t11 zorder 2
-    y "I didn't mean it!!"
-    mc "I-I believe you..."
-    "I have no idea what Yuri might have said to Natsuki."
-    "Or did."
-    y "[player]."
-    y "Please don't hate me."
-    y "Please!"
-    y "I'm not like this!"
-    y "There's something wrong with me today..."
+    y "我不是那个意思！！"
+    mc "我-我相信你..."
+    "我完全无法想象 Yuri 可能对 Natsuki 讲了些什么。"
+    "或者已经说了些什么。"
+    y "[player]..."
+    y "请不要因为这件事讨厌我。"
+    y "千万别啊！"
+    y "我从来不是这个样子！"
+    y "今天的我一定是哪里出问题了..."
     show monika 1d at f31 zorder 3
-    m "It's fine, Yuri."
-    m "We know you didn't mean it."
-    m 1j "Besides, I'm sure Natsuki will forget all about it by tomorrow."
-    m 1a "Completely."
+    m "没事的，Yuri。"
+    m "我们知道你不是那个意思。"
+    m 1j "况且，Natsuki 明天就会全忘了的。"
+    m 1a "彻彻底底、一干二净的那种。"
     show monika at t31 zorder 2
     show yuri at f32 zorder 3
     y 4b "..."
     show yuri at t32 zorder 3
     show monika at f31 zorder 2
-    m "Anyway, the meeting is over, so you can go home now if you want."
+    m "总之，今天的社团活动就到这里吧，你们想回家的话可以回去了。"
     show monika at t31 zorder 2
     show yuri at f32 zorder 3
     y 4a "..."
     show yuri at t32 zorder 2
-    "Yuri looks at me like she wants to say something."
-    "But she keeps glancing at Monika."
+    "Yuri 看着我，似乎想要说些什么。"
+    "但是她也不断瞟着 Monika..."
     show yuri at f32 zorder 3
-    y 2v "Y-You can go first, Monika..."
-    y "I'd like to stay a little bit longer."
+    y 2v "Monika...你-你可以先走的..."
+    y "我想稍微多待一会。"
     show yuri at t32 zorder 2
     show monika at f31 zorder 3
-    m 2k "I'm the President, so I should be the last one out."
-    m "I'll wait for you to be done."
+    m 2k "我是部长，所以我才应该是最后离开的那个。"
+    m "我会等你弄完的。"
     show monika 2a at t31 zorder 2
     show yuri at f32 zorder 3
     y 4b "..."
     y "..."
-    y "Well-- I'm Vice President, so..."
-    y "Please let me take that responsibility today."
+    y "呃--我是副部长，所以..."
+    y "今天就让我代行这个职责好了。"
     show yuri at t32 zorder 2
     show monika at f31 zorder 3
-    m 2i "It kind of sounds like you don't want me around for something, Yuri."
+    m 2i "Yuri，这听起来就像是你想做什么事，但是又不想让我在身边呐。"
     show monika at t31 zorder 2
     show yuri at f32 zorder 3
-    y 3p "I-It's not that!"
-    y 3o "It's not that..."
-    y 3n "I just..."
-    y 3q "I didn't get much of a chance to discuss my book with [player]..."
-    y "It would just be...embarrassing with you listening..."
+    y 3p "不-不是你想的那样！"
+    y 3o "不是那样..."
+    y 3n "我只是..."
+    y 3q "我只是都还没来得及和 [player] 讨论我的书..."
+    y "你要是在一边听的话...也许会有点尴尬..."
     show yuri at t32 zorder 2
     show monika at f31 zorder 3
-    m 1r "{i}*Sigh*{/i}"
-    m 1d "I guess I don't really have a choice, do I?"
+    m 1r "{i}*叹气*{/i}"
+    m 1d "这样的话，我也没得选了，不是吗？"
     show monika at t31 zorder 2
     show yuri at f32 zorder 3
-    y 1t "I-I'm sorry for causing trouble..."
+    y 1t "我-我很抱歉给你添麻烦了..."
     $ gtext = glitchtext(20)
-    y 1s "But I really appreciate you understan{nw}"
+    y 1s "但是我真的希望你可以理j{nw}"
     play music g1
     show monika 1 at i31 onlayer front
-    y glitch "But I really appreciate you understan{fast}[gtext] [gtext][gtext]{nw}"
+    y glitch "但是我真的希望你可以理j{fast} [gtext] [gtext][gtext]{nw}"
     $ _history_list.pop()
     hide monika onlayer front
     window hide(None)

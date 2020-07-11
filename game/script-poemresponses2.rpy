@@ -221,7 +221,7 @@ label ch22_m_end:
     m "Can you hear me?"
     m 3g "Tell me you can hear me."
     m "Anything."
-    $ renpy.call_screen("dialog", "Please help me.", ok_action=Return())
+    $ renpy.call_screen("dialog", "请一定要帮我啊。", ok_action=Return())
     m 3k "...That's my advice for today!"
     m "Thanks for listening~"
     return

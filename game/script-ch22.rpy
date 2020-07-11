@@ -292,13 +292,14 @@ label ch22_end:
     stop music fadeout 1.0
     scene black
     with wipeleft_scene
-    call screen confirm("你解锁了一首特殊诗歌。\n是否查看？\有概率获得成就哦！", Return(True), Return(False))
+    call screen confirm("你解锁了一首特殊诗歌。\n是否查看？\n有概率获得成就哦！", Return(True), Return(False))
     if _return:
         call expression "poem_special_" + str(persistent.special_poems[1]) from _call_expression_12
         scene black with Dissolve(1.0)
     else:
         pass
     if not faint_effect and renpy.random.randint(0,2) == 0:
+        show screen notify("达成成就：死 者 视 角 打 游 戏")
         $ faint_effect = True
     else:
         $ faint_effect = None
@@ -319,7 +320,8 @@ label ch22_end:
     else:
         play music t3
     if renpy.random.randint(0,2) == 0:
-        
+        show screen notify("达成成就：你鼠标里的 DNA（（（")
+        $ mouse_modify_random = True
         $ config.mouse = {"default": [
                                     ("gui/mouse/s_head2.png", 0, 0),
                                     ("gui/mouse/s_head2.png", 0, 0),
@@ -337,11 +339,17 @@ label ch22_end:
                                     ("gui/mouse/s_head2.png", 0, 0),
                                     ("gui/mouse/s_head.png", 0, 0),
                                     ]}
+    else:
+        $ mouse_modify_random = False
 
     # 死 不 瞑 目 纱 师 弟（1/3）
 
     m "Okay, everyone!"
     m "We're all done reading each other's poems, right?"
+    if mouse_modify_random:
+        show screen notify("光标已重置。")
+        $ mouse_modify_random = False
+
     $ config.mouse = None
     m "We have something we need to go over today, so if everyone could come sit at the front of the room..."
     show natsuki 3c at f31 zorder 3

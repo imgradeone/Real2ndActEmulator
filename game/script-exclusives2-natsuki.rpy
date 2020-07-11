@@ -84,15 +84,15 @@ label natsuki_exclusive2_1:
     $ _history_list[-1].what = "Monika 讨厌鬼..." # 放心，历史记录被我们改了
     n "从来都不把我的东西放回去！"
     n "如果有人老是把你的东西乱放，那整理起来又有什么意义啊？wdnmd！"
-    "Natsuki slides a bunch of stacked books and boxes across the shelf."
-    mc "Manga..."
-    n 2c "You read manga, right?"
-    mc "Ah--"
-    mc "...Sometimes..."
-    "Manga is one of those things where you can't admit you're really into it until you figure out where the other person stands."
-    mc "...How did you know, anyway?"
-    n 2k "I heard you bring it up at some point."
-    n "Besides, it's kind of written on your face."
+    "Natsuki 把书架上的漫画重新插进套装盒中。"
+    mc "漫画..."
+    n 2c "我记得你也看漫画，对吧？"
+    mc "啊--"
+    mc "...偶尔吧..."
+    "漫画这种东西，在不知道对方的态度前，你不能直接承认自己非常喜欢它。"
+    mc "...你怎么知道？"
+    n 2k "我之前听你提起过。"
+    n "更何况，你脸上就像是这么写着的。"
     "What's that supposed to mean...?"
     mc "I-I see..."
     "There's a lone volume of manga amidst a stack of various books on the side of one of the shelves."
@@ -104,32 +104,32 @@ label natsuki_exclusive2_1:
     n "Seeing a box set with one book missing is probably the most irritating sight in the world."
     mc "I know that feel..."
     "I get a closer look at the box set she's admiring."
-    mc "Parfait Girls...?"
-    "It's a series I've never heard of in my life."
-    "That probably means it's either way out of my demographic, or it's simply terrible."
-    n 5g "If you're gonna judge, you can go do it through the glass on that door."
-    "She points to the classroom door."
-    mc "H-Hey, I wasn't judging anything...!"
-    mc "I didn't even say anything."
-    n 5c "It was the tone of your voice."
+    mc "Parfait Girls...？"
+    "我从没听说过这个系列。"
+    "要么它不是我喜欢的类型，要么就是个屑作。"
+    n 5g "如果你还要品头论足的话，你可以透过门上的玻璃朝外面说。"
+    "她指着教室的门。"
+    mc "喂-喂，我可没有要评头论足...！"
+    mc "我还什么都没说呢。"
+    n 5c "你的语调已经表现出来了。"
     $ style.say_dialogue = style.normal
-    n "But I'll tell you one thing, [player]."
+    n "但我要先告诉你一件事，[player]。"
     n 4l "这句话也适用于整个文学部：{nw}"
-    $ _history_list[-1].what = "这句话也适用于整个文学部：不要光凭封面就评判一本书！" # 我们必须假装 bug 没有发生过 
+    $ _history_list[-1].what = "这句话也适用于整个文学部：不要光凭封面评判一本书！" # 我们必须假装 bug 没有发生过 
     $ style.say_dialogue = style.edited
-    n "不要光凭封封封封封封封封封封封封封封封封 就就就就就就 价价价{space=20}书{space=40}书{space=120}书{space=160}书{space=200}书"
+    n "不要光凭封fffffffffffmmmmmmmmm 就jjjjjjjjj 判ppp{space=20}书{space=40}s{space=120}s{space=160}s{space=200}s"
     $ style.say_dialogue = style.normal
     $ _history_list.pop()
-    n "In fact--"
-    "Natsuki pulls out the first volume of Parfait Girls from the box."
+    n "实际上--"
+    "夏树从盒子里抽出 Parfait Girls（帕菲女孩）的第一册。"
     n "I'm gonna show you exactly why!"
     "She shoves the book right into my hands."
     mc "Ah..."
     "I stare at the cover."
     "It features four girls in colorful attire striking animated feminine poses."
-    "It's...exceedingly \"moe\"."
+    "这个...\"萌\"得出血了。"
     n 4b "Don't just stand there!"
-    mc "Uwa--"
+    mc "呜啊--"
     show natsuki at thide zorder 1
     hide natsuki
     "Natsuki grabs my arm and pulls me out of the closet."
@@ -262,6 +262,8 @@ label natsuki_exclusive2_1:
     show n_cg1b
     hide n_cg1_base
     # 噔 噔 咚
+
+    show screen notify("达成成就：低 级 马 赛 克")
     $ currentpos = get_pos()
     $ audio.t6g = "<from " + str(currentpos) + " loop 10.893>bgm/6g.ogg"
     play music t6g
@@ -287,6 +289,7 @@ label natsuki_exclusive2_1:
     m 1a "Here..."
     show monika at t21 zorder 2
     "Monika reaches into her bag and pulls out some kind of protein bar."
+    show screen notify("饿了就吃士力架（（（")
     "She throws it in Natsuki's direction."
     "Natsuki's eyes suddenly light up again."
     "She snatches the bar from the floor and immediately tears off the wrapper."

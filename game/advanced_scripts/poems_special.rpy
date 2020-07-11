@@ -28,7 +28,7 @@ image poem_end = ConditionSwitch(
 
 #Each of these define a label for showing a poem
 label poem_special_1:
-    show screen notify("达成成就：HEPPY THXXXXOUGHTS")
+    show screen notify("达成成就：叮！您点的晴天娃娃！")
     $ quick_menu = False
     play sound page_turn
     show poem_special1 with Dissolve(1.0)

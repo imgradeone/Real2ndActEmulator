@@ -304,12 +304,12 @@ label ch23_end:
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
     n 1o "说得好像{i}你{/i} TND 知道一样！" # 爆粗口的 Natsuki 是屑（
-    n 1x "All you care about now is dragging [player] around with you and your stupid books."
+    n 1x "你只关心如何把 [player] 拴在你和那本白癡才会看的书旁边吧。"
     n 1f "You {i}and{/i} Monika!"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
-    m 2g "Hey!"
-    m "I didn't even do anything!"
+    m 2g "嘿！"
+    m "我可什么都没做啊！"
     show monika at t32 zorder 2
     show natsuki at f31 zorder 3
     n 3e "Okay, then why not let [player] decide who to help instead of abusing your power?"
@@ -340,6 +340,7 @@ label ch23_end:
     m 1r "Jesus christ..."
     m 1i "This is never going to end. Just make the choice, okay?"
     show monika at t32 zorder 2
+    show screen notify("我们会强制把你的鼠标挪动 Monika 上。你大可以试试强行选另外两个。")
     python:
         madechoice = renpy.display_menu([("Natsuki.", "natsuki"), ("Yuri.", "yuri"), ("Monika.", "monika")], screen="rigged_choice")
     # 我们会强制把你的鼠标挪动 Monika 上。你大可以试试强行选另外两个。
@@ -403,7 +404,7 @@ label ch23_end:
     n "This isn't fair at all!"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
-    m 2i "It is fair, Natsuki."
+    m 2i "Natsuki，这非常公平。"
     m "It's what he chose."
     show monika at t32 zorder 2
     show yuri 3r at f33 zorder 3
@@ -420,13 +421,13 @@ label ch23_end:
     show yuri at f33 zorder 3
     y 2y4 "我又不讲道理了？"
     y 2y3 "啊哈哈哈哈哈！"
-    y "Monika, I can't believe how delusional and self-important you are!"
+    y "Monika，我都不敢相信你是这么地妄自尊大，又自私自利！"
     y "每次你没能参与进来就把 [player] 从我身边拖走，次次如此。"
     y 1y1 "你是嫉妒吧？"
-    y "Crazy?"
-    y 1y3 "Or maybe you just hate yourself so much that you take it out on others?"
-    y 1y4 "我给你个建议。考虑一下自裁怎么样？"
-    y "对你的精神健康会有很大帮助。"
+    y "还是疯了？"
+    y 1y3 "还是你对自己的憎恨溢了一地，就开始随便往别人身上泼呢？"
+    y 1y4 "我给你个建议。考虑一下自裁，怎么样？"
+    y "对你的精神健康会有 hin 大的帮助。"
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
     n 5u "Yuri, you're scaring me a little..."
@@ -453,49 +454,51 @@ label ch23_end:
 
     play music t10y
     show yuri 2m at t11 zorder 2
-    y "Finally."
-    y 2y1 "Finally!"
-    y 2s "This is really all I wanted."
-    y 1y6 "[player], there's no need to spend the weekend with Monika."
-    y "Don't listen to her."
-    y 1y5 "Just come to my house instead."
-    y 3y5 "The whole day, with just the two of us..."
-    y "Doesn't that sound wonderful?"
-    y 3y1 "Ahahaha!"
-    y 3y4 "Wow... There's really something wrong with me, isn't there?"
-    y "But you know what?"
-    y 1y3 "I don't care anymore."
-    y "I've never felt this good my whole life."
-    y 1y4 "Just being with you is a far greater pleasure than anything I could imagine."
-    y "I'm addicted to you."
-    y 3y4 "It feels like I'm going to die if I'm not breathing the same air as you."
-    y 4a "Doesn't it feel nice to have someone care about you so much?"
-    y "To have someone who wants to revolve their entire life around you?"
-    y 2y6 "But if it feels so good..."
-    y 2y4 "Then why does it feel more and more like something horrible is going to happen?"
-    y 2y6 "Maybe that's why I tried stopping myself at first..."
-    y "But the feeling is too strong now."
-    y 3y1 "I don't care anymore, [player]!"
-    y "I have to tell you!"
-    y 3y4 "I'm...I'm madly in love with you!"
-    y "It feels like every inch of my body...every drop of blood in me...is screaming your name."
-    y 3y3 "I don't care what the consequences are anymore!"
-    y "I don't care if Monika is listening!"
-    y 3w "Please, [player], just know how much I love you."
-    y 3m "I love you so much that I even touch myself with the pen I stole from you."
-    y 3y4 "I just want to pull your skin open and crawl inside of you."
-    y 3y6 "I want you all to myself."
-    y "And I will be only yours."
-    y "Doesn't that sound perfect?"
-    y 3s "Tell me, [player]."
-    y "Tell me you want to be my lover."
-    y "Do you accept my confession?"
+    y "终于啊。"
+    y 2y1 "久等了！！！"
+    y 2s "这就是我真心想要的！"
+    y 1y6 "[player]，没必要和 Monika 度过周末了。"
+    y "别听她的。"
+    y 1y5 "就来我家吧。"
+    y 3y5 "一整天就只有我们两个..."
+    y "是不是很完美啊？"
+    y 3y1 "啊哈哈哈哈！"
+    y 3y4 "哇... 我是不是有毛病...？"
+    y "但你知道吗？"
+    y 1y3 "老子才不在乎呢！"
+    y "我这辈子都没有感到这么爽过。"
+    y 1y4 "和你在一起就已经是超乎我想象的极致快乐了。"
+    y "你知道吗？"
+    y "我对你“上瘾”了。"
+    y 3y4 "我感觉如果不和你在一起，我就要死了。"
+    y 4a "如果有那么关心你的人，那感觉是不是很爽？"
+    y "还是那种一辈子都想围着你转的那种。"
+    y 2y6 "不过如果这种感觉很好..."
+    y 2y4 "那么为什么可怕的事情还是要发生？"
+    y 2y6 "也许这就是我最初尝试阻止自己的原因..."
+    y "但是现在这个感觉特别强烈了。"
+    y 3y1 "[player]，即便这样，我也不在乎了！"
+    y 3y1 "[player]！"
+    y "我一定要告诉你！"
+    y 3y4 "我...我彻彻底底地爱上你了！"
+    y "我感觉我身体的每一块地方...还有每一滴血...都在喊着你的名字。"
+    y 3y3 "我也不在乎后果了！"
+    y "我也不在乎 Monika 有没有在那里偷听了！"
+    y 3w "[player]，请一定要明白我有多爱你啊。"
+    y 3m "我特别爱你，甚至一度偷你的笔去自///慰。"
+    y 3y4 "我只想拉开你的表//皮，在你的身体里游走。"
+    y 3y6 "我想让你永远属于我。"
+    y "我也将永远属于你。"
+    y "听上去是不是很棒呢？"
+    y 3s "所以，[player]，告诉我。"
+    y "告诉我你想成为我的爱人。"
+    y "你接受我的感情吗？"
 
     menu:
-        "Yes.":
-            jump yuri_kill
-        "No.":
-            jump yuri_kill
+        "是的。":
+            jump yuriinkill
+        "不！":
+            jump yuriinkill
 
 label yuri_kill:
     $ quick_menu = False
