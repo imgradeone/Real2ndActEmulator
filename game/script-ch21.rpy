@@ -133,7 +133,7 @@ label ch21_end:
     n "用词上还蛮不错的。"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    n "用词上还蛮不错的。"
+    y 2i "啊--谢谢..."
     y "你的诗...挺可爱的..."
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
@@ -202,12 +202,12 @@ label ch21_end:
     y 3h "我...！"
     y "才没有..."
     y "如果我真的是懂王..."
-    y 1r "...我就会变成做作的人！"
+    y 1r "...那我应该很做作啊！"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     n 1o "唔唔唔...！"
-    n "哼，你知道吗？！"
-    n "某些人啊，自从 [player] 一出现，欧派就神奇地多了一个零件！！"
+    n "哼唧，你知道吗？！"
+    n "某些人啊，自从 [player] 一出现，欧派就多了一个奇怪的零件！！"
     show yuri 3p at h21
     show natsuki at t22 zorder 2
     y "N-Natsuki！！"
@@ -218,7 +218,7 @@ label ch21_end:
     show monika at h41
     show yuri 3p at f32 zorder 3
     show natsuki 1e at f33 zorder 3
-    ny "这跟你没关系！"
+    ny "关你屁事！"
     show monika at lhide
     hide monika
     show yuri 2h at f21 zorder 2
@@ -236,13 +236,13 @@ label ch21_end:
     n 4o "{i}又是我了？？？{/i}看看现在是谁在逼逼赖赖，你这个欲求不满的死碧池！" # 祖安 Natsuki
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y "死碧池...?"
+    y "死碧池...？欲求不满...？"
     y 2r "很抱歉，相对于你的心理年龄而言，想要理解我的生活方式，可能对你这种人来说太难了！"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     n 4f "看到了吧？？"
     n "歪打正着！"
-    n 4f "看到了吧？？"
+    n 4e "大部分人初中毕业后就学会克制自己了，可不像你。"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
     y "想要教训我的话，你先收起你那四处招惹人的弱智态度吧！"
@@ -281,7 +281,7 @@ label ch21_end:
     "{cps=*2}wdnmd，我当初怎么就被牵扯进来的呢？！{/cps}{nw}"
     "{cps=*2}我对写作一窍不通啊...{/cps}{nw}"
     "{cps=*2}不过不管我站在谁的一边，她对我的评价可能会更高吧！{/cps}"
-    "{cps=*2}所以，我肯定选择...！{/cps}{nw}"
+    "{cps=*2}那么，肯定是选择...{/cps}{nw}"
     $ style.say_dialogue = style.normal
     $ menu_clicked = 0
     window hide(None)

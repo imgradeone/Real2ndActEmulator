@@ -14,7 +14,10 @@ init python:
 
     splash_messages = [
         "请多多支持 Dan 鸽www",
-        "Monika 在盯着你的粪代码。（笑）"
+        "Just Monika.",
+        "在这里，成就 = 被吓死（",
+        "您有 1/6 的几率在部室的海报上看到你的 DNA。\n如果你看到了这行警告，请加油触发（",
+        "Dan 鸽也被自己的游戏吓到过 XD"
     ]
 
 
@@ -280,10 +283,11 @@ label splashscreen:
         "本 Mod 还在开发中，因此可能会遇到汉化不完全和其他 bug。"
         "本 Mod 理应在通关原游戏后再进行游玩，因此本 Mod 包含大量剧透。"
         "要游玩本 Mod，需要原版 Doki Doki Literature Club 的文件。您可以在 {a=https://ddlc.moe}DDLC.moe{/a} 或者 Steam 免费获取。"
-        "中文剧本内容基于 Steam 社区知名汉化版 DDLC，在此致谢。"
+        "中文剧本内容基于 Steam 社区知名汉化版 DDLC 进行翻译并加以修改，在此致谢。"
+        "您可以访问 {a=https://steamcommunity.com/sharedfiles/filedetails/?id=1176221672}这里{/a} 以下载汉化版 DDLC，支持汉化大佬。"
         "请注意！本 Mod 不适合儿童或心理承受能力较弱的人。"
         "由于本 Mod 包含原作的恐怖元素（甚至发挥到了极致），焦虑症、抑郁症患者，以及儿童，均不适合游玩此 Mod。"
-        "对于原作的恐怖内容，请访问 {a=https://ddlc.moe/warning.html}这里{/a}。（包含剧透）"
+        "对于原作的恐怖内容，请访问 {a=https://ddlc.moe/warning.html}这里{/a}。（英文，包含剧透）"
         "如果继续游玩 [config.name] 将视为你已经通关原游戏，并接受任何剧透内容。"
         "与此同时，我们将认为您是 13 岁以上的玩家，心理健康，且同意接受恐怖内容。"
 

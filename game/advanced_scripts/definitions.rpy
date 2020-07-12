@@ -1338,6 +1338,15 @@ define _dismiss_pause = config.developer
 
 default persistent.playername = ""
 default player = persistent.playername
+
+# 玩家等级，表示能力者级别
+default persistent.player_level = 0
+
+# 安全模式
+default persistent.safe_mode = 0
+
+default persistent.cleared = False
+
 default persistent.playthrough = 0
 default persistent.yuri_kill = 0
 default persistent.seen_eyes = None

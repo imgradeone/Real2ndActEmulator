@@ -235,6 +235,7 @@ label ch23_m_end:
         $ mouse_visible = False
         scene bsod
         pause 3.0
+        show screen notify("是的，你电脑蓝屏了（x）")
     else:
         show black zorder 1
         pause 2.0
@@ -746,6 +747,6 @@ label m2_yuri_2:
 
 label m2_yuri_3:
     stop music
-    m 1i "Don't say I didn't warn you, [player]."
+    m 1i "[player]，不要说我们没有警告过你。"
     $ skip_poem = True
     return

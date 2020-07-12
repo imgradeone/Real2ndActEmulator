@@ -93,14 +93,14 @@ label natsuki_exclusive2_1:
     mc "...你怎么知道？"
     n 2k "我之前听你提起过。"
     n "更何况，你脸上就像是这么写着的。"
-    "What's that supposed to mean...?"
-    mc "I-I see..."
-    "There's a lone volume of manga amidst a stack of various books on the side of one of the shelves."
-    "Curious, I pull it out of the stack."
-    n 1b "{i}There{/i} it is!"
-    "Natsuki snatches it out of my hand."
-    "She then turns to a box of manga and slips the volume right into the middle of the rest."
-    n 4d "Aah, much better!"
+    "这是想表达什么意思...？"
+    mc "这-这样啊..."
+    "在其中一个书架的一边，有一本漫画被放在了一堆各种各样的书之中。"
+    "我有点好奇，把它从把书堆里抽了出来。"
+    n 1b "原来它在{i}这里{/i}！"
+    "Natsuki 从我手里抢过了那本漫画。"
+    "她转过身，把那本漫画按照册号重新插回漫画盒中。"
+    n 4d "啊哈，舒服多了！"
     n "Seeing a box set with one book missing is probably the most irritating sight in the world."
     mc "I know that feel..."
     "I get a closer look at the box set she's admiring."
@@ -121,20 +121,20 @@ label natsuki_exclusive2_1:
     $ style.say_dialogue = style.normal
     $ _history_list.pop()
     n "实际上--"
-    "夏树从盒子里抽出 Parfait Girls（帕菲女孩）的第一册。"
-    n "I'm gonna show you exactly why!"
-    "She shoves the book right into my hands."
+    "Natsuki 从盒子里抽出 Parfait Girls（帕菲女孩）的第一册。"
+    n "我来告诉你为什么！"
+    "她把漫画塞进我的手里。"
     mc "Ah..."
-    "I stare at the cover."
-    "It features four girls in colorful attire striking animated feminine poses."
+    "我看着封面。"
+    "上面画着四个盛装美少女摆出漫画女主角的姿势。"
     "这个...\"萌\"得出血了。"
-    n 4b "Don't just stand there!"
+    n 4b "别傻站着啊！"
     mc "呜啊--"
     show natsuki at thide zorder 1
     hide natsuki
-    "Natsuki grabs my arm and pulls me out of the closet."
-    "She then takes a seat against the wall, beneath the windowsills."
-    "She pats on the ground next to her, signaling me to sit there."
+    "Natsuki 抓着我的手臂把我拖出了储藏间。"
+    "然后她靠墙坐下了，就坐在窗沿底下。"
+    "她拍了拍身边的地面，示意我坐在那里。"
     show bg club_day
     show natsuki 2a at t11 zorder 2
     with wipeleft
@@ -187,18 +187,18 @@ label natsuki_exclusive2_1:
     n "That's not..."
     n "Well, I wouldn't really know."
     mc "...What do you mean?"
-    mc "Don't you share your manga with your friends?"
+    mc "你不和自己的朋友一起看漫画吗？"
     hide n_cg1_exp2
     show n_cg1_exp3 at cgfade
     n "Could you not rub it in?"
     n "Jeez..."
     mc "Ah... Sorry..."
     n "Hmph."
-    n "Like I could ever get my friends to read this..."
-    n "They just think manga is for kids."
-    n "I can't even bring it up without them being all like..."
-    n "'Eh? You still haven't grown out of that yet?'"
-    n "Makes me want to punch them in the face..."
+    n "说得好像我有可以一起看漫画的朋友一样..."
+    n "他们都觉得漫画是给小屁孩看的。"
+    n "每当我提起漫画，他们就像是在说..."
+    n "'诶？你还没长大吗？'"
+    n "真是让我想要揍爆她们的脸..."
     mc "Urgh, I know those kinds of people..."
     mc "Honestly, it takes a lot of effort to find friends who don't judge, much less friends who are also into it..."
     mc "I'm already kind of a loser, so I guess I gravitated toward the other losers over time."
@@ -206,18 +206,19 @@ label natsuki_exclusive2_1:
     hide n_cg1_exp3
     n "Hm."
     n "Yeah, that's pretty accurate."
-    "{i}...Wait, which part??{/i}"
+    "{i}...等下，哪个部分？？{/i}"
     $ style.say_dialogue = style.normal
-    n "I mean, I feel like I can't even keep it in my own room..."
+    n "我是说，我甚至都没法把漫画放在自己房间里..."
 
     $ style.say_dialogue = style.edited
-    n "My dad would beat the shit out of me if he found this."
+    n "我爸看到这东西，绝逼把我连翔都 TM 打出来。"
+    # n "My dad would beat the shit out of me if he found this."
     $ style.say_dialogue = style.normal
-    $ _history_list[-1].what = "I don't even know what my dad would do if he found this."
-    n "At least it's safe here in the clubroom."
+    $ _history_list[-1].what = "不晓得我爸看到后会是什么感受。"
+    n "至少放在部室里挺安全的。"
     show n_cg1_exp3 at cgfade
-    n "'Cept Monika's kind of a jerk about it..."
-    n "Ugh! I just can't win, can I?"
+    n "除了 Monika 这个 baka..."
+    n "可恶！我难道就赢不了吗？"
     mc "Well, it paid off in the end, didn't it?"
     mc "I mean, here I am, reading it."
     n "Well, it's not like that solves any of my problems."
@@ -227,35 +228,35 @@ label natsuki_exclusive2_1:
     show n_cg1_exp2 at cgfade
     n "--"
     n "..."
-    n "...So?"
+    n "...So？"
     mc "Ahaha."
     hide n_cg1_exp2
     show n_cg1_exp3 at cgfade
-    n "Jeez, that's enough!"
-    n "Are you gonna keep reading, or what?"
+    n "嘶~你够了！"
+    n "你到底还读不读了？"
     mc "Yeah, yeah..."
-    "I flip the page."
+    "我又翻了一页。"
     show black with dissolve_cg
     "..."
     "..."
     "....."
     "......."
     "........."
-    "Time passes."
+    "时间过去了。"
     hide n_cg1_exp3
     show n_cg1_exp4 at cgfade behind black
-    "Natsuki is strangely quiet now."
-    "I glance over at her."
+    "Natsuki 出奇地安静。"
+    "我悄悄瞥了她一眼。"
     hide black with dissolve_cg
-    "It looks like she's started to fall asleep."
-    mc "Hey, Natsuki..."
+    "她似乎快要睡着了。"
+    mc "嘿，Natsuki..."
     hide n_cg1_exp4
     show n_cg1_exp5 at cgfade
-    n "Y-Yeah...?"
-    "Suddenly, Natsuki collapses straight into me."
+    n "嗯-哦...？"
+    "突然之间，夏树倒向了我。"
     play sound fall
     $ style.say_dialogue = style.normal
-    mc "H-Hey--"
+    mc "诶-诶--"
     show n_cg1_exp5
     hide n_cg1_exp5
 
@@ -279,16 +280,16 @@ label natsuki_exclusive2_1:
     window auto
     scene bg club_day
     show monika 1r at t11 zorder 2
-    m "Oh jeez..."
-    m 1d "Natsuki, are you okay?"
+    m "哦，天啊..."
+    m 1d "Natsuki，R U OK？"
     show monika at t21 zorder 2
     show natsuki 12b at f22 zorder 3
     n "..."
     show natsuki at t22 zorder 2
     show monika at f21 zorder 3
-    m 1a "Here..."
+    m 1a "来，把这个吃了..."
     show monika at t21 zorder 2
-    "Monika reaches into her bag and pulls out some kind of protein bar."
+    "Monika 从她的包里拿出了类似能量棒一样的东西。"
     show screen notify("饿了就吃士力架（（（")
     "She throws it in Natsuki's direction."
     "Natsuki's eyes suddenly light up again."

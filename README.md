@@ -2,6 +2,10 @@
 
 DDLC 中文 Mod 模板 新 Demo
 
+## 下载 Mod
+
+见 Releases
+
 ## 中文字体
 
 中文版 DDLC Mod 模板使用了一些免费商用的中文字体，在此致谢。**开始 Mod 开发前，请务必下载这些字体，否则将无法启动工程。安装方式见 [中文字体包安装](#中文字体包安装) 小节。**
@@ -62,6 +66,12 @@ Ren'Py 由一系列开源组件构成，它们的开源协议可以在 https://w
 本模板基于 Monika After Story 团队的 [DDLCModTemplate](https://github.com/Monika-After-Story/DDLCModTemplate)。
 
 本模板属于粉丝作品，遵循 Team Salvato IP Guidelines。
+
+## TODO
+
+- [ ] 成就后端
+- [ ] 安全模式 / 究极安全模式
+- [ ] 能力者称号
 
 ## 加入社区
 
