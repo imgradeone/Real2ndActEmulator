@@ -389,7 +389,7 @@ label ch21_end:
     "Yuri 用手捂着额头，不断地在她的座位前后摇摆着。"
     mc "Yuri...？"
     show yuri 4d at t11 zorder 2
-    y "我不是那个意思！！"
+    y "我真的不是那个意思啊！！"
     mc "我-我相信你..."
     "我完全无法想象 Yuri 可能对 Natsuki 讲了些什么。"
     "或者已经说了些什么。"

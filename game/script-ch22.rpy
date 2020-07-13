@@ -114,7 +114,7 @@ label ch22_main:
     $ style.say_dialogue = style.edited
     n "Whatever's on your mind, I'm sure it was nothing."
     n "I don't even remember anything bad happening."
-    n "You're the kind of person who worries too much about the little things, aren't you?"
+    n "你就是那种总是在意鸡毛蒜皮的事的那种人，对吧？"
     $ style.say_dialogue = style.normal
     show natsuki at t33 zorder 2
     show yuri at f32 zorder 3
