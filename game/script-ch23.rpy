@@ -496,9 +496,9 @@ label ch23_end:
 
     menu:
         "是的。":
-            jump yuriinkill
+            jump yuri_kill
         "不！":
-            jump yuriinkill
+            jump yuri_kill
 
 label yuri_kill:
     $ quick_menu = False
@@ -525,41 +525,45 @@ label yuri_kill_1:
     window hide(None)
     window auto
     $ style.say_dialogue = style.normal
+    if persistent.alt_safe_mode:
+        call screen dialog("为响应“清朗”未成年人暑期网络环境专项整治，\nYuri 的自杀动画已跳过。",Return())
+        jump yuri_kill_3
+    else:
+        play sound "sfx/yuri-kill.ogg" # 去世预警 + 变调版 Play With Me
+        pause 1.43
+        show yuri stab_1
+        pause 0.75
+        show yuri stab_2
+        show blood:
+            pos (610,485)
+        pause 1.25
+        show yuri stab_3
+        pause 0.75
+        show yuri stab_2
+        show blood:
+            pos (610,485)
+        show yuri stab_4 with ImageDissolve("images/yuri/stab/4_wipe.png", 0.25)
+        pause 1.25
+        show yuri stab_5
+        pause 0.70
+        show yuri stab_6:
+            2.55
+            easeout_cubic 0.5 yoffset 300
+        show blood as blood2:
+            pos (635,335)
+        pause 2.55
+        hide blood
+        hide blood2
+        pause 0.25
+        play sound fall
+        pause 0.25
+        scene black
+        pause 2.0
 
-    play sound "sfx/yuri-kill.ogg" # 去世预警 + 变调版 Play With Me
-    pause 1.43
-    show yuri stab_1
-    pause 0.75
-    show yuri stab_2
-    show blood:
-        pos (610,485)
-    pause 1.25
-    show yuri stab_3
-    pause 0.75
-    show yuri stab_2
-    show blood:
-        pos (610,485)
-    show yuri stab_4 with ImageDissolve("images/yuri/stab/4_wipe.png", 0.25)
-    pause 1.25
-    show yuri stab_5
-    pause 0.70
-    show yuri stab_6:
-        2.55
-        easeout_cubic 0.5 yoffset 300
-    show blood as blood2:
-        pos (635,335)
-    pause 2.55
-    hide blood
-    hide blood2
-    pause 0.25
-    play sound fall
-    pause 0.25
-    scene black
-    pause 2.0
-
-    scene black
-    show y_kill
-    with dissolve_cg
+        scene black
+        show y_kill
+        with dissolve_cg
+        jump yuri_kill_2
 label yuri_kill_2:
     $ quick_menu = True
     python:

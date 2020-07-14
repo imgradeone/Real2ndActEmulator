@@ -1344,7 +1344,7 @@ default persistent.player_level = 0
 
 # 安全模式
 default persistent.safe_mode = 0
-
+default persistent.alt_safe_mode = True
 default persistent.cleared = False
 
 default persistent.playthrough = 0
