@@ -344,7 +344,10 @@ label yuri_exclusive2_2_ch22:
     "I reach the corner and peer around it."
     mc "Yuri...？"
     $ y_name = "Yuri"
-    show yuri cuts at t11 zorder 2
+    if persistent.alt_safe_mode:
+        show yuri 2n at t11 zorder 2
+    else:
+        show yuri cuts at t11 zorder 2
     y "噫啊--！"
 
     $ currentpos = 45.264 - (get_pos() / 2.0)

@@ -139,7 +139,7 @@ label ch20_main2:
     m "我回来啦～！"
     m "而且我还带来了一位客人！"
     show yuri 2t at t33 zorder 2
-    if not config.skipping:
+    if not config.skipping or not persistent.alt_safe_mode:
         show screen invert(0.15, 0.3)
         # 这么好康你还跳过？？？？？？？
     y "诶？"

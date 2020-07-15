@@ -190,10 +190,10 @@ label poem(transition=True):
         if persistent.playthrough == 0: #Show Sayori in Act 1
             show s_sticker at sticker_left
         show n_sticker at sticker_mid
-        if persistent.playthrough == 2 and chapter == 2:
-            show y_sticker_cut at sticker_right
-        else:
-            show y_sticker at sticker_right
+        # if persistent.playthrough == 2 and chapter == 2:
+        #     show y_sticker_cut at sticker_right
+        # else:
+        show y_sticker at sticker_right
         if persistent.playthrough == 2 and chapter == 2:
             show m_sticker at sticker_m_glitch
     if transition:
@@ -290,10 +290,10 @@ label poem(transition=True):
                     else:
                         if persistent.playthrough == 2 and chapter == 2 and random.randint(0,10) == 0: renpy.show("m_sticker hop") #1/10 chance for Monika to hop from off screen
                         elif t.nPoint > t.yPoint: renpy.show("n_sticker hop")
-                        elif persistent.playthrough == 2 and not persistent.seen_sticker and random.randint(0,100) == 0:
+                        elif persistent.playthrough == 2 and not persistent.seen_sticker and random.randint(0,100) == 0 and not persistent.alt_safe_mode:
                             renpy.show("y_sticker hopg") #1/100 chance for creepy yuri stick in Act 2
                             persistent.seen_sticker = True
-                        elif persistent.playthrough == 2 and chapter == 2: renpy.show("y_sticker_cut hop")
+                        #elif persistent.playthrough == 2 and chapter == 2: renpy.show("y_sticker_cut hop")
                         else: renpy.show("y_sticker hop")
             else:
                 r = random.randint(0, 10)
