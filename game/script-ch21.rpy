@@ -151,7 +151,7 @@ label ch21_end:
     show natsuki at f22 zorder 3
     n "诶？"
     n 4w "你意思是，这首诗对于你来说，就连找点好听的话来形容都那么困难吗？"
-    n "那可谢谢你了，但是实际上一点都不好听！"
+    n "我 TM 谢谢你，这实际上一点都不好听！"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
     y 1i "唔..."
@@ -192,7 +192,7 @@ label ch21_end:
     y 1o "唔..."
     y "你...你就是..."
     "Yuri 也拍案而起。"
-    y 2r "也许你是嫉妒 [player] 更赞同我的建议，而不是你的！"
+    y 2r "你就是嫉妒 [player] 更赞同我的建议，而不是你的！"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     n 1e "哈！你又知道他没有更重视{i}我{/i}的建议了？"
@@ -245,7 +245,7 @@ label ch21_end:
     n 4e "大部分人初中毕业后就学会克制自己了，可不像你。"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y "想要教训我的话，你先收起你那四处招惹人的弱智态度吧！"
+    y "想要教训我的话，你先收起你那四处招惹人的司马态度吧！"
     y "你以为你可以通过自己可爱的穿着和行为，来掩盖你那糟糕的性格吗？"
     y 1k "到最后你唯一看起来可爱的地方就只剩下你可怜地做这种无用功了。"
     show yuri at t21 zorder 2
