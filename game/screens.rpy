@@ -607,9 +607,8 @@ style main_menu_title:
 ## transcluded (placed) inside it.
 
 screen game_menu_m():
-    #$ persistent.menu_bg_m = True
+    $ persistent.menu_bg_m = True
     add "gui/menu_bg_m.png" # 血 溅 文 学 部（
-    $ ddmm_earn_achievement("BLOOD_MONIKA")
     timer 0.3 action Show(screen="dialog", message="恭喜你解锁成就：血 溅 毛 二 力。\n我们暂时没有显示成就列表的功能。\n没想到吧，这 2% 的几率被你撞上了 XDD\n该彩蛋不会再次显示。", ok_action=Hide("dialog"))
     timer 0.3 action Hide("game_menu_m")
 
@@ -669,7 +668,7 @@ screen game_menu(title, scroll=None):
 
     use navigation
 
-    if not main_menu and persistent.playthrough == 2 and not persistent.menu_bg_m and renpy.random.randint(0, 49) == 0:
+    if not main_menu and persistent.playthrough == 2 and not persistent.menu_bg_m and renpy.random.randint(0, 49) == 0 and not persistent.alt_safe_mode:
         on "show" action Show("game_menu_m")
 
     textbutton _("返回"):

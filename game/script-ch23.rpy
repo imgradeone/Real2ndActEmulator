@@ -526,7 +526,7 @@ label yuri_kill_1:
     window auto
     $ style.say_dialogue = style.normal
     if persistent.alt_safe_mode:
-        call screen dialog("为响应“清朗”未成年人暑期网络环境专项整治，\nYuri 的自杀动画已跳过。",Return())
+        call screen dialog("为响应“清朗”未成年人暑期网络环境专项整治，\nYuri 的自裁动画已跳过。",Return())
         jump yuri_kill_3
     else:
         play sound "sfx/yuri-kill.ogg" # 去世预警 + 变调版 Play With Me
