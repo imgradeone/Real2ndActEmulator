@@ -123,11 +123,13 @@ label ch22_main:
     if renpy.random.randint(0, 3) == 0:
         show screen notify("达成成就：MOPEMOPE")
         $ style.say_dialogue = style.edited
-        show yuri at t32 zorder 2
-        show natsuki mouth as nm at i33 zorder 3
+        if not persistent.alt_safe_mode:
+            show yuri at t32 zorder 2
+            show natsuki mouth as nm at i33 zorder 3
         show n_moving_mouth zorder 3:
             xoffset 400
-        n 2a "mibulls sailcloth blindsight lifeline anan rectipetality faultlessly offered scleromalacia neighed catholicate"
+        n 2a "啊wee改哈鞥嫦娥我刚不疤痕处哈维楚王嗡阿格王朔鸡e句NBA我是猪tix来试谱啊11宝宝呢囜您呢你娘比起重机究其本质你只是个浅水区的牛蛙"
+        # n 2a "mibulls sailcloth blindsight lifeline anan rectipetality faultlessly offered scleromalacia neighed catholicate"
         hide nm
         hide n_moving_mouth
         $ style.say_dialogue = style.normal
@@ -538,11 +540,12 @@ label ch22_end:
     $ currentpos = get_pos() * 2.07
     stop music
     pause 0.5
-    play sound "sfx/stab.ogg"
-    show blood_eye zorder 3:
-        pos (710,380) zoom 2.5
-    pause 0.75
-    stop sound
+    if not persistent.alt_safe_mode:
+        play sound "sfx/stab.ogg"
+        show blood_eye zorder 3:
+            pos (710,380) zoom 2.5
+        pause 0.75
+        stop sound
     play music "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
     hide black
     hide y_glitch_head

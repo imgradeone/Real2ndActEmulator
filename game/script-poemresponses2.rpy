@@ -24,15 +24,15 @@ label ch23_y_end:
     show darkred zorder 5:
         alpha 0
         linear 2.0 alpha 1.0
-    call showpoem(poem_y23, track="bgm/5_yuri2.ogg", revert_music=False, paper="images/bg/poem_y2.jpg", img="yuri eyes", where=truecenter)
+    call showpoem(poem_y23, track="bgm/5_yuri2.ogg", revert_music=False, paper="mod_assets/poem_y2_alt.jpg", img="yuri eyes", where=truecenter)
     # 现在稿纸已经是血与液的赞歌了，BGM 也诡异了起来
-    y "Do you like it??"
-    y "I wrote it for you!"
+    y "喜欢吗？？"
+    y "这可是我为你而写的！"
     $ gtext = glitchtext(80)
     show yuri 1b at i11
-    y "In case you couldn't tell, the poem is about [gtext]"
-    y 1y6 "More importantly, I've endowed it with my scent."
-    y "See, aren't I the most thoughtful person in the club?"
+    y "怕你不知道，先说一下，这首诗是关于 [gtext]"
+    y 1y6 "更重要的是，我给它赋予了我的专属气味。"
+    y "看吧，我是不是俱乐部里最体贴的人？"
     play sound "sfx/glitch2.ogg"
     show yuri glitch
     pause 0.2
@@ -44,8 +44,8 @@ label ch23_y_end:
     $ renpy.music.stop(channel="music_poem")
     $ renpy.music.play(audio.t5c)
     y "..."
-    y 4d "I..."
-    y "I think I'm...going to vomit."
+    y 4d "我..."
+    y "让我先...吐一会儿。"
     show yuri at lhide
     hide yuri
     pause 1.0
@@ -125,7 +125,7 @@ label ch22_n_end2:
     n "陪我玩。"
     stop music
     hide n_rects_ghost3
-    n ghost2 "{b}快来陪我玩！！！{/b}"
+    n ghost2 "快来陪我玩！！！"
     $ style.say_dialogue = style.normal
     $ quick_menu = False
     pause 1
@@ -157,6 +157,8 @@ label ch22_n_end2:
     pause 2.0
     scene black
     with None
+    show screen notify("达成成就：陪我玩！！！！")
+
     $ quick_menu = True
     $ style.say_dialogue = style.normal
     return
@@ -171,14 +173,14 @@ label ch23_n_end:
     stop music
     hide screen tear
     show natsuki ghost_base
-    n "I changed my mind."
-    n "Ignore everything you just read."
-    n "There's no point in trying to do anything."
-    n "It's Yuri's own fault that she's so unlikable."
-    n "Can you hear me, [player]?"
-    n "If you would just spend more time with Monika, all these problems would go away."
-    n "Yuri and I are too messed up for someone as wonderful as you."
-    n "Just think of Monika from now on."
+    n "我改变想法了。"
+    n "忽略你刚刚看到的一切吧。"
+    n "试着做任何事情都是没用的。"
+    n "Yuri 被人讨厌是她自己的锅。"
+    n "[player]，听得见我说话吗？"
+    n "如果你多陪陪 Monika，问题就解决了。"
+    n "对于如此完美的您来说，Yuri 和我实在不合你的口味。"
+    n "从现在开始，Just Monika." # 请不要翻译 Just Monika.
     n "Just Monika."
     hide natsuki
     $ style.say_dialogue = style.edited

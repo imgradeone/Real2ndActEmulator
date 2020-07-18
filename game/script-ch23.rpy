@@ -338,7 +338,7 @@ label ch23_end:
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
     m 1r "Jesus christ..."
-    m 1i "This is never going to end. Just make the choice, okay?"
+    m 1i "这肯定没完没了了。赶快做决定吧，好吗？"
     show monika at t32 zorder 2
     show screen notify("我们会强制把你的鼠标挪动 Monika 上。你大可以试试强行选另外两个。")
     python:
@@ -395,17 +395,17 @@ label ch23_end:
         hide natsuki
         hide yuri
 
-    m 5a "Yay, you picked me!"
+    m 5a "耶，你选我啦！"
     m "We can meet at your house this weekend."
     m "I promise it'll be fun."
     m "Is Sunday okay with you?"
     show natsuki 1e at f31 zorder 3
     n "你他娘的在逗我吗？" # 爆粗口的 Natsuki 是屑（
-    n "This isn't fair at all!"
+    n "不公平啦！"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
     m 2i "Natsuki，这非常公平。"
-    m "It's what he chose."
+    m "这就是他自己的选择。"
     show monika at t32 zorder 2
     show yuri 3r at f33 zorder 3
     y "No, it's not fair!"
@@ -414,7 +414,7 @@ label ch23_end:
     show yuri at t33 zorder 2
     show monika at f32 zorder 3
     m 2r "Yuri, I didn't even give you any work."
-    m 2i "You decided it for yourself."
+    m 2i "我都让你自己决定要做什么。"
     m "你现在有一点点不讲道理。"
     stop music
     show monika at t32 zorder 2
@@ -426,27 +426,27 @@ label ch23_end:
     y 1y1 "你是嫉妒吧？"
     y "还是疯了？"
     y 1y3 "还是你对自己的憎恨溢了一地，就开始随便往别人身上泼呢？"
-    y 1y4 "这边强烈建议你去当晴天娃娃呢。"
+    y 1y4 "这边强烈建议你去试下当晴天娃娃呢。"
     y "对你的精神健康会有 hin 大的帮助。"
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
-    n 5u "Yuri, you're scaring me a little..."
+    n 5u "Yuri，你属实吓到我了..."
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
-    m 1r "Natsuki, let's just go."
-    m 1i "I don't think she wants us around right now."
+    m 1r "Natsuki，咱们先撤吧。"
+    m 1i "我认为她不想让我们在这里继续待着了。"
     show monika at t32 zorder 2
     show yuri at f33 zorder 3
-    y 2y3 "看吧，这很简单嘛。"
-    y "All I want is to spend a little time with him."
-    y "Is that so much to ask?"
+    y 2y3 "看吧，想让你们滚不是很简单嘛。"
+    y "我仅仅只是想要和他再多独处那么一会。"
+    y "这样的要求很过分吗？"
     hide natsuki
     hide monika
     hide yuri
     with wipeleft
-    "Yuri follows Monika and Natsuki to the door."
+    "Yuri 跟在 Monika 和 Natsuki 后面，走到教室门。"
     show monika 5a at t11 zorder 2
-    m "Hey, [player]..."
+    m "嘿，[player]..."
     m "Yuri 真的有点那啥..."
     show monika at thide zorder 1
     hide monika
@@ -470,13 +470,13 @@ label ch23_end:
     y 1y4 "和你在一起就已经是超乎我想象的极致快乐了。"
     y "你知道吗？"
     y "我对你“上瘾”了。"
-    y 3y4 "我感觉如果不和你在一起，我就要死了。"
+    y 3y4 "如果不和你在一起，我就要死了。"
     y 4a "如果有那么关心你的人，那感觉是不是很爽？"
     y "还是那种一辈子都想围着你转的那种。"
     y 2y6 "不过如果这种感觉很好..."
-    y 2y4 "那么为什么可怕的事情还是要发生？"
+    y 2y4 "那么为什么可怕的事情还是要发生呢？"
     y 2y6 "也许这就是我最初尝试阻止自己的原因..."
-    y "但是现在这个感觉特别强烈了。"
+    y "但是现在这种爱的感觉特别强烈了。"
     y 3y1 "[player]，即便这样，我也不在乎了！"
     y 3y1 "[player]！"
     y "我一定要告诉你！"
@@ -484,7 +484,7 @@ label ch23_end:
     y "我感觉我身体的每一块地方...还有每一滴血...都在喊着你的名字。"
     y 3y3 "我也不在乎后果了！"
     y "我也不在乎 Monika 有没有在那里偷听了！"
-    y 3w "[player]，请一定要明白我有多爱你啊。"
+    y 3w "求你了，[player]，请一定要明白我有多爱你啊。"
     y 3m "我特别爱你，甚至一度偷你的笔去自///慰。"
     y 3y4 "我只想拉开你的表//皮，在你的身体里游走。"
     y 3y6 "我想让你永远属于我。"

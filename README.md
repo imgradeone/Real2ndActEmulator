@@ -2,6 +2,22 @@
 
 DDLC 中文 Mod 模板 新 Demo
 
+## 警告
+
+请注意！本 Mod 不适合儿童或心理承受能力较弱的人。
+
+由于本 Mod 包含原作的恐怖元素（甚至发挥到了极致），焦虑症、抑郁症患者，以及儿童，均不适合游玩此 Mod。
+
+对于原作的恐怖内容，请访问 [这里](https://ddlc.moe/warning.html)。（英文，包含剧透）
+
+如果继续游玩本 Mod，我们将视为你已经通关原游戏，并接受任何剧透内容。
+
+与此同时，我们将认为您是 13 岁以上的玩家，心理健康，且同意接受恐怖内容。
+
+**不要说我们没有警告过你。**
+
+详情参阅 [WARNING.md](./WARNING.md)
+
 ## 下载 Mod
 
 见 Releases
@@ -55,6 +71,9 @@ DDLC 中文 Mod 模板 新 Demo
 
 本 Demo 采用了知名汉化版的翻译，在此感谢。[Steam 社区原帖](https://steamcommunity.com/sharedfiles/filedetails/?id=1176221672)
 
+## 翻译指南
+
+本 Mod 对原游戏剧本的汉化会有一些小区别，请查阅 [TRANSLATIONS.md](./TRANSLATIONS.md)。
 
 ## 开源许可
 

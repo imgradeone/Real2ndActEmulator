@@ -304,7 +304,7 @@ label ch20_main2:
     n 5q "没什么。"
     show natsuki at t31 zorder 2
     show monika at f33 zorder 3
-    m 1a "这就对了，你平常更喜欢写可爱的东西，不是吗，Natsuki？"
+    m 1a "这就对了，你平常更喜欢写可爱的东西，Natsuki，不是吗？"
     show monika at t33 zorder 2
     show natsuki 1o at f31 zorder 3
     n "什-什么？"
