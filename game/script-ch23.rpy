@@ -415,18 +415,18 @@ label ch23_end:
     show monika at f32 zorder 3
     m 2r "Yuri, I didn't even give you any work."
     m 2i "You decided it for yourself."
-    m "You're being a little unreasonable here."
+    m "你现在有一点点不讲道理。"
     stop music
     show monika at t32 zorder 2
     show yuri at f33 zorder 3
     y 2y4 "我又不讲道理了？"
     y 2y3 "啊哈哈哈哈哈！"
-    y "Monika，我都不敢相信你是这么地妄自尊大，又自私自利！"
+    y "Monika，没想到你这么妄自尊大，又自私自利！"
     y "每次你没能参与进来就把 [player] 从我身边拖走，次次如此。"
     y 1y1 "你是嫉妒吧？"
     y "还是疯了？"
     y 1y3 "还是你对自己的憎恨溢了一地，就开始随便往别人身上泼呢？"
-    y 1y4 "我给你个建议。考虑一下自裁，怎么样？"
+    y 1y4 "这边强烈建议你去当晴天娃娃呢。"
     y "对你的精神健康会有 hin 大的帮助。"
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
@@ -437,7 +437,7 @@ label ch23_end:
     m 1i "I don't think she wants us around right now."
     show monika at t32 zorder 2
     show yuri at f33 zorder 3
-    y 2y3 "See, that wasn't very hard."
+    y 2y3 "看吧，这很简单嘛。"
     y "All I want is to spend a little time with him."
     y "Is that so much to ask?"
     hide natsuki
@@ -447,10 +447,10 @@ label ch23_end:
     "Yuri follows Monika and Natsuki to the door."
     show monika 5a at t11 zorder 2
     m "Hey, [player]..."
-    m "Yuri is really something, isn't she?"
+    m "Yuri 真的有点那啥..."
     show monika at thide zorder 1
     hide monika
-    "Monika giggles as Yuri pushes her out the door."
+    "Monika 在欢声笑语中被 Yuri 推出门外。"
 
     play music t10y
     show yuri 2m at t11 zorder 2
