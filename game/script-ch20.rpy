@@ -176,7 +176,7 @@ label ch20_main2:
     show monika 2a at t31 zorder 2
     show yuri at f33 zorder 3
     y 4 "很-很荣幸认识你..."
-    "Yuri，看起来更加成熟，但却有点害羞，似乎不太跟得上类似夏树这样的人的节奏。"
+    "Yuri，看起来更加成熟，但却有点害羞，似乎不太跟得上类似Natsuki这样的人的节奏。"
     show yuri at t33 zorder 2
     mc "嗯...很高兴认识你们俩。"
     show monika at f31 zorder 3
@@ -315,7 +315,7 @@ label ch20_main2:
     m "好像你正在写一首诗，叫做--"
     show monika at t33 zorder 2
     show natsuki 1p at f31 zorder 3
-    n "别讲那么大声！！"
+    n "你吼辣么大声干什么！！"
     n "把纸条还给我！"
     show natsuki at t31 zorder 2
     show monika at f33 zorder 3
@@ -335,14 +335,14 @@ label ch20_main2:
     show natsuki at t31 zorder 2
     mc "啊...对自己的水平还不够自信吗？"
     show yuri at f32 zorder 3
-    y 2f "我理解夏树的感受。"
+    y 2f "我理解 Natsuki 的感受。"
     y "分享那种水平的文字需要的可不仅仅是自信。"
     y 2k "最真挚的文字是写给自己的。"
     y "所以分享的前提是，作者必须要愿意向读者敞开心扉，暴露出自己的弱点，甚至抵达心灵的最深处。"
     show yuri at t32 zorder 2
     show monika 2a at f33 zorder 3
     m "所以 Yuri，你也有写作的经验吗？"
-    m "如果你愿意分享一下你的作品，没准在榜样作用下，夏树也会愿意分享的。"
+    m "如果你愿意分享一下你的作品，没准在榜样作用下，Natsuki 也会愿意分享的。"
     show yuri at s32
     y 3o "..."
     mc "似乎 Yuri 也是这样想的..."
@@ -354,7 +354,7 @@ label ch20_main2:
     show natsuki 2k at f31 zorder 3
     show yuri 3e at f32 zorder 3
     ny "...？"
-    "Natsuki 和 Yuri 迷惑地望着莫妮卡。"
+    "Natsuki 和 Yuri 迷惑地望着 Monika。"
     show natsuki at t31 zorder 2
     show yuri at t32 zorder 2
     show monika at f33 zorder 3
@@ -388,7 +388,7 @@ label ch20_main2:
     "既然已经提到了最重要的话题，我终于能够坦率地说出我一直以来的想法。"
     show monika at t33 zorder 2
     mc "我从来都没说过我要入部！"
-    mc "虽然莫妮卡说服了我来看看，但我从没下过任何决定。"
+    mc "虽然 Monika 说服了我来看看，但我从没下过任何决定。"
     mc "我还有别的一些社团要看看，并且...唔..."
     show monika 1g
     show natsuki 4g
@@ -402,7 +402,7 @@ label ch20_main2:
     show natsuki at s31
     n 5s "哼唧。"
     mc "诶...？"
-    "女孩们相互交换了一下眼神，之后莫妮卡转向了我。"
+    "女孩们相互交换了一下眼神，之后 Monika 转向了我。"
     show monika at f33 zorder 3
     m 1m "我...我猜我需要告诉你真相，[player]."
     m "事实上..."

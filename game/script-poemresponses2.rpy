@@ -28,7 +28,7 @@ label ch23_y_end:
     # 现在稿纸已经是血与液的赞歌了，BGM 也诡异了起来
     y "喜欢吗？？"
     y "这可是我为你而写的！"
-    $ gtext = glitchtext(80)
+    $ gtext = fujaowee(80)
     show yuri 1b at i11
     y "怕你不知道，先说一下，这首诗是关于 [gtext]"
     y 1y6 "更重要的是，我给它赋予了我的专属气味。"
@@ -438,7 +438,7 @@ label ch23_n_ygave:
     n "You gave your poem to Yuri?"
     n 4x "Gross!"
     n "What is with you two?"
-    n 1s "Hmph..."
+    n 1s "哼唧..."
     n "It's not like I wanted to read it anyway."
     n 1r "It's just pissing me off a little bit that you didn't even think to show me at all."
     n 1x "...Ugh."

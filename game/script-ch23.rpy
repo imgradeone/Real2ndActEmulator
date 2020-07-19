@@ -53,8 +53,8 @@ label ch23_main:
     show natsuki 4w at f33 zorder 3
     n "Monika!"
     n "I told you not to--"
-    n 1g "Ugh..."
-    n "Is she really late again?"
+    n 1g "emm..."
+    n "她是不是又双迟到了？"
     show natsuki at t33 zorder 2
     show yuri at f32 zorder 3
     y 1h "Inconsiderate as usual, Natsuki."
@@ -96,8 +96,8 @@ label ch23_main:
     show natsuki at t33 zorder 2
     show yuri 3e
     show monika 1g at l31
-    m "Aw, man..."
-    m "I'm the last one here again!"
+    m "Awwwww, man..." # 这里结合 Creeper? Aw man 的 meme，所以不要翻译
+    m "我又双叒叕是最后一个到的！"
     show natsuki at f33 zorder 3
     n 2c "Well, [player] just walked in too."
     show natsuki at t33 zorder 2
@@ -194,8 +194,8 @@ label ch23_main:
     m "You guys can do whatever you want."
     show monika at t31 zorder 2
     show yuri at hf32 zorder 3
-    y 2y1 "{i}(Yes!){/i}{w=0.5}{nw}"
-    y 2u "Um... Thank you for understanding, Monika."
+    y 2y1 "{i}（吼哇！）{/i}{w=0.5}{nw}"
+    y 2u "emm...Monika，感谢理解。"
     if poemwinner[2] == "natsuki":
         $ poemwinner[2] = "yuri"
         $ y_appeal += 1
@@ -360,7 +360,7 @@ label ch23_end:
             repeat
         show noise:
             alpha 0.1
-        $ gtext = glitchtext(80)
+        $ gtext = fujaowee(80)
         window auto
         menu:
             "[gtext]"
@@ -581,7 +581,7 @@ label yuri_kill_2:
     label yuri_kill_loop:
         $ persistent.yuri_kill += 1
         if persistent.yuri_kill < 1440:
-            $ gtext = glitchtext(renpy.random.randint(8, 80))
+            $ gtext = fujaowee(renpy.random.randint(8, 80))
             if config.developer:
                 y "[persistent.yuri_kill] [gtext]"
             else:
@@ -598,7 +598,7 @@ label yuri_kill_3:
     $ allow_skipping = False
     $ quick_menu = False
     $ style.say_dialogue = style.normal
-    $ gtext = glitchtext(renpy.random.randint(8, 80))
+    $ gtext = fujaowee(renpy.random.randint(8, 80))
     if not renpy.music.get_playing(channel='music') == audio.t6s:
         $ audiostart = str(renpy.random.random() * 360)
         $ audio.t6s = "<from " + audiostart + " loop 43.572>bgm/6s.ogg"

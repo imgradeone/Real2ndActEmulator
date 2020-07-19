@@ -803,8 +803,8 @@ screen load():
 init python:
     def FileActionMod(name, page=None, **kwargs):
         if persistent.playthrough == 1 and not persistent.deleted_saves and renpy.current_screen().screen_name[0] == "load" and FileLoadable(name):
-            return Show(screen="dialog", message="文件错误： \"characters/sayori.chr\"\n\nThe file is missing or corrupt.",
-                ok_action=Show(screen="dialog", message="The save file is corrupt. Starting a new game.", ok_action=Function(renpy.full_restart, label="start")))
+            return Show(screen="dialog", message="文件错误： \"characters/sayori.chr\"\n\n文件已被删除或修改。",
+                ok_action=Show(screen="dialog", message="存档已被更改。即将重开游戏", ok_action=Function(renpy.full_restart, label="start")))
         elif persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
             return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
         else:
@@ -1423,7 +1423,7 @@ screen dialog(message, ok_action):
                 xalign 0.5
                 spacing 100
 
-                textbutton _("OK") action ok_action
+                textbutton _("好的！") action ok_action
 
 image confirm_glitch:
     "gui/overlay/confirm_glitch.png"

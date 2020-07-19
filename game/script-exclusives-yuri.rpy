@@ -316,7 +316,7 @@ label yuri_exclusive_2_ch3:
     m "I suppose there's nothing wrong with that..."
     show monika at t31 zorder 2
     show yuri at f11 zorder 3
-    y 2l "Hmph..."
+    y 2l "哼唧..."
     y "Then let's go, [player]."
     show yuri at t11 zorder 2
     mc "Ah..."

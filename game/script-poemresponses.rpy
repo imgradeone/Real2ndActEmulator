@@ -553,7 +553,7 @@ label ch1_s_end:
     s "I get all cranky..."
     mc "Well, I guess there's no point in arguing..."
     mc "Anyway, thanks for showing me."
-    s 1q "Ehehe~"
+    s 1q "诶嘿嘿~"
     s "This was so much fun."
     s "Monika's the best!"
     mc "Ah...yeah."
@@ -697,7 +697,7 @@ label ch3_m_end:
 label ch1_n_bad:
     n "..."
     mc "...?"
-    if persistent.playthrough == 2 and renpy.random.randint(0, 2) == 0:
+    if persistent.playthrough == 2 and renpy.random.randint(0, 2) == 0 and not persistent.alt_safe_mode:
         $ currentpos = get_pos()
         stop music
         pause 2.0
@@ -1346,7 +1346,7 @@ label ch1_s_bad:
         s 4r "Yay~!"
         s "Now, you'll read my poem too, right?"
         s 1y "Don't worry, I'm really bad at this."
-        s "Ehehe..."
+        s "诶嘿嘿..."
         mc "We'll see about that."
         return
 
@@ -1397,7 +1397,7 @@ label ch1_s_good:
     s "Like I can feel your feelings in it~"
     "Sayori hugs the sheet against her chest."
     mc "You're so weird, Sayori..."
-    s "Ehehe..."
+    s "诶嘿嘿..."
     jump ch1_s_shared
 
 
@@ -1410,7 +1410,7 @@ label ch2_s_bad:
     s 4l "...Maybe!"
     s 5a "Just a little?"
     s "Yuri must have spoiled me a little bit with her poems..."
-    s "Ehehe..."
+    s "诶嘿嘿..."
     mc "It's fine, it's fine."
     mc "After all, I still have no idea what kinds of writing you even like."
     label ch2_s_shared:
@@ -1484,7 +1484,7 @@ label ch2_s_med:
         s 4b "Mmm, lemme think..."
         s 1q "I dunno!"
         s "I guess I like them both!"
-        s "Ehehe~"
+        s "诶嘿嘿~"
         mc "That's not very helpful, you know..."
         jump ch2_s_med_shared
     #This one is not as good as the last one
@@ -1545,7 +1545,7 @@ label ch2_s_good:
         s "Like I can feel your feelings in it~"
         "Sayori hugs the sheet against her chest."
         mc "You're so weird, Sayori..."
-        s 4l "Ehehe..."
+        s 4l "诶嘿嘿..."
         jump ch2_s_med_shared
     #Loved both poems
     else:
@@ -1578,7 +1578,7 @@ label ch2_s_good:
         mc "Even the little things."
         s 4o "Like cooking!!"
         mc "Let's not talk about that!"
-        s 5a "Ehehe..."
+        s 5a "诶嘿嘿..."
         mc "So, yeah..."
         mc "I guess what I'm saying is that I can feel more feelings through you than I can through myself."
         mc "We have that kind of weird connection."
@@ -1600,11 +1600,11 @@ label ch2_s_good:
         s 1y "Because..."
         s "Well..."
         s "It's the first time you've written something for me..."
-        s "Ehehe..."
+        s "诶嘿嘿..."
         mc "!!"
         mc "Sayori, you completely misunderstood!"
         mc "I didn't write this for you!"
-        s 5b "Ehehehehe..."
+        s 5b "Eheh诶嘿嘿..."
         mc "Sigh..."
         mc "Are you even listening anymore?"
         mc "Well, whatever."
@@ -1665,7 +1665,7 @@ label ch3_s_bad:
     s 1b "Huh?"
     s 1k "No, nothing."
     s "I'm just a little tired today."
-    s 1l "Ehehe."
+    s 1l "诶嘿嘿。"
     mc "Alright..."
     mc "Just tell me if you need anything."
     s 1a "I will."
@@ -1700,7 +1700,7 @@ label ch3_s_good:
     s "Of course!"
     s 4l "Everything is fine~"
     s "Maybe I'm just a little tired today."
-    s 1l "Ehehe."
+    s 1l "诶嘿嘿。"
     mc "Do you want to nap or something?"
     s 1h "No, that's silly!"
     s "Don't worry about me, okay?"

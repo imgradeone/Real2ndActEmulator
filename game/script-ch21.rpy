@@ -129,7 +129,7 @@ label ch21_end:
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     n 2c "哦，没什么。"
-    "Natsuki 不屑一顾地单手把诗放回了桌子。"
+    "Natsuki 不屑一顾地把诗放回了桌子。"
     n "用词上还蛮不错的。"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
@@ -444,7 +444,7 @@ label ch21_end:
     m 1d "这样的话，我也没得选了，不是吗？"
     show monika at t31 zorder 2
     show yuri at f32 zorder 3
-    y 1t "我-我很抱歉给你添麻烦了..."
+    y 1t "抱-抱歉给你添麻烦了..."
     $ gtext = glitchtext(20)
     y 1s "但是我真的希望你可以理j{nw}"
     play music g1

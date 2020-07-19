@@ -164,8 +164,8 @@ translate None strings:
 translate None strings:
 
     # renpy/common/00layout.rpy:439
-    old "Are you sure?"
-    new "是否确认？"
+    # old "Are you sure?"
+    # new "是否确认？"
 
     old "Please enter your name"
     new "请输入昵称，仅支持英文字符"

@@ -3,7 +3,7 @@ label fakeintro:
     $ delete_all_saves() # 炸档使我快乐
     show screen notify("存档已删除。")
     $ persistent.deleted_saves = True
-    $ gtext = glitchtext(48) # 删 Sayori 使我快乐
+    $ gtext = fujaowee(48) # 删 Sayori 使我快乐
     stop music
     $ config.window_hide_transition = None
     scene bg residential_day
@@ -11,7 +11,7 @@ label fakeintro:
     $ config.window_hide_transition = Dissolve(.2)
     play music t2g
     queue music t2g2
-    $ s_name = glitchtext(12)
+    $ s_name = "???"
 
     s "[gtext]"
     "我看见一个吵吵闹闹的女孩不断挥着手向我跑来，仿佛要把全世界的注意力都聚焦在她身上一样。"
@@ -21,6 +21,7 @@ label fakeintro:
     "但她这样狂追不舍，弄得我好想逃跑。"
     "不过，我也别无选择，只好叹了口气在路口等着好让 [s_name] 赶上我。"
 
+    $ s_name = glitchtext(12)
     show sayori glitch at t11 zorder 2
     python:
         currentpos = get_pos()
@@ -29,10 +30,10 @@ label fakeintro:
         track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/2.ogg"
         renpy.music.play(track, loop=True)
     pause 1.0
-    $ gtext = glitchtext(48)
+    $ gtext = fujaowee(48)
     s "{cps=60}[gtext]{/cps}{nw}"
     pause 1.0
-    $ gtext = glitchtext(48)
+    $ gtext = fujaowee(48)
     s "{cps=60}[gtext]{/cps}{nw}"
     show screen tear(8, offtimeMult=1, ontimeMult=10)
     pause 1.5
