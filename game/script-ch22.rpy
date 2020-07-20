@@ -205,7 +205,7 @@ label ch22_main:
     n 2d "You should play something for us sometime!"
     show natsuki at t33 zorder 2
     show monika at f41 zorder 3
-    m "Ahaha, that's..."
+    m "啊哈哈， that's..."
     "Monika looks at me."
     m 1a "Well, I am working on writing a song, but it's not quite done yet..."
     m "Maybe once I get a little bit better, I will."
@@ -224,7 +224,7 @@ label ch22_main:
     "Monika smiles sweetly."
     mc "Ah..."
     mc "I didn't mean any pressure or anything like that!"
-    m 1a "Ahaha, don't worry."
+    m 1a "啊哈哈， don't worry."
     m "I was hoping that I could share it with you, anyway."
     m "I guess that's why I've been practicing so much recently."
     mc "I see..."
@@ -641,7 +641,7 @@ label ch22_end:
     m "I don't like seeing the other girls give you a hard time."
     m 4r "With how mean Natsuki is and everything..."
     m 4m "And Yuri being a little bit...you know."
-    m 5a "Ahaha..."
+    m 5a "啊哈哈..."
     m "Sometimes it feels like you and I are the only real people here."
     m "You know what I mean?"
     m 1g "But it's weird, because in all the time you've been here, we've hardly gotten to spend any time together."

@@ -52,7 +52,7 @@ label sayori_exclusive_1:
     s "Cupcakes!"
     show sayori at t21 zorder 2
     show monika 1k at f22 zorder 3
-    m "Ahaha. Good thinking."
+    m "啊哈哈。 Good thinking."
     m 1a "Natsuki would love to do that."
     show monika at t22 zorder 2
     show sayori at f21 zorder 3
@@ -402,7 +402,7 @@ label sayori_exclusive_2:
     hide s_cg2_exp2
     s "I'm fine with--looking like a unicorn--"
     "Even wincing from the pain, Sayori makes a silly joke."
-    mc "Ahaha, what are you saying?"
+    mc "啊哈哈， what are you saying?"
     mc "I'll be right back, okay?"
     s "O-Okay..."
     stop music fadeout 1.0
@@ -557,7 +557,7 @@ label sayori_exclusive_2:
     show sayori 1a at t21 zorder 2
     mc "...Yeah, that."
     show monika 1j at f22 zorder 3
-    m "Ahaha, okay, okay."
+    m "啊哈哈， okay, okay."
     m 1a "In any case, good work!"
     m "I'll start working on the posters tonight."
     show monika at t22 zorder 2

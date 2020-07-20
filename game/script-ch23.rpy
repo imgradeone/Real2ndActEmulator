@@ -106,7 +106,7 @@ label ch23_main:
     show yuri at t32 zorder 2
     show monika at f31 zorder 3
     m 5a "Yeah..."
-    m "Ahaha..."
+    m "啊哈哈..."
     show monika at t31 zorder 2
     show yuri at f32 zorder 3
     y 1m "You must have a lot of determination."

@@ -4,7 +4,7 @@ label ch21_y_end:
 label ch22_y_end:
     stop music fadeout 2.0
     call showpoem(poem_y22, music=False, paper="images/bg/poem_y1.jpg", img="yuri 2s")
-    y 2q "Ahaha..."
+    y 2q "啊哈哈..."
     y "It doesn't really matter what it's about."
     y "My mind has been a little hyperactive lately, so I had to take it out on your pen."
     y 2o "Ah--"
@@ -13,7 +13,7 @@ label ch22_y_end:
     y 2y6 "I just...really like...the way...that it writes."
     y "So I wrote this...poem...with it."
     y "And now you're touching it..."
-    y 2y5 "Ahaha."
+    y 2y5 "啊哈哈。"
     y 3p "I-I'm okay!!"
     y 3o "What did I just..."
     y "..."
@@ -477,7 +477,7 @@ label ch22_y_med:
     y 2q "...Well, there are some things that you could work on..."
     y "But that doesn't really matter."
     y 2s "It feels like anything written by you is a treasure."
-    y 2d "Ahaha..."
+    y 2d "啊哈哈..."
     y 2o "That came out a little awkward..."
     y "L-Let's move on..."
     y 2t "Here's the poem I wrote."
@@ -509,7 +509,7 @@ label ch22_y_good:
             y 3y5 "It's so amazing to feel like I'm valued, [player]!"
             y "Everything that you write is a treasure to me."
             y 3m "My heart pounds just holding it..."
-            y 3q "Ahaha..."
+            y 3q "啊哈哈..."
             y "I want to write a poem about this feeling..."
             y 3y6 "Is that bad, [player]?"
             y "I'm not being weird, right?"
@@ -539,7 +539,7 @@ label ch23_y_med:
 
 label ch23_y_good:
     y 1d "Finally..."
-    y 3y5 "Ahaha..."
+    y 3y5 "啊哈哈..."
     show yuri 3m
     "Yuri holds my poem to her face and takes a deep breath."
     y 3y6 "I love it."
@@ -548,7 +548,7 @@ label ch23_y_good:
     y "Will you let me keep it?"
     y "Please?"
     mc "Sure, I don't care..."
-    y 2y5 "Ahaha."
+    y 2y5 "啊哈哈。"
     y "You're too nice to me, [player]..."
     y "I've never met anyone as nice as you."
     y 2y6 "I could die..."
@@ -625,7 +625,7 @@ label ch22_m_start:
         m 2b "As long as it's not going bad!"
         m 2a "I'm happy that you're applying yourself."
         m "Maybe soon you'll come up with a masterpiece!"
-        mc "Ahaha, I wouldn't count on that..."
+        mc "啊哈哈， I wouldn't count on that..."
         m 2a "You never know!"
         m "Want to share what you wrote for today?"
         mc "Sure... Here you go."
@@ -668,7 +668,7 @@ label m2_natsuki_1:
     m "It kind of makes me think of something Natsuki would write."
     m "And she's a good writer, too."
     m 5a "So take that as a compliment!"
-    mc "Ahaha..."
+    mc "啊哈哈..."
     mc "If you say so."
     m "Yep!"
     m 3b "If you're interested in Natsuki, then always keep a snack on you."

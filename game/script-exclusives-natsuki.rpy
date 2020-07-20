@@ -193,7 +193,7 @@ label natsuki_exclusive_1:
     n "--"
     n "..."
     n "...So?"
-    mc "Ahaha."
+    mc "啊哈哈。"
     hide n_cg1_exp2
     show n_cg1_exp3 at cgfade
     n "Jeez, that's enough!"
@@ -510,7 +510,7 @@ label natsuki_exclusive_2_ch3:
     show natsuki at t11 zorder 2
     show monika at f31 zorder 3
     m 5 "S-Sorry, sorry!"
-    m "Ahaha..."
+    m "啊哈哈..."
     show monika at t31 zorder 2
     show natsuki at f11 zorder 3
     n 5r "Oh, and one more thing."
@@ -605,7 +605,7 @@ label natsuki_exclusive_2_ch3:
     "Natsuki averts her gaze."
     show natsuki 5u at t11
     n "T-Thanks..."
-    mc "Ahaha..."
+    mc "啊哈哈..."
     mc "It's nothing."
     "Natsuki is holding the volume I set aside in her hands."
     mc "Alright, I'm ready."

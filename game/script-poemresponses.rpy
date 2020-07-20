@@ -21,7 +21,7 @@ label poemresponse_start:
         if poemsread == 0:
             $ menutext = "首先我该把诗分享给谁看呢？"
         else:
-            $ menutext = "Who should I show my poem to next?"
+            $ menutext = "接下来要和谁分享我的诗呢？"
 
         menu:
             "[menutext]"
@@ -35,19 +35,19 @@ label poemresponse_start:
             "Natsuki" if not n_readpoem:
                 $ n_readpoem = True
                 if chapter == 1 and poemsread == 0:
-                    "I told Natsuki I was interested in her poems yesterday."
-                    "It's probably only fair if I shared mine with her first."
+                    "昨天我说过，我对 Natsuki 的诗很感兴趣。"
+                    "所以我应该先和她分享，这样才对。"
                 call poemresponse_natsuki from _call_poemresponse_natsuki
             "Yuri" if not y_readpoem and not y_ranaway:
                 $ y_readpoem = True
                 if chapter == 1 and poemsread == 0:
-                    "Yuri seems the most experienced, so I should start with her."
+                    "Yuri 看上去像个大佬，所以我应该从她开始。"
                     "I can trust her opinion to be fair."
                 call poemresponse_yuri from _call_poemresponse_yuri
             "Monika" if not m_readpoem:
                 $ m_readpoem = True
                 if chapter == 1 and poemsread == 0:
-                    "I should start with Monika."
+                    "我应该从 Monika 开始。"
                     "Yesterday she seemed eager to read my poem, and I want her to know I'm putting in effort."
                 call poemresponse_monika from _call_poemresponse_monika
         $ poemsread += 1
@@ -127,6 +127,9 @@ label poemresponse_monika:
 
 label ch1_y_end:
     call showpoem(poem_y1, img="yuri 3t")
+    call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
+    if _return:
+        call showpoem(poem_y1_chs, img="yuri 3t")
     y 3t "..."
     y "I...I'm sorry I have such terrible handwriting!"
     mc "What??"
@@ -218,7 +221,7 @@ label ch2_y_end:
         y "To me, she seemed like the kind of person who would make fun of my hobbies..."
         y "But I suppose that's my fault for judging, isn't it...?"
         y 3p "Ah-- Please don't tell her I said that!"
-        mc "Ahaha. Don't worry, I have no reason to."
+        mc "啊哈哈。 Don't worry, I have no reason to."
         y 1l "Okay..."
         y 1a "Well, thank you for sharing it with me."
     else:
@@ -426,7 +429,7 @@ label ch2_n_end:
         n 4q "I mean...I know I was talking about that yesterday."
         n "But I've been...well, I've been enjoying sharing my writing with you, so..."
         n 4w "...So consider yourself lucky, okay?"
-        mc "Ahaha."
+        mc "啊哈哈。"
         mc "Well, thanks for being honest."
         n 1n "What's that supposed to mean?"
         n "I'm always honest!"
@@ -590,7 +593,7 @@ label ch2_s_end:
     s 4r "Yeah!"
     s "Writing's the best!"
     s "I'm gonna keep writing until I die!"
-    mc "Ahaha...don't get ahead of yourself."
+    mc "啊哈哈...don't get ahead of yourself."
     "Sayori's always had a habit of getting obsessed with something, before dropping it no more than a week later."
     "I wonder if this is one of those times?"
     "But seeing the passion in her eyes makes it hard for me to be pessimistic."
@@ -604,7 +607,7 @@ label ch1_m_end2:
     m 1a "So...what do you think?"
     mc "Hmm...it's very...freeform, if that's what you call it."
     mc "Sorry, I'm not really the right person to ask for feedback..."
-    m 2e "Ahaha. It's okay."
+    m 2e "啊哈哈。 It's okay."
     m 2b "Yeah, that kind of style has gotten pretty popular nowadays."
     m "That is, a lot of poems have been putting emphasis on the timing between words and lines."
     m 2a "When performed out loud, it can be really powerful."
@@ -633,7 +636,7 @@ label ch2_m_end:
     call showpoem(poem_m2)
     mc "Hm..."
     mc "It's even more abstract than your last one, huh?"
-    m 5 "Ahaha..."
+    m 5 "啊哈哈..."
     m "I guess it's just the way I write..."
     m "I'm sorry if you don't like it."
     mc "No, I never said that."
@@ -644,7 +647,7 @@ label ch2_m_end:
     m "The way I wrote the lines really short makes it feel like they're trying to speak over the noise."
     mc "I see..."
     mc "It's still hard for me to tell what it's about, though."
-    m 2k "Ahaha."
+    m 2k "啊哈哈。"
     m 4a "Sometimes asking what a poem is about isn't the right question."
     m "A poem can be as abstract as a physical expression of a feeling."
     m "Or a conversation with the reader."
@@ -673,7 +676,7 @@ label ch3_m_end:
     m "Because if we had all the answers, wouldn't the world start to lose its meaning?"
     mc "You know, there's one thing I noticed..."
     mc "It seems like everyone in the club prefers writing about things that are more sad than happy."
-    m 1k "Ahaha. Are you surprised?"
+    m 1k "啊哈哈。 Are you surprised?"
     m 1a "I mean, if everything was okay..."
     m "We wouldn't really have anything to write about, would we?"
     m "Humans aren't two-dimensional creatures."
@@ -1840,7 +1843,7 @@ label ch1_y_good:
     y "That's..."
     y 2q "I-I guess you're right..."
     y "What am I getting so nervous for?"
-    y "A-Ahaha..."
+    y "A-啊哈哈..."
     show yuri 2l at t11
     "Yuri takes a breath."
     y "So..."
@@ -2353,7 +2356,7 @@ label ch1_m_start:
     m "So don't force yourself to write the way everyone else wants you to write."
     m "It's not like you have to worry about impressing them or anything."
     m 5 "Ahaha!"
-    mc "Ahaha..."
+    mc "啊哈哈..."
     m 1a "Anyway, do you want to read my poem now?"
     m 1e "Don't worry, I'm not very good..."
     mc "You sound pretty confident for someone who claims to not be very good."
@@ -2372,7 +2375,7 @@ label ch2_m_start:
     m 2b "As long as it's not going bad!"
     m 2a "I'm happy that you're applying yourself."
     m "Maybe soon you'll come up with a masterpiece!"
-    mc "Ahaha, I wouldn't count on that..."
+    mc "啊哈哈， I wouldn't count on that..."
     m 2a "You never know!"
     m "Want to share what you wrote for today?"
     mc "Sure... Here you go."
@@ -2423,7 +2426,7 @@ label m_natsuki_1:
     m "It kind of makes me think of something Natsuki would write."
     m "And she's a good writer, too."
     m 5a "So take that as a compliment!"
-    mc "Ahaha..."
+    mc "啊哈哈..."
     mc "If you say so."
     m "Yep!"
     m 1a "By any chance have you read anything by Shel Silverstein?"
@@ -2519,7 +2522,7 @@ label m_sayori_2:
     m 1j "It's pretty good~"
     m 1a "It makes me think of Sayori, like the other one that you wrote."
     m 4b "You two are like the dynamic duo!"
-    mc "Ahaha... That's kind of exaggerating it."
+    mc "啊哈哈... That's kind of exaggerating it."
     m 2a "Yeah, probably."
     m "But you do spend a lot of time with her even in this club, don't you?"
     m 2j "Then again, I don't blame you for being a little shy~"
@@ -2612,7 +2615,7 @@ label m_natsuki_3:
     return
 
 label m_sayori_3:
-    m 1k "Ahaha."
+    m 1k "啊哈哈。"
     m "It's kind of funny..."
     mc "How so?"
     m 1a "No, not the poem..."
