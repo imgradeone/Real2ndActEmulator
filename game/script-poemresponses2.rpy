@@ -74,7 +74,7 @@ label ch22_n_end:
         n 1x "...Such as two of the girls in this very club, whom I respectfully won't name."
         n 1s "Kind of ironic that even in my one place of comfort, I can't even have people respect me..."
         n 1u "...Jeez, now you're making me complain too much!"
-        "{i}(...What did I do?){/i}"
+        "{i}（我刚刚在做什么？）{/i}"
         mc "For what it's worth, I respect you..."
         n 1h "Well--"
         n "I guess thanks..."
@@ -225,10 +225,10 @@ label ch22_m_end:
     m "Sometimes you'll find yourself facing a difficult decision..."
     m "When that happens, don't forget to save your game!"
     m 3k "You never know when...um..."
-    m 3i "...Who am I talking to?"
-    m "Can you hear me?"
-    m 3g "Tell me you can hear me."
-    m "Anything."
+    m 3i "...等等，我在跟谁说话？"
+    m "你听得到吗？"
+    m 3g "告诉我，你听得到吗？"
+    m "给个反应。"
     $ renpy.call_screen("dialog", "请一定要帮我啊。", ok_action=Return())
     m 3k "...That's my advice for today!"
     m "Thanks for listening~"
@@ -251,9 +251,9 @@ label ch23_m_end:
     show monika 1d at i11 zorder 11
     $ quick_menu = True
     $ mouse_visible = True
-    m "Jeez! That really startled me!{fast}"
+    m "woc，吓到我了！{fast}"
     window auto
-    m "Um..."
+    m "emmm..."
     m 1m "Well, I guess I kinda messed up at, uh... 'writing' this poem."
     m "I was just trying to..."
     m 1i "...Never mind."
@@ -277,8 +277,8 @@ label ch22_n_bad:
         n 1r "..."
         n "Yeah, just as I thought..."
         mc "...?"
-        n 2w "[player], come on."
-        n "I'm not stupid."
+        n 2w "[player]，听着。"
+        n "我可不是白癡。"
         n 2h "I know how much time you've been spending with Yuri..."
         n "It's obvious that you care more about impressing her than trying to improve your writing."
         n 2w "To put it bluntly, it's kind of pathetic."
@@ -288,7 +288,7 @@ label ch22_n_bad:
         n 4s "Not exclude each other even more."
         n 1u "This is such a stupid activity anyway..."
         n 12c "...Look, I'm not in a good mood today, and I just really don't feel like talking right now."
-        n "Please go away."
+        n "你爬吧。"
         $ skip_poem = True
         return
     
@@ -364,7 +364,7 @@ label ch23_n_bad:
         jump ch23_n_ygave
     #Didn't like the last two poems
     if n_poemappeal[0] < 0 and n_poemappeal[1] < 0:
-        n 5x "I'm not going to read another one of your Yuri suck-up poems."
+        n 5x "我再也不想看你那种为 Yuri 写的屑诗。"
         n 5s "But I'm still going to make you read mine."
         n "There's a reason."
         n 5x "I really wish I didn't have to do this..."
@@ -396,7 +396,7 @@ label ch23_n_bad:
     else:
         n "..."
         n 2r "Oh, man."
-        n "This is seriously a step backwards."
+        n "大倒退啊。"
         mc "Eh?"
         n 2c "I liked your last two way better than this one."
         jump ch23_n_bad_shared
@@ -446,7 +446,7 @@ label ch23_n_ygave:
     n "I really hate that I have to do this."
     n "But unfortunately I don't have much of a choice."
     n 1h "Just...read it carefully, okay?"
-    n "Then you can go away."
+    n "看完你就可以走了。"
     return
 
 label ch23_n_good:
@@ -561,12 +561,12 @@ label ch23_y_good:
         "yuri 3y6"
     y "It's not bad, right?"
     "Yuri holds my poem to her chest."
-    y 3m "I'm going to take this home with me and keep it in my room."
+    y 3m "我要把这首诗拿回家，好好放在房间里保管。"
     y "I hope that it makes you feel good when you think about me having it."
     $ style.say_dialogue = style.normal
-    y 3y5 "I'll take good care of it!"
+    y 3y5 "我会好好保管的！"
     $ style.say_dialogue = style.edited
-    y 3y6 "I'll even touch myself while reading it over and over."
+    y 3y6 "我还会边反复欣赏，边自我排遣的！"
     $ _history_list.pop()
     y "I'll give myself paper cuts so your skin oil enters my bloodstream."
     $ _history_list.pop()
@@ -576,7 +576,7 @@ label ch23_y_good:
     y 2s "You can have my poem too."
     y "Besides, after you read it, I know you're really going to want to keep it."
     y 2y6 "Here, take it. I can't wait any longer."
-    y 2y5 "Hurry! Read it!"
+    y 2y5 "快点读吧！"
     $ y_gave = True
     return
 
@@ -653,7 +653,7 @@ label ch23_m_start:
             m 1a "As for mine..."
         m 1e "I worked really...really hard on this poem, so..."
         m "I hope that it's, uh, effective."
-        m 1r "Here goes..."
+        m 1r "来吧..."
     return
 
 
@@ -755,6 +755,6 @@ label m2_yuri_2:
 
 label m2_yuri_3:
     stop music
-    m 1i "[player]，不要说我们没有警告过你。"
+    m 1i "[player]，不要说我们没有警告过你。" # 巨硬翻译梗（
     $ skip_poem = True
     return

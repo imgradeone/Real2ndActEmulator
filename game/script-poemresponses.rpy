@@ -699,7 +699,7 @@ label ch3_m_end:
 
 label ch1_n_bad:
     n "..."
-    mc "...?"
+    mc "...？"
     if persistent.playthrough == 2 and renpy.random.randint(0, 2) == 0 and not persistent.alt_safe_mode:
         $ currentpos = get_pos()
         stop music
@@ -738,16 +738,16 @@ label ch1_n_bad:
         hide blood2
         stop sound
         play music "<from " + str(currentpos) + " loop 4.444>bgm/5.ogg"
-    n 2b "[player], if you're not going to take this club seriously then go home."
-    mc "W-What??"
-    mc "Harsh..."
+    n 2b "[player]，如果你不想认真对待这个文学部的话，请你直接回家。"
+    mc "纳-纳尼？？"
+    mc "wdnmd..."
     n 42c "What, you expect me to believe that you actually put effort into this?"
-    n "Do you think I'm stupid?"
+    n "你觉得我是白癡吗？"
     mc "I'm not a writer!"
     mc "Maybe it's not very good, but yeah, I did put in effort."
     mc "We all start somewhere, right?"
     mc "If you're still proud of the first poem {i}you{/i} ever wrote, then I'd like to read it."
-    n 1o "!!"
+    n 1o "！！"
     mc "Painful to think about?"
     n 1r "..."
     n 5q "Fine."
