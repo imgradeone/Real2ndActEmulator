@@ -305,7 +305,7 @@ label ch23_end:
     show natsuki at f31 zorder 3
     n 1o "说得好像{i}你{/i} TND 知道一样！" # 爆粗口的 Natsuki 是屑（
     n 1x "你只关心如何把 [player] 拴在你和那本白癡才会看的书旁边吧。"
-    n 1f "You {i}and{/i} Monika!"
+    n 1f "说的是你，{i}还有{/i} Monika！"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
     m 2g "嘿！"
@@ -323,7 +323,7 @@ label ch23_end:
     show yuri at t33 zorder 2
     show monika at f32 zorder 3
     m 1r "Okay, fine!"
-    m "Fine."
+    m "好吧。"
     show monika 1h at t32 zorder 2
     show natsuki at f31 zorder 3
     n 3w "Jeez..."
@@ -331,7 +331,7 @@ label ch23_end:
     n 3c "We can just--"
     show natsuki at t31 zorder 2
     show yuri at f33 zorder 3
-    y 2r "Natsuki，闭上你的臭嘴，让他自己做决定好吗？" # 爆粗口的 Yuri 是屑（
+    y 2r "Natsuki，你 TM 闭上你的臭嘴，让他自己做决定好吗？" # 爆粗口的 Yuri 是屑（
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
     n 1o "{i}你{/i} TM 才该闭嘴！"
@@ -422,7 +422,7 @@ label ch23_end:
     y 2y4 "我又不讲道理了？"
     y 2y3 "啊哈哈哈哈哈！"
     y "Monika，没想到你这么妄自尊大，又自私自利！"
-    y "每次你没能参与进来就把 [player] 从我身边拖走，次次如此。"
+    y "每次你只要没能参与进来，就把 [player] 从我身边拖走，次次如此。"
     y 1y1 "你是嫉妒吧？"
     y "还是疯了？"
     y 1y3 "还是你对自己的憎恨溢了一地，就开始随便往别人身上泼呢？"

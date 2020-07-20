@@ -525,8 +525,8 @@ label ch22_end:
     hide y_glitch_head
     y "I mean, I like how nice and quiet the club is right now..."
     y "And I'm just...happy with you here..."
-    y 2t "But still!"
-    y "I'm the Vice President..."
+    y 2t "不过！"
+    y "我可是副部长啊..."
     y "It's not right for me to ignore my responsibilities like that..."
     show black zorder 3
     show y_glitch_head zorder 3:

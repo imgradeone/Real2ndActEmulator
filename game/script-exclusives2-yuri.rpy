@@ -101,7 +101,7 @@ label yuri_exclusive2_1_ch22:
     mc "我也该开始读这本书了，对吧？"
     play sound "sfx/glitch3.ogg"
     show screen notify("达成成就：七 龙 珠")
-    y dragon "好-好哇！！GKD！"
+    y dragon "吼-吼哇！！GKD！"
     y 3n "我-我的意思是，你也不是非要读它，但是...！"
     mc "啊哈哈，你在说些什么啊？"
     y 3o "..."

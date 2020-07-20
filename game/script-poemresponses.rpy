@@ -19,7 +19,7 @@ label poemresponse_start:
         else:
             $ pt = ""
         if poemsread == 0:
-            $ menutext = "Who should I show my poem to first?"
+            $ menutext = "首先我该把诗分享给谁看呢？"
         else:
             $ menutext = "Who should I show my poem to next?"
 
