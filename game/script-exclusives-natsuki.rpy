@@ -453,11 +453,11 @@ label natsuki_exclusive_2_ch3:
     hide n_cg2_exp2
     n "A-Ah--"
     "The chair suddenly swivels beneath Natsuki's feet."
-    mc "Natsuki--!"
+    mc "Natsuki--！"
     show n_cg2_base at n_cg2_wiggle_loop
     show n_cg2_exp1 at n_cg2_wiggle_loop
     show n_cg2_exp2 at n_cg2_wiggle_loop
-    n "{i}Kyaaaaa!{/i}"
+    n "{i}噫啊啊啊啊啊啊！{/i}"
     "The scene turns to chaos in a split second."
     "The chair flies from under Natsuki's feet."
     "Frantically, I try to catch her."
@@ -495,7 +495,7 @@ label natsuki_exclusive_2_ch3:
     "A fist pounds into my chest."
     "Natsuki then hoists herself to her feet."
     show natsuki 1x at t11 zorder 2
-    n "What were you thinking?!"
+    n "你 TM 在想什么？！"
     n "You sicko!"
     show monika 1d at f31 zorder 3
     m "Everything okay over there...?"

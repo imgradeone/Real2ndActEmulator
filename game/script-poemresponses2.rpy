@@ -559,7 +559,7 @@ label ch23_y_good:
         "yuri 3y4"
         0.4
         "yuri 3y6"
-    y "It's not bad, right?"
+    y "还行，对吧？"
     "Yuri holds my poem to her chest."
     y 3m "我要把这首诗拿回家，好好放在房间里保管。"
     y "I hope that it makes you feel good when you think about me having it."
@@ -570,12 +570,12 @@ label ch23_y_good:
     $ _history_list.pop()
     y "I'll give myself paper cuts so your skin oil enters my bloodstream."
     $ _history_list.pop()
-    y 3y1 "Ahahahahaha."
+    y 3y1 "啊哈哈哈哈哈哈哈哈哈。"
     $ _history_list.pop()
     $ style.say_dialogue = style.normal
     y 2s "You can have my poem too."
     y "Besides, after you read it, I know you're really going to want to keep it."
-    y 2y6 "Here, take it. I can't wait any longer."
+    y 2y6 "来，拿去吧。我已经等不及了。"
     y 2y5 "快点读吧！"
     $ y_gave = True
     return

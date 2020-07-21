@@ -408,13 +408,13 @@ label ch23_end:
     m "这就是他自己的选择。"
     show monika at t32 zorder 2
     show yuri 3r at f33 zorder 3
-    y "No, it's not fair!"
-    y "Giving us all this work and then taking [player] for yourself."
-    y "What a shameful thing to do!"
+    y "不，这一点都不公平！"
+    y "你就是让我们干活，然后去和 [player] 聊天。"
+    y "这真可耻啊！"
     show yuri at t33 zorder 2
     show monika at f32 zorder 3
-    m 2r "Yuri, I didn't even give you any work."
-    m 2i "我都让你自己决定要做什么。"
+    m 2r "Yuri，我都没命令你要干什么。"
+    m 2i "我都让你自己决定的。"
     m "你现在有一点点不讲道理。"
     stop music
     show monika at t32 zorder 2
@@ -660,6 +660,7 @@ label yuri_kill_3:
 
     show screen tear(8, offtimeMult=1, ontimeMult=10)
     pause 1.5
+    hide screen tear
     scene black
     pause 3.0
 

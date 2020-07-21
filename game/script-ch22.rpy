@@ -558,10 +558,11 @@ label ch22_end:
     mc "...And for the club to provide something that you can't get anywhere else."
     mc "I don't think it's about how many members, but rather the quality of each member."
     mc "That's what will end up making the Literature Club a special place."
-    y 1u "I see..."
+    y 1u "我懂..."
     y "I really agree with you."
-    show blood_eye2 zorder 3:
-        pos (568, 165)
+    # show blood_eye2 zorder 3:
+    #     pos (568, 165)
+    # 直接和谐，我不喜欢看孟姜女哭血（
     y 1f "Each member contributes their own qualities in a special way."
     y "With each change in members, the identity of the club as a whole will change, too."
     y 1h "I don't think that's necessarily a bad thing."

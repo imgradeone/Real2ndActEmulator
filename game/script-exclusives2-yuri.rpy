@@ -569,11 +569,11 @@ label yuri_exclusive2_2_ch22:
     hide yuri
     show yuri eyes
     pause 3.0
-    y "...哈..."
+    y "...哈啊..."
     pause 3.0
-    y "...哈..."
+    y "...哈啊..."
     pause 3.0
-    y "...哈..."
+    y "...哈啊..."
     pause 3.0
     play sound closet_open
     stop music

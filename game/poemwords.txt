@@ -1,14 +1,14 @@
 #File format: word,sPoint,nPoint,yPoint
-
+# 中文词语未经测试
 #Sayori's winning words
-happiness,3,2,1
-sadness,3,2,1
-death,3,1,2
+happiness 幸福,3,2,1
+sadness 难过,3,2,1
+death 死,3,1,2
 tragedy,3,1,2
-alone,3,1,2
+alone 孤独,3,1,2
 love,3,2,1
 adventure,3,2,1
-sweet,3,2,1
+sweet 甜蜜,3,2,1
 excitement,3,2,1
 fireworks,3,2,1
 romance,3,2,1
