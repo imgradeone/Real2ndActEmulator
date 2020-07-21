@@ -208,8 +208,8 @@ label poem(transition=True):
     $ config.allow_skipping = False
     $ allow_skipping = False
     #Display a tutorial tooltip on very first playthrough of minigame
-    if persistent.playthrough == 0 and chapter == 0:
-        call screen dialog("It's time to write a poem!\n\nPick words you think your favorite club member\nwill like. Something good might happen with\nwhoever likes your poem the most!", ok_action=Return())
+    if chapter == 0:
+        call screen dialog("是时候写诗了！\n\n选择你认为某个部员喜欢的词，\n接下来可能会发生什么好事哦！（？）", ok_action=Return())
     python:
         poemgame_glitch = False
         played_baa = False

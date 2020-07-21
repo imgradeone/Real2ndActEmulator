@@ -202,10 +202,10 @@ label ch22_main:
     m 5 "喔，谢谢你，Yuri～"
     show monika at t41 zorder 2
     show natsuki at f33 zorder 3
-    n 2d "You should play something for us sometime!"
+    n 2d "你哪时也要让我们听听啊！"
     show natsuki at t33 zorder 2
     show monika at f41 zorder 3
-    m "啊哈哈， that's..."
+    m "啊哈哈，这个嘛..."
     "Monika looks at me."
     m 1a "Well, I am working on writing a song, but it's not quite done yet..."
     m "Maybe once I get a little bit better, I will."
@@ -262,7 +262,7 @@ label ch22_main:
     y 3y5 "Okay!"
     y "Can we start now?"
     y "Let's find a place to sit--"
-    y 3n "A-Ah--"
+    y 3n "啊-啊--"
     y "I'm being a little forceful, aren't I...?"
     y 4c "I'm sorry!"
     y "My heart...just won't stop pounding, for some reason..."
@@ -321,7 +321,10 @@ label ch22_end:
     else:
         play music t3
     if renpy.random.randint(0,2) == 0:
-        show screen notify("达成成就：你鼠标里的 DNA（（（")
+        if faint_effect:
+            show screen notify("达成成就：你鼠标里的 DNA 和 死 者 视 角 打 游 戏（（（")
+        else:
+            show screen notify("达成成就：你鼠标里的 DNA（（（")
         $ mouse_modify_random = True
         $ config.mouse = {"default": [
                                     ("gui/mouse/s_head2.png", 0, 0),
@@ -346,7 +349,7 @@ label ch22_end:
     # 死 不 瞑 目 纱 师 弟（1/3）
 
     m "Okay, everyone!"
-    m "We're all done reading each other's poems, right?"
+    m "大家分享完诗了吧？"
     if mouse_modify_random:
         show screen notify("光标已重置。")
         $ mouse_modify_random = False
@@ -354,7 +357,7 @@ label ch22_end:
     $ config.mouse = None
     m "We have something we need to go over today, so if everyone could come sit at the front of the room..."
     show natsuki 3c at f31 zorder 3
-    n "Is this about the festival?"
+    n "是关于学园祭的吗？"
     show natsuki at t31 zorder 2
     show monika 1j at f32 zorder 3
     m "Well, sort of~"
@@ -523,7 +526,7 @@ label ch22_end:
     play music "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
     hide black
     hide y_glitch_head
-    y "I mean, I like how nice and quiet the club is right now..."
+    y "我的意思是，我喜欢现在这个文学部的样子，又好又安静..."
     y "And I'm just...happy with you here..."
     y 2t "不过！"
     y "我可是副部长啊..."
@@ -539,12 +542,12 @@ label ch22_end:
     $ currentpos = get_pos() * 2.07
     stop music
     pause 0.5
-    if not persistent.alt_safe_mode:
-        play sound "sfx/stab.ogg"
-        show blood_eye zorder 3:
-            pos (710,380) zoom 2.5
-        pause 0.75
-        stop sound
+    # if not persistent.alt_safe_mode:
+    #     play sound "sfx/stab.ogg"
+    #     show blood_eye zorder 3:
+    #         pos (710,380) zoom 2.5
+    #     pause 0.75
+    #     stop sound
     play music "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
     hide black
     hide y_glitch_head
@@ -634,14 +637,14 @@ label ch22_end:
     show noise:
         alpha 0
         linear 20 alpha 0.1
-    m "[player], I just wanted to make sure you're enjoying your time at this club."
+    m "[player]，我只希望你在俱乐部过得开心。"
     m "I would really hate to see you unhappy."
     m 2m "I feel kind of like I'm responsible for that, as President..."
     stop music
     m 4e "And I really do care about you...you know?"
     m "I don't like seeing the other girls give you a hard time."
     m 4r "With how mean Natsuki is and everything..."
-    m 4m "And Yuri being a little bit...you know."
+    m 4m "Yuri 现在也有点那啥...你也懂。"
     m 5a "啊哈哈..."
     m "Sometimes it feels like you and I are the only real people here."
     m "You know what I mean?"
@@ -659,7 +662,7 @@ label ch22_end:
     m "所以这就是为什么--\"{space=5000}{w=0.75}{nw}"
     m 1g "等等，我还没说完啊！\"{space=5000}{w=0.5}{nw}"
     m "别！\"{space=5000}{w=0.5}{nw}"
-    m "快停下！\"{space=5000}{w=1.0}{nw}"
+    m "快停下！\"{space=5000}{w=1.0}"
     window hide(None)
     window auto
     hide black onlayer front
