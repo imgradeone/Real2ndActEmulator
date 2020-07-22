@@ -756,5 +756,6 @@ label m2_yuri_2:
 label m2_yuri_3:
     stop music
     m 1i "[player]，不要说我们没有警告过你。" # 巨硬翻译梗（
+    call screen dialog("你居然爱一个疯子...呵呵。（（（",Return())
     $ skip_poem = True
     return

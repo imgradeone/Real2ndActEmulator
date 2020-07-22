@@ -176,7 +176,7 @@ label ch20_main2:
     show monika 2a at t31 zorder 2
     show yuri at f33 zorder 3
     y 4 "很-很荣幸认识你..."
-    "Yuri，看起来更加成熟，但却有点害羞，似乎不太跟得上类似Natsuki这样的人的节奏。"
+    "Yuri，看起来更加成熟，但却有点害羞，似乎不太跟得上类似 Natsuki 这样的人的节奏。"
     show yuri at t33 zorder 2
     mc "嗯...很高兴认识你们俩。"
     show monika at f31 zorder 3
