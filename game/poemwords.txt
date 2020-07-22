@@ -1,5 +1,5 @@
 #File format: word,sPoint,nPoint,yPoint
-# 中文翻译被我搞砸了
+# FIXME: 中文翻译被我搞砸了
 #Sayori's winning words
 happiness 幸福,3,2,1
 sadness 难过,3,2,1
