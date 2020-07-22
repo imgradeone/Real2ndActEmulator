@@ -365,17 +365,17 @@ label ch23_n_bad:
     #Didn't like the last two poems
     if n_poemappeal[0] < 0 and n_poemappeal[1] < 0:
         n 5x "我再也不想看你那种为 Yuri 写的屑诗。"
-        n 5s "But I'm still going to make you read mine."
+        n 5s "但你还是要读我的。"
         n "There's a reason."
         n 5x "I really wish I didn't have to do this..."
         n "But unfortunately I don't have much of a choice."
-        n 5h "Just...read it carefully, okay?"
-        n "Then you can go away."
+        n 5h "你...就好好读吧，OK？"
+        n "看完你就可以走了。"
         return
     #Liked one of the other two but not this one
     elif n_poemappeal[0] < 0 or n_poemappeal[1] < 0:
         n "..."
-        n 2c "...Meh."
+        n 2c "...咩。"
         n "I guess you really haven't learned anything after all."
         n "Honestly, I don't know why I got my hopes up in the first place."
         label ch23_n_bad_shared:
@@ -434,10 +434,10 @@ label ch23_n_med:
         jump ch23_n_shared
 
 label ch23_n_ygave:
-    n 1h "What?"
-    n "You gave your poem to Yuri?"
-    n 4x "Gross!"
-    n "What is with you two?"
+    n 1h "纳尼？"
+    n "你已经把诗给 Yuri 了？"
+    n 4x "艹！"
+    n "你们两个怎么了？"
     n 1s "哼唧..."
     n "It's not like I wanted to read it anyway."
     n 1r "It's just pissing me off a little bit that you didn't even think to show me at all."
@@ -538,7 +538,7 @@ label ch23_y_med:
     jump ch23_y_good
 
 label ch23_y_good:
-    y 1d "Finally..."
+    y 1d "终于啊..."
     y 3y5 "啊哈哈..."
     show yuri 3m
     "Yuri holds my poem to her face and takes a deep breath."
@@ -573,10 +573,10 @@ label ch23_y_good:
     y 3y1 "啊哈哈哈哈哈哈哈哈哈。"
     $ _history_list.pop()
     $ style.say_dialogue = style.normal
-    y 2s "You can have my poem too."
-    y "Besides, after you read it, I know you're really going to want to keep it."
+    y 2s "你也可以读我的诗。"
+    y "你看完后一定也想留着它的。"
     y 2y6 "来，拿去吧。我已经等不及了。"
-    y 2y5 "快点读吧！"
+    y 2y5 "快点读吧！GKD！"
     $ y_gave = True
     return
 

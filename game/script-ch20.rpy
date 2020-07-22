@@ -15,7 +15,7 @@ label ch20_main:
 
 label ch20_main2:
     "今天，一如既往，是个平常的上学日。"
-    "早上可以说是最糟糕的，会被周围的现充包围着走到学校。"
+    "早上可以说是最糟糕的，去学校的路上总会被周围的一大波现充包围着。"
     "与此同时，我却总是一个人。"
     "我经常告诉自己，差不多是时候该找一个女朋友之类的了..."
     "但我确实没什么动力去加入什么社团。"
@@ -250,7 +250,7 @@ label ch20_main2:
     show yuri at f21 zorder 3
     y 2u "那就好..."
     show yuri at t21 zorder 2
-    "Yuri 宽慰地微微一笑。"
+    "Yuri 微微一笑。"
     show monika at thide zorder 1
     hide monika
     show yuri 1a at t32 zorder 2
@@ -300,7 +300,7 @@ label ch20_main2:
     show yuri at t32 zorder 2
     show natsuki at f31 zorder 3
     n 5c "好吧，我只是..."
-    "Natsuki 短暂地撇了我一眼。"
+    "Natsuki 短暂地瞥了我一眼。"
     n 5q "没什么。"
     show natsuki at t31 zorder 2
     show monika at f33 zorder 3
@@ -359,7 +359,7 @@ label ch20_main2:
     show yuri at t32 zorder 2
     show monika at f33 zorder 3
     m 2b "我们每个人回家写一首自己的诗吧！"
-    m "这样的话，在下次活动的时候，我们就可以彼此分享了。"
+    m "下次活动的时候，我们就可以彼此分享了。"
     m "这样的话，大家就扯平了！"
     show monika 2a at t33 zorder 2
     show natsuki at f31 zorder 3

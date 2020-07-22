@@ -159,11 +159,11 @@ label ch21_end:
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     n 5x "哼。"
-    n "如果我想要建议，那么我就会去找喜欢这首诗的人。"
-    n "顺便告诉你，都有谁{i}已经{/i}喜欢了。"
+    n "如果我需要建议，那么我就会去找喜欢这首诗的人。"
+    n "顺便告诉你，都有谁{i}已经{/i}喜欢这首诗了。"
     n 5e "Monika 喜欢。"
     n "[player] 也喜欢！"
-    n "所以基于这些，我也乐意给你我的一点建议。"
+    n "所以基于这些，我也乐意给你一点建议。"
     n "首先--"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
@@ -202,7 +202,7 @@ label ch21_end:
     y 3h "我...！"
     y "才没有..."
     y "如果我真的是懂王..."
-    y 1r "...那我应该很做作啊！"
+    y 1r "...那我应该可爱得很恶心啊！"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     n 1o "唔唔唔...！"

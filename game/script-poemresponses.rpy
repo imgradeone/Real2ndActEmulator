@@ -131,8 +131,8 @@ label ch1_y_end:
     if _return:
         call showpoem(poem_y1_chs, img="yuri 3t")
     y 3t "..."
-    y "I...I'm sorry I have such terrible handwriting!"
-    mc "What??"
+    y "抱-抱歉，我写字写得那么难看！"
+    mc "啥？？"
     mc "I wasn't thinking that at all..."
     y 2v "But it took you a long time to read..."
     mc "Ah--"
