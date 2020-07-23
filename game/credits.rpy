@@ -203,7 +203,7 @@ style credits_text:
     outlines []
 
 style monika_credits_text:
-    font "gui/font/m1.ttf"
+    font "mod_assets/font/nian.otf"
     color "#fff"
     size 40
     text_align 0.5
@@ -390,7 +390,6 @@ image end_glitch4:
 
 #Start for the actual credits scene
 label credits:
-    $ persistent.autoload = "credits" #Come back to the credits if the game is quit
     #Disable player interactions
     $ config.keymap['game_menu'] = []
     $ config.keymap['hide_windows'] = []
@@ -459,7 +458,7 @@ label credits:
     scene black
     pause 0.5
     $ consolehistory = []
-    call updateconsole("renpy.music.play(\"ddlc.ogg\")", "Playing audio \"ddlc.ogg\"...") from _call_updateconsole
+    call updateconsole("renpy.music.play(\"ddlc.ogg\")", "Playing audio \"ddlc.ogg\"...")
     pause 1.0
     call hideconsole from _call_hideconsole
     play music "<to 50.0>bgm/credits.ogg" noloop
@@ -645,22 +644,4 @@ label credits2:
     play sound page_turn
     show poem_end with Dissolve(1)
 
-    #Fade to black and make player quit
-    label postcredits_loop:
-        $ persistent.autoload = "postcredits_loop" #If the game quits come back here
-
-        #Disable player input
-        $ config.keymap['game_menu'] = []
-        $ config.keymap['hide_windows'] = []
-        $ renpy.display.behavior.clear_keymap_cache()
-        $ quick_menu = False
-        $ config.skipping = False
-        $ config.allow_skipping = False
-
-        #Fade to black
-        scene black
-        show poem_end #Show special ending message
-        $ pause()
-        #Make player quit
-        call screen dialog(message="Error: Script file is missing or corrupt.\nPlease reinstall the game.", ok_action=Quit(confirm=False))
-        return
+    return

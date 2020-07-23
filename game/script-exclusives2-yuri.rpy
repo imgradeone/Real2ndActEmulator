@@ -17,7 +17,7 @@ label yuri_exclusive2_1:
     mc "抱歉..."
     mc "我只是在发呆..."
     "我喃喃地说着，觉得自己是不是让她感觉不舒服。"
-    show screen notify("达成成就：眉 飞 色 舞")
+    show screen notify("达成成就：眉 飞 色 舞（不信你就挂机一下再回来看）")
     y oneeye "哦..."
     y "没事的..."
     y "要是我注意力集中的话，那我一开始也就不会注意到了。"

@@ -873,6 +873,9 @@ image natsuki vomit = "natsuki/vomit.png"
 image n_blackeyes = "images/natsuki/blackeyes.png"
 image n_eye = "images/natsuki/eye.png" # 眼珠子爆出来力（（（
 
+image n_blackeyes_alt = "mod_assets/images/blackeyes_alt.png"
+image n_eye_alt = "mod_assets/images/eye_alt.png" # 眼珠子爆出来力（（（
+
 # Yuri
 
 image yuri 1 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/a.png")

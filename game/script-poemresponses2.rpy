@@ -4,6 +4,10 @@ label ch21_y_end:
 label ch22_y_end:
     stop music fadeout 2.0
     call showpoem(poem_y22, music=False, paper="images/bg/poem_y1.jpg", img="yuri 2s")
+    call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
+    if _return:
+        call showpoem(poem_y22_chs, music=False, paper="images/bg/poem_y1.jpg", img="yuri 2s")
+
     y 2q "啊哈哈..."
     y "It doesn't really matter what it's about."
     y "My mind has been a little hyperactive lately, so I had to take it out on your pen."
@@ -44,7 +48,7 @@ label ch23_y_end:
     $ renpy.music.stop(channel="music_poem")
     $ renpy.music.play(audio.t5c)
     y "..."
-    y 4d "我..."
+    y 4d "让..."
     y "让我先...吐一会儿。"
     show yuri at lhide
     hide yuri
@@ -57,6 +61,9 @@ label ch22_n_end:
         jump ch22_n_end2
     else:
         call showpoem(poem_n2)
+        call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
+        if _return:
+            call showpoem(poem_n2_chs)
         n 2a "Not bad, right?"
         mc "It's quite a bit longer than yesterday's."
         n 2w "Yesterday's was way too short..."
@@ -83,6 +90,9 @@ label ch22_n_end:
     return
 label ch22_n_end2:
     call showpoem(poem_n2b, revert_music=False)
+    call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
+    if _return:
+        call showpoem(poem_n2b_chs, revert_music=False)
     $ style.say_dialogue = style.edited
     n "[player]..."
     n "为什么你今天不陪我一起看书？"
@@ -166,6 +176,9 @@ label ch23_n_end:
     $ natsuki_23 = True
     $ style.say_dialogue = style.normal
     call showpoem(poem_n23, revert_music=False)
+    call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
+    if _return:
+        call showpoem(poem_n23_chs, revert_music=False)
     $ renpy.music.stop(channel="music_poem", fadeout=2.0)
     $ style.say_dialogue = style.edited
     show screen tear(8, offtimeMult=1, ontimeMult=10)
@@ -174,11 +187,11 @@ label ch23_n_end:
     hide screen tear
     show natsuki ghost_base
     n "我改变想法了。"
-    n "忽略你刚刚看到的一切吧。"
+    n "忘掉你刚刚看到的一切吧。"
     n "试着做任何事情都是没用的。"
-    n "Yuri 被人讨厌是她自己的锅。"
+    n "Yuri 被人讨厌都是她自己的锅。"
     n "[player]，听得见我说话吗？"
-    n "如果你多陪陪 Monika，问题就解决了。"
+    n "如果你多陪陪 Monika，问题就消失了。"
     n "对于如此完美的您来说，Yuri 和我实在不合你的口味。"
     n "从现在开始，Just Monika." # 请不要翻译 Just Monika.
     n "Just Monika."
@@ -205,9 +218,15 @@ label ch23_n_end:
 
 label ch21_m_end:
     call showpoem(poem_m21)
+    call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
+    if _return:
+        call showpoem(poem_m21_chs)
     jump ch1_m_end2
 label ch22_m_end:
     call showpoem(poem_m22, revert_music=False)
+    call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
+    if _return:
+        call showpoem(poem_m22_chs, revert_music=False)
     $ currentpos = get_pos(channel="music_poem")
     $ audio.t5c = "<from " + str(currentpos) + " loop 4.444>bgm/5.ogg"
     stop music_poem fadeout 2.0
@@ -220,11 +239,11 @@ label ch22_m_end:
     m "I'm just trying to...um..."
     m 1r "Well, never mind."
     m "There's no point in explaining."
-    m 1i "Anyway..."
-    m 3b "Here's Monika's Writing Tip of the Day!"
-    m "Sometimes you'll find yourself facing a difficult decision..."
-    m "When that happens, don't forget to save your game!"
-    m 3k "You never know when...um..."
+    m 1i "那么..."
+    m 3b "这里是 Monika's Writing Tip of the Day！" # 不要翻译 Monika's Writing Tip of the Day
+    m "有时你会遇到选择困难..."
+    m "此时不要忘记存档哦！"
+    m 3k "你也不知道...emm..."
     m 3i "...等等，我在跟谁说话？"
     m "你听得到吗？"
     m 3g "告诉我，你听得到吗？"
@@ -275,27 +294,27 @@ label ch22_n_bad:
     #Didn't like last poem or this one
     if n_poemappeal[0] < 0:
         n 1r "..."
-        n "Yeah, just as I thought..."
-        mc "...?"
+        n "呵，果然如此..."
+        mc "...？"
         n 2w "[player]，听着。"
         n "我可不是白癡。"
-        n 2h "I know how much time you've been spending with Yuri..."
+        n 2h "我知道你在 Yuri 身上花了多少时间..."
         n "It's obvious that you care more about impressing her than trying to improve your writing."
         n 2w "To put it bluntly, it's kind of pathetic."
-        n 4h "Why are you even in this club, [player]?"
-        n "Honestly..."
-        n "I thought getting a new member would help everyone get more involved together."
-        n 4s "Not exclude each other even more."
-        n 1u "This is such a stupid activity anyway..."
-        n 12c "...Look, I'm not in a good mood today, and I just really don't feel like talking right now."
-        n "你爬吧。"
+        n 4h "[player]，你为什么你会出现在这个社团里？"
+        n "老实说..."
+        n "我原以为新加入一个成员可以让大家更多地参与到一起。"
+        n 4s "而不是变本加厉地彼此排斥。"
+        n 1u "这真 TM 傻逼至极..."
+        n 12c "...看吧，我今天心情不好，而且我现在也不想说话。"
+        n "所以，你爬吧。"
         $ skip_poem = True
         return
     
     #Liked the last poem but not this one
     else:
         n 1k "...Hm."
-        n "I liked your last one better."
+        n "我更喜欢你上一首诗。"
         mc "Eh? Really?"
         n 2c "Well yeah. I can tell you were a little more daring with this one."
         n "But you're really not good enough for that yet. It fell flat."
@@ -332,7 +351,7 @@ label ch22_n_med:
         mc "Ah... Well anything that isn't a trainwreck, I'll take as a win."
         mc "And I get the feeling you're probably the most critical."
         n 1p "H-Hey! What makes you--"
-        n 1q "{i}(Wait, maybe that was a compliment...?){/i}"
+        n 1q "{i}(等等，刚刚那句也许是表扬...？){/i}"
         n 4y "A-Ahah! Glad to see someone recognizes my experience!"
         n "Well then, keep practicing and maybe you'll be as good as me someday!"
         mc "That's...uh..."
@@ -366,9 +385,9 @@ label ch23_n_bad:
     if n_poemappeal[0] < 0 and n_poemappeal[1] < 0:
         n 5x "我再也不想看你那种为 Yuri 写的屑诗。"
         n 5s "但你还是要读我的。"
-        n "There's a reason."
-        n 5x "I really wish I didn't have to do this..."
-        n "But unfortunately I don't have much of a choice."
+        n "这是有原因的。"
+        n 5x "其实我也不想..."
+        n "但不幸的是，我被逼了。"
         n 5h "你...就好好读吧，OK？"
         n "看完你就可以走了。"
         return
@@ -439,13 +458,13 @@ label ch23_n_ygave:
     n 4x "艹！"
     n "你们两个怎么了？"
     n 1s "哼唧..."
-    n "It's not like I wanted to read it anyway."
-    n 1r "It's just pissing me off a little bit that you didn't even think to show me at all."
-    n 1x "...Ugh."
-    n 1q "Okay...I guess I'm going to share my poem with you anyway."
-    n "I really hate that I have to do this."
-    n "But unfortunately I don't have much of a choice."
-    n 1h "Just...read it carefully, okay?"
+    n "反正我也不想读它。"
+    n 1r "你甚至都不想给我看，真是惹到我了。"
+    n 1x "...呃。"
+    n 1q "好吧...不管怎么说，我还是要让你读的诗。"
+    n "我真的很讨厌这种感觉。"
+    n "但不幸的是，我被逼了。"
+    n 5h "你...就好好读吧，OK？"
     n "看完你就可以走了。"
     return
 
@@ -549,12 +568,12 @@ label ch23_y_good:
     y "Please?"
     mc "Sure, I don't care..."
     y 2y5 "啊哈哈。"
-    y "You're too nice to me, [player]..."
+    y "[player]，你对我真好..."
     y "I've never met anyone as nice as you."
     y 2y6 "I could die..."
-    y 3y5 "N-Not really, but--!"
-    y "I just don't know how to describe it."
-    y "It's okay to be feeling this way, right?"
+    y 3y5 "别-别当真，只不过--！"
+    y "我不知道该怎么形容。"
+    y "这样的感觉没问题的，对吧？"
     show yuri:
         "yuri 3y4"
         0.4
@@ -562,13 +581,13 @@ label ch23_y_good:
     y "还行，对吧？"
     "Yuri holds my poem to her chest."
     y 3m "我要把这首诗拿回家，好好放在房间里保管。"
-    y "I hope that it makes you feel good when you think about me having it."
+    y "我希望当你想到我拿着它时，你会感觉开心。"
     $ style.say_dialogue = style.normal
     y 3y5 "我会好好保管的！"
     $ style.say_dialogue = style.edited
     y 3y6 "我还会边反复欣赏，边自我排遣的！"
     $ _history_list.pop()
-    y "I'll give myself paper cuts so your skin oil enters my bloodstream."
+    y "我会用纸割开自己，这样你的皮脂就会进入到我的血液中。"
     $ _history_list.pop()
     y 3y1 "啊哈哈哈哈哈哈哈哈哈。"
     $ _history_list.pop()
@@ -597,13 +616,13 @@ label ch21_m_start:
     m 1a "Anyway..."
     m "Want to share your poem with me?"
     mc "It's kind of embarrassing, but I guess I have to."
-    m 5a "Ahahaha!"
+    m 5a "啊哈哈哈！"
     m "Don't worry, [player]!"
     m "We're all a little embarrassed today, you know?"
     m "But it's that sort of barrier that we'll all learn to get past soon."
     mc "Yeah, that's true."
     "I hand Monika my poem."
-    m 2a "...Mhm!"
+    m 2a "...嗯？！"
     $ nextscene = "m2_" + poemwinner[0] + "_" + str(eval(poemwinner[0][0] + "_appeal"))
     call expression nextscene from _call_expression_3
 
@@ -749,8 +768,8 @@ label m2_yuri_2:
     m 1d "I'm not saying it's your fault, though!"
     m 1a "But I guess that's why I had to explain it all to you..."
     m "So I think if you keep your distance, that would probably be best for her."
-    m 5 "While you're at it, don't be shy to spend a little more time with me..."
-    m "To put it lightly, I at least have it together in the head...and I know how to treat my club members."
+    m 5 "与此同时，不要羞于多花一些时间和我在一起..."
+    m "坦白地说，至少我有在脑海中考虑过...而且我知道该如何对待我的社团成员。"
     return
 
 label m2_yuri_3:

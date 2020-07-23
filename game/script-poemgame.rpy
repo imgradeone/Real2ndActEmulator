@@ -503,6 +503,7 @@ label poem(transition=True):
             if not poemgame_glitch:
                 if t.glitch: #Make stuff go wonky if the game glitches
                     poemgame_glitch = True
+                    renpy.show_screen("notify","达成成就：看到啥都乱点，小学生啊（")
                     renpy.music.play(audio.t4g)
                     renpy.scene()
                     renpy.show("white")
@@ -602,7 +603,7 @@ label poem(transition=True):
 
 #Creepy picture Happy Thoughts that scrolls up the screen infinitely
 image bg eyes_move:
-    "images/bg/eyes.png"
+    "mod_assets/images/s_eyes_alt.png"
     parallel:
         yoffset 720 ytile 2
         linear 0.5 yoffset 0
@@ -617,7 +618,7 @@ image bg eyes_move:
             xoffset 0
         repeat
 image bg eyes:
-    "images/bg/eyes.png"
+    "mod_assets/images/s_eyes_alt.png"
 
 #The character stickers, defined with their animation behaviors
 image s_sticker:

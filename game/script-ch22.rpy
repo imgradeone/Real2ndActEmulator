@@ -206,64 +206,82 @@ label ch22_main:
     show natsuki at t33 zorder 2
     show monika at f41 zorder 3
     m "啊哈哈，这个嘛..."
-    "Monika looks at me."
-    m 1a "Well, I am working on writing a song, but it's not quite done yet..."
-    m "Maybe once I get a little bit better, I will."
+    "Monika 看向了我。"
+    m 1a "好吧，其实我正在写一首歌，不过还差一点..."
+    m "也许等到我弹得稍微好些的时候，我会的。"
     show monika at t41 zorder 2
-    mc "That sounds cool."
-    mc "I look forward to it."
+    mc "听起来好厉害。"
+    mc "我很期待哦。"
     show monika at f41 zorder 3
-    m 1b "Is that so?"
-    m "In that case..."
-    m "I won't let you down, [player]."
+    m 1b "真的吗？"
+    m "那样的话..."
+    m "我不会让你失望的，[player]。"
     show yuri at thide zorder 1
     show natsuki at thide zorder 1
     hide yuri
     hide natsuki
     show monika 5 at t11 zorder 2
-    "Monika smiles sweetly."
-    mc "Ah..."
-    mc "I didn't mean any pressure or anything like that!"
-    m 1a "啊哈哈， don't worry."
-    m "I was hoping that I could share it with you, anyway."
-    m "I guess that's why I've been practicing so much recently."
-    mc "I see..."
-    "I'm not sure if Monika was referring to the whole club, or just me..."
-    mc "In that case, best of luck."
-    m 1j "Thanks~!"
-    m 1a "So, I didn't miss anything, did I?"
-    mc "Not...not really."
+    "Monika 甜甜地笑着。"
+    mc "啊..."
+    mc "我不是想给你压力之类的！"
+    m 1a "啊哈哈，别担心。"
+    m "我本来也在想着要弹给你（们）听的。"
+    m "这大概就是为什么我最近加大了练习强度了吧。"
+    mc "我明白了..."
+    "我不太确定 Monika 到底是指整个文学部，还是只弹给我..."
+    mc "这样的话，祝你好运。"
+    m 1j "谢谢～！"
+    m 1a "话说，我没有错过什么吧？"
+    mc "没...没有。"
     show monika at thide zorder 1
     hide monika
-    "I choose not to bring up anything that the three of us talked about."
-    "Besides, Natsuki has already run off into the closet."
+    "我觉得还是不要说我们三个刚刚发生的事比较好。"
+    "另外，Natsuki 已经跑到储藏间那边去了。"
     show yuri 2q at t11 zorder 2
     y "[player]..."
-    y "Um..."
-    y "Since your compliments put me in a good mood..."
-    y "I was wondering if you would like to spend some time together today."
-    y 3o "I mean--in the club!"
+    y "emm..."
+    y "你说的那些话让我很开心..."
+    y "我在想也许我们今天可以一起做些什么。"
+    y 3o "我是说--在社团里！"
     if poemwinner[0] == "natsuki":
         $ y_appeal = 1
-        mc "Ah, I suppose so."
-        mc "I don't think I could say no to you, after you gave that book to me."
-        mc "Well, I guess I need to make sure Natsuki isn't waiting for me."
-        mc "After we finished reading yesterday, she--"
-        y 3r "S-She's fine!"
-        y 3h "She's reading over there."
-        y 3y6 "So it's okay, right?"
-        mc "Ah--"
-        mc "In that case, I don't see any problem..."
+        mc "啊，我也觉得。"
+        mc "毕竟你送了我那本书，我想我也没有什么理由拒绝。"
+        mc "只是，我觉得我应该先确认 Natsuki 没有在等着我。"
+        mc "昨天我们一起看完漫画后，她--"
+        if n_appeal >= 2:
+            y 3r "她-她没事！"
+            $ style.say_dialogue = style.normal
+            y 3h "她正在那边看漫画呢。瞧？"
+            $ style.say_dialogue = style.edited
+            y 3f "别老想着她了。"
+            y "她已经习惯被无视了。"
+            y "来吧，我们去那边。"
+            $ style.say_dialogue = style.normal
+            window hide(None)
+            $ currentpos = get_pos()
+            stop music
+            scene black
+            window auto
+            pause 2.0
+            play music "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
+            jump ch22_main2
+        else:
+            y 3r "她-她没事！"
+            y 3h "她正在那边看漫画呢。"
+            y 3y6 "所以没关系的，对吧？"
+            mc "啊--"
+            mc "那这样的话，我觉得没问题..."
     else:
         $ y_appeal = 2
-        mc "Yeah, definitely."
-        mc "I planned on it anyway."
+        mc "嗯，当然可以。"
+        mc "我本来也是这么打算的。"
     show yuri at h11 zorder 2
-    y 3y5 "Okay!"
-    y "Can we start now?"
-    y "Let's find a place to sit--"
+    y 3y5 "好！"
+    y "现在可以开始吗？"
+    y "我们去找个地方坐--"
     y 3n "啊-啊--"
-    y "I'm being a little forceful, aren't I...?"
+    y "我会不会，有点强迫你了...？"
     y 4c "I'm sorry!"
     y "My heart...just won't stop pounding, for some reason..."
     mc "Don't worry about it."
@@ -274,6 +292,7 @@ label ch22_main:
     y "I won't be able to focus on reading like this..."
     mc "Take your time."
     "Yuri takes a deep breath, then pulls a copy of the book out of her bag."
+label ch22_main2:
     if n_poemappeal[1] == 1:
         $ n_poemappeal[1] = 0
     $ poemwinner[1] = "yuri"
@@ -348,24 +367,24 @@ label ch22_end:
 
     # 死 不 瞑 目 纱 师 弟（1/3）
 
-    m "Okay, everyone!"
+    m "好了，各位！"
     m "大家分享完诗了吧？"
     if mouse_modify_random:
         show screen notify("光标已重置。")
         $ mouse_modify_random = False
 
     $ config.mouse = None
-    m "We have something we need to go over today, so if everyone could come sit at the front of the room..."
+    m "我们今天需要商量点事，请大家都坐到房间的前面来..."
     show natsuki 3c at f31 zorder 3
     n "是关于学园祭的吗？"
     show natsuki at t31 zorder 2
     show monika 1j at f32 zorder 3
-    m "Well, sort of~"
+    m "嗯，差不多～"
     show monika 1a at t32 zorder 2
     show natsuki 1m at f31 zorder 3
-    n "Ugh. Do we really have to do something for the festival?"
-    n "It's not like we can put together anything good in just a few days."
-    n "We'll just end up embarrassing ourselves instead of getting any new members."
+    n "呃。我们真的必须准备学园祭吗？"
+    n "我们似乎没办法在短短几天内，就拼凑出什么像样的东西来啊。"
+    n "可能到头来，我们只会变得很难堪，也吸引不了新成员加入。"
     if faint_effect:
         $ currentpos = get_pos() + 2.0
         stop music fadeout 2.0
@@ -374,7 +393,7 @@ label ch22_end:
             linear 2.0 alpha 1.0
     show natsuki at t31 zorder 2
     show yuri 2g at f33 zorder 3
-    y "That's a concern of mine as well."
+    y "我也有这种担心呢。"
     if faint_effect:
         hide black onlayer front
         hide veins onlayer front
@@ -383,11 +402,11 @@ label ch22_end:
         show layer master
         show layer screens
         play music "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
-    y "I don't really do well with last-minute preparations..."
+    y "我并不擅长临时抱佛脚..."
     show yuri at t33 zorder 2
     show monika at f32 zorder 3
-    m 1b "Don't worry so much!"
-    m "We're going to keep it simple, okay?"
+    m 1b "别担心太多啦！"
+    m "我们就简单地来，好吗？"
     m 2a "Look..."
     m 2m "I know everyone's been a little more...lively...ever since [player] joined and we've started with some club activities."
     m 2d "But this isn't the time for us to become complacent."
@@ -510,10 +529,10 @@ label ch22_end:
     y "This is bad..."
     y "I don't know what to do..."
     mc "Well..."
-    mc "Do you have an opinion on the festival?"
-    y 4b "I-I don't know..."
+    mc "你对学园祭有什么想法吗？"
+    y 4b "我-我不知道..."
     $ style.say_dialogue = style.normal
-    y "I'm kind of indifferent, I guess..."
+    y "我其实无所谓的吧，我觉得..."
     show black zorder 3
     show y_glitch_head zorder 3:
         xpos 630 ypos -50 zoom 2.0
@@ -527,10 +546,10 @@ label ch22_end:
     hide black
     hide y_glitch_head
     y "我的意思是，我喜欢现在这个文学部的样子，又好又安静..."
-    y "And I'm just...happy with you here..."
+    y "而且我只是...觉得和你在这里挺好的..."
     y 2t "不过！"
     y "我可是副部长啊..."
-    y "It's not right for me to ignore my responsibilities like that..."
+    y "我不该那样逃避我的责任..."
     show black zorder 3
     show y_glitch_head zorder 3:
         xpos 430 ypos -450 zoom 4.5
@@ -552,8 +571,8 @@ label ch22_end:
     hide black
     hide y_glitch_head
     hide blood_eye
-    y 2l "I should do my best to consider everyone's perspective and make the decision that's right for the club."
-    y 1t "But what about you, [player]?"
+    y 2l "我应该尽力考虑所有人的感受，然后去做正确的决定。"
+    y 1t "那么你呢，[player]？"
     y "What do you want to get out of this club?"
     "Yuri repeats the same question as Monika."
     "I decide giving an indirect answer is better than nothing."
@@ -562,13 +581,13 @@ label ch22_end:
     mc "I don't think it's about how many members, but rather the quality of each member."
     mc "That's what will end up making the Literature Club a special place."
     y 1u "我懂..."
-    y "I really agree with you."
+    y "你说的没错呢。"
     # show blood_eye2 zorder 3:
     #     pos (568, 165)
     # 直接和谐，我不喜欢看孟姜女哭血（
-    y 1f "Each member contributes their own qualities in a special way."
-    y "With each change in members, the identity of the club as a whole will change, too."
-    y 1h "I don't think that's necessarily a bad thing."
+    y 1f "每个成员都以自己独特的方式为社团做贡献。"
+    y "随着成员的成长，社团的面貌也会逐渐改变。"
+    y 1h "我不觉得这一定是件坏事。"
     y "Stepping out of your comfort zone once in a while..."
     y 1a "So if you would like to help Monika with the festival, then I'm on your side as well."
     hide blood_eye2
@@ -625,11 +644,11 @@ label ch22_end:
     m 1j "See you tomorrow~"
     show yuri at thide zorder 1
     hide yuri
-    "Monika waves as Yuri exits the classroom."
+    "Monika 向正在离开教室的 Yuri 挥了挥手。"
     
     show monika 2a at t11 zorder 2
-    m "Phew..."
-    m 2e "Things have been a bit hectic lately, haven't they?"
+    m "pew..."
+    m 2e "最近的事情变得有点麻烦了，不是吗？"
     show darkred:
         additive 0.2
         alpha 0
@@ -638,11 +657,11 @@ label ch22_end:
         alpha 0
         linear 20 alpha 0.1
     m "[player]，我只希望你在俱乐部过得开心。"
-    m "I would really hate to see you unhappy."
-    m 2m "I feel kind of like I'm responsible for that, as President..."
+    m "我不愿意看到你不开心的样子。"
+    m 2m "我觉得这大概是我作为部长的责任..."
     stop music
-    m 4e "And I really do care about you...you know?"
-    m "I don't like seeing the other girls give you a hard time."
+    m 4e "而且我真的很在乎你...你知道吗？"
+    m "我不喜欢看到她们让你为难。"
     m 4r "With how mean Natsuki is and everything..."
     m 4m "Yuri 现在也有点那啥...你也懂。"
     m 5a "啊哈哈..."
@@ -651,9 +670,9 @@ label ch22_end:
     m 1g "But it's weird, because in all the time you've been here, we've hardly gotten to spend any time together."
     m 1n "Ah...I mean..."
     m "I guess it's technically only been a couple days..."
-    m 1l "Sorry, I didn't mean to say something weird!"
-    m 1e "There are just some things I've been hoping to talk about with you..."
-    m "Things I know only you could understand."
+    m 1l "抱歉，我不是故意说一些奇怪的话的！"
+    m 1e "其实有些事情我早就想和你说了..."
+    m "一些只有你才能理解的事情。"
     stop music fadeout 3.0
     show black onlayer front:
         alpha 0.0
@@ -662,7 +681,7 @@ label ch22_end:
     m "所以这就是为什么--\"{space=5000}{w=0.75}{nw}"
     m 1g "等等，我还没说完啊！\"{space=5000}{w=0.5}{nw}"
     m "别！\"{space=5000}{w=0.5}{nw}"
-    m "快停下！\"{space=5000}{w=1.0}"
+    m "快停下！\"{space=5000}{w=1.0}{nw}"
     window hide(None)
     window auto
     hide black onlayer front

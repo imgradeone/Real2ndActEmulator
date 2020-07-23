@@ -9,6 +9,8 @@ label start:
             persistent.special_poems[i] = b
             a.remove(b)
 
+    $ persistent.seen_eyes == None
+    $ seen_eyes_this_chapter = False
 
     # 注册成就（原生）
 
