@@ -9,7 +9,7 @@ label yuri_exclusive2_1:
     play music t6 fadeout 1.0
     show yuri 4a at t11 zorder 2
     y "啊..."
-    "Shxt--"
+    "淦--"
     "她似乎注意到我在看她了..."
     "她又偷偷看了我一眼，我们视线有那么一瞬间交汇上了。"
     y 4b "..."
@@ -353,6 +353,8 @@ label yuri_exclusive2_2_ch22:
 
     $ currentpos = 45.264 - (get_pos() / 2.0)
     $ audio.t6r = "<from " + str(currentpos) + " to 39.817 loop 0>bgm/6r.ogg"
+    if persistent.disable_awful_music:
+        show screen notify("为营造游戏气氛，我不能放正常版 BGM，抱歉（（（")
     play music t6r
     show yuri at thide zorder 1
     hide yuri
@@ -596,7 +598,10 @@ label yuri_exclusive2_2_ch23:
     scene black
     with None
     $ audio.t6g = "<loop 10.893>bgm/6g.ogg"
-    play music t6g
+    if persistent.disable_awful_music:
+        play music t6
+    else:
+        play music t6g
     pause 4.62
     scene bg corridor
     show yuri eyes_base
@@ -609,7 +614,8 @@ label yuri_exclusive2_2_ch23:
     show yuri glitch at i11
     $ gtext = glitchtext(80)
     $ currentpos = get_pos()
-    play music g1
+    if not persistent.disable_awful_music:
+        play music g1
     y "[gtext]{nw}"
     stop music
     scene bg corridor
@@ -705,16 +711,16 @@ label yuri_exclusive2_2_ch23:
     y 1m "那样我们就能在偌大的部室里独处了。"
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
-    y "再没有人干扰我们的阅读时光。"
+    y "再也没有人干扰我们的阅读时光。"
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
-    y 1y4 "再没有人让我如自///割般痛苦。"
+    y 1y4 "再没有人让我如刀割般痛苦。"
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
     y 1q "啊哈哈..."
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
-    y "那只是个玩笑！"
+    y "开个玩笑！"
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
     y "别当真。"
@@ -723,7 +729,7 @@ label yuri_exclusive2_2_ch23:
     y 1i "不过我确实喜欢刀..."
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
-    y "听上去会有点怪，但是你没欣赏过刀子的美的话，是不会理解的。"
+    y "听上去会有点怪，但是你没欣赏过刀子的美学的话，是不会理解的。"
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
     y 1f "我有个想法。"

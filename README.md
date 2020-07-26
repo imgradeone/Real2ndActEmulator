@@ -69,15 +69,17 @@ DDLC 中文 Mod 模板 新 Demo
 - Doki Doki Mod Manager Team
 - 汉化版作者
 
-本 Demo 采用了知名汉化版的翻译，在此感谢。[Steam 社区原帖](https://steamcommunity.com/sharedfiles/filedetails/?id=1176221672)
+本 Demo 参考了知名汉化版的翻译，在此感谢。[Steam 社区原帖](https://steamcommunity.com/sharedfiles/filedetails/?id=1176221672)
 
 ## 翻译指南
 
 本 Mod 对原游戏剧本的汉化会有一些小区别，请查阅 [TRANSLATIONS.md](./TRANSLATIONS.md)。
 
+同时，本 Mod 的中文剧本翻译参考了知名汉化版的翻译、腾讯翻译官的机器翻译。
+
 ## 开源许可
 
-本模板采用 [Sayo-nika 的 GitHub Action](https://github.com/Sayo-nika/quickstart-actions) 进行远程 Mod 构建，在此致谢。
+本模板采用 [Sayo-nika 的 GitHub Action](https://github.com/Sayo-nika/quickstart-actions) 进行远程 Mod 构建，并进行定制化，在此致谢。
 
 本 Mod 模板需要使用 Ren'Py。Ren'Py 包含自由软件许可中的一些许可证，包括 GNU 宽通用公共许可证。  
 Ren'Py 由一系列开源组件构成，它们的开源协议可以在 https://www.renpy.cn/doc/license.html （简体中文）或 https://www.renpy.org/doc/html/license.html （英文）查看。

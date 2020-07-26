@@ -72,7 +72,7 @@ define audio.t6r = "<to 39.817 loop 0>bgm/6r.ogg" # 倒放版 Play With Me
 define audio.t6s = "<loop 43.572>bgm/6s.ogg" # 0.25 倍速版 Play With Me
 define audio.t7 = "<loop 2.291>bgm/7.ogg" # Poem Panic - 撕 X 主题
 define audio.t7a = "<loop 4.316 to 12.453>bgm/7.ogg"
-define audio.t7g = "<loop 31.880>bgm/7g.ogg" # 你游崩了版 Poem Panic
+define audio.t7g = "<loop 31.880>bgm/7g.ogg" # 超级加速版 Poem Panic
 define audio.t8 = "<loop 9.938>bgm/8.ogg" # Daijoubu! - 撕 X 结束力
 define audio.t9 = "<loop 3.172>bgm/9.ogg" # My Feelings - Emotional Theme
 define audio.t9g = "<loop 1.532>bgm/9g.ogg" # My Feelings 207% 速版本（原游戏未使用）
@@ -1349,7 +1349,7 @@ default persistent.player_level = 0
 default persistent.safe_mode = 0
 default persistent.alt_safe_mode = True
 default persistent.cleared = False
-
+default persistent.disable_awful_music = False
 default persistent.playthrough = 0
 default persistent.yuri_kill = 0
 default persistent.seen_eyes = None

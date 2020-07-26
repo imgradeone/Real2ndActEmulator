@@ -150,7 +150,7 @@ label ch22_main:
     "Natsuki 转向了我。"
     show yuri at t32 zorder 2
     show natsuki at f33 zorder 3
-    n 2a "你的可还在试用期哦。"
+    n 2a "你可还在试用期哦。"
     show natsuki at t33 zorder 2
     mc "嘿...！"
     "突然，门被猛地拉开了。"
@@ -282,16 +282,16 @@ label ch22_main:
     y "我们去找个地方坐--"
     y 3n "啊-啊--"
     y "我会不会，有点强迫你了...？"
-    y 4c "I'm sorry!"
-    y "My heart...just won't stop pounding, for some reason..."
-    mc "Don't worry about it."
-    mc "If anything, it's nice to see you have so much energy."
-    y 3q "Y-Yeah!"
-    y "But..."
-    y 3j "I need to try to calm down."
-    y "I won't be able to focus on reading like this..."
-    mc "Take your time."
-    "Yuri takes a deep breath, then pulls a copy of the book out of her bag."
+    y 4c "抱歉！"
+    y "我的心...因为某些原因，跳得很厉害..."
+    mc "别想太多了。"
+    mc "这不就显得更元气满满了嘛。"
+    y 3q "是-是啊！"
+    y "但..."
+    y 3j "我真的需要冷静一下。"
+    y "不然我就没办法专心读书..."
+    mc "慢慢来。"
+    "Yuri 做了一个深呼吸，随后从书包里拿出了一本书。"
 label ch22_main2:
     if n_poemappeal[1] == 1:
         $ n_poemappeal[1] = 0
@@ -379,11 +379,11 @@ label ch22_end:
     n "是关于学园祭的吗？"
     show natsuki at t31 zorder 2
     show monika 1j at f32 zorder 3
-    m "嗯，差不多～"
+    m "嗯，差不多~"
     show monika 1a at t32 zorder 2
     show natsuki 1m at f31 zorder 3
-    n "呃。我们真的必须准备学园祭吗？"
-    n "我们似乎没办法在短短几天内，就拼凑出什么像样的东西来啊。"
+    n "呃...我们必须准备学园祭吗？"
+    n "似乎没办法在短短几天内就整出什么像样的东西来啊。"
     n "可能到头来，我们只会变得很难堪，也吸引不了新成员加入。"
     if faint_effect:
         $ currentpos = get_pos() + 2.0
@@ -407,132 +407,132 @@ label ch22_end:
     show monika at f32 zorder 3
     m 1b "别担心太多啦！"
     m "我们就简单地来，好吗？"
-    m 2a "Look..."
-    m 2m "I know everyone's been a little more...lively...ever since [player] joined and we've started with some club activities."
-    m 2d "But this isn't the time for us to become complacent."
-    m "We still only have four members..."
-    m 2a "And the festival is our only real chance to find more, you know?"
+    m 2a "看..."
+    m 2m "我知道大家自从 [player] 加入之后都变得更加的...有活力...而且我们也开始了一些社团活动。"
+    m 2d "但是现在还不是自满的时候。"
+    m "我们还是只有四个成员..."
+    m 2a "而且学园祭是我们唯一真正的去招募更多人的机会，懂吧？"
     show monika at t32 zorder 2
     show natsuki at f31 zorder 3
-    n 5g "What's so great about getting new members, anyway?"
-    n "We already have enough to be considered an official club."
-    n "More members will just mean everything gets noisier and more difficult to manage."
+    n 5g "可是，招新又有什么好处呢？"
+    n "如果只是想正式成立的话，我们已经有足够的社员了。"
+    n "人越多只会变得越吵，也越难管。"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
     m 1g "Natsuki..."
-    m "I don't think you're looking at it the right way at all."
-    m "Don't you want to share your passion with as many people as you can?"
-    m 3e "To inspire them to find the same feelings that brought you here in the first place?"
-    m "The Literature Club should be a place where people can express themselves like they can't do anywhere else."
-    m "It should be a place so intimate that you never want to leave."
-    m 2e "I know you feel that way, too."
-    m 2b "I know we all do!"
-    m "So that's why we should work hard and put something together for the festival...even if it's something small!"
-    m "Right, [player]?"
+    m "我认为你根本没有正确地看待这件事。"
+    m "难道你不想和更多人分享你的热情吗？"
+    m 3e "启发他们找到当初同样把你带到这里的感情？"
+    m "文学部应该是一个让人们自由表达自我的地方。"
+    m "还应该是一个亲密得让人不想离开的地方。"
+    m 2e "我知道你也是这样想的，对吧？"
+    m 2b "大家都这么想的！"
+    m "所以，这就是为什么我们应该努力在学园祭上做出点什么...哪怕只是不起眼的小事！"
+    m "对吧，[player]?"
     show monika 2a at t32 zorder 2
-    mc "Ah..."
+    mc "啊..."
     show natsuki at f31 zorder 3
-    n 42c "Oh, come on!"
-    n "You can't take advantage of [player] to agree with you just because he doesn't know how to say no to anything."
+    n 42c "哦，求你别这样！"
+    n "你不能因为 [player] 不擅长回绝别人就利用他同意你啊。"
     stop music fadeout 1
-    n 1c "Look, Monika."
-    n "Do you really think any of us here joined the club with other people in mind?"
-    n "Yuri never even talked until [player] joined."
-    n 2b "As for me, I just like it better here than I do at home."
-    n "And [player] isn't even passionate about literature in the first place."
-    n "And that's everyone."
-    n 4w "Sorry, but you're really the only one who's so interested in finding new members."
-    n "The rest of us are fine like this."
-    n 4q "I know you're President and all, but you should really consider our opinions for once."
+    n 1c "Monika，你品，你细品。"
+    n "你真的觉得有人在加入文学部之前考虑过别人的事吗？"
+    n "Yuri 在 [player] 来之前连话都不说。"
+    n 2b "至于我，我只是觉得留在这儿比在家好点罢了。"
+    n "而 [player] 一开始甚至都对文学没什么兴趣。"
+    n "就这。"
+    n 4w "很抱歉，但是你是唯一一个对招揽新人有兴趣的人。"
+    n "我觉得现在这样就挺好的。"
+    n 4q "我知道，你毕竟是部长，但你这次确实应该考虑一下我们其他人的意见。"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
     m 1g "..."
-    "Monika is clearly taken aback by Natsuki's words."
+    "Monika 很明显被 Natsuki 的话吓了一跳。"
     play music t9
-    m 1m "That's...not true at all."
-    m 2m "I'm sure Yuri and [player] want to get more members too..."
-    m 2p "...Right?"
+    m 1m "这...压根就不对啊。"
+    m 2m "我敢肯定，Yuri 和 [player] 也希望能多招一些新成员..."
+    m 2p "...对吧？"
     show monika at t32 zorder 2
     show yuri at f33 zorder 3
     y 4b "..."
     show yuri at t33 zorder 2
     mc "..."
-    "I don't know about Yuri, but I'm kind of indifferent."
-    "If I showed as much enthusiasm as Monika wanted, then I would probably be lying."
-    "Still, if it's up to me to rescue this situation..."
-    mc "Um--"
+    "我不知道 Yuri 怎么认为，但我其实不在乎。"
+    "如果我表现得像 Monika 期待中那样热切的话，那我就是在说谎。"
+    "但是，如果救不救场取决于我的话..."
+    mc "emm--"
     show monika at f32 zorder 3
-    m 1i "No."
-    m "Natsuki's right, isn't she?"
-    m 1g "This club..."
-    m "It's nothing more than a place for a few people to hang out."
-    m 1r "Why did I think that everyone here saw it the same way as I did?"
+    m 1i "不。"
+    m "Natsuki 说的没错。"
+    m 1g "这个社团..."
+    m "其实只是一小部分人拿来散心的地方罢了。"
+    m 1r "我为什么会觉得大家都会以我的角度来考虑呢？"
     show monika at t32 zorder 2
-    mc "But that doesn't mean that we're against getting new members or anything..."
+    mc "但是这也不是说我们反对找些新成员之类的..."
     show monika at f32 zorder 3
-    m 1i "[player], why did you even join this club?"
-    m "What were you hoping to get out of it?"
+    m 1i "[player]，你到底是为什么才来的？"
+    m "你当时希望从中得到什么？"
     show monika at t32 zorder 2
-    mc "Well--"
-    "That's not really something I can be honest about, is it?"
+    mc "呃--"
+    "我最好还是别说实话吧。"
     show monika at f32 zorder 3
-    m 1p "In fact..."
-    m "If I remember, you weren't even given a choice not to join."
+    m 1p "其实..."
+    m "如果我没记错的话，你甚至没有选择不加入的权利。"
     show monika at thide zorder 1
     hide monika
-    "Monika sits down and stares at her desk."
-    m "What's the point of all this, anyway?"
-    m "What if starting this club was a mistake?"
+    "Monika 坐了下来，只是盯着她的桌子。"
+    m "那这一切又有什么意义呢？"
+    m "或许办这个社团一开始就是个错误？"
     mc "..."
     show yuri at f33 zorder 3
-    y 2g "Now you've done it, Natsuki..."
+    y 2g "Natsuki，看你干的好事..."
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
-    n 1p "What, me?"
-    n 1s "I just spoke my mind..."
-    n "Is it a crime to be honest?"
+    n 1p "啥，我？"
+    n 1s "我只是把我的想法讲出来罢了..."
+    n "说实话又成犯罪了？"
     show natsuki at t31 zorder 2
     show yuri at f33 zorder 3
-    y 2l "It's not about being honest."
-    y "It's about word choice."
-    y 2h "Besides, you have no right to speak for everyone else in the club like that..."
+    y 2l "这和说实话没关系。"
+    y "是你说话的方式。"
+    y 2h "另外，你也没有权力代表我们所有人那样讲..."
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
-    n 1e "You don't understand at all!"
-    n 5s "I just..."
-    n "I just want a place that feels nice to hang out with a few friends."
-    n 5u "Is there a problem with the club being that for me?"
-    n "There aren't...there aren't many other places like that for me..."
-    n 5x "And now Monika wants to take it away from me!"
+    n 1e "你懂个锤子啊！"
+    n 5s "我只是..."
+    n "我只是想要一个可以舒服地与几个朋友相处的地方而已。"
+    n 5u "我希望这个社团是这样，有错吗？"
+    n "现在...现在真的没有几个这样适合我的地方了..."
+    n 5x "现在 Monika 还想要夺走它！"
     show natsuki at t31 zorder 2
-    mc "She's not taking anything away--"
+    mc "她没有想要夺--"
     show natsuki at f31 zorder 3
-    n 1g "No, [player]."
-    n "It's not the same."
-    n 1q "It won't be the same with the direction she wants to take it."
-    n "If I wanted that, then I could have just joined any other stupid club."
-    n 12d "But this one..."
-    n "I mean..."
-    n 12e "At least for a little bit of time..."
-    n "Things were nice."
-    "Natsuki starts packing up her things."
-    n 12d "I'm going home."
-    n "I feel like...I don't belong here right now."
+    n 1g "你错了，[player]。"
+    n "那不一样。"
+    n 1q "如果按她的方向来，很快这里就会变味了。"
+    n "如果我想那样，那我可能早就加入其他 SB 社团了。"
+    n 12d "但这个社团..."
+    n "至少..."
+    n 12e "至少有那么一点点时间..."
+    n "让我感到安心。"
+    "Natsuki 开始收拾自己的东西。"
+    n 12d "我回家吧。"
+    n "我感觉...我不再属于这里了。"
     show natsuki at t31 zorder 2
     show yuri at f33 zorder 3
     y 3t "Natsuki..."
     show natsuki at thide zorder 1
     hide natsuki
-    "Natsuki ignores Yuri and walks right out of the classroom."
+    "Natsuki 无视了 Yuri，径直走出了教室。"
     show yuri at t11 zorder 2
     y 3v "..."
-    y "This is bad..."
-    y "I don't know what to do..."
-    mc "Well..."
+    y "完蛋..."
+    y "咋办啊..."
+    mc "那么..."
     mc "你对学园祭有什么想法吗？"
     y 4b "我-我不知道..."
     $ style.say_dialogue = style.normal
-    y "我其实无所谓的吧，我觉得..."
+    y "其实无所谓的吧，我觉得..."
     show black zorder 3
     show y_glitch_head zorder 3:
         xpos 630 ypos -50 zoom 2.0
@@ -545,11 +545,11 @@ label ch22_end:
     play music "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
     hide black
     hide y_glitch_head
-    y "我的意思是，我喜欢现在这个文学部的样子，又好又安静..."
+    y "我的意思是，我喜欢现在这个文学部的样子，安静平和..."
     y "而且我只是...觉得和你在这里挺好的..."
     y 2t "不过！"
     y "我可是副部长啊..."
-    y "我不该那样逃避我的责任..."
+    y "我不该逃避我的责任..."
     show black zorder 3
     show y_glitch_head zorder 3:
         xpos 430 ypos -450 zoom 4.5
@@ -573,13 +573,13 @@ label ch22_end:
     hide blood_eye
     y 2l "我应该尽力考虑所有人的感受，然后去做正确的决定。"
     y 1t "那么你呢，[player]？"
-    y "What do you want to get out of this club?"
-    "Yuri repeats the same question as Monika."
-    "I decide giving an indirect answer is better than nothing."
-    mc "...I think the most important thing is for everyone to get along..."
-    mc "...And for the club to provide something that you can't get anywhere else."
-    mc "I don't think it's about how many members, but rather the quality of each member."
-    mc "That's what will end up making the Literature Club a special place."
+    y "那在部室之外，你想做些什么？"
+    "Yuri 问了和 Monika 相同的问题。"
+    "我决定迂回一下，毕竟这比一言不发要好。"
+    mc "...我认为最重要的是每个人都要和睦相处..."
+    mc "...而文学部本身，则是提供一些独家的东西。"
+    mc "我不觉得这取决于成员数量，而是成员的素质。"
+    mc "这样才会让文学部最终变成一个特别的地方。"
     y 1u "我懂..."
     y "你说的没错呢。"
     # show blood_eye2 zorder 3:
@@ -588,60 +588,60 @@ label ch22_end:
     y 1f "每个成员都以自己独特的方式为社团做贡献。"
     y "随着成员的成长，社团的面貌也会逐渐改变。"
     y 1h "我不觉得这一定是件坏事。"
-    y "Stepping out of your comfort zone once in a while..."
-    y 1a "So if you would like to help Monika with the festival, then I'm on your side as well."
+    y "只是稍微离开一下自己的舒适区的话..."
+    y 1a "所以如果你希望帮助 Monika 准备学园祭的话，我也会帮忙的。"
     hide blood_eye2
-    mc "Alright."
-    mc "Well, maybe we can all talk to Natsuki tomorrow..."
-    "Yuri nods."
+    mc "可以。"
+    mc "嗯，也许我们明天可以和 Natsuki 好好谈谈..."
+    "Yuri 点了点头。"
     show monika 1g at f21 zorder 3
     show yuri at t22 zorder 2
-    m "Hey, Yuri..."
+    m "嘿，Yuri..."
     show monika at t21 zorder 2
     show yuri at f22 zorder 3
-    y 1t "Eh?"
+    y 1t "诶？"
     show yuri at t22 zorder 2
     show monika at f21 zorder 3
-    m 1p "Um, I know things were a little awkward yesterday..."
-    m "But I feel like you deserve to know that I still think you're a wonderful vice president."
-    m 1e "And also, a wonderful friend."
+    m 1p "唔，我知道昨天的气氛有点尴尬..."
+    m "但是我还是应该告诉你，其实你是个很棒的副部长。"
+    m 1e "而且，也是个很棒的朋友。"
     show monika at t21 zorder 2
     show yuri at f22 zorder 3
     y 3s "M-Monika..."
     show yuri at t22 zorder 2
     show monika at f21 zorder 3
-    m 2e "I want to do everything I can to make this the best club ever."
-    m "Okay?"
+    m 2e "为了让文学部变成最棒的社团，我会尽我一切努力的。"
+    m "好伐？"
     show monika at t21 zorder 2
     show yuri at f22 zorder 3
-    y "...Me too."
+    y "...我也会的。"
     show yuri at t22 zorder 2
     show monika at f21 zorder 3
-    m 1a "Yeah..."
-    m "Let's all go home for today."
-    m "We'll talk about the festival tomorrow."
+    m 1a "嗯..."
+    m "那我们今天就先回家吧。"
+    m "明天再讨论关于学园祭的事情。"
     show monika at t21 zorder 2
     show yuri at f22 zorder 3
-    y 1m "Okay."
-    y "I look forward to it."
-    y 1a "Shall we go, [player]?"
+    y 1m "OK。"
+    y "我很期待。"
+    y 1a "[player]，那现在走吗？"
     show yuri at t22 zorder 2
     show monika at f21 zorder 3
-    m 1d "Um--"
-    m 1p "Please don't take this the wrong way, but..."
-    m "I'm going to chat a little bit with [player] before we leave."
-    m 1d "Just to see what he thinks of his time here and all that..."
-    m "It's important to me, as President."
+    m 1d "emm--"
+    m 1p "别想歪，我只是..."
+    m "我想在离开之前和 [player] 说几句话。"
+    m 1d "只是问问他这段时间以来的感受之类的事情..."
+    m "作为部长，这对我来说挺重要的。"
     show monika at t21 zorder 2
     show yuri at f22 zorder 3
     y 2v "..."
-    "Yuri looks a little troubled, but she doesn't protest."
-    y 2t "Okay."
-    y 2s "I trust your judgment, Monika."
-    y "In that case, I'll see the two of you tomorrow."
+    "Yuri 看起来有点不高兴，但是她没有反对。"
+    y 2t "OK。"
+    y 2s "Monika，我相信你的判断。"
+    y "那么，明天见。"
     show yuri at t22 zorder 2
     show monika at f21 zorder 3
-    m 1j "See you tomorrow~"
+    m 1j "明天见~"
     show yuri at thide zorder 1
     hide yuri
     "Monika 向正在离开教室的 Yuri 挥了挥手。"
@@ -662,14 +662,14 @@ label ch22_end:
     stop music
     m 4e "而且我真的很在乎你...你知道吗？"
     m "我不喜欢看到她们让你为难。"
-    m 4r "With how mean Natsuki is and everything..."
+    m 4r "尤其是 Natsuki 有点太刻薄..."
     m 4m "Yuri 现在也有点那啥...你也懂。"
     m 5a "啊哈哈..."
-    m "Sometimes it feels like you and I are the only real people here."
-    m "You know what I mean?"
-    m 1g "But it's weird, because in all the time you've been here, we've hardly gotten to spend any time together."
-    m 1n "Ah...I mean..."
-    m "I guess it's technically only been a couple days..."
+    m "有时候感觉就像是只有你和我两个真人一样。"
+    m "你懂吧？"
+    m 1g "但是挺奇怪的，你在这都这么久了，我们几乎都没有单独相处过。"
+    m 1n "啊...我..."
+    m "虽然理论上讲只有几天..."
     m 1l "抱歉，我不是故意说一些奇怪的话的！"
     m 1e "其实有些事情我早就想和你说了..."
     m "一些只有你才能理解的事情。"

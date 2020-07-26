@@ -9,19 +9,23 @@ label fakeintro:
     scene bg residential_day
     with dissolve_scene_half
     $ config.window_hide_transition = Dissolve(.2)
-    play music t2g
-    queue music t2g2
+    if persistent.disable_awful_music:
+        play music t2
+    else:
+        play music t2g
+        queue music t2g2
     $ s_name = "???"
 
     s "[gtext]"
     "我看见一个吵吵闹闹的女孩不断挥着手向我跑来，仿佛要把全世界的注意力都聚焦在她身上一样。"
+
+    $ s_name = glitchtext(12)
     "她叫 [s_name]，我的邻居，也是我的儿时玩伴。"
     "你能理解，你不一定会和她交朋友，但你们俩在一起太久了，很多事情就这样顺其自然了的感觉吗？"
     "我们以前经常这样一起上学，但上了高中以后她睡懒觉的频率就越来越高，之后我也就有点懒得等她了。"
     "但她这样狂追不舍，弄得我好想逃跑。"
     "不过，我也别无选择，只好叹了口气在路口等着好让 [s_name] 赶上我。"
 
-    $ s_name = glitchtext(12)
     show sayori glitch at t11 zorder 2
     python:
         currentpos = get_pos()

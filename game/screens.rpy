@@ -954,13 +954,20 @@ screen preferences():
                         label _("显示模式")
                         textbutton _("窗口") action Preference("display", "window")
                         textbutton _("全屏") action Preference("display", "fullscreen")
-                if config.developer:
-                    vbox:
-                        style_prefix "radio"
-                        label _("Rollback Side")
-                        textbutton _("Disable") action Preference("rollback side", "disable")
-                        textbutton _("Left") action Preference("rollback side", "left")
-                        textbutton _("Right") action Preference("rollback side", "right")
+                # if config.developer:
+                #     vbox:
+                #         style_prefix "radio"
+                #         label _("Rollback Side")
+                #         textbutton _("Disable") action Preference("rollback side", "disable")
+                #         textbutton _("Left") action Preference("rollback side", "left")
+                #         textbutton _("Right") action Preference("rollback side", "right")
+
+                vbox:
+                    style_prefix "check"
+                    label _("Mod 设置")
+                    textbutton _("禁用 glitch 音乐"):
+                        action ToggleField(persistent, "disable_awful_music")
+                        selected persistent.disable_awful_music
 
                 vbox:
                     style_prefix "check"
@@ -1023,6 +1030,7 @@ screen preferences():
                         textbutton _("一键静音"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
+
     text "版本 [config.version]":
                 xalign 1.0 yalign 1.0
                 xoffset -10 yoffset -10

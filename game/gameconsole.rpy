@@ -2,7 +2,7 @@ label gameconsole:
     stop music fadeout 2.0
     scene black
     with dissolve_scene_full
-    play music t10y
+    play music t10
 
     menu:
         "继续刷二周目":

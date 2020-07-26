@@ -7,7 +7,7 @@ define config.name = "全真二周目模拟器"
 define gui.show_name = False
 
 # 版本号
-define config.version = "0.0.2-trial-indev-20200723"
+define config.version = "0.0.2-trial-indev-20200726"
 
 # text placed on about screen
 define gui.about = _("感谢您下载全真二周目模拟器。这是 DDLC 中文 Mod 模板的新 Demo。")
@@ -30,7 +30,7 @@ define config.exit_transition = Dissolve(.2)
 # 在加载存档后显示的转场
 define config.after_load_transition = None
 
-# 在故事结束后显示的转场。推荐使用 Dissolve(.2)。
+# 在故事结束后显示的转场。
 define config.end_game_transition = Dissolve(.5)
 
 # 对话窗显示设置

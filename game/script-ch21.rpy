@@ -3,7 +3,10 @@ label ch21_main:
     show screen notify("当前 ch21")
     scene bg club_day2
     with dissolve_scene_half
-    play music t2g3
+    if persistent.disable_awful_music:
+        play music t2
+    else:
+        play music t2g3
     show monika 5 at t11 zorder 2
     show layer master:
         subpixel True
@@ -100,8 +103,11 @@ label ch21_end:
     stop music fadeout 1.0
     scene bg club_day2
     with wipeleft_scene
-    play music t3g
-    queue music t3g2
+    if persistent.disable_awful_music:
+        play music t3
+    else:
+        play music t3g
+        queue music t3g2
     mc "呼..."
     "终于结束了。"
     "我扫视了一下教室。"
@@ -184,7 +190,10 @@ label ch21_end:
     show natsuki at f22 zorder 3
     n 4y "哦？"
     n "Yuri，我才发现你为了取悦我们的新成员，简直费尽了心思。"
-    play music t7a
+    if persistent.disable_awful_music:
+        play music t7
+    else:
+        play music t7a
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
     y 1n "诶-诶？！"
@@ -202,12 +211,12 @@ label ch21_end:
     y 3h "我...！"
     y "才没有..."
     y "如果我真的是懂王..."
-    y 1r "...那我应该可爱得很恶心啊！"
+    y 1r "...那我应该把事情搞得可爱到恶心啊！"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     n 1o "唔唔唔...！"
     n "哼唧，你知道吗？！"
-    n "某些人啊，自从 [player] 一出现，欧派就多了一个奇怪的零件！！"
+    n "某位女士，自从 [player] 一出现，欧派就多了一个奇怪的零件！！"
     show yuri 3p at h21
     show natsuki at t22 zorder 2
     y "N-Natsuki！！"
@@ -223,13 +232,14 @@ label ch21_end:
     hide monika
     show yuri 2h at f21 zorder 2
     show natsuki at t22 zorder 2
-    queue music t7g
+    if not persistent.disable_awful_music:
+        queue music t7g
     $ timeleft = 12.453 - get_pos()
     show noise at noisefade(25 + timeleft) zorder 3
     show vignette as flicker at vignetteflicker(timeleft) zorder 4
     show vignette at vignettefade(timeleft) zorder 4
     show layer master at layerflicker(timeleft)
-    y "把自己的不安情绪投射到别人身上啊..."
+    y "把自己的不安情绪投射到别人身上..."
     y "Natsuki，你啊，还是 too young。"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
@@ -240,7 +250,7 @@ label ch21_end:
     y 2r "很抱歉，相对于你的心理年龄而言，想要理解我的生活方式，可能对你这种人来说太难了！"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 4f "看到了吧？？"
+    n 4f "看吧？？"
     n "歪打正着！"
     n 4e "大部分人初中毕业后就学会克制自己了，可不像你。"
     show natsuki at t22 zorder 2
@@ -251,7 +261,7 @@ label ch21_end:
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     n 2y "嚯，Yuri，说这种话的时候小心点，可小心话别太锋利，划伤了自己。"
-    n "哦，抱歉，我的错...你不是已经在划了吗？"
+    n "哦，抱歉...你不是已经在划了吗？"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
     y 3n "你-你刚刚是说我在割伤自己吗？？"
@@ -259,7 +269,7 @@ label ch21_end:
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     n 1e "来啊！继续啊！"
-    n "让 [player] 来听听你的真实想法！"
+    n "让 [player] 来听听您的真实想法！"
     n "当他听完以后，一定会被您迷得神魂颠倒的咯！"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
@@ -280,8 +290,8 @@ label ch21_end:
     $ style.say_dialogue = style.edited
     "{cps=*2}wdnmd，我当初怎么就被牵扯进来的呢？！{/cps}{nw}"
     "{cps=*2}我对写作一窍不通啊...{/cps}{nw}"
-    "{cps=*2}不过不管我站在谁的一边，她对我的评价可能会更高吧！{/cps}"
-    "{cps=*2}那么，肯定是选择...{/cps}{nw}"
+    "{cps=*2}不过，不管我站在谁那边，她对我的评价可能会更高吧！{/cps}{nw}"
+    "{cps=*2}那么，肯定是选择...{/cps}{nw}" # 这一段请翻历史查看
     $ style.say_dialogue = style.normal
     $ menu_clicked = 0
     window hide(None)

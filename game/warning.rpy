@@ -1,9 +1,5 @@
 label warning:
 
-    python:
-        try: renpy.file(config.basedir + "/hxppy thxughts.png")
-        except: open(config.basedir + "/hxppy thxughts.png", "wb").write(renpy.file("hxppy thxughts.png").read())
-
     stop music fadeout 2.0
 
     scene black

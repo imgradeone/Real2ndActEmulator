@@ -14,12 +14,16 @@ label ch20_main:
     jump ch20_main2
 
 label ch20_main2:
+    python:
+        try: renpy.file(config.basedir + "/hxppy thxughts.png")
+        except: open(config.basedir + "/hxppy thxughts.png", "wb").write(renpy.file("hxppy thxughts.png").read())
+
     "今天，一如既往，是个平常的上学日。"
     "早上可以说是最糟糕的，去学校的路上总会被周围的一大波现充包围着。"
     "与此同时，我却总是孤身一人。"
     "我经常告诉自己，差不多是时候该找一个女朋友之类的了..."
-    "但我确实没什么动力去加入什么社团。"
-    "可以把空余时间花在游戏和动画上，我其实已经相当满足了。"
+    "但话说回来，我确实没什么动力去加入什么社团。"
+    "其实可以把空余时间花在游戏和动画上，我就已经相当满足了。"
     "学校总是会有动画部的，但是那里怎么可能会有女孩啊..."
     
     scene bg class_day
@@ -47,7 +51,7 @@ label ch20_main2:
     show monika 1 at t11 zorder 2
     mc "...Monika？"
     $ m_name = "Monika"
-    m 1b "天哪，我完全没想到会在这里看见你！"
+    m 1b "哦，天哪，我完全没想到会在这里看见你！"
     m 5 "有一段时间没见了，对吧？"
     mc "啊..."
     mc "是的，确实有一段时间了。"
@@ -67,8 +71,8 @@ label ch20_main2:
     mc "真的？你退部了？"
     m "对..."
     m 2e "说实话，我无法忍受大社团里的勾心斗角。"
-    m "除了争论预算和宣传以及准备活动，感觉都没有别的事情..."
-    m "我更愿意选择自己喜欢的东西，并做出一些有意义的事。"
+    m "除了争论预算和宣传以及准备活动，真的枯燥得要死..."
+    m "我更愿意选择自己喜欢的东西，并做些有意义的事。"
     mc "那你后来加入哪个社团了？"
     m 1b "实际上，我正在组建一个新的！"
     m "是一个文学部！{nw}"
@@ -81,7 +85,7 @@ label ch20_main2:
     window show(None)
     m "是一个文学部！{fast}"
     window auto
-    mc "文学...？"
+    mc "文学啊...？"
     "听起来有点...枯燥的亚子？"
     mc "那么你们现在有多少部员了呢？"
     m 5 "emm..."
@@ -97,10 +101,10 @@ label ch20_main2:
     m 2e "她总是坚称漫画也是文学的一部分。"
     m "我的意思是，她说得应该也没错..."
     m "况且，成员有一个算一个，对吧？"
-    "... Monika 刚刚说了...\"她\"？"
+    "...等等，Monika 刚刚说了...\"她\"？"
     "emm..."
     m 1a "嘿，[player]..."
-    m "就随便问问...你还在找要加入的社团吗？？"
+    m "就随便问问...你现在在找要加入的社团吗？？"
     mc "啊--"
     mc "我，大概...也许...差不多在找，不过..."
     m "这样的话..."
@@ -123,8 +127,8 @@ label ch20_main2:
     scene bg corridor
     with wipeleft_scene
 
-    "就在今日，我把灵魂出卖给了 Monika 和她那无人可挡的微笑。"
-    "我羞怯地跟随着 Monika 穿过学校、上了楼 - 我不常来学校这边, 这里通常是三年级学生和社团活动所使用的地方。"
+    "就在今天，我把灵魂出卖给了 Monika 和她那无人可挡的微笑。"
+    "我羞怯地跟随着 Monika 穿过学校、上了楼 - 我不常来这边, 这里通常是三年级学生和社团活动所使用的地方。"
     "元气满满的 Monika 一口气拉开了教室的门。"
 
     scene bg club_day2
@@ -146,7 +150,7 @@ label ch20_main2:
     y "一...一个客人？"
     show natsuki 4c at t32 zorder 2
     n "你真的假的？你带了个男生过来？"
-    n "太毁气氛了吧。"
+    n "太毁气氛了。"
     show monika 3m at f31 zorder 3
     m "别这样，Natsuki..."
     m 3b "...但不管怎样，[player]，欢迎来到文学部!"
@@ -157,11 +161,11 @@ label ch20_main2:
     "{i}...全都是超级卡哇伊的女孩纸啊啊！！{/i}"
 
     show natsuki at f32 zorder 3
-    n 5c "那么，我来猜一猜..."
+    n 5c "那么，让我猜猜..."
     n "你是 Monika 的男朋友，对吧？"
     show natsuki at t32 zorder 2
     mc "啥--"
-    mc "不！我没有！"
+    mc "不！不是！"
     show yuri at f33 zorder 3
     y 2l "Natsuki..."
     $ n_name = 'Natsuki'
@@ -185,8 +189,8 @@ label ch20_main2:
     show monika at t31 zorder 2
     show natsuki at f32 zorder 3
     n 4e "等等！Monika！"
-    n "难道我没和你说过，在让其他人加入之前先告诉我的么？"
-    n 4q "我正要...好吧，you know..." # you know: Dan 鸽在直播时经常说（（（
+    n "难道我没和你说过，在让其他人加入社团之前先告诉我的么？"
+    n 4q "我准备...好吧，you know..." # you know: Dan 鸽在直播时经常说（（（
     show natsuki at t32 zorder 2
     show monika at f31 zorder 3
     m 1e "抱歉，抱歉！"
@@ -217,7 +221,7 @@ label ch20_main2:
     m "尤其是像文学这样，不能第一时间吸引到注意力的东西。"
     m "你必须加倍努力才能让别人相信，文学既有趣又有意义。"
     m "而这也让校园活动，比如学园祭，变得更加重要。"
-    m 2k "我相信我们能在我们毕业之前，将文学部发展起来！"
+    m 2k "我们一定能在毕业之前把文学部发展起来！"
     m "对吧，Natsuki？"
     show monika at t22 zorder 2
     show natsuki 4q at t21 zorder 2
