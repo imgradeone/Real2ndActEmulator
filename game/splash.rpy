@@ -319,22 +319,11 @@ label splashscreen:
     if persistent.autoload and not _restart:
         jump autoload
 
-    if persistent.playthrough == 2 and not persistent.seen_ghost_menu and renpy.random.randint(0, 63) == 0:
-        show black
-        $ config.main_menu_music = audio.ghostmenu
-        $ persistent.seen_ghost_menu = True
-        $ persistent.ghost_menu = True
-        $ renpy.music.play(config.main_menu_music)
-        pause 1.0
-        show end with dissolve_cg
-        pause 3.0
-        $ config.allow_skipping = True
-        return
+    # see diff for ghostmenu code!
 
     $ config.allow_skipping = False
 
     show white
-    $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
     $ config.main_menu_music = audio.t1
     $ renpy.music.play(config.main_menu_music)
@@ -370,14 +359,11 @@ label after_load:
         else:
             m "[persistent.playername]，您真可笑。"
         $ renpy.utter_restart()
-
-        $ renpy.utter_restart()
     return
 
 
 label autoload:
     python:
-
         if "_old_game_menu_screen" in globals():
             _game_menu_screen = _old_game_menu_screen
             del _old_game_menu_screen
@@ -385,15 +371,10 @@ label autoload:
             _history = _old_history
             del _old_history
         renpy.block_rollback()
-
-
         renpy.context()._menu = False
         renpy.context()._main_menu = False
         main_menu = False
         _in_replay = None
-
-
-
     $ renpy.pop_call()
     jump expression persistent.autoload
 
@@ -402,15 +383,4 @@ label before_main_menu:
     return
 
 label quit:
-
-    if persistent.ghost_menu:
-        hide screen main_menu
-        scene white
-        show expression "gui/menu_art_m_ghost.png":
-            xpos -100 ypos -100 zoom 3.5
-        $ renpy.call_screen("dialog", "这种彩蛋都能被你碰上，您可真是欧皇（x）", ok_action=Return())
-        pause 3.25
-        $ persistent.ghost_menu = False
-    return
-
     return
