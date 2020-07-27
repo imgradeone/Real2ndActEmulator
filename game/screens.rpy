@@ -967,8 +967,8 @@ screen preferences():
 
                 hbox:
                     textbutton _("导入 DDLC 存档"):
-                    action Function(renpy.call_in_new_context, 'import_ddlc_persistent')
-                    style "navigation_button"
+                        action Function(renpy.call_in_new_context, 'import_ddlc_persistent')
+                        style "navigation_button"
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
