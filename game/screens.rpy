@@ -535,10 +535,11 @@ screen main_menu():
             text "[config.version]":
                 style "main_menu_version"
 
-        if persistent.playthrough == 1 or persistent.playthrough == 2:
-            add "menu_art_s_glitch"
-        else:
-            add "menu_art_s"
+    # todo: remove?
+    if persistent.playthrough == 1 or persistent.playthrough == 2:
+        add "menu_art_s_glitch"
+    else:
+        add "menu_art_s"
 
     add "menu_particles"
     add "menu_particles"
