@@ -10,8 +10,7 @@ label start:
             a.remove(b)
 
     $ persistent.seen_eyes == None
-    $ seen_eyes_this_chapter = False
-
+    $ persistent.seen_sticker == False
     # 注册成就（原生）
 
     # ID of this playtrhoguh
@@ -38,7 +37,7 @@ label start:
 
     # 确定好 label，然后改动下面几行
     if persistent.cleared:
-        call gameconsole
+        call gameconsole_intro
     else:
         if persistent.playthrough == 0:
             call warning from _call_warning

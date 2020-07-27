@@ -149,7 +149,7 @@ image n_cg1_exp5:
 
 #Natsuki's glitched out creepy face
 image n_cg1b = LiveComposite((1280,720), (0,0), "images/cg/n_cg1b.png", (882,325), "n_rects1", (732,400), "n_rects2", (850,475), "n_rects3")
-image n_cg1b_alt = LiveComposite((1280,720), (0,0), "images/cg/n_cg1b.png")
+image n_cg1b_alt = LiveComposite((1280,720), (0,0), "mod_assets/n_cg1b_alt.png")
 
 
 image n_rects1:

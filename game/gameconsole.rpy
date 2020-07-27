@@ -1,9 +1,9 @@
-label gameconsole:
+label gameconsole_intro:
     stop music fadeout 2.0
     scene black
     with dissolve_scene_full
     play music t10
-
+label gameconsole:
     menu:
         "继续刷二周目":
             jump ch20_main

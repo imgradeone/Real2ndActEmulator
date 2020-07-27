@@ -406,7 +406,6 @@ init python:
 label poem(transition=True):
     stop music fadeout 2.0 #Stop previous music
     $ played_baa = False
-
     #These checks change the game for the glitchy minigame in Act3
     if persistent.playthrough == 3:
         scene bg notebook-glitch #Act 3
@@ -521,9 +520,10 @@ label poem(transition=True):
                     else:
                         if persistent.playthrough == 2 and chapter == 2 and random.randint(0,10) == 0: renpy.show("m_sticker hop") #1/11 chance for Monika to hop from off screen
                         elif t.nPoint > t.yPoint: renpy.show("n_sticker hop")
-                        # elif persistent.playthrough == 2 and not persistent.seen_sticker and random.randint(0,100) == 0 and not persistent.alt_safe_mode:
-                        #     renpy.show("y_sticker hopg") #1/100 chance for creepy yuri stick in Act 2
-                        #     persistent.seen_sticker = True
+                        elif persistent.playthrough == 2 and not persistent.seen_sticker and random.randint(0,100) == 0:
+                            renpy.show("y_sticker hopg") #1/101 chance for creepy yuri stick in Act 2
+                            renpy.show_screen("notify","达成成就：在？为什么迫害 PurpleShep？？？")
+                            persistent.seen_sticker = True
                         #elif persistent.playthrough == 2 and chapter == 2: renpy.show("y_sticker_cut hop")
                         else: renpy.show("y_sticker hop")
             else:
@@ -707,7 +707,7 @@ image y_sticker_cut hop:
 
 #Creepy hopping pic for yuri
 image y_sticker hopg:
-    "gui/poemgame/y_sticker_2g.png"
+    "mod_assets/y_sticker_2g_alt.png"
     xoffset yuriOffset xzoom yuriZoom
     sticker_hop
     xoffset 0 xzoom 1

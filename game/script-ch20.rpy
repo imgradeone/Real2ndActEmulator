@@ -130,9 +130,12 @@ label ch20_main2:
     "就在今天，我把灵魂出卖给了 Monika 和她那无人可挡的微笑。"
     "我羞怯地跟随着 Monika 穿过学校、上了楼 - 我不常来这边, 这里通常是三年级学生和社团活动所使用的地方。"
     "元气满满的 Monika 一口气拉开了教室的门。"
-
-    scene bg club_day2
-    with wipeleft
+    if persistent.recording:
+        scene bg club_day
+        with wipeleft
+    else:
+        scene bg club_day2
+        with wipeleft
     play music t3
 
     if renpy.random.randint(0, 2) == 0:
@@ -435,10 +438,10 @@ label ch20_main2:
     mc "是的..."
     mc "应该会挺有意思的，对吧？"
     show yuri at f32 zorder 3
-    y 1m "你真的吓到我了..."
+    y 1m "你吓到我了..."
     show yuri at t32 zorder 2
     show natsuki at f31 zorder 3
-    n 5q "如果你真的就这么走了，我真的会超生气的。"
+    n 5q "如果你真的就这么走了，我会超生气的。"
     show natsuki at t31 zorder 2
     show monika at f33 zorder 3
     m "[player]，我非常高兴..."
@@ -499,7 +502,7 @@ label ch20_main2:
     $ config.allow_skipping = False
     $ allow_skipping = False
 
-    call screen confirm("你解锁了一首特殊诗歌。\n是否查看？\n有概率获得成就哦！", Return(True), Return(False))
+    call screen confirm("你解锁了一首特殊诗歌。\n是否查看？\n有概率获得新成就哦！", Return(True), Return(False))
     if _return:
         call expression "poem_special_" + str(persistent.special_poems[0])
     else:

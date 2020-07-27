@@ -4,7 +4,13 @@
 
 init offset = -1
 
-
+init -1 python:
+    layout.RECORDING = (
+        "禁用部分敏感画面（如 club_day2），以降低被查水表的风险"
+    )
+    layout.AWFUL_MUSIC = (
+        "禁用部分变调音乐"
+    )
 ################################################################################
 ## Styles
 ################################################################################
@@ -388,14 +394,14 @@ screen quick_menu():
             xalign 0.5
             yalign 0.995
 
-            #textbutton _("Back") action Rollback()
+            #textbutton _("返回") action Rollback()
             textbutton _("历史") action ShowMenu('history')
             textbutton _("跳过") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("自动") action Preference("auto-forward", "toggle")
             textbutton _("存档") action ShowMenu('save')
             textbutton _("读档") action ShowMenu('load')
-            #textbutton _("Q.Save") action QuickSave()
-            #textbutton _("Q.Load") action QuickLoad()
+            textbutton _("快速存档") action QuickSave()
+            textbutton _("快速读档") action QuickLoad()
             textbutton _("设置") action ShowMenu('preferences')
 
 
@@ -873,17 +879,17 @@ screen file_slots(title):
 
                 spacing gui.page_spacing
 
-                #textbutton _("<") action FilePagePrevious(max=9, wrap=True)
+                textbutton _("<") action FilePagePrevious()
 
                 #textbutton _("{#auto_page}A") action FilePage("auto")
 
-                #textbutton _("{#quick_page}Q") action FilePage("quick")
+                textbutton _("快{#quick_page}") action FilePage("quick")
 
                 # range(1, 10) gives the numbers from 1 to 9.
                 for page in range(1, 10):
                     textbutton "[page]" action FilePage(page)
 
-                #textbutton _(">") action FilePageNext(max=9, wrap=True)
+                textbutton _(">") action FilePageNext()
 
 
 style page_label is gui_label
@@ -939,6 +945,8 @@ screen preferences():
     else:
         $ cols = 4
 
+    default tooltip = Tooltip("")
+
     use game_menu(_("设置"), scroll="viewport"):
 
         vbox:
@@ -955,12 +963,19 @@ screen preferences():
                         textbutton _("窗口") action Preference("display", "window")
                         textbutton _("全屏") action Preference("display", "fullscreen")
                 # if config.developer:
-                #     vbox:
-                #         style_prefix "radio"
-                #         label _("Rollback Side")
-                #         textbutton _("Disable") action Preference("rollback side", "disable")
-                #         textbutton _("Left") action Preference("rollback side", "left")
-                #         textbutton _("Right") action Preference("rollback side", "right")
+                # vbox:
+                #     style_prefix "radio"
+                #     label _("回退控制区")
+                #     textbutton _("禁用") action Preference("rollback side", "disable")
+                #     textbutton _("左侧") action Preference("rollback side", "left")
+                #     textbutton _("右侧") action Preference("rollback side", "right")
+
+                vbox:
+                    style_prefix "check"
+                    label _("跳过设置")
+                    textbutton _("未浏览过的内容") action Preference("skip", "toggle")
+                    textbutton _("选择选项之后") action Preference("after choices", "toggle")
+                    #textbutton _("忽略转场动画") action InvertSelected(Preference("transitions", "toggle"))
 
                 vbox:
                     style_prefix "check"
@@ -968,13 +983,11 @@ screen preferences():
                     textbutton _("禁用 glitch 音乐"):
                         action ToggleField(persistent, "disable_awful_music")
                         selected persistent.disable_awful_music
-
-                vbox:
-                    style_prefix "check"
-                    label _("跳过设置")
-                    textbutton _("未浏览过的内容") action Preference("skip", "toggle")
-                    textbutton _("选择选项之后") action Preference("after choices", "toggle")
-                    #textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                        hovered tooltip.Action(layout.AWFUL_MUSIC)
+                    textbutton _("录制实况模式"):
+                        action ToggleField(persistent, "recording")
+                        selected persistent.recording
+                        hovered tooltip.Action(layout.RECORDING)
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
@@ -1014,22 +1027,17 @@ screen preferences():
                             if config.sample_sound:
                                 textbutton _("Test") action Play("sound", config.sample_sound)
 
-
-                    if config.has_voice:
-                        label _("Voice Volume")
-
-                        hbox:
-                            bar value Preference("voice volume")
-
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
-
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
                         textbutton _("一键静音"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
+
+    text tooltip.value:
+        xalign 0.0 yalign 1.0
+        xoffset 300 yoffset -10
+        style "main_menu_version"
 
     text "版本 [config.version]":
                 xalign 1.0 yalign 1.0
@@ -1155,7 +1163,7 @@ screen history():
                 text h.what
 
         if not _history_list:
-            label _("The dialogue history is empty.")
+            label _("这里什么都没有。")
 
 
 style history_window is empty

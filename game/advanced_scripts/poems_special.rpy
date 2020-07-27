@@ -3,10 +3,10 @@
 
 #This script defines the special poems that might be shown to the player
 #Only three of these are ever shown to the player, selected at random
-image poem_special1 = "poem_special/poem_special1.png" #Happy Thoughts
+image poem_special1 = "mod_assets/poem_special1_alt.png" #Happy Thoughts
 image poem_special2 = "poem_special/poem_special2.png" #Can you hear me?
 image poem_special3 = "poem_special/poem_special3.png" #Nothing is real
-image poem_special4 = "poem_special/poem_special4.png" #Cutting memento
+image poem_special4 = "mod_assets/poem_special4_alt.png" #Cutting memento
 #Stare at the dot, after 10 seconds show "I love you"
 image poem_special5:
     "poem_special/poem_special5a.png"
@@ -113,7 +113,7 @@ label poem_special_10:
     $ quick_menu = True
     return
 label poem_special_11:
-    show screen notify("达成成就：✝我要退赛✝")
+    show screen notify("达成成就：我要退赛")
     $ quick_menu = False
     play sound page_turn
     show poem_special11 with Dissolve(1.0)

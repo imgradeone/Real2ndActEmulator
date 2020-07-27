@@ -68,7 +68,7 @@ image n_rects_ghost5:
 label natsuki_exclusive2_1:
     scene bg club_day
     with wipeleft_scene
-    n "呃...!"
+    n "呃...！"
     "我听见 Natsuki 在储藏间那里发出了一声窝火的声音。"
     "看起来她正在烦恼着什么。"
     "我走过去，看看能不能帮上她。"
@@ -107,7 +107,7 @@ label natsuki_exclusive2_1:
     mc "Parfait Girls（帕菲女孩）...？"
     "我从没听说过这个系列。"
     "要么它不是我喜欢的类型，要么就是个屑作。"
-    n 5g "如果你还要品头论足的话，this way，please。"
+    n 5g "如果你还要评头论足的话，this way，please。"
     "她指着教室的门。"
     mc "喂-喂，我可没有要评头论足...！"
     mc "我还什么都没说呢。"
@@ -124,7 +124,7 @@ label natsuki_exclusive2_1:
     "Natsuki 从盒子里抽出 Parfait Girls 的第一册。"
     n "告诉你为什么吧！"
     "她把漫画塞进我的手里。"
-    mc "Ah..."
+    mc "啊..."
     "我看着封面。"
     "上面画着四个盛装美少女摆出漫画女主角的姿势。"
     "这个...\"萌\"得出血了。"
@@ -253,7 +253,7 @@ label natsuki_exclusive2_1:
     hide n_cg1_exp4
     show n_cg1_exp5 at cgfade
     n "嗯-哦...？"
-    "突然之间，Natsuki倒向了我。"
+    "突然，Natsuki 倒向了我。"
     play sound fall
     $ style.say_dialogue = style.normal
     mc "诶-诶--"
@@ -266,11 +266,12 @@ label natsuki_exclusive2_1:
     hide n_cg1_base
     # 噔 噔 咚
 
-    show screen notify("达成成就：低 级 马 赛 克")
     $ currentpos = get_pos()
     $ audio.t6g = "<from " + str(currentpos) + " loop 10.893>bgm/6g.ogg"
     if persistent.disable_awful_music:
         show screen notify("达成成就：低 级 马 赛 克，顺便我无能把 BGM 换成正常版，毁气氛（（（")
+    else:
+        show screen notify("达成成就：低 级 马 赛 克")
     play music t6g
     $ ntext = glitchtext(96)
     $ style.say_dialogue = style.edited

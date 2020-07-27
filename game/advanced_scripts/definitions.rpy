@@ -1350,6 +1350,9 @@ default persistent.safe_mode = 0
 default persistent.alt_safe_mode = True
 default persistent.cleared = False
 default persistent.disable_awful_music = False
+default persistent.recording = False
+
+
 default persistent.playthrough = 0
 default persistent.yuri_kill = 0
 default persistent.seen_eyes = None

@@ -7,7 +7,7 @@ define config.name = "全真二周目模拟器"
 define gui.show_name = False
 
 # 版本号
-define config.version = "0.0.2-trial-indev-20200726"
+define config.version = "0.0.3-trial-indev-20200727"
 
 # text placed on about screen
 define gui.about = _("感谢您下载全真二周目模拟器。这是 DDLC 中文 Mod 模板的新 Demo。")
@@ -87,7 +87,7 @@ define config.layers = [ 'master', 'transient', 'screens', 'overlay', 'front' ]
 # Other things to not mess with
 define config.image_cache_size = 64
 define config.predict_statements = 50
-define config.rollback_enabled = config.developer
+define config.rollback_enabled = True
 define config.menu_clear_layers = ["front"]
 define config.gl_test_image = "white"
 

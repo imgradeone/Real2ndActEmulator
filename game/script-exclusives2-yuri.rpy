@@ -165,7 +165,7 @@ label yuri_exclusive2_1_ch22:
     "但是这样拿书的话..."
     "我们比之前挤得更近了。"
     "这完全就是干扰...！"
-    "It's as if I can feel the warmth of Yuri's face, and she's in the corner of my vision..."
+    "我都可以感受到 Yuri 脸颊的温暖，而且她就在我视线的一旁..."
     show y_cg1_exp1 at cgfade
     y "...你准备好了吗？"
     mc "诶？"
@@ -451,7 +451,7 @@ label yuri_exclusive2_2_ch22:
     y 1o "我-我的..."
     mc "你的阅读姿势，对吧？"
     mc "总是趴在桌子上读书..."
-    y 2p "dui！"
+    y 2p "对！"
     y 2q "我的阅读姿势很糟！"
     y "所以我们应该坐到地上。"
     mc "有道理。"
@@ -539,13 +539,13 @@ label yuri_exclusive2_2_ch22:
     mc "抱-抱歉！"
     mc "我不该这样的..."
     stop music
-    y "A-Ah..."
-    "Yuri starts to breathe heavily."
+    y "啊-啊..."
+    "Yuri 的呼吸开始沉重了起来。"
     y "我..."
     y "我不能..."
     y "[player]..."
-    "Suddenly, Yuri forcefully grabs my arm and jerks me to my feet."
-    "My teacup gets knocked over."
+    "突然，Yuri 抓住我的胳膊，将我甩开。"
+    "我的茶杯也被打翻了。"
     scene bg closet
     show yuri 2t at t11 zorder 2
     with wipeleft
@@ -561,7 +561,7 @@ label yuri_exclusive2_2_ch22:
     "Yuri 突然把我的手按在她的胸前。"
     play music hb
     show layer master at heartbeat
-    y 3t "为什么这发生在我身上？"
+    y 3t "为什么这会发生在我身上？"
     y "就像失去自我意识..."
     y 3y4 "我停不下来了。"
     y 3y6 "我甚至不想读书了..."
@@ -569,6 +569,7 @@ label yuri_exclusive2_2_ch22:
     y 3s "...看着..."
     y "...你。"
     hide yuri
+    show screen notify("达成成就：Touch")
     show yuri eyes
     pause 3.0
     y "...哈啊..."
@@ -623,8 +624,8 @@ label yuri_exclusive2_2_ch23:
     y "emm..."
     y "等等..."
     y 2o "我刚刚..."
-    y 2y6 "...抱歉，我只是有些奇怪的熟悉感..."
-    y "以前没发生过类似的事情...对吧？"
+    y 2y6 "...抱歉，我只是有种奇怪的熟悉感..."
+    y "以前没发生过类似的事情...吧？"
     y 2t "我最近有些恍惚..."
     y 3t "希望没有太明显！"
     y "如果我们才刚刚开始相处你就觉得我古怪的话，我会伤心的..."
@@ -651,22 +652,22 @@ label yuri_exclusive2_2_ch23:
             repeat
 
     play music t9
-    y "每个人都会有些不寻常的习惯。"
-    y 1v "但是在人际关系的开始就分享这些，就会显得比较不合群...甚至惹人讨厌。"
+    y "每个人都会有些奇怪的习惯。"
+    y 1v "但是刚见到别人时就分享这些，会显得比较不合群...甚至惹人讨厌。"
     y "至少，这是我的发现。"
-    y "我还小的时候，似乎有点过于强势和认真..."
-    y "大家都不太想靠近我。"
-    y 2w "所以...我开始厌恶自己。"
-    y "例如我对特定爱好的过度迷恋。"
+    y "我小时候，似乎有点过于强势和认真..."
+    y "别人都不太想靠近我。"
+    y 2w "所以...我开始恨自己。"
+    y "比如，我对某种爱好的过度迷恋。"
     y "还有一旦对某件事感到过于兴奋，我就会失控。"
     y "因此..."
-    y 1v "我渐渐就开始不和人说话了。"
+    y 1v "我逐渐不和人说话了。"
     y "如果我认为重要的东西只会让我越来越被人讨厌...。"
     y 1u "...那自闭起来似乎要好点。"
     y 1h "但最近，又出现了问题。"
     y "我不知道为什么。"
     y 2y6 "每次我走进社团，我的心脏就开始狂跳。"
-    y "就好像要撞开胸口的那种感觉。"
+    y "就好像是要撞开胸口的那种感觉。"
     y "无法释放的能量和情感淹没了我。"
     y "这驱使我做奇怪的事。"
     y 2t "我不知道为什么会这样！"
@@ -677,7 +678,7 @@ label yuri_exclusive2_2_ch23:
     y "可最近，只要她在身边，气氛就会谜之尖锐。"
     y 2y4 "我没疯，对吧？"
     y 2y1 "快告诉我，我没疯！"
-    y "我之前什么都不能说，因为她一直都在听着！"
+    y "我前面什么都不能说，因为她一直都在听着！"
     y 2y3 "但是现在，我们终于独处了..."
     y "我们可以在这里多待一会吗？"
     y 1m "好吧..."
@@ -714,7 +715,7 @@ label yuri_exclusive2_2_ch23:
     y "再也没有人干扰我们的阅读时光。"
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
-    y 1y4 "再没有人让我如刀割般痛苦。"
+    y 1y4 "再没有人让我如自///残般痛苦。"
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
     y 1q "啊哈哈..."
@@ -726,19 +727,19 @@ label yuri_exclusive2_2_ch23:
     y "别当真。"
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
-    y 1i "不过我确实喜欢刀..."
+    y 1i "其实，我很喜欢刀..."
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
-    y "听上去会有点怪，但是你没欣赏过刀子的美学的话，是不会理解的。"
+    y "听上去有点怪，但如果你没见过这些刀子有多美，你是不会明白的。"
     $ ac += 0.5
     show monika 1 at malpha(ac / ad) onlayer front
     y 1f "我有个想法。"
     $ ac += 1
     show monika 1 at malpha(ac / ad) onlayer front
-    y "你来我家看看如何？"
+    y "你哪时来我家看看如何？"
     $ ac += 1
     show monika 1 at malpha(ac / ad) onlayer front
-    y 1y6 "我可以给你看我的收藏。"
+    y 1y6 "我可以给你看我的刀具收藏。"
     $ ac += 1
     show monika 1 at malpha(ac / ad) onlayer front
     y "那里有不同工匠铸造的各类刀具。"
@@ -798,16 +799,16 @@ label yuri_exclusive2_2_ch23:
     y 1s "是不是很爽啊？"
     $ ac += 2
     show monika 1 at malpha(ac / ad) onlayer front
-    y "再没有什么比这更完美了。"
+    y "这就是我想要的一切。"
     $ ac += 2
     show monika 1 at malpha(ac / ad) onlayer front
-    y 1a "这不就是你最开始加入社团的理由吗？"
+    y 1a "难道这不就是你最开始加入社团的理由吗？"
     $ ac += 2
     show monika 1 at malpha(ac / ad) onlayer front
     y "这就是命啊！" # @极限挑战
     $ ac += 2
     show monika 1 at malpha(ac / ad) onlayer front
-    y "命运让我们在一起了。"
+    y "命运让我们在一起了！"
     $ ac += 2
     show monika 1 at malpha(ac / ad) onlayer front
     y "现在我终于迎来了我等了几个世纪的 Happy Ending。"
@@ -817,7 +818,7 @@ label yuri_exclusive2_2_ch23:
     $ ac += 2
     show monika 1 at malpha(ac / ad) onlayer front
     $ gtext = glitchtext(200)
-    y "你会{space=60}[gtext]{nw}"
+    y "你hui{space=60}[gtext]{nw}"
     hide monika onlayer front
     window hide(None)
     $ poemsread = 0

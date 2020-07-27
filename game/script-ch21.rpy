@@ -1,8 +1,12 @@
 label ch21_main:
     $ chapter = 1
     show screen notify("当前 ch21")
-    scene bg club_day2
-    with dissolve_scene_half
+    if persistent.recording:
+        scene bg club_day
+        with dissolve_scene_half
+    else:
+        scene bg club_day2
+        with dissolve_scene_half
     if persistent.disable_awful_music:
         play music t2
     else:
@@ -66,8 +70,8 @@ label ch21_main:
     y "...我大概应该让你从你喜欢的东西入手。"
     "Yuri 从她的包里翻出了一本书。"
     y 1s "我希望你可以更快地融入进来..."
-    y "所以我就找了本我觉得你可能会喜欢的书。"
-    y "故事不长，所以即使你不经常阅读，也应该可以保持你的注意力。"
+    y "所以我就找了本你可能会喜欢的书。"
+    y "故事不长，所以即使你偶尔看看，也应该可以保持你的注意力。"
     y "而且我们可以，嗯..."
     show yuri at sink
     y 4b "如果你想的话...可以一起讨论..."
@@ -101,8 +105,12 @@ label ch21_main:
 
 label ch21_end:
     stop music fadeout 1.0
-    scene bg club_day2
-    with wipeleft_scene
+    if persistent.recording:
+        scene bg club_day
+        with wipeleft_scene
+    else:
+        scene bg club_day2
+        with wipeleft_scene
     if persistent.disable_awful_music:
         play music t3
     else:
@@ -391,8 +399,13 @@ label ch21_end:
     show monika 1l at t11 zorder 2
     m "天哪..."
     m "...好吧，看来她们吵完了..."
-    scene bg club_day2
-    with wipeleft_scene
+    if persistent.recording:
+        scene bg club_day
+        with wipeleft_scene
+    else:
+        scene bg club_day2
+        with wipeleft_scene
+
     y "我不是那个意思..."
     y "我不是那个意思..."
     y "我真的不是那个意思..."

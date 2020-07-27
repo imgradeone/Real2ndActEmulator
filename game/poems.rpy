@@ -198,7 +198,8 @@ Owls can seek
 Cheetahs can run
 Eagles can fly
 People can try
-But that's about it."""
+But that's about it.
+"""
     )
 
     poem_n2 = Poem(
@@ -236,7 +237,8 @@ It's gross.
 She's gross.
 The world is better off without spider lovers.
 
-And I'm gonna tell everyone."""
+And I'm gonna tell everyone.
+"""
     )
 
     poem_n2b = Poem(
@@ -256,7 +258,8 @@ bGFibGUgcGxlYXN1cmUuIEJ1dCBJIGNh
 biBhbHJlYWR5IHRlbGwgdGhhdCBJJ20g
 YmVpbmcgcHVzaGVkIG92ZXIgdGhlIGVk
 Z2UuIEkgY2FuJ3QuLi5JIGNhbid0IHN0
-b3AgbXlzZWxmLg=="""
+b3AgbXlzZWxmLg==
+"""
     )
 
     poem_n3 = Poem(
@@ -295,7 +298,8 @@ In a way you thought had left you long ago.
 
 But if you let me by your side
 Your own beach, your own escape
-You'll learn to love yourself again."""
+You'll learn to love yourself again.
+"""
     )
 
     poem_n3b = Poem(
@@ -353,7 +357,8 @@ try to do something.
 As for Monika... I don't know why, but she's been really dismissive about this. It's like she just wants us \
 to ignore it. So I'm mad at her right now, and that's why I'm coming to you about this. \
 DON'T LET HER KNOW I WROTE THIS!!!! Just pretend like I gave you a really good poem, okay? \
-I'm counting on you. Thanks for reading."""
+I'm counting on you. Thanks for reading.
+"""
     )
 
     poem_s1 = Poem(
@@ -763,54 +768,56 @@ unreleased tension experienced by my entire body. Her Third Eye is drawing me cl
 
     poem_n1_chs = Poem(
         author = "natsuki",
-        title = "雄鹰能飞翔",
+        title = "雄鹰可以飞翔",
         text = """\
-猴子善攀爬
-蟋蟀会跳高
-骏马爱赛跑
-夜猫能捕猎
-猎豹善狂奔
-雄鹰能飞翔
-人们能模仿
-但也仅此而已了"""
+猴子善于攀爬
+蟋蟀可以跃扬
+骏马强于激荡
+夜猫喜欢捉藏
+猎豹强于闯荡
+雄鹰可以飞翔
+人们也能模仿
+但，也就到此为止了。
+"""
         )
 
     poem_n2_chs = Poem(
         author = "natsuki",
-        title = "艾米爱蜘蛛",
+        title = "Amy 喜欢蜘蛛",
         text = """\
-我知道艾米的小秘密
-艾米是个蜘蛛爱好者
-黏糊糊，鬼祟祟，毛绒绒，丑陋的蜘蛛！
-所以我才不会和她做朋友
+你知道 Amy 的小秘密吗？
+Amy 喜欢蜘蛛。
+黏糊糊，鬼祟祟，毛绒绒，丑陋陋的蜘蛛！
+我才不会和她做朋友呢，蛛。
 
-艾米的歌声很动听
-她能唱我最爱的歌
-每次响起她演唱的旋律，我的心跳都会跟上歌词的韵律
-但她是个蜘蛛爱好者
-所以我才不会和她做朋友
+Amy 的歌声很动听
+她能唱我最喜欢的歌。
+每次响起她的旋律，我的心跳都会跟上歌词的韵律。
+可惜，她喜欢蜘蛛。
+我才不会和她做朋友呢。
 
-有次，我摔伤了我的腿
-是艾米扶着我去医务室
-我曾尽量不让她碰自己
-她喜欢蜘蛛，她的手一定也毛绒绒
-所以我才不会和她做朋友
+有次，我伤到了腿。
+是 Amy 扶着我去医务室。
+我尽量不让她碰自己。
+她喜欢蜘蛛，她的手一定很毛。
+我才不会和她做朋友呢，蛛。
 
-艾米有很多朋友
-我总看她与别人聊得开
-她一定是在讲蜘蛛的故事
+Amy 有很多朋友。
+我总看她与别人聊得开。
+她一定是在讲蜘蛛的故事。
 如果她的朋友也开始喜欢蜘蛛呢？
-所以我才不会和她做朋友
+我才不会和她做朋友呢。
 
-她有别的爱好也无所谓
-她不会公开那也无所谓
-她不会伤人根本无所谓
+她有别的爱好到无所谓。
+她不会公开那也无所谓。
+她不会伤人那更无所谓。
 
-蜘蛛毛绒绒的
-她也毛茸茸的
-世界没了蜘蛛爱好者会更好的
+蜘蛛毛。
+她也毛。
+没了这些蜘蛛爱好者，世界就不会这么燥。
 
-我要去告诉其他人"""
+而我要去告诉其他人。
+"""
         )
 
     poem_n2b_chs = Poem(
@@ -827,7 +834,8 @@ unreleased tension experienced by my entire body. Her Third Eye is drawing me cl
 5peg5rOV5o6n5Yi255qE5oSJ5oKm44CC
 5L2G5piv5oiR5b6I5riF5qWa5oiR5bey
 57uP6L+H55WM5LqG44CC5oiRLi4u5oiR
-5oqR5Yi25LiN5L2P5LqG44CCIA=="""
+5oqR5Yi25LiN5L2P5LqG44CCIA==
+"""
         )
 
     poem_n3_chs = Poem(
@@ -905,21 +913,22 @@ unreleased tension experienced by my entire body. Her Third Eye is drawing me cl
         author = "natsuki",
         title = "",
         text = """\
-我不知道从何讲起，但是我确实在担心。Yuri 最近的行为很奇怪。你才来几天所以你也许不太懂我的意思。\
-但她这样可不太正常。她一直都安静礼貌又细心...什么的。
+不知道怎么说，但我确实在担心。Yuri 最近的行为很奇怪。你刚来几天，所以你可能不太懂我的意思。\
+但她这样不太正常啊。她一直都安静礼貌又细心...的说。
 
-好吧...提这个虽然很丢脸，但我也忍了。事实上，我真的真的很担心她。但是我若试着和她谈，\
-她肯定又会和我发火的。我不知道该怎么办，我觉得只有你说话她才能听得进去了。我也不知道为什么。\
-但是请帮忙做点什么。也许你能去劝她看看心理医生呢。
+好吧...虽然很丢脸，但我也忍了。事实上，我真的很担心她。但是我若试着和她谈，\
+她肯定又会和我发火的。我不知道该怎么办，我觉得只有你来讲，她才能听得进去。我也不知道为什么。\
+但是请一定要帮忙啊。也许你能去劝她看看心理医生呢。
 
-我其实一直想和 Yuri 成为朋友来着，看她这个样子我真的很难受。我知道换做平时的我是绝对不会承认的，\
-但是现在我不在乎了。我只是觉得很无助。所以求求你看看能做点什么事情帮帮她。我可不想看她身上\
-发生什么坏事。你愿意的话，我可以给你做纸杯蛋糕吃！真的，求你帮忙做点什么。
+我其实一直想和 Yuri 成为朋友来着，看她这个样子我真的很难受。我知道换做平时，我是绝对不会承认的，\
+但是现在我不在乎了。我只是觉得很无助。所以求求你一定要帮帮她。我可不想看她再\
+发生什么坏事。你愿意的话，我可以给你做纸杯蛋糕吃！真的，求你帮忙吧。
 
-至于 Monika...我不知道为什么，但是她好像很不以为人。看起来她想让我们完全忽略 Yuri 的事。我现在\
+至于 Monika...我不知道为什么，但是她好像很不以为然。看起来她想让我们完全忽略 Yuri 的事。我现在\
 对她很生气，所以我才来找你的。\
 千万别让她知道我写了这些！！！！！就假装我给了你一首特别棒的诗，好吧？\
-全靠你了，感谢读完！"""
+全靠你了！感谢读完。
+"""
         )
 
     poem_s1_chs = Poem(

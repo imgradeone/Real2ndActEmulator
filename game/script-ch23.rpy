@@ -37,10 +37,16 @@ label ch23_main:
         play sound "sfx/gnid.ogg"
         pause 7
         $ quick_menu = True
-        scene bg club_day2
+        if persistent.recording:
+            scene bg club_day
+        else:
+            scene bg club_day2
         show yuri 2 at i11 zorder 2
     else:
-        scene bg club_day2
+        if persistent.recording:
+            scene bg club_day
+        else:
+            scene bg club_day2
         with dissolve_scene_half
     $ chapter = 3
     play music t6
@@ -244,7 +250,10 @@ label ch23_main:
         $ poemwinner[2] = "yuri"
         $ y_appeal += 1
 
-    scene bg club_day2
+    if persistent.recording:
+        scene bg club_day
+    else:
+        scene bg club_day2
     show yuri 3 at t11 zorder 2
     with wipeleft_scene
     call yuri_exclusive2_2_ch22
@@ -268,7 +277,10 @@ label ch23_end:
         scene black with Dissolve(1.0)
     else:
         pass
-    scene bg club_day2
+    if persistent.recording:
+        scene bg club_day
+    else:
+        scene bg club_day2
     show monika 4b at t32 zorder 2
     with wipeleft_scene
     play music t3
@@ -597,6 +609,7 @@ label yuri_kill_1:
         call screen dialog("为响应“清朗”未成年人暑期网络环境专项整治，\nYuri 的自裁动画已跳过。",Return())
         jump yuri_kill_3
     else:
+        show screen notify("危险动作 关乎生命 请勿模仿")
         play sound "sfx/yuri-kill.ogg" # 去世预警 + 变调版 Play With Me
         pause 1.43
         show yuri stab_1
@@ -676,6 +689,8 @@ label yuri_kill_3:
     scene bg club_day
     "[gtext]"
     window auto
+    $ config.allow_skipping = True
+    $ quick_menu = True
     n "好哇，是学园祭时间！"
     show natsuki 4k at t11 zorder 2
     n "哇，你比我早到？"
@@ -731,7 +746,7 @@ label yuri_kill_3:
     show screen tear(8, offtimeMult=1, ontimeMult=10)
     pause 1.5
     hide screen tear
-    scene black
+    scene black with dissolve_scene_half
     pause 3.0
 
 # TODO: 一刷后初级能力者标识

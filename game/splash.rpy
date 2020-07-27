@@ -380,8 +380,6 @@ label autoload:
         if "_old_history" in globals():
             _history = _old_history
             del _old_history
-        renpy.block_rollback()
-
 
         renpy.context()._menu = False
         renpy.context()._main_menu = False

@@ -12,8 +12,12 @@ label ch22_main:
         try: renpy.file(config.basedir + "/iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt")
         except: open(config.basedir + "/iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt", "wb").write(renpy.file("iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt").read())
     show screen notify("当前 ch22")
-    scene bg club_day2
-    with dissolve_scene_half
+    if persistent.recording:
+        scene bg club_day
+        with dissolve_scene_half
+    else:
+        scene bg club_day2
+        with dissolve_scene_half
     play music t6
     "又是平常的一天，眨眼间已经到了社团活动的时间了。"
     "几天过去，我对文学部已经相当习惯了。"
@@ -75,7 +79,7 @@ label ch22_main:
     mc "我也在想她去哪了呢。"
     show natsuki at f33 zorder 3
     n 5g "wdnmd..."
-    n 5c "Yuri,我猜你应该也没见到她吧？"
+    n 5c "Yuri，我猜你应该也没看到她吧？"
     show natsuki at t33 zorder 2
     show yuri at f32 zorder 3
     y 4a "..."
@@ -158,10 +162,10 @@ label ch22_main:
     m "抱歉！非常抱歉！"
     mc "啊，你来了..."
     show monika at f41 zorder 3
-    m "我真不是有意迟到的..."
-    m "希望你们没有担心我之类的！"
+    m "我真不是故意迟到的..."
+    m "希望你们没有担心我！"
     show monika at t41 zorder 2
-    mc "Nope..."
+    mc "没事..."
     mc "好吧，其实 Natsuki 挺担心的。"
     show natsuki at f33 zorder 3
     n 1p "我-我可没有！"
@@ -228,7 +232,7 @@ label ch22_main:
     m "我本来也在想着要弹给你（们）听的。"
     m "这大概就是为什么我最近加大了练习强度了吧。"
     mc "我明白了..."
-    "我不太确定 Monika 到底是指整个文学部，还是只弹给我..."
+    "我不太确定 Monika 到底是指整个文学部，还是指我..."
     mc "这样的话，祝你好运。"
     m 1j "谢谢～！"
     m 1a "话说，我没有错过什么吧？"
@@ -255,8 +259,8 @@ label ch22_main:
             y 3h "她正在那边看漫画呢。瞧？"
             $ style.say_dialogue = style.edited
             y 3f "别老想着她了。"
-            y "她已经习惯被无视了。"
-            y "来吧，我们去那边。"
+            y "她已经习惯被忽视了。"
+            y "走，我们去那边。"
             $ style.say_dialogue = style.normal
             window hide(None)
             $ currentpos = get_pos()
@@ -269,7 +273,7 @@ label ch22_main:
         else:
             y 3r "她-她没事！"
             y 3h "她正在那边看漫画呢。"
-            y 3y6 "所以没关系的，对吧？"
+            y 3y6 "没事的，对吧？"
             mc "啊--"
             mc "那这样的话，我觉得没问题..."
     else:
@@ -298,9 +302,14 @@ label ch22_main2:
     $ poemwinner[1] = "yuri"
 
     #Call exclusive scene
-    scene bg club_day2
-    show yuri 3a at i11
-    with wipeleft
+    if persistent.recording:
+        scene bg club_day
+        show yuri 3a at i11
+        with wipeleft
+    else:
+        scene bg club_day2
+        show yuri 3a at i11
+        with wipeleft
     $ nextscene = "yuri_exclusive2_" + str(eval("y_appeal")) + "_ch22"
     call expression nextscene from _call_expression_11
     call poemresponse_start
@@ -312,7 +321,7 @@ label ch22_end:
     stop music fadeout 1.0
     scene black
     with wipeleft_scene
-    call screen confirm("你解锁了一首特殊诗歌。\n是否查看？\n有概率获得成就哦！", Return(True), Return(False))
+    call screen confirm("你解锁了一首特殊诗歌。\n是否查看？\n有概率获得新成就哦！", Return(True), Return(False))
     if _return:
         call expression "poem_special_" + str(persistent.special_poems[1]) from _call_expression_12
         scene black with Dissolve(1.0)
@@ -323,7 +332,10 @@ label ch22_end:
         $ faint_effect = True
     else:
         $ faint_effect = None
-    scene bg club_day2
+    if persistent.recording:
+        scene bg club_day
+    else:
+        scene bg club_day2
     show monika 4b at t32 zorder 2
     if faint_effect:
         show layer master at dizzy(0.5, 1.0)
@@ -561,6 +573,7 @@ label ch22_end:
     $ currentpos = get_pos() * 2.07
     stop music
     pause 0.5
+    show screen notify("没爆血，是不是很惊讶啊？（（（")
     # if not persistent.alt_safe_mode:
     #     play sound "sfx/stab.ogg"
     #     show blood_eye zorder 3:
