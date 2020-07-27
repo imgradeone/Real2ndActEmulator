@@ -83,6 +83,8 @@ define audio.td = "<loop 36.782>bgm/d.ogg" # Sayo-nara 晴 天 娃 娃
 define audio.m1 = "<loop 0>bgm/m1.ogg" # Just Monika - Just Monika.
 define audio.mend = "<loop 6.424>bgm/monika-end.ogg" # I Still Love You - 你个死直娘贼，居然刀了 Monika，哼唧（（（
 
+define audio.home = "<loop 32>mod_assets/audio/Heaven.ogg"
+
 define audio.ghostmenu = "<loop 0>bgm/ghostmenu.ogg"
 define audio.g1 = "<loop 0>bgm/g1.ogg"
 define audio.g2 = "<loop 0>bgm/g2.ogg"
