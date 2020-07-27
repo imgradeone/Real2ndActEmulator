@@ -19,7 +19,9 @@ init python:
         "您有 1/6 的几率在部室的海报上看到你的 DNA。\n如果你看到了这行警告，请加油触发（",
         "Dan 鸽也被自己的游戏吓到过 XD",
         "我不希望你连“儿童或心理承受能力较弱的人”的心理能被影响几成都搞不懂。",
-        "我不希望你是个{i}瞎子{/i}，\n看不懂“本游戏不适合儿童或心理承受能力较弱的人”是什么意思。"
+        "我不希望你是个{i}瞎子{/i}，\n看不懂“本游戏不适合儿童或心理承受能力较弱的人”是什么意思。",
+        "管管孩子，救救游戏",
+        "为什么 Sayori 总是被迫害？"
     ]
 
 
@@ -27,7 +29,7 @@ image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign
 
 
 image menu_logo:
-    "/mod_assets/DDLCModTemplateLogoCN.png"
+    "/mod_assets/2ndActEmu.png"
     subpixel True
     xcenter 240
     ycenter 120
@@ -325,7 +327,7 @@ label splashscreen:
 
     show white
     $ splash_message = splash_message_default
-    $ config.main_menu_music = audio.t1
+    $ config.main_menu_music = audio.home
     $ renpy.music.play(config.main_menu_music)
 
     if persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
