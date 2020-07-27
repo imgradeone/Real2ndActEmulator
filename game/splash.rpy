@@ -17,7 +17,9 @@ init python:
         "Just Monika.",
         "在这里，成就 = 被吓死（",
         "您有 1/6 的几率在部室的海报上看到你的 DNA。\n如果你看到了这行警告，请加油触发（",
-        "Dan 鸽也被自己的游戏吓到过 XD"
+        "Dan 鸽也被自己的游戏吓到过 XD",
+        "我不希望你连“儿童或心理承受能力较弱的人”的心理能被影响几成都搞不懂。",
+        "我不希望你是个{i}瞎子{/i}，\n看不懂“本游戏不适合儿童或心理承受能力较弱的人”是什么意思。"
     ]
 
 
@@ -285,21 +287,23 @@ label splashscreen:
         "要游玩本 Mod，需要原版 Doki Doki Literature Club 的文件。您可以在 {a=https://ddlc.moe}DDLC.moe{/a} 或者 Steam 免费获取。"
         "中文剧本内容基于 Steam 社区知名汉化版 DDLC 进行翻译并加以修改，在此致谢。"
         "您可以访问 {a=https://steamcommunity.com/sharedfiles/filedetails/?id=1176221672}这里{/a} 以下载汉化版 DDLC，支持汉化大佬。"
+        pause 1.0
         "请注意！本 Mod 不适合儿童或心理承受能力较弱的人。"
         "由于本 Mod 包含原作的恐怖元素（甚至发挥到了极致），焦虑症、抑郁症患者，以及儿童，均不适合游玩此 Mod。"
-        "同时近期 DDLC 正遭到彻查，所以请务必谨慎游玩。"
+        "同时受“清朗”行动的影响，请务必谨慎游玩。"
         "对于原作的恐怖内容，请访问 {a=https://ddlc.moe/warning.html}这里{/a}。（英文，包含剧透）"
-        "如果继续游玩 [config.name] 将视为你已经通关原游戏，并接受任何剧透内容。"
-        "与此同时，我们将认为您是 16 岁以上的玩家，心理健康，且同意接受恐怖内容。"
+        pause 1.0
+        "如果继续游玩 [config.name] 将视为你已经通关原游戏。"#，并接受任何剧透内容。"
+        "与此同时，我们将视你为 16 岁以上的玩家，心理健康，且同意接受恐怖内容。"
 
         menu:
-            "您，真的要继续吗？"
-            "我确认自己已经 16 岁以上且心理健康。":
+            "您真的要继续吗？"
+            "继续。":
                 "再次说明，本 Mod 为 DDLC 中文 Mod 模板的新 Demo。"
                 "接下来，您将体验到模板的许多特殊功能。"
-                "祝您玩得愉快！同时要保持心理健康哦~"
+                "祝您玩得愉快！"
                 pass
-            "我不同意，退出。":
+            "退出。":
                 $ renpy.quit()
 
         scene tos2
@@ -315,22 +319,11 @@ label splashscreen:
     if persistent.autoload and not _restart:
         jump autoload
 
-    if persistent.playthrough == 2 and not persistent.seen_ghost_menu and renpy.random.randint(0, 63) == 0:
-        show black
-        $ config.main_menu_music = audio.ghostmenu
-        $ persistent.seen_ghost_menu = True
-        $ persistent.ghost_menu = True
-        $ renpy.music.play(config.main_menu_music)
-        pause 1.0
-        show end with dissolve_cg
-        pause 3.0
-        $ config.allow_skipping = True
-        return
+    # see diff for ghostmenu code!
 
     $ config.allow_skipping = False
 
     show white
-    $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
     $ config.main_menu_music = audio.t1
     $ renpy.music.play(config.main_menu_music)
@@ -366,28 +359,21 @@ label after_load:
         else:
             m "[persistent.playername]，您真可笑。"
         $ renpy.utter_restart()
-
-        $ renpy.utter_restart()
     return
 
 
 label autoload:
     python:
-
         if "_old_game_menu_screen" in globals():
             _game_menu_screen = _old_game_menu_screen
             del _old_game_menu_screen
         if "_old_history" in globals():
             _history = _old_history
             del _old_history
-
         renpy.context()._menu = False
         renpy.context()._main_menu = False
         main_menu = False
         _in_replay = None
-
-
-
     $ renpy.pop_call()
     jump expression persistent.autoload
 
@@ -396,15 +382,4 @@ label before_main_menu:
     return
 
 label quit:
-
-    if persistent.ghost_menu:
-        hide screen main_menu
-        scene white
-        show expression "gui/menu_art_m_ghost.png":
-            xpos -100 ypos -100 zoom 3.5
-        $ renpy.call_screen("dialog", "这种彩蛋都能被你碰上，您可真是欧皇（x）", ok_action=Return())
-        pause 3.25
-        $ persistent.ghost_menu = False
-    return
-
     return

@@ -523,14 +523,9 @@ screen main_menu():
 
     style_prefix "main_menu"
 
-    if persistent.ghost_menu:
-         add "white"
-         add "menu_art_y_ghost"
-         add "menu_art_n_ghost"
-    else:
-        add "menu_bg"
-        add "menu_art_y"
-        add "menu_art_n"
+    add "menu_bg"
+    add "menu_art_y"
+    add "menu_art_n"
     frame:
         pass
 
@@ -539,7 +534,6 @@ screen main_menu():
     use navigation
 
     if gui.show_name:
-
         vbox:
             text "[config.name!t]":
                 style "main_menu_title"
@@ -547,23 +541,18 @@ screen main_menu():
             text "[config.version]":
                 style "main_menu_version"
 
-    if persistent.ghost_menu:
-        add "menu_art_s_ghost"
-        add "menu_art_m_ghost"
-    
+    # todo: remove?
+    if persistent.playthrough == 1 or persistent.playthrough == 2:
+        add "menu_art_s_glitch"
     else:
-        if persistent.playthrough == 1 or persistent.playthrough == 2:
-            add "menu_art_s_glitch"
-        else:
-            add "menu_art_s"
+        add "menu_art_s"
 
-    if not persistent.ghost_menu:
-        add "menu_particles"
-        add "menu_particles"
-        add "menu_particles"
-        add "menu_logo"
+    add "menu_particles"
+    add "menu_particles"
+    add "menu_particles"
+    add "menu_logo"
     
-    if persistent.playthrough != 4 and not persistent.ghost_menu:
+    if persistent.playthrough != 4:
         add "menu_art_m"
         add "menu_fade"
         
