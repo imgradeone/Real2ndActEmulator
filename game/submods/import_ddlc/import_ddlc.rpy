@@ -54,7 +54,7 @@ label import_ddlc_persistent:
     #Nothing to import
     else:
         call screen dialog(message="找不到任何 DDLC 存档。", ok_action=Return())
-        return
+        jump import_ddlc_explict_return
 
     #Open the persistent save file as ddlc_persistent
     python:
@@ -207,7 +207,6 @@ label import_ddlc_persistent:
 
     "存档已合并。"
     label import_ddlc_explict_return:
-        pause 0.5
         return
 
 label ddlc_persistent_merge_unmatched_names:
