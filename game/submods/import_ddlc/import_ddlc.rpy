@@ -220,5 +220,5 @@ label ddlc_persistent_merge_unmatched_names:
         "[persistent.playername]":
             pass
     $ quick_menu = quick_menu_orig
-    window auto dissolve # checklater
+    window auto
     return
