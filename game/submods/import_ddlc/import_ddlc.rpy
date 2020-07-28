@@ -212,8 +212,8 @@ label import_ddlc_persistent:
             else:
                 persistent.playthrough = ddlc_persistent.playthrough
 
-        "存档已合并。"
-        pause 0.5
+    "存档已合并。"
+    pause 0.5
     return
 
 label ddlc_persistent_merge_unmatched_names:
