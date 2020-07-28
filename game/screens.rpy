@@ -1024,7 +1024,7 @@ screen preferences():
                             style "mute_all_button"
 
             hbox:
-                textbutton _("成就列表"):
+                textbutton _("成就状态"):
                     action Function(renpy.call_in_new_context, 'archievements_list')
                     style "navigation_button"
 

@@ -36,6 +36,7 @@ init 10 python:
     achievement.register("adfhsdfkbsbdfaldfbjs")
     achievement.register("我要退赛")
     achievement.register("下次一定")
+    achievement.register("一键忽略")
 
     pass
 
