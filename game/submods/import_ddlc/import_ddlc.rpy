@@ -49,18 +49,11 @@ label import_ddlc_persistent:
     #We have something to import
     if ddlc_save_path:
         $ ddlc_save_path = ddlc_save_path[0]
-        "在 [ddlc_save_path] 找到了 DDLC 的存档。"
-        menu:
-            "想要把它导入到 [config.name] 的存档里吗？\n（DDLC不会被影响）"
-            "是。":
-                pause 0.25
-                pass
-            "否。":
-                return
+        call screen confirm(message="找到了一份 DDLC 存档。\n你确定要把它导入到 [config.name] 的存档里吗？", yes_action=NullAction(), no_action=Jump("import_ddlc_explict_return"))
 
     #Nothing to import
     else:
-        call screen dialog(message="找不到任何 DDLC 存档。没有什么可以导入。", ok_action=Return())
+        call screen dialog(message="找不到任何 DDLC 存档。", ok_action=Return())
         return
 
     #Open the persistent save file as ddlc_persistent
@@ -213,8 +206,9 @@ label import_ddlc_persistent:
                 persistent.playthrough = ddlc_persistent.playthrough
 
     "存档已合并。"
-    pause 0.5
-    return
+    label import_ddlc_explict_return:
+        pause 0.5
+        return
 
 label ddlc_persistent_merge_unmatched_names:
     menu:
