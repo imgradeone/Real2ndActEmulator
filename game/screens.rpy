@@ -1023,6 +1023,11 @@ screen preferences():
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
+            hbox:
+                textbutton _("成就列表"):
+                    action Function(renpy.call_in_new_context, 'archievements_list')
+                    style "navigation_button"
+
     text tooltip.value:
         xalign 0.0 yalign 1.0
         xoffset 300 yoffset -10

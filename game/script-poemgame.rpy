@@ -502,6 +502,7 @@ label poem(transition=True):
             if not poemgame_glitch:
                 if t.glitch: #Make stuff go wonky if the game glitches
                     poemgame_glitch = True
+                    achievement.grant("看到啥都乱点，小学生啊（")
                     renpy.show_screen("notify","达成成就：看到啥都乱点，小学生啊（")
                     renpy.music.play(audio.t4g)
                     renpy.scene()
@@ -522,6 +523,7 @@ label poem(transition=True):
                         elif t.nPoint > t.yPoint: renpy.show("n_sticker hop")
                         elif persistent.playthrough == 2 and not persistent.seen_sticker and random.randint(0,100) == 0:
                             renpy.show("y_sticker hopg") #1/101 chance for creepy yuri stick in Act 2
+                            achievement.grant("在？为什么迫害 PurpleShep？？？")
                             renpy.show_screen("notify","达成成就：在？为什么迫害 PurpleShep？？？")
                             persistent.seen_sticker = True
                         #elif persistent.playthrough == 2 and chapter == 2: renpy.show("y_sticker_cut hop")
@@ -530,6 +532,7 @@ label poem(transition=True):
                 r = random.randint(0, 10)
                 if r == 0 and not played_baa: #您有 1/11 的机会让游戏喊你“爸”（迫真），但只能触发 1 次
                     renpy.show_screen("notify","达成成就：被叫爸爸的感觉怎么样（")
+                    achievement.grant("被叫爸爸的感觉怎么样（")
                     renpy.play("gui/sfx/baa.ogg")
                     played_baa = True
                 elif r <= 5: renpy.play(gui.activate_sound_glitch)
@@ -573,6 +576,7 @@ label poem(transition=True):
     #1/6 chance that we'll see creepy Happy Thoughts pic after the game in Act 2
     if persistent.playthrough == 2 and persistent.seen_eyes == None and renpy.random.randint(0,5) == 0:
         show screen notify("达成成就：今日你迫害 Sayori 了吗（")
+        $ achievement.grant("今日你迫害 Sayori 了吗（")
         $ seen_eyes_this_chapter = True
         $ quick_menu = False
         play sound "sfx/eyes.ogg"

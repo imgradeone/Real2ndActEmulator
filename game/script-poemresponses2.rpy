@@ -124,7 +124,7 @@ label ch22_n_end2:
     n "你恨我吗？"
     if not persistent.alt_safe_mode:
         show natsuki_ghost_blood zorder 3
-    n "难道你 TM 想让我哭着回家？"
+    n "那，难道你 TM 想让我哭着回家？"
     n "文学部是我唯一感觉安全的地方。"
     n "不要毁了它。"
     n "千万不要毁了它。"
@@ -168,6 +168,7 @@ label ch22_n_end2:
     scene black
     with None
     show screen notify("达成成就：陪我玩！！！！")
+    $ achievement.grant("陪我玩！！！！")
 
     $ quick_menu = True
     $ style.say_dialogue = style.normal

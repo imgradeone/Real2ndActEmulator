@@ -7,7 +7,7 @@ define config.name = "全真二周目模拟器"
 define gui.show_name = False
 
 # 版本号
-define config.version = "0.0.5-trial-indev-20200727.1"
+define config.version = "0.0.5-indev-20200728"
 
 # text placed on about screen
 define gui.about = _("感谢您下载全真二周目模拟器。这是 DDLC 中文 Mod 模板的新 Demo。")
@@ -21,7 +21,7 @@ define config.has_music = True
 define config.has_voice = False
 
 # 主菜单 BGM
-define config.main_menu_music = audio.t1
+define config.main_menu_music = audio.t4
 
 # 进入和退出游戏菜单时使用的转场
 define config.enter_transition = Dissolve(.2)
@@ -66,7 +66,7 @@ default preferences.sfx_volume = 0.75
 define config.save_directory = "Real 2nd Act Emulator"
 
 # 任务栏图标
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "mod_assets/2ndActEmu.png"
 
 # 是否允许跳过
 define config.allow_skipping = True
@@ -87,7 +87,7 @@ define config.layers = [ 'master', 'transient', 'screens', 'overlay', 'front' ]
 # Other things to not mess with
 define config.image_cache_size = 64
 define config.predict_statements = 50
-define config.rollback_enabled = True
+define config.rollback_enabled = False
 define config.menu_clear_layers = ["front"]
 define config.gl_test_image = "white"
 

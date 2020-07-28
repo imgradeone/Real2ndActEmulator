@@ -327,7 +327,6 @@ label splashscreen:
 
     show white
     $ splash_message = splash_message_default
-    $ config.main_menu_music = audio.home
     $ renpy.music.play(config.main_menu_music)
 
     if persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
@@ -380,7 +379,7 @@ label autoload:
     jump expression persistent.autoload
 
 label before_main_menu:
-    $ config.main_menu_music = audio.t1
+    $ config.main_menu_music = audio.t4
     return
 
 label quit:

@@ -24,6 +24,7 @@ label ch22_main:
     "我走进教室，迎来的又是那熟悉的一幕。"
     # 1/3 几率，Yuri 崩坏
     if renpy.random.randint(0,2) == 0:
+        $ achievement.grant("苏 联 解 体")
         show screen notify("达成成就：苏 联 解 体")
         show yuri half at i11 zorder 2
         show yuri_half2 at i11 zorder 1
@@ -124,6 +125,7 @@ label ch22_main:
     y 2o "..."
     y "但-但是..."
     if renpy.random.randint(0, 3) == 0:
+        $ achievement.grant("MOPEMOPE")
         show screen notify("达成成就：MOPEMOPE")
         $ style.say_dialogue = style.edited
         if not persistent.alt_safe_mode:
@@ -328,6 +330,7 @@ label ch22_end:
     else:
         pass
     if not faint_effect and renpy.random.randint(0,2) == 0:
+        $ achievement.grant("死 者 视 角 打 游 戏")
         show screen notify("达成成就：死 者 视 角 打 游 戏")
         $ faint_effect = True
     else:
@@ -352,6 +355,7 @@ label ch22_end:
     else:
         play music t3
     if renpy.random.randint(0,2) == 0:
+        $ achievement.grant("你鼠标里的 DNA")
         if faint_effect:
             show screen notify("达成成就：你鼠标里的 DNA 和 死 者 视 角 打 游 戏（（（")
         else:
@@ -417,18 +421,18 @@ label ch22_end:
     y "我并不擅长临时抱佛脚..."
     show yuri at t33 zorder 2
     show monika at f32 zorder 3
-    m 1b "别担心太多啦！"
+    m 1b "别担心那么多啦！"
     m "我们就简单地来，好吗？"
     m 2a "看..."
     m 2m "我知道大家自从 [player] 加入之后都变得更加的...有活力...而且我们也开始了一些社团活动。"
     m 2d "但是现在还不是自满的时候。"
-    m "我们还是只有四个成员..."
+    m "我们只有四个成员..."
     m 2a "而且学园祭是我们唯一真正的去招募更多人的机会，懂吧？"
     show monika at t32 zorder 2
     show natsuki at f31 zorder 3
     n 5g "可是，招新又有什么好处呢？"
     n "如果只是想正式成立的话，我们已经有足够的社员了。"
-    n "人越多只会变得越吵，也越难管。"
+    n "人越多只会变得更吵，也更难管。"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
     m 1g "Natsuki..."
@@ -489,7 +493,7 @@ label ch22_end:
     "我最好还是别说实话吧。"
     show monika at f32 zorder 3
     m 1p "其实..."
-    m "如果我没记错的话，你甚至没有选择不加入的权利。"
+    m "如果没记错的话，你甚至没有不加入的选择。"
     show monika at thide zorder 1
     hide monika
     "Monika 坐了下来，只是盯着她的桌子。"
@@ -502,12 +506,12 @@ label ch22_end:
     show natsuki at f31 zorder 3
     n 1p "啥，我？"
     n 1s "我只是把我的想法讲出来罢了..."
-    n "说实话又成犯罪了？"
+    n "说实话又是罪了？"
     show natsuki at t31 zorder 2
     show yuri at f33 zorder 3
     y 2l "这和说实话没关系。"
-    y "是你说话的方式。"
-    y 2h "另外，你也没有权力代表我们所有人那样讲..."
+    y "是你说话的方式有问题。"
+    y 2h "另外，你也没有权力代表所有人..."
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
     n 1e "你懂个锤子啊！"
@@ -515,9 +519,9 @@ label ch22_end:
     n "我只是想要一个可以舒服地与几个朋友相处的地方而已。"
     n 5u "我希望这个社团是这样，有错吗？"
     n "现在...现在真的没有几个这样适合我的地方了..."
-    n 5x "现在 Monika 还想要夺走它！"
+    n 5x "而且 Monika 还想毁了它！"
     show natsuki at t31 zorder 2
-    mc "她没有想要夺--"
+    mc "她没想毁--"
     show natsuki at f31 zorder 3
     n 1g "你错了，[player]。"
     n "那不一样。"
@@ -682,7 +686,7 @@ label ch22_end:
     m "你懂吧？"
     m 1g "但是挺奇怪的，你在这都这么久了，我们几乎都没有单独相处过。"
     m 1n "啊...我..."
-    m "虽然理论上讲只有几天..."
+    m "其实只有几天..."
     m 1l "抱歉，我不是故意说一些奇怪的话的！"
     m 1e "其实有些事情我早就想和你说了..."
     m "一些只有你才能理解的事情。"

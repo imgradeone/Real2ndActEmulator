@@ -66,7 +66,7 @@ define audio.tyuri = "<loop 4.444>bgm/5_yuri.ogg" # Okay Everyone! (Yuri)
 
 define audio.t5b = "<loop 4.444>bgm/5.ogg"
 define audio.t5c = "<loop 4.444>bgm/5.ogg"
-define audio.t6 = "<loop 10.893>bgm/6.ogg" # Play With Me - Yuri/Natsuki Theme （大哥我要死了.png）
+define audio.t6 = "<loop 10.893>bgm/6.ogg" # Play With Me - Yuri/Natsuki Theme
 define audio.t6g = "<loop 10.893>bgm/6g.ogg" # 爆炸版 Play With Me
 define audio.t6r = "<to 39.817 loop 0>bgm/6r.ogg" # 倒放版 Play With Me
 define audio.t6s = "<loop 43.572>bgm/6s.ogg" # 0.25 倍速版 Play With Me
@@ -1350,10 +1350,13 @@ default persistent.player_level = 0
 # 安全模式
 default persistent.safe_mode = 0
 default persistent.alt_safe_mode = True
+
 default persistent.cleared = False
 default persistent.disable_awful_music = False
 default persistent.recording = False
 
+default persistent.achievements_count = 0
+default persistent.achievements_point = 0
 
 default persistent.playthrough = 0
 default persistent.yuri_kill = 0

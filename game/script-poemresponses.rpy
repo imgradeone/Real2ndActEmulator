@@ -266,6 +266,7 @@ label ch1_n_bad:
         stop music
         pause 2.0
         show screen notify("达成成就：我 TM 炸开！（物理）")
+        $ achievement.grant("我 TM 炸开！（物理）")
         play sound "sfx/stab.ogg"
         show n_blackeyes_alt at i11 zorder 3
         show n_eye_alt zorder 3:
@@ -300,7 +301,7 @@ label ch1_n_bad:
         hide blood2
         stop sound
         play music "<from " + str(currentpos) + " loop 4.444>bgm/5.ogg"
-    n 2b "[player]，如果你不想认真对待这个文学部的话，请你直接回家。"
+    n 2b "[player]，如果你不想认真对待这个文学部的话，请你直接滚回家。"
     mc "纳-纳尼？？"
     mc "wdnmd..."
     n 42c "哈？你还以为，我不知道你在瞎写啊？"
@@ -319,7 +320,7 @@ label ch1_n_bad:
     mc "说得在理..."
     mc "嗯，我觉得，每个人都有选择喜好的权利。"
     n 5q "不管怎么说，我猜现在该由我来分享诗了..."
-    n "以我对你的了解，你可能会觉得它很傻。"
+    n "以我对你的了解，恐怕你会觉得它很傻。"
     return
 
 label ch1_n_med:
@@ -365,7 +366,7 @@ label ch1_n_good:
     n 1x "呜呜呜...你真是太...！"
     n "你...你...什么都不懂，对吧？"
     n 5q "我已经跟你说了，你别整得像对着全世界说自己很牛 B 一样！"
-    mc "你真的没说过这句话啊..."
+    mc "可你真的没说过这句话啊..."
     "其实这是自言自语罢了。"
     "Natsuki 肯定很讨厌我了吧。"
     "我不知道她喜欢我的诗，是意味着我的胜利还是失败。"

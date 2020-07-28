@@ -113,7 +113,7 @@ label natsuki_exclusive2_1:
     mc "我还什么都没说呢。"
     n 5c "可你的语调已经表现出来了。"
     $ style.say_dialogue = style.normal
-    n "但我要先告诉你一件事，[player]。"
+    n "但我得先告诉你一件事，[player]。"
     n 4l "这句话也适用于整个文学部：{nw}"
     $ _history_list[-1].what = "这句话也适用于整个文学部：不要光凭封面就评判一本书！" # 我们必须假装 bug 没有发生过 
     $ style.say_dialogue = style.edited
@@ -127,7 +127,7 @@ label natsuki_exclusive2_1:
     mc "啊..."
     "我看着封面。"
     "上面画着四个盛装美少女摆出漫画女主角的姿势。"
-    "这个...\"萌\"得出血了。"
+    "这个...“萌”得出血了。"
     n 4b "别傻站着啊！"
     mc "呜啊--"
     show natsuki at thide zorder 1
@@ -170,7 +170,7 @@ label natsuki_exclusive2_1:
     scene n_cg1_bg
     show n_cg1_base
     with dissolve_cg
-    mc "你这样坐着不感觉无聊吗？"
+    mc "你这样坐着不无聊吗？"
     n "并没有！"
     mc "即便你只是在这看着我读？"
     n "好吧...！"
@@ -197,11 +197,11 @@ label natsuki_exclusive2_1:
     n "说得好像我有可以一起看漫画的朋友一样..."
     n "他们都觉得漫画是给小屁孩看的。"
     n "每当我提起漫画，他们就像是在说..."
-    n "'诶？你还没长大吗？'"
-    n "真是让我有种把她们的头锤爆的感觉..."
+    n "'诶？你还是小孩子吗？'"
+    n "真是想把她们锤爆的感觉..."
     mc "呃，我知道有这种人的..."
     mc "说真的，能找到一个不对你评头论足的朋友已经够难了，更何况对方还要同样喜欢漫画..."
-    mc "我已经差不多是个垃圾了，所以我觉得自己会被慢慢吸引到同类里。"
+    mc "我已经差不多是个渣渣了，所以我觉得自己会被慢慢吸引到同类里。"
     mc "但对你这样的人来说可能会难一点..."
     hide n_cg1_exp3
     n "口亨。"
@@ -228,7 +228,7 @@ label natsuki_exclusive2_1:
     show n_cg1_exp2 at cgfade
     n "--"
     n "..."
-    n "...So？"
+    n "...SO？"
     mc "啊哈哈。"
     hide n_cg1_exp2
     show n_cg1_exp3 at cgfade
@@ -268,6 +268,7 @@ label natsuki_exclusive2_1:
 
     $ currentpos = get_pos()
     $ audio.t6g = "<from " + str(currentpos) + " loop 10.893>bgm/6g.ogg"
+    $ achievement.grant("低 级 马 赛 克")
     if persistent.disable_awful_music:
         show screen notify("达成成就：低 级 马 赛 克，顺便我无能把 BGM 换成正常版，毁气氛（（（")
     else:

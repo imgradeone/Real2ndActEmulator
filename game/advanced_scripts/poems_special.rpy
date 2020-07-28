@@ -29,6 +29,7 @@ image poem_end = ConditionSwitch(
 #Each of these define a label for showing a poem
 label poem_special_1:
     show screen notify("达成成就：叮！您点的晴天娃娃！")
+    $ achievement.grant("叮！您点的晴天娃娃！")
     $ quick_menu = False
     play sound page_turn
     show poem_special1 with Dissolve(1.0)
@@ -39,6 +40,7 @@ label poem_special_1:
 #All the rest are the same
 label poem_special_2:
     show screen notify("达成成就：CAN YOU HEAR ME?")
+    $ achievement.grant("CAN YOU HEAR ME?")
     $ quick_menu = False
     play sound page_turn
     show poem_special2 with Dissolve(1.0)
@@ -48,6 +50,7 @@ label poem_special_2:
     return
 label poem_special_3:
     show screen notify("达成成就：这是甚么东西？？？")
+    $ achievement.grant("这是甚么东西？？？")
     $ quick_menu = False
     play sound page_turn
     show poem_special3 with Dissolve(1.0)
@@ -56,6 +59,7 @@ label poem_special_3:
     return
 label poem_special_4:
     show screen notify("达成成就：今天 Yuri 自 wei 了吗（")
+    $ achievement.grant("今天 Yuri 自 wei 了吗（")
     $ quick_menu = False
     play sound page_turn
     show poem_special4 with Dissolve(1.0)
@@ -64,6 +68,7 @@ label poem_special_4:
     return
 label poem_special_5:
     show screen notify("达成成就：盯着那个黑点，10 秒！！！")
+    $ achievement.grant("盯着那个黑点，10 秒！！！")
     $ quick_menu = False
     play sound page_turn
     show poem_special5 with Dissolve(1.0)
@@ -72,6 +77,7 @@ label poem_special_5:
     return
 label poem_special_6:
     show screen notify("达成成就：世界线错乱")
+    $ achievement.grant("世界线错乱")
     $ quick_menu = False
     play sound page_turn
     show poem_special6 with Dissolve(1.0)
@@ -80,6 +86,7 @@ label poem_special_6:
     return
 label poem_special_7:
     show screen notify("达成成就：借 尸 还 魂")
+    $ achievement.grant("借 尸 还 魂")
     $ quick_menu = False
     play sound page_turn
     show poem_special7a as ps with Dissolve(1.0)
@@ -90,6 +97,7 @@ label poem_special_7:
     return
 label poem_special_8:
     show screen notify("达成成就：都是桃子（？）")
+    $ achievement.grant("都是桃子（？）")
     $ quick_menu = False
     play sound page_turn
     show poem_special8 with Dissolve(1.0)
@@ -98,6 +106,7 @@ label poem_special_8:
     return
 label poem_special_9:
     show screen notify("达成成就：拒绝家暴，从我做起")
+    $ achievement.grant("拒绝家暴，从我做起")
     $ quick_menu = False
     play sound page_turn
     show poem_special9 with Dissolve(1.0)
@@ -106,6 +115,7 @@ label poem_special_9:
     return
 label poem_special_10:
     show screen notify("达成成就：adfhsdfkbsbdfaldfbjs")
+    $ achievement.grant("adfhsdfkbsbdfaldfbjs")
     $ quick_menu = False
     play sound page_turn
     show poem_special10 with Dissolve(1.0)
@@ -114,6 +124,7 @@ label poem_special_10:
     return
 label poem_special_11:
     show screen notify("达成成就：我要退赛")
+    $ achievement.grant("我要退赛")
     $ quick_menu = False
     play sound page_turn
     show poem_special11 with Dissolve(1.0)

@@ -28,6 +28,7 @@ label ch23_main:
     show screen notify("当前 ch23")
     # 来点更刺激的
     if renpy.random.randint(0,15) == 0:
+        $ achievement.grant("死 不 瞑 目 沙 师 弟")
         show screen notify("达成成就：死 不 瞑 目 沙 师 弟")
         $ quick_menu = False
         scene white
@@ -92,6 +93,8 @@ label ch23_main:
         $ style.say_dialogue = style.edited
         y 1f "没人在乎的。"
         y "你咋不去钻到售货机底下捡捡硬币呢？"
+        $ achievement.grant("下次一定")
+        show screen notify("达成成就：下次一定")
         $ style.say_dialogue = style.normal
         show yuri zorder 2 at t32
         show natsuki zorder 3 at f33
@@ -411,6 +414,7 @@ label ch23_end:
     # 我们会强制把你的鼠标挪动 Monika 上。你大可以试试强行选另外两个。
     # 下面是后果。
     if madechoice != "monika":
+        $ achievement.grant("但是我拒绝！")
         show screen notify("达成成就：但是我拒绝！")
         window hide(None)
         $ musicpos = get_pos()

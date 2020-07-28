@@ -11,8 +11,6 @@ label ch20_main:
     with dissolve_scene_full
     play music t2
     show screen notify("二周目...是停不下来的！！！")
-    jump ch20_main2
-
 label ch20_main2:
     python:
         try: renpy.file(config.basedir + "/hxppy thxughts.png")
@@ -139,6 +137,7 @@ label ch20_main2:
     play music t3
 
     if renpy.random.randint(0, 2) == 0:
+        $ achievement.grant("卡 姿 兰 大 眼 睛")
         show screen notify("达成成就：卡 姿 兰 大 眼 睛")
         show monika g1 at l31
     else:
@@ -155,13 +154,13 @@ label ch20_main2:
     n "你真的假的？你带了个男生过来？"
     n "太毁气氛了。"
     show monika 3m at f31 zorder 3
-    m "别这样，Natsuki..."
+    m "Natsuki，别这样..."
     m 3b "...但不管怎样，[player]，欢迎来到文学部!"
     show monika 3a at t31 zorder 2
     mc "..."
     "看着眼前这幅景象，我根本说不出话来。"
     "这个社团..."
-    "{i}...全都是超级卡哇伊的女孩纸啊啊！！{/i}"
+    "{i}...全都是超级卡哇伊的女孩纸啊啊啊！！{/i}"
 
     show natsuki at f32 zorder 3
     n 5c "那么，让我猜猜..."
@@ -300,7 +299,7 @@ label ch20_main2:
     y "超现实主义的恐怖小说会改变你看待世界的方式，哪怕只有一小会。"
     show yuri at t32 zorder 2
     show natsuki 5q at f31 zorder 3
-    n "唔，我讨厌恐怖..."
+    n "唔，我讨厌恐怖的东西..."
     show natsuki at t31 zorder 2
     show yuri at f32 zorder 3
     y 1f "哦？为什么？"
@@ -308,7 +307,7 @@ label ch20_main2:
     show natsuki at f31 zorder 3
     n 5c "好吧，我只是..."
     "Natsuki 短暂地瞥了我一眼。"
-    n 5q "没什么。"
+    n 5q "Nothing。"
     show natsuki at t31 zorder 2
     show monika at f33 zorder 3
     m 1a "这就对了，你平常更喜欢写可爱的东西，Natsuki，不是吗？"
@@ -318,8 +317,8 @@ label ch20_main2:
     n "你从哪里冒出来的这种想法？"
     show natsuki at t31 zorder 2
     show monika at f33 zorder 3
-    m 3b "上次社团会议结束后，你掉了一张便签纸在教室里。"
-    m "好像你正在写一首诗，叫做--"
+    m 3b "上次社团会议结束后，你掉了一张便签纸。"
+    m "好像你在写一首诗，叫--"
     show monika at t33 zorder 2
     show natsuki 1p at f31 zorder 3
     n "你吼辣么大声干什么！！"
@@ -468,7 +467,7 @@ label ch20_main2:
     hide monika
     "我真的能用我那平庸的写作水平打动校园明星 Monika 么?"
     "焦虑已经在我的心中开始翻涌了。"
-    "与此同时，女孩们也在继续着她们的闲聊，Yuri 还在一边清理她的茶具。"
+    "与此同时，女孩们也在继续她们的闲聊，Yuri 还在一边清理她的茶具。"
     mc "那我就回家了..."
     show monika 5a at t11 zorder 2
     m "好的！"
