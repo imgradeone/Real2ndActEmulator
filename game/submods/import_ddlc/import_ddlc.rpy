@@ -205,15 +205,20 @@ label import_ddlc_persistent:
             else:
                 persistent.playthrough = ddlc_persistent.playthrough
 
-    "存档已合并。"
+    call screen dialog(message="存档已合并。", ok_action=Return())
     label import_ddlc_explict_return:
         return
 
 label ddlc_persistent_merge_unmatched_names:
+    $ quick_menu_orig = quick_menu
+    $ quick_menu = False
+    "两个存档之间的玩家名称不相符。如何称呼您？"
+    window hide(None)
     menu:
-        "两个存档之间的玩家名称不相符。如何称呼您？"
         "[ddlc_persistent.playername]":
             $ persistent.playername = ddlc_persistent.playername
         "[persistent.playername]":
             pass
+    $ quick_menu = quick_menu_orig
+    window auto
     return
