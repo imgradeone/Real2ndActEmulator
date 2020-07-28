@@ -213,12 +213,12 @@ label ddlc_persistent_merge_unmatched_names:
     $ quick_menu_orig = quick_menu
     $ quick_menu = False
     "两个存档之间的玩家名称不相符。如何称呼您？"
-    window hide(None)
+    window hide dissolve
     menu:
         "[ddlc_persistent.playername]":
             $ persistent.playername = ddlc_persistent.playername
         "[persistent.playername]":
             pass
     $ quick_menu = quick_menu_orig
-    window auto
+    window auto dissolve # checklater
     return
