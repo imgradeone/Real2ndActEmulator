@@ -388,11 +388,10 @@ label ch22_end:
 
     m "好了，各位！"
     m "大家分享完诗了吧？"
-    if mouse_modify_random:
+    if mouse_modify_random and not persistent.sayoricursor:
         show screen notify("光标已重置。")
         $ mouse_modify_random = False
-
-    $ config.mouse = None
+        $ config.mouse = None
     m "我们今天需要商量点事，请大家都坐到房间的前面来..."
     show natsuki 3c at f31 zorder 3
     n "是关于学园祭的吗？"

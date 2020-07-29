@@ -592,10 +592,13 @@ label poem(transition=True):
         show bg eyes_move
         pause 1.25
         hide bg eyes with None
+        pause 1.0
         $ quick_menu = True
     #Turn back on UI options for reading portion
     $ config.allow_skipping = True
     $ allow_skipping = True
+    if persistent.poemgame_points:
+        call screen dialog("本次战况：\nSayori：[sPointTotal] 分，Yuri：[yPointTotal] 分，Natsuki：[nPointTotal] 分",Return())
     stop music fadeout 2.0
     hide screen quick_menu
     show black as fadeout:

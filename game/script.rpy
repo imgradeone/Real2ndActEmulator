@@ -1,6 +1,14 @@
 # Entry point
 label start:
 
+    if persistent.sayoricursor:
+        $ config.mouse = {"default": [
+                            ("gui/mouse/s_head.png", 0, 0),
+                            ]}
+    else:
+        $ config.mouse = None
+
+
     python hide:
         persistent.special_poems = [0,0,0]
         a = range(1,12)

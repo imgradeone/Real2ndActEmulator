@@ -1358,6 +1358,8 @@ default persistent.recording = False
 default persistent.achievements_count = 0
 default persistent.achievements_point = 0
 
+default persistent.ddmm_mode = False
+
 default persistent.playthrough = 0
 default persistent.yuri_kill = 0
 default persistent.seen_eyes = None

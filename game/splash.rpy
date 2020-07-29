@@ -242,6 +242,13 @@ init python:
 
 label splashscreen:
 
+    if persistent.sayoricursor:
+        $ config.mouse = {"default": [
+                            ("gui/mouse/s_head.png", 0, 0),
+                            ]}
+    else:
+        $ config.mouse = None
+
 
     python:
         firstrun = ""
@@ -301,16 +308,18 @@ label splashscreen:
         menu:
             "您真的要继续吗？"
             "继续。":
+                scene tos2
+                with Dissolve(1.5)
                 "再次说明，本 Mod 为 DDLC 中文 Mod 模板的新 Demo。"
                 "接下来，您将体验到模板的许多特殊功能。"
+                "但是，如果感到不适，请立即退出游戏。"
                 "祝您玩得愉快！"
+                window hide
+                pause 1.0
                 pass
             "退出。":
                 $ renpy.quit()
 
-        scene tos2
-        with Dissolve(1.5)
-        pause 1.0
         scene white
 
         $ persistent.first_run = True

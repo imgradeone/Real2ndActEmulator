@@ -9,7 +9,16 @@ init -1 python:
         "禁用部分敏感画面（如 club_day2），以降低被查水表的风险"
     )
     layout.AWFUL_MUSIC = (
-        "禁用部分变调音乐"
+        "禁用部分变调音乐，仅在下一次触发时生效"
+    )
+    layout.DDMM = (
+        "启用 Doki Doki Mod Manager 成就支持，但请先从 Mod Manager 启动游戏后再使用该选项\n如果您不是 DDMM 用户，请不要启用，会导致游戏卡顿\n功能暂不可用"
+    )
+    layout.SAYORI = (
+        "启用 Sayori 的特殊光标，同时恢复主界面的 Sayori，\n弥补您无法带着 Sayori 刷二周目的缺憾\n部分效果将在下次点击“新游戏”或重启游戏后生效"
+    )
+    layout.POEMGAME = (
+        "在完成写诗后，显示写诗总分情况（开发中）"
     )
 ################################################################################
 ## Styles
@@ -542,7 +551,7 @@ screen main_menu():
                 style "main_menu_version"
 
     # todo: remove?
-    if persistent.playthrough == 1 or persistent.playthrough == 2:
+    if persistent.playthrough == 1 or persistent.playthrough == 2 and not persistent.sayoricursor:
         add "menu_art_s_glitch"
     else:
         add "menu_art_s"
@@ -557,7 +566,7 @@ screen main_menu():
         add "menu_fade"
         
 
-    key "K_ESCAPE" action Quit(confirm=False)
+    key "K_ESCAPE" action Quit(confirm=True)
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -977,7 +986,19 @@ screen preferences():
                         action ToggleField(persistent, "recording")
                         selected persistent.recording
                         hovered tooltip.Action(layout.RECORDING)
-
+                    textbutton _("启用 DDMM 支持"):
+                        action ToggleField(persistent, "ddmm_mode")
+                        selected persistent.ddmm_mode
+                        hovered tooltip.Action(layout.DDMM)
+                    if persistent.player_level >= 2:
+                        textbutton _("Sayori 厨专用模式"):
+                            action ToggleField(persistent, "sayoricursor")
+                            selected persistent.sayoricursor
+                            hovered tooltip.Action(layout.SAYORI)
+                        textbutton _("显示写诗战况"):
+                            action ToggleField(persistent, "poemgame_points")
+                            selected persistent.poemgame_points
+                            hovered tooltip.Action(layout.POEMGAME)                        
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
 
@@ -1026,6 +1047,9 @@ screen preferences():
             hbox:
                 textbutton _("成就状态"):
                     action Function(renpy.call_in_new_context, 'archievements_list')
+                    style "navigation_button"
+                textbutton _("重播警告"):
+                    action Function(renpy.call_in_new_context, 'warning2')
                     style "navigation_button"
 
     text tooltip.value:
@@ -1580,7 +1604,6 @@ screen notify(message):
         text message
 
     timer 3.25 action Hide('notify')
-
 
 transform notify_appear:
     on show:

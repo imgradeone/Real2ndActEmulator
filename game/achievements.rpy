@@ -1,7 +1,7 @@
 label archievements_list:
     scene black
     "系统" "您现在查看的是成就列表，这里可以显示你已经达成的成就，并且兑换能力者称号。"
-    "系统" "正在结算您的成就......{p=1.0}{nw}"
+    "系统" "正在结算您的成就......{w=1.0}{nw}"
     $ persistent.achievements_count = 0
     $ persistent.achievements_point = 0
 
@@ -63,23 +63,23 @@ label archievements_list:
         $ text8 = "未达成"
     # 9
     if achievement.has("眉 飞 色 舞"):
-        $ persistent.achievements_point += 2
+        $ persistent.achievements_point += 1
         $ persistent.achievements_count += 1
-        $ text9 = "眉 飞 色 舞 / 普通"
+        $ text9 = "眉 飞 色 舞 / 极普通"
     else:
         $ text9 = "未达成"
     # 10
     if achievement.has("七 龙 珠"):
-        $ persistent.achievements_point += 2
+        $ persistent.achievements_point += 1
         $ persistent.achievements_count += 1
-        $ text10 = "七 龙 珠 / 普通"
+        $ text10 = "七 龙 珠 / 极普通"
     else:
         $ text10 = "未达成"
     # 11
     if achievement.has("Touch"):
-        $ persistent.achievements_point += 2
+        $ persistent.achievements_point += 1
         $ persistent.achievements_count += 1
-        $ text11 = "Touch / 普通"
+        $ text11 = "Touch / 极普通"
     else:
         $ text11 = "未达成"
     # 12
@@ -223,19 +223,17 @@ label archievements_list:
     else:
         $ text31 = "未达成"
     
-    $ quick_menu = False
     "系统" "您目前获得的成就数量为 [persistent.achievements_count] / 31。"
-    "系统" "累计获得点数 [persistent.achievements_point] / 91。"
+    "系统" "累计获得点数 [persistent.achievements_point] / 88。"
     
     if persistent.achievements_point >= 50:
         if persistent.achievements_count == 31:
             $ persistent.player_level = 3
-            "系统" "您居然集齐了所有成就！恭喜您解锁彩蛋！"# TODO: 彩蛋
+            "系统" "您居然集齐了所有成就！恭喜您解锁彩蛋！（TODO）"# TODO: 彩蛋
         else:
             $ persistent.player_level = 2
-            "系统" "挺强的，您现在可以查看更多选项了。"
-    # TODO: 更多选项
-    $ quick_menu = True
+            "系统" "挺强的，您现在可以查看更多选项了。现在前往游戏设置看看吧。（TODO）"
+    # TODO: 更多选项（现在已经做了 Sayori 光标）
 
     "系统" "接下来看看你获得了哪些成就吧："
     "1. [text1]"
