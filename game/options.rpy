@@ -13,7 +13,7 @@ define config.version = "0.0.5-indev-20200729"
 define gui.about = _("感谢您下载全真二周目模拟器。这是 DDLC 中文 Mod 模板的新 Demo。")
 
 # 构建名，不要使用中文、数字、空格、分隔符，只使用英文
-define build.name = "RealActTwoEmulator"
+define build.name = "RealisticActTwoSimulator"
 
 # 控制设置菜单中的音量设置显示
 define config.has_sound = True
@@ -63,6 +63,7 @@ default preferences.sfx_volume = 0.75
 #   Linux: $HOME/.renpy/<config.save_directory>
 #
 # must be a literal string
+# DO NOT CHANGE for now for cross-version compatibility
 define config.save_directory = "Real 2nd Act Emulator"
 
 # 任务栏图标
