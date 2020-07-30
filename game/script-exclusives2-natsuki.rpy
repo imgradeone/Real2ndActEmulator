@@ -277,14 +277,9 @@ label natsuki_exclusive2_1:
 
     $ currentpos = get_pos()
     $ audio.t6g = "<from " + str(currentpos) + " loop 10.893>bgm/6g.ogg"
-    $ achievement.grant("低 级 马 赛 克")
-    #if persistent.ddmm_mode:
-       #$ ddmm_earn_achievement("")
-    if persistent.disable_awful_music:
-        show screen notify("达成成就：低 级 马 赛 克，顺便我无能把 BGM 换成正常版，毁气氛（（（")
-    else:
-        show screen notify("达成成就：低 级 马 赛 克")
-    play music t6g
+    call grant_achievement_all("低 级 马 赛 克","") # todo
+    if not persistent.disable_awful_music:
+        play music t6g
     # h u n g r y y y y y y y
     $ ntext = glitchtext(96)
     $ style.say_dialogue = style.edited
