@@ -929,6 +929,7 @@ style slot_button_text:
 label main_menu_branch_warning:
     $ invoking_warning_from_main_menu = True
     call splashscreen_warning
+    return
 
 ## Preferences screen ##########################################################
 ##
