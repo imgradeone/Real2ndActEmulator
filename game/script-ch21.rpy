@@ -287,7 +287,6 @@ label ch21_end:
     n "哦，抱歉...你不是已经在划了吗？"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    if persistent.sthu
     y 3n "你-你刚刚是说我在割伤自己吗？？"
     if persistent.sthu:
         y 3r "你到底是什么意思？？？"
