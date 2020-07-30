@@ -18,6 +18,9 @@ label yuri_exclusive2_1:
     mc "我只是在发呆..."
     "我喃喃地说着，觉得自己是不是让她感觉不舒服。"
     $ achievement.grant("眉 飞 色 舞")
+    # why: special notify
+    #if persistent.ddmm_mode:
+    #    $ ddmm_earn_achievement("")
     show screen notify("达成成就：眉 飞 色 舞（不信你就挂机一下再回来看）")
     y oneeye "哦..."
     y "没事的..."
@@ -101,8 +104,7 @@ label yuri_exclusive2_1_ch22:
     mc "其实..."
     mc "我也该开始读这本书了，对吧？"
     play sound "sfx/glitch3.ogg"
-    $ achievement.grant("七 龙 珠")
-    show screen notify("达成成就：七 龙 珠")
+    call grant_achievement_all("七 龙 珠", "")#todo
     y dragon "吼-吼哇！！GKD！"
     y 3n "我-我的意思是，你也不是非要读它，但是...！"
     mc "啊哈哈，你在说些什么啊？"
@@ -571,8 +573,7 @@ label yuri_exclusive2_2_ch22:
     y 3s "...看着..."
     y "...你。"
     hide yuri
-    $ achievement.grant("Touch")
-    show screen notify("达成成就：Touch")
+    call grant_achievement_all("Touch", "") # todo
     show yuri eyes
     pause 3.0
     y "...哈啊..."
@@ -609,8 +610,7 @@ label yuri_exclusive2_2_ch23:
     pause 4.62
     scene bg corridor
     show yuri eyes_base
-    $ achievement.grant("O w O")
-    show screen notify("达成成就：O w O")
+    call grant_achievement_all("O w O", "") # todo
     pause 1.0
     show bg glitch:
         yoffset 480 ytile 2
@@ -701,6 +701,7 @@ label yuri_exclusive2_2_ch23:
             1.49
             repeat
     pause 2.0
+    # m0nika 在看着你
     $ ad = 40.0
     $ ac = 1.0
     show monika 1 at malpha(ac / ad) onlayer front
