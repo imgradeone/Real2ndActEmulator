@@ -264,7 +264,7 @@ label splashscreen_warning:
         "中文剧本内容基于 {a=https://steamcommunity.com/sharedfiles/filedetails/?id=1176221672}Steam 社区知名汉化版 DDLC{/a} 进行翻译并加以修改，在此致谢。"
         pause 1.0
         "请注意！由于本 Mod 包含原作的恐怖元素，焦虑症、抑郁症患者，以及儿童，均不适合游玩此 Mod。"
-        "同时受“清朗”行动的影响，请务必谨慎游玩。"
+        "同时受“清朗”行动的影响，请谨慎游玩。"
         "请点击{a=https://ddlc.moe/warning.html}这里{/a}以查看原作恐怖内容的清单。（英文，含剧透）"
         pause 1.0
         "如果继续游玩 [config.name] 将视为你已经通关原游戏。"
@@ -272,7 +272,7 @@ label splashscreen_warning:
 
         if persistent.first_run:
             menu:
-                "您真的要继续吗？"
+                "你想要继续吗？"
                     "继续。":
                         if not persistent.recording:
                             scene tos2
