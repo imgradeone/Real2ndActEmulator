@@ -83,12 +83,10 @@ label natsuki_exclusive2_1:
     if persistent.sthu:
         $ ntext = fujaowee(16)
         n 4x "monika我可qqqqqqqqqqqqqqqq{fast}[ntext]{nw}" # “我可去你的”
-		$ style.say_dialogue = style.normal
-        $ _history_list[-1].what = "Monika 这个讨厌鬼..." # 放心，历史记录被我们改了
     else:
         n 4x "monika我丢雷楼某mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm" # 爆粗口的 Natsuki 是屑（
-        $ style.say_dialogue = style.normal
-        $ _history_list[-1].what = "Monika 这个讨厌鬼..." # 放心，历史记录被我们改了
+	$ style.say_dialogue = style.normal
+	$ _history_list[-1].what = "Monika 这个讨厌鬼..." # 放心，历史记录被我们改了
     n "从来都不把我的东西放回去！"
     n "如果有人老是把你的东西乱放，那整理起来又有什么意义啊？wdnmd！"
     "Natsuki 把书架上的漫画重新插进套装盒中。"
