@@ -20,6 +20,9 @@ init -1 python:
     layout.POEMGAME = (
         "在完成写诗后，显示写诗总分情况（开发中）"
     )
+    layout.NOT_A_BITCH = ( # fixme
+        "又称“debuff Nat & Yuri 吵架”"
+    )
 ################################################################################
 ## Styles
 ################################################################################
@@ -464,9 +467,9 @@ screen navigation():
             if main_menu:
 
                 if persistent.playthrough == 1:
-                    textbutton _("二周目启动sndsdfiusfbsidcsodf") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                    textbutton _("二周目启动sndsdfiusfbsidcsodf") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="请输入你的名字", ok_action=Function(FinishEnterName)))
                 else:
-                    textbutton _("新游戏") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                    textbutton _("新游戏") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="请输入你的名字", ok_action=Function(FinishEnterName)))
 
             else:
 
@@ -613,7 +616,7 @@ style main_menu_title:
 screen game_menu_m():
     $ persistent.menu_bg_m = True
     add "gui/menu_bg_m.png" # 血 溅 文 学 部（
-    timer 0.3 action Show(screen="dialog", message="恭喜你解锁成就：血 溅 毛 二 力。\n我们暂时没有显示成就列表的功能。\n没想到吧，这 2% 的几率被你撞上了 XDD\n该彩蛋不会再次显示。", ok_action=Hide("dialog"))
+    timer 0.3 action Show(screen="dialog", message="血 溅 毛 二 力", ok_action=Hide("dialog"))
     timer 0.3 action Hide("game_menu_m")
 
 screen game_menu(title, scroll=None):
@@ -938,6 +941,8 @@ label main_menu_branch_warning:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
+default persistent.sthu = False
+
 screen preferences():
 
     tag menu
@@ -990,6 +995,10 @@ screen preferences():
                         action ToggleField(persistent, "recording")
                         selected persistent.recording
                         hovered tooltip.Action(layout.RECORDING)
+                    textbutton _("削弱严重粗话"): # feels better than blocking
+                        action ToggleField(persistent, "sthu") # Shut The Hell Up
+                        selected persistent.sthu
+                        hovered tooltip.Action(layout.NOT_A_BITCH)
                     textbutton _("启用 DDMM 支持"):
                         action ToggleField(persistent, "ddmm_mode")
                         selected persistent.ddmm_mode
