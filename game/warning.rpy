@@ -23,8 +23,8 @@ label warning:
     m "但..."
     m "你现在想把它弄回来..."
     m "..."
-    m "而且，你必须知道..."
-    m "Sayori 不会存在于二周目..."
+    m "而且，你也知道..."
+    m "Sayori 不在二周目里..."
     m "所以如果你是 Sayori 厨，不要再继续玩了。"
     m "无论如何，我该警告的都警告完了。"
     m "接下来，那个次元里 Monika 的行为都与我无关。"
@@ -33,14 +33,14 @@ label warning:
     menu:
 
         "是。":
-            "系统" "正在删除 Sayori..............................{nw}"
+            "系统" "正在删除 Sayori...{nw}"
             call updateconsole("os.remove(\"characters/sayori.chr\")", "sayori.chr deleted successfully.") from _call_updateconsole_18
             $ delete_character("sayori")
-            "系统" "正在跳转到二周目................{nw}"
+            "系统" "正在加载二周目...{nw}"
             $ persistent.playthrough = 1
             show screen notify("二周目已加载。")
             pause 1.0
-            "系统" "正在重新启动游戏......{nw}"
+            "正在重新启动游戏...{nw}"
             $ renpy.utter_restart()
         "不。":
             $ renpy.quit()
