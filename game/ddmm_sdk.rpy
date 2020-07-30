@@ -39,34 +39,10 @@ label ddmm_earn_achievement(id):
     $ ddmm_earn_achievement(id)        
     return
 
-label _reg_achievements:
+label grant_achievement_all(renpy_desc, ddmm_id):
     python:
-        ddmm_register_achievement("TEST_ACHIEVEMENT", "测试成就", "可以从教程菜单获得")
-        ddmm_register_achievement("MONIKA_ROUTE_COMPLETE", "只要 Monika", "完成 Monika 路线的编程")
-        achievements.register("测试成就")
-        achievements.register("只要 Monika", 9, 1)
-    return
-
-# Test SDK functions
-# Ren'Py 测试有限
-label _ddmm_test:
-    $ ddmm_online = ddmm_check_online()
-    "DDMM 是否在线：[ddmm_online]"
-    menu:
-        "请选择想要测试的项。"
-        "重新测试在线状态":
-            pass # 像我们没做什么一样
-        "注册成就": # TODO: 在 init -10 块中添加 call 之后移除这个选择
-            call _reg_achievements
-            "已注册成就。"
-        "达成 测试成就":
-            call ddmm_earn_achievement("TEST_ACHIEVEMENT")
-        "测试成就 (Ren'Py)":
-            $ achievement.grant("测试成就")
-        "达成 只要 Monika":
-            call ddmm_earn_achievement("MONIKA_ROUTE_COMPLETE")
-        "退出":
-            return
-            # pass
-    call _ddmm_test
+        achievements.grant(renpy_desc)
+        if persistent.ddmm_mode:
+            ddmm_earn_achievement(ddmm_id)
+    show screen notify("达成成就：[renpy_desc]")
     return
