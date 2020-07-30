@@ -224,10 +224,13 @@ label ch21_end:
     show natsuki at f22 zorder 3
     n 1o "唔唔唔...！"
     n "哼唧，你知道吗？！"
-    n "某位女士，自从 [player] 一出现，欧派就多了一个奇怪的零件！！"
+    if persistent.sthu:
+        n "某个人啊，自从 [player] 出现，衣服里某两个部位就肿起来了！"
+    else:
+        n "某位女士，自从 [player] 出现，欧派就多了一个奇怪的零件！！"
     show yuri 3p at h21
     show natsuki at t22 zorder 2
-    y "N-Natsuki！！"
+    y "你-你！！" # 原文 N-Natsuki!!
     show yuri at t32 zorder 2
     show natsuki at t33 zorder 2
     show monika 3l at l41 behind yuri,natsuki
@@ -235,7 +238,10 @@ label ch21_end:
     show monika at h41
     show yuri 3p at f32 zorder 3
     show natsuki 1e at f33 zorder 3
-    ny "关你屁事！"
+    if persistent.sthu:
+        ny "你管不着！"
+    else:
+        ny "关你屁事！"
     show monika at lhide
     hide monika
     show yuri 2h at f21 zorder 2
@@ -251,11 +257,17 @@ label ch21_end:
     y "Natsuki，你啊，还是 too young。"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
-    n 4o "{i}又是我了？？？{/i}看看现在是谁在逼逼赖赖，你这个欲求不满的死碧池！" # 祖安 Natsuki
+    if persistent.sthu:
+        n 4o "{i}又是我了？？？{/i}看看是谁在这里装模装样，你这个欲求不满的家伙！"
+    else:
+        n 4o "{i}又是我了？？？{/i}看看现在是谁在逼逼赖赖，你这个欲求不满的死碧池！" # 祖安 Natsuki
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y "死碧池...？欲求不满...？"
-    y 2r "很抱歉，相对于你的心理年龄而言，想要理解我的生活方式，可能对你这种人来说太难了！"
+    if persistent.sthu:
+        y "欲求不满...？"
+    else:
+        y "死碧池...？欲求不满...？"
+    y 2r "很抱歉，但对于你这种心理年龄大小而言，想要理解我的生活方式可能太难了！"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     n 4f "看吧？？"
@@ -263,7 +275,10 @@ label ch21_end:
     n 4e "大部分人初中毕业后就学会克制自己了，可不像你。"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
-    y "想要教训我的话，你先收起你那四处招惹人的司马态度吧！"
+    if persistent.sthu:
+        y "想要教训我的话，你先收起你那招惹人的态度吧！"
+    else:
+        y "想要教训我的话，你先收起你那四处招惹人的司马态度吧！"
     y "你以为你可以通过自己可爱的穿着和行为，来掩盖你那糟糕的性格吗？"
     y 1k "到最后你唯一看起来可爱的地方就只剩下你可怜地做这种无用功了。"
     show yuri at t21 zorder 2
@@ -272,8 +287,12 @@ label ch21_end:
     n "哦，抱歉...你不是已经在划了吗？"
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
+    if persistent.sthu
     y 3n "你-你刚刚是说我在割伤自己吗？？"
-    y 3r "你 TM 脑袋里都在想什么？？？"
+    if persistent.sthu:
+        y 3r "你到底是什么意思？？？"
+    else:
+        y 3r "你 TM 脑袋里都在想什么？？？"
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     n 1e "来啊！继续啊！"
@@ -296,7 +315,7 @@ label ch21_end:
     $ style.say_dialogue = style.normal
     mc "..."
     $ style.say_dialogue = style.edited
-    "{cps=*2}wdnmd，我当初怎么就被牵扯进来的呢？！{/cps}{nw}"
+    "{cps=*2}wdnmd，我当初为什么被牵扯进来了？！{/cps}{nw}"
     "{cps=*2}我对写作一窍不通啊...{/cps}{nw}"
     "{cps=*2}不过，不管我站在谁那边，她对我的评价可能会更高吧！{/cps}{nw}"
     "{cps=*2}那么，肯定是选择...{/cps}{nw}" # 这一段请翻历史查看
