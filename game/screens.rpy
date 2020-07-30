@@ -612,8 +612,9 @@ style main_menu_title:
 
 screen game_menu_m():
     $ persistent.menu_bg_m = True
-    add "gui/menu_bg_m.png" # 血 溅 文 学 部（
-    timer 0.3 action Show(screen="dialog", message="恭喜你解锁成就：血 溅 毛 二 力。\n我们暂时没有显示成就列表的功能。\n没想到吧，这 2% 的几率被你撞上了 XDD\n该彩蛋不会再次显示。", ok_action=Hide("dialog"))
+    add "mod_assets/menu_bg_m_alt.png" # 血 溅 文 学 部（
+    $ achievement.grant("蓝屏钙 V2")
+    timer 0.3 action Show(screen="dialog", message="恭喜你解锁成就：蓝屏钙 V2（\n没想到吧，这 2% 的几率被你撞上了 XDD\n该彩蛋不会再次显示。", ok_action=Hide("dialog"))
     timer 0.3 action Hide("game_menu_m")
 
 screen game_menu(title, scroll=None):
@@ -672,7 +673,7 @@ screen game_menu(title, scroll=None):
 
     use navigation
 
-    if not main_menu and persistent.playthrough == 2 and not persistent.menu_bg_m and renpy.random.randint(0, 49) == 0 and not persistent.alt_safe_mode:
+    if not main_menu and persistent.playthrough == 2 and not persistent.menu_bg_m and renpy.random.randint(0, 49) == 0:
         on "show" action Show("game_menu_m")
 
     textbutton _("返回"):
@@ -1046,7 +1047,7 @@ screen preferences():
 
             hbox:
                 textbutton _("成就状态"):
-                    action Function(renpy.call_in_new_context, 'archievements_list')
+                    action Function(renpy.call_in_new_context, 'achievements_list')
                     style "navigation_button"
                 textbutton _("重播警告"):
                     action Function(renpy.call_in_new_context, 'warning2')

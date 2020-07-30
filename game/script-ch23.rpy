@@ -661,7 +661,8 @@ label yuri_kill_2:
     if not renpy.music.get_playing(channel='music') == audio.t6s:
         $ audiostart = str(renpy.random.random() * 360)
         $ audio.t6s = "<from " + audiostart + " loop 43.572>bgm/6s.ogg"
-        play music t6s
+        if not persistent.disable_awful_music:
+            play music t6s
     show y_kill
     label yuri_kill_loop:
         $ persistent.yuri_kill += 50 # 1440 下是人等的？？？
@@ -689,7 +690,8 @@ label yuri_kill_3:
     if not renpy.music.get_playing(channel='music') == audio.t6s:
         $ audiostart = str(renpy.random.random() * 360)
         $ audio.t6s = "<from " + audiostart + " loop 43.572>bgm/6s.ogg"
-        play music t6s
+        if not persistent.disable_awful_music:
+            play music t6s
     scene bg club_day
     "[gtext]"
     window auto

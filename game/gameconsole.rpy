@@ -10,7 +10,7 @@ label gameconsole:
         "安全模式设置（开发中，无效）":
             call safe_mode_settings
         "成就系统（开发中）":
-            call archievements_list
+            call achievements_list
 
     jump gameconsole
 return

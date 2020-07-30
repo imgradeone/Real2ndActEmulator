@@ -37,7 +37,7 @@ init 10 python:
     achievement.register("我要退赛")
     achievement.register("下次一定")
     achievement.register("一键忽略")
-
+    achievement.register("蓝屏钙 V2")
     pass
 
 ## Late overrides
