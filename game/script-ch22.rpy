@@ -24,8 +24,7 @@ label ch22_main:
     "我走进教室，迎来的又是那熟悉的一幕。"
     # 1/3 几率，Yuri 崩坏
     if renpy.random.randint(0,2) == 0:
-        $ achievement.grant("苏 联 解 体")
-        show screen notify("达成成就：苏 联 解 体")
+        call grant_achievement_all("苏 联 解 体", "") # todo
         show yuri half at i11 zorder 2
         show yuri_half2 at i11 zorder 1
     else:
@@ -125,16 +124,19 @@ label ch22_main:
     y 2o "..."
     y "但-但是..."
     if renpy.random.randint(0, 3) == 0:
-        $ achievement.grant("MOPEMOPE")
-        show screen notify("达成成就：MOPEMOPE")
+        call grant_achievement_all("MOPEMOPE", "") # todo
         $ style.say_dialogue = style.edited
         if not persistent.alt_safe_mode:
             show yuri at t32 zorder 2
             show natsuki mouth as nm at i33 zorder 3
         show n_moving_mouth zorder 3:
             xoffset 400
-        n 2a "啊wee改哈鞥嫦娥我刚不疤痕处哈维楚王嗡阿格王朔鸡e句NBA我是猪tix来试谱啊11宝宝呢囜您呢你娘比起重机究其本质你只是个浅水区的牛蛙"
-        # n 2a "mibulls sailcloth blindsight lifeline anan rectipetality faultlessly offered scleromalacia neighed catholicate"
+        if renpy.random.randint(0,2) == 0:
+            $ ntext = fujaowee(48)
+            n 2a "[ntext]"
+        else:
+            n 2a "啊wee改哈鞥嫦娥我刚不疤痕处哈维楚王嗡阿格王朔鸡e句NBA我是猪tix来试谱啊11宝宝呢囜您呢你娘比起重机究其本质你只是个浅水区的牛蛙"
+            # n 2a "mibulls sailcloth blindsight lifeline anan rectipetality faultlessly offered scleromalacia neighed catholicate"
         hide nm
         hide n_moving_mouth
         $ style.say_dialogue = style.normal
@@ -263,8 +265,7 @@ label ch22_main:
             y 3f "别老想着她了。"
             y "她已经习惯被忽视了。"
             y "走，我们去那边。"
-            $ achievement.grant("一键忽略")
-            show screen notify("达成成就：一键忽略")
+            call grant_achievement_all("一键忽略", "") # todo
 
             $ style.say_dialogue = style.normal
             window hide(None)
@@ -333,8 +334,7 @@ label ch22_end:
     else:
         pass
     if not faint_effect and renpy.random.randint(0,2) == 0:
-        $ achievement.grant("死 者 视 角 打 游 戏")
-        show screen notify("达成成就：死 者 视 角 打 游 戏")
+        call grant_achievement_all("死 者 视 角 打 游 戏", "") # todo
         $ faint_effect = True
     else:
         $ faint_effect = None
@@ -359,6 +359,8 @@ label ch22_end:
         play music t3
     if renpy.random.randint(0,2) == 0:
         $ achievement.grant("你鼠标里的 DNA")
+        #if persistent.ddmm_mode:
+            #$ ddmm_earn_achievement("")
         if faint_effect:
             show screen notify("达成成就：你鼠标里的 DNA 和 死 者 视 角 打 游 戏（（（")
         else:
