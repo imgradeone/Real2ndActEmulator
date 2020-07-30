@@ -79,9 +79,10 @@ label natsuki_exclusive2_1:
     $ style.say_dialogue = style.normal
     mc "你在这里找什么吗？"
     $ style.say_dialogue = style.edited
+    # checklater: wdllm vs wdnmd vs wdnlm
     n 4x "monika我丢雷楼某mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm" # 爆粗口的 Natsuki 是屑（
     $ style.say_dialogue = style.normal
-    $ _history_list[-1].what = "Monika 讨厌鬼..." # 放心，历史记录被我们改了
+    $ _history_list[-1].what = "Monika 这个讨厌鬼..." # 放心，历史记录被我们改了
     n "从来都不把我的东西放回去！"
     n "如果有人老是把你的东西乱放，那整理起来又有什么意义啊？wdnmd！"
     "Natsuki 把书架上的漫画重新插进套装盒中。"
@@ -269,11 +270,14 @@ label natsuki_exclusive2_1:
     $ currentpos = get_pos()
     $ audio.t6g = "<from " + str(currentpos) + " loop 10.893>bgm/6g.ogg"
     $ achievement.grant("低 级 马 赛 克")
+    #if persistent.ddmm_mode:
+       #$ ddmm_earn_achievement("")
     if persistent.disable_awful_music:
         show screen notify("达成成就：低 级 马 赛 克，顺便我无能把 BGM 换成正常版，毁气氛（（（")
     else:
         show screen notify("达成成就：低 级 马 赛 克")
     play music t6g
+    # h u n g r y y y y y y y
     $ ntext = glitchtext(96)
     $ style.say_dialogue = style.edited
     n "{color=#000}[ntext]{/color}"
