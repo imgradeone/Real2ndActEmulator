@@ -239,6 +239,61 @@ init python:
         except:
             pass
 
+label splashscreen_warning:
+    default persistent.first_run = False
+    default invoking_warning_from_main_menu = False
+    if not persistent.first_run or invoking_warning_from_main_menu:
+        $ quick_menu = False
+        scene white
+        pause 0.5
+        scene tos # may be no longer relevant
+        with Dissolve(1.0)
+        pause 1.0
+
+        "[config.name] 是 Doki Doki Literature Club 的粉丝向 Mod，与 Team Salvato 无关。"
+        "本 Mod 还在开发中，因此可能会遇到汉化不完全和其他 bug。"
+        #if persistent.first_run:
+            #$ gtext = glitchtext(7)
+            #"{fast}我喜欢写 bug[gtext]{nw}"
+            #$ history_list.pop()
+        "因为本 Mod 包含大量剧透，所以本 Mod 理应在通关原游戏后再进行游玩。"
+        "中文剧本内容基于 {a=https://steamcommunity.com/sharedfiles/filedetails/?id=1176221672}Steam 社区知名汉化版 DDLC{/a} 进行翻译并加以修改，在此致谢。"
+        pause 1.0
+        "请注意！由于本 Mod 包含原作的恐怖元素，焦虑症、抑郁症患者，以及儿童，均不适合游玩此 Mod。"
+        "同时受“清朗”行动的影响，请务必谨慎游玩。"
+        "请点击{a=https://ddlc.moe/warning.html}这里{/a}以查看原作恐怖内容的清单。（英文，含剧透）"
+        pause 1.0
+        "如果继续游玩 [config.name] 将视为你已经通关原游戏。"
+        "与此同时，我们将视你为 16 岁以上，心理健康，且同意接受恐怖内容的玩家。"
+
+        if persistent.first_run:
+            menu:
+                "您真的要继续吗？"
+                    "继续。":
+                        scene tos2
+                        with Dissolve(1.5)
+                        "再次说明，本 Mod 为 DDLC 中文 Mod 模板的新 Demo。"
+                        "接下来，您将体验到模板的许多特殊功能。"
+                        jump splashwarning_final
+                    "退出。":
+                        $ renpy.quit()
+        else:
+            scene tos2
+            with Dissolve(1.5)
+            "既然你已经同意过了，我们也就不再需要你的意见了。"
+
+       label splashwarning_final:
+            "但是，如果感到不适，请立即退出游戏。"
+            "祝您玩得愉快！"
+            window hide
+            pause 1.0
+            pass
+            scene white
+
+            $ invoking_warning_from_main_menu = False
+            $ persistent.first_run = True
+
+    return
 
 label splashscreen:
 
@@ -281,48 +336,7 @@ label splashscreen:
             filepath = renpy.file("firstrun").name
             open(filepath, "a").close()
 
-    default persistent.first_run = False
-    if not persistent.first_run:
-        $ quick_menu = False
-        scene white
-        pause 0.5
-        scene tos
-        with Dissolve(1.0)
-        pause 1.0
-
-        "[config.name] 是 Doki Doki Literature Club 的粉丝向 Mod，与 Team Salvato 无关。"
-        "本 Mod 还在开发中，因此可能会遇到汉化不完全和其他 bug。"
-        "本 Mod 理应在通关原游戏后再进行游玩，因此本 Mod 包含大量剧透。"
-        "要游玩本 Mod，需要原版 Doki Doki Literature Club 的文件。您可以在 {a=https://ddlc.moe}DDLC.moe{/a} 或者 Steam 免费获取。"
-        "中文剧本内容基于 Steam 社区知名汉化版 DDLC 进行翻译并加以修改，在此致谢。"
-        "您可以访问 {a=https://steamcommunity.com/sharedfiles/filedetails/?id=1176221672}这里{/a} 以下载汉化版 DDLC，支持汉化大佬。"
-        pause 1.0
-        "请注意！本 Mod 不适合儿童或心理承受能力较弱的人。"
-        "由于本 Mod 包含原作的恐怖元素（甚至发挥到了极致），焦虑症、抑郁症患者，以及儿童，均不适合游玩此 Mod。"
-        "同时受“清朗”行动的影响，请务必谨慎游玩。"
-        "对于原作的恐怖内容，请访问 {a=https://ddlc.moe/warning.html}这里{/a}。（英文，包含剧透）"
-        pause 1.0
-        "如果继续游玩 [config.name] 将视为你已经通关原游戏。"#，并接受任何剧透内容。"
-        "与此同时，我们将视你为 16 岁以上的玩家，心理健康，且同意接受恐怖内容。"
-
-        menu:
-            "您真的要继续吗？"
-            "继续。":
-                scene tos2
-                with Dissolve(1.5)
-                "再次说明，本 Mod 为 DDLC 中文 Mod 模板的新 Demo。"
-                "接下来，您将体验到模板的许多特殊功能。"
-                "但是，如果感到不适，请立即退出游戏。"
-                "祝您玩得愉快！"
-                window hide
-                pause 1.0
-                pass
-            "退出。":
-                $ renpy.quit()
-
-        scene white
-
-        $ persistent.first_run = True
+    call splashscreen_warning
 
     python:
         basedir = config.basedir.replace('\\', '/')
