@@ -9,7 +9,7 @@ init 10 python:
     register_achievement_all("卡 姿 兰 大 眼 睛", "KAMONI_BIG_EYES", "见到 Monika 崩坏的大眼睛")
     register_achievement_all("苏 联 解 体", "YURI_YURI_ICE_CREAM", "见到变成两半的 Yuri") # 尝试翻译旺旺碎碎冰失败
     register_achievement_all("MOPEMOPE", "MOUTHY_NATSUKI", "见到 Natsuki 的真实嘴")
-    register_achievement_all("死 者 视 角 打 游 戏"， "DEAD_SAYORI_GAMEPLAY", "见到游戏画面”昏厥“效果")
+    register_achievement_all("死 者 视 角 打 游 戏", "DEAD_SAYORI_GAMEPLAY", "见到游戏画面”昏厥“效果")
     register_achievement_all("你鼠标里的 DNA", "SAYORI_CURSOR_NORMAL_GAMEPLAY", "在普通游戏流程中获得 Sayori 的指针")
     register_achievement_all("死 不 瞑 目 沙 师 弟"， "SHAMEFUL_HANG", "看到”死亡“ Sayori 的 noface 形态")
     register_achievement_all("但是我拒绝！", "JUST_MONIKA", "在第 3 章选你的真实意见时没选 Monika")
