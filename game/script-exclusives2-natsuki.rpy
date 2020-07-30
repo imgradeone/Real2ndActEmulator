@@ -277,7 +277,7 @@ label natsuki_exclusive2_1:
 
     $ currentpos = get_pos()
     $ audio.t6g = "<from " + str(currentpos) + " loop 10.893>bgm/6g.ogg"
-    call grant_achievement_all("低 级 马 赛 克","") # todo
+    call grant_achievement_all("低 级 马 赛 克","I_AM_HUNGRY") # todo
     if not persistent.disable_awful_music:
         play music t6g
     # h u n g r y y y y y y y

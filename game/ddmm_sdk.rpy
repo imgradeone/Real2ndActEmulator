@@ -46,3 +46,9 @@ label grant_achievement_all(renpy_desc, ddmm_id):
             ddmm_earn_achievement(ddmm_id)
     show screen notify("达成成就：[renpy_desc]")
     return
+
+
+python:      
+    def register_achievement_all(name, id, description):
+        achievement.register(name)
+        ddmm_register_achievement(id, name, description)

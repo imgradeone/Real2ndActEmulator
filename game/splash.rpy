@@ -1,10 +1,9 @@
 ## splash screen is first thing that gets shown to player
 init -100 python:
-
     # archive check for mods
     for archive in ['audio','images','fonts']:
         if archive not in config.archives:
-            renpy.error("看样子你还没有把 DDLC 游戏的文件复制过去呐。建议您去看看 README 一步步操作。")
+            renpy.error("看样子你还没有把 DDLC 游戏的文件复制过去呐。")
 
 # disclaimers
 init python:
@@ -23,7 +22,6 @@ init python:
         "管管孩子，救救游戏",
         "为什么 Sayori 总是被迫害？"
     ]
-
 
 image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign=0.5)
 

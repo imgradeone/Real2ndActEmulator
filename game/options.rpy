@@ -112,8 +112,6 @@ init python:
         else:
             return (float(height) * (float(config.screen_width) / float(config.screen_height)), height)
 
-
-
 # BUILD CONFIG
 
 init python:

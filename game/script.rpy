@@ -1,13 +1,11 @@
 # Entry point
 label start:
-
     if persistent.sayoricursor:
         $ config.mouse = {"default": [
                             ("gui/mouse/s_head.png", 0, 0),
                             ]}
     else:
         $ config.mouse = None
-
 
     python hide:
         persistent.special_poems = [0,0,0]
@@ -17,9 +15,8 @@ label start:
             persistent.special_poems[i] = b
             a.remove(b)
 
-    $ persistent.seen_eyes == None
-    $ persistent.seen_sticker == False
-    # 注册成就（原生）
+    $ persistent.seen_eyes = None
+    $ persistent.seen_sticker = False
 
     # ID of this playtrhoguh
     $ anticheat = persistent.anticheat
@@ -53,11 +50,6 @@ label start:
             call fakeintro from _call_fakeintro
         else:
             call ch20_main from _call_ch20_main
-    # 就动注释夹起来的这几行
-
-    # 对于教程，直接使用下面一行：
-    # call meet_monika
-
     return
 
 label endgame(pause_length=4.0):
