@@ -141,7 +141,7 @@ label yuri_exclusive2_1_ch22:
     $ style.say_dialogue = style.normal
     y "我只是--！{nw}"
     $ style.say_dialogue = style.edited
-    y "我只是{fast}沐浴在你的体温wwwwwwwwwwwwwwww温 温wwwwwwwww体iiiiiiiiiiiiiiiiiiii{nw}"
+    y "我只是{fast}沉浸在你的体温wwwwwwwwwwwwwwww温 温wwwwwwwww体iiiiiiiiiiiiiiiiiiii{nw}"
     $ style.say_dialogue = style.normal
     $ _history_list.pop()
 
