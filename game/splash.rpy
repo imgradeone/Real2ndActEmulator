@@ -246,8 +246,12 @@ label splashscreen_warning:
         $ quick_menu = False
         scene white
         pause 0.5
-        scene tos # may be no longer relevant
-        with Dissolve(1.0)
+        if persistent.recording:
+            show game_menu_bg zorder 1
+            with Dissolve(1.0)
+        else:
+            scene tos # may be no longer relevant
+            with Dissolve(1.0)
         pause 1.0
 
         "[config.name] 是 Doki Doki Literature Club 的粉丝向 Mod，与 Team Salvato 无关。"
@@ -270,16 +274,18 @@ label splashscreen_warning:
             menu:
                 "您真的要继续吗？"
                     "继续。":
-                        scene tos2
-                        with Dissolve(1.5)
+                        if not persistent.recording:
+                            scene tos2
+                            with Dissolve(1.5)
                         "再次说明，本 Mod 为 DDLC 中文 Mod 模板的新 Demo。"
                         "接下来，您将体验到模板的许多特殊功能。"
                         jump splashwarning_final
                     "退出。":
                         $ renpy.quit()
         else:
-            scene tos2
-            with Dissolve(1.5)
+            if not persistent.recording:
+                scene tos2
+                with Dissolve(1.5)
             "既然你已经同意过了，我们也就不再需要你的意见了。"
 
        label splashwarning_final:
