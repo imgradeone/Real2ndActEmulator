@@ -81,9 +81,10 @@ label natsuki_exclusive2_1:
     $ style.say_dialogue = style.edited
     # checklater: wdllm vs wdnmd vs wdnlm
     if persistent.sthu:
-        $ ntext = fujaowee(48)
-        n 4x "monika我可{fast}[ntext]{nw}" # “我可去你的”
-        $ _history_list.pop()
+        $ ntext = fujaowee(16)
+        n 4x "monika我可qqqqqqqqqqqqqqqq{fast}[ntext]{nw}" # “我可去你的”
+		$ style.say_dialogue = style.normal
+        $ _history_list[-1].what = "Monika 这个讨厌鬼..." # 放心，历史记录被我们改了
     else:
         n 4x "monika我丢雷楼某mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm" # 爆粗口的 Natsuki 是屑（
         $ style.say_dialogue = style.normal
