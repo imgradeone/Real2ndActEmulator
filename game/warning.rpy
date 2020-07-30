@@ -39,6 +39,10 @@ label warning:
             show screen notify("二周目已加载。")
             pause 1.0
             "正在重新启{nw}"
+            $ srf = screenshot_srf()
+            show layer screens:
+                truecenter
+                zoom 1.00
             show screen tear(20, 0.1, 0.1, 0, 40, srf)
             play sound "sfx/s_kill_glitch1.ogg"
             $ renpy.utter_restart()
