@@ -389,6 +389,11 @@ label after_load:
         else:
             m "[persistent.playername]，您真可笑。"
         $ renpy.utter_restart()
+    else:
+        if not persistent.first_load:
+            $ persistent.first_load = True
+            call screen dialog("提示：“跳过”按钮可以跳过已读文字。\n我知道多刷二周目很枯燥，所以一定要用好跳过啊！", ok_action=Return())
+
     return
 
 

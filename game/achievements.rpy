@@ -1,4 +1,4 @@
-label archievements_list:
+label achievements_list:
     scene black
     "系统" "您现在查看的是成就列表，这里可以显示你已经达成的成就，并且兑换能力者称号。"
     "系统" "正在结算您的成就......{w=1.0}{nw}"
@@ -222,12 +222,19 @@ label archievements_list:
         $ text31 = "一键忽略 / 中等"
     else:
         $ text31 = "未达成"
+    # 32
+    if achievement.has("蓝屏钙 V2"):
+        $ persistent.achievements_point += 15
+        $ persistent.achievements_count += 1
+        $ text32 = "蓝屏钙 V2 / 超稀有"
+    else:
+        $ text32 = "未达成"
     
-    "系统" "您目前获得的成就数量为 [persistent.achievements_count] / 31。"
-    "系统" "累计获得点数 [persistent.achievements_point] / 88。"
+    "系统" "您目前获得的成就数量为 [persistent.achievements_count] / 32。"
+    "系统" "累计获得点数 [persistent.achievements_point] / 103。"
     
     if persistent.achievements_point >= 50:
-        if persistent.achievements_count == 31:
+        if persistent.achievements_count == 32:
             $ persistent.player_level = 3
             "系统" "您居然集齐了所有成就！恭喜您解锁彩蛋！（TODO）"# TODO: 彩蛋
         else:
@@ -267,9 +274,10 @@ label archievements_list:
     "29. [text29]"
     "30. [text30]"
     "31. [text31]"
+    "32. [text32]"
     # TODO: 显示成就相应场景
 
-    if persistent.achievements_count == 31:
+    if persistent.achievements_count == 32:
         "系统" "感谢您的爆肝。"
     else:
         "系统" "继续加油，集齐更多成就吧！"
@@ -307,4 +315,5 @@ label archievements_list:
     # achievement.register("我要退赛")
     # achievement.register("下次一定")
     # achievement.register("一键忽略")
+    # achievement.register("蓝屏钙 V2")
 

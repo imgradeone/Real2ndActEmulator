@@ -4,7 +4,7 @@ DDLC 中文 Mod 模板 新 Demo
 
 ## 警告
 
-请注意！本 Mod 不适合儿童或心理承受能力较弱的人。
+**请注意！本 Mod 不适合儿童或心理承受能力较弱的人。**
 
 由于本 Mod 包含原作的恐怖元素（甚至发挥到了极致），焦虑症、抑郁症患者，以及儿童，均不适合游玩此 Mod。
 
@@ -20,7 +20,11 @@ DDLC 中文 Mod 模板 新 Demo
 
 ## 下载 Mod
 
-见 Releases
+您可以在 [Releases 页面](https://github.com/imgradeone/Real2ndActEmulator/releases) 获取。
+
+### 关于移植
+
+您可以自行研究 Ren'Py，然后进行 Mod 的 Android / iOS 移植，但是 **请勿分享移植版的安装包，移植仅供自用**，作者也不提供移植版的维护。
 
 ## 中文字体
 
@@ -49,10 +53,6 @@ DDLC 中文 Mod 模板 新 Demo
 ### 其他地区用户
 
 [MediaFire](http://www.mediafire.com/file/6juwd7h0venrg7f/font%25282%2529.zip/file) | [Google 云端硬盘](https://drive.google.com/file/d/1LClyzgxq-les-N5egLXm1aK7ULATDpex/view?usp=sharing) | GitHub (later)
-
-## 下载
-
-您可以在 [Releases 页面](https://github.com/imgradeone/Real2ndActEmulator/releases) 获取。
 
 ## 打包 Mod
 
@@ -90,7 +90,7 @@ Ren'Py 由一系列开源组件构成，它们的开源协议可以在 https://w
 
 ## TODO
 
-- [ ] 成就后端
+- [x] 成就后端
 - [ ] 安全模式 / 究极安全模式
 - [ ] 能力者称号
 

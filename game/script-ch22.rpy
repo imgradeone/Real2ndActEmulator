@@ -366,23 +366,24 @@ label ch22_end:
         else:
             show screen notify("达成成就：你鼠标里的 DNA（（（")
         $ mouse_modify_random = True
-        $ config.mouse = {"default": [
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head.png", 0, 0),
-                                    ("gui/mouse/s_head.png", 0, 0),
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head2.png", 0, 0),
-                                    ("gui/mouse/s_head.png", 0, 0),
-                                    ]}
+        if not persistent.sayoricursor:
+            $ config.mouse = {"default": [
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head.png", 0, 0),
+                                        ("gui/mouse/s_head.png", 0, 0),
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head2.png", 0, 0),
+                                        ("gui/mouse/s_head.png", 0, 0),
+                                        ]}
     else:
         $ mouse_modify_random = False
 
