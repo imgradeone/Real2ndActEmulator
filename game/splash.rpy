@@ -273,15 +273,15 @@ label splashscreen_warning:
         if persistent.first_run:
             menu:
                 "你想要继续吗？"
-                    "继续。":
-                        if not persistent.recording:
-                            scene tos2
-                            with Dissolve(1.5)
+                "继续。":
+                    if not persistent.recording:
+                        scene tos2
+                        with Dissolve(1.5)
                         "再次说明，本 Mod 为 DDLC 中文 Mod 模板的新 Demo。"
                         "接下来，您将体验到模板的许多特殊功能。"
                         jump splashwarning_final
-                    "退出。":
-                        $ renpy.quit()
+                "退出。":
+                    $ renpy.quit()
         else:
             if not persistent.recording:
                 scene tos2
