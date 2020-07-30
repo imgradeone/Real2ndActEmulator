@@ -926,6 +926,9 @@ style slot_button_text:
     color "#666"
     outlines []
 
+label main_menu_branch_warning:
+    $ invoking_warning_from_main_menu = True
+    call splashscreen_warning
 
 ## Preferences screen ##########################################################
 ##
@@ -1049,7 +1052,7 @@ screen preferences():
                     action Function(renpy.call_in_new_context, 'archievements_list')
                     style "navigation_button"
                 textbutton _("重播警告"):
-                    action Function(renpy.call_in_new_context, 'warning2')
+                    action Function(renpy.call_in_new_context, 'main_menu_branch_warning')
                     style "navigation_button"
 
     text tooltip.value:
