@@ -2,8 +2,8 @@
 label start:
     if persistent.sayoricursor:
         $ config.mouse = {"default": [
-                            ("gui/mouse/s_head.png", 0, 0),
-                            ]}
+							("gui/mouse/s_head.png", 0, 0),
+						 ]}
     else:
         $ config.mouse = None
 
@@ -15,8 +15,8 @@ label start:
             persistent.special_poems[i] = b
             a.remove(b)
 
-    $ persistent.seen_eyes = None
-    $ persistent.seen_sticker = False
+    #$ persistent.seen_eyes = None
+    #$ persistent.seen_sticker = False
 
     # ID of this playtrhoguh
     $ anticheat = persistent.anticheat
