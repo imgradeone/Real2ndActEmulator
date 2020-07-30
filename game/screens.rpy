@@ -616,7 +616,8 @@ style main_menu_title:
 screen game_menu_m():
     $ persistent.menu_bg_m = True
     add "gui/menu_bg_m.png" # 血 溅 文 学 部（
-    timer 0.3 action Show(screen="dialog", message="血 溅 毛 二 力", ok_action=Hide("dialog"))
+    call grant_achievement_all("蓝屏钙 V2", "") # todo
+    #timer 0.3 action Show(screen="dialog", message="血 溅 毛 二 力", ok_action=Hide("dialog"))
     timer 0.3 action Hide("game_menu_m")
 
 screen game_menu(title, scroll=None):
