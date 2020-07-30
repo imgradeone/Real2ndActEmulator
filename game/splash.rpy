@@ -288,7 +288,7 @@ label splashscreen_warning:
                 with Dissolve(1.5)
             "既然你已经同意过了，我们也就不再需要你的意见了。"
 
-       label splashwarning_final:
+        label splashwarning_final:
             "但是，如果感到不适，请立即退出游戏。"
             "祝您玩得愉快！"
             window hide
