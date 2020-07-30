@@ -167,8 +167,7 @@ label ch22_n_end2:
     pause 2.0
     scene black
     with None
-    show screen notify("达成成就：陪我玩！！！！")
-    $ achievement.grant("陪我玩！！！！")
+    call grant_achievement_all("陪我玩！！！！","") # todo
 
     $ quick_menu = True
     $ style.say_dialogue = style.normal
