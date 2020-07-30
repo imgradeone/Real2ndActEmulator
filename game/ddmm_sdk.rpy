@@ -48,7 +48,7 @@ label grant_achievement_all(renpy_desc, ddmm_id):
     return
 
 
-python:      
+init -10 python:      
     def register_achievement_all(name, id, description):
         achievement.register(name)
         ddmm_register_achievement(id, name, description)
