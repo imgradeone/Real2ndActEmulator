@@ -42,7 +42,7 @@ label ddmm_earn_achievement(id):
 label grant_achievement_all(renpy_desc, ddmm_id):
     python:
         achievements.grant(renpy_desc)
-        if persistent.ddmm_mode:
+        if persistent.ddmm_mode and ddmm_id != "":
             ddmm_earn_achievement(ddmm_id)
     show screen notify("达成成就：[renpy_desc]")
     return
