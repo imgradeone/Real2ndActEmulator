@@ -20,6 +20,9 @@ init -1 python:
     layout.POEMGAME = (
         "在完成写诗后，显示写诗总分情况（开发中）"
     )
+    layout.NOT_A_BITCH = (
+        "削弱游戏剧本中的粗话内容，尽可能让游戏和谐"
+    )
 ################################################################################
 ## Styles
 ################################################################################
@@ -991,6 +994,10 @@ screen preferences():
                         action ToggleField(persistent, "ddmm_mode")
                         selected persistent.ddmm_mode
                         hovered tooltip.Action(layout.DDMM)
+                    textbutton _("削弱严重粗话"):
+                        action ToggleField(persistent, "sthu") # Shut The Hell Up
+                        selected persistent.sthu
+                        hovered tooltip.Action(layout.NOT_A_BITCH)
                     if persistent.player_level >= 2:
                         textbutton _("Sayori 厨专用模式"):
                             action ToggleField(persistent, "sayoricursor")

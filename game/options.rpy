@@ -7,7 +7,7 @@ define config.name = "全真二周目模拟器"
 define gui.show_name = False
 
 # 版本号
-define config.version = "0.1.0-indev-20200730"
+define config.version = "0.1.0-indev-20200731"
 
 # text placed on about screen
 define gui.about = _("感谢您下载全真二周目模拟器。这是 DDLC 中文 Mod 模板的新 Demo。")
