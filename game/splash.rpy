@@ -1,5 +1,7 @@
 ## splash screen is first thing that gets shown to player
 init -100 python:
+    if persistent.playthrough >= 1:
+        config.main_menu_music = audio.t4g
     # archive check for mods
     for archive in ['audio','images','fonts']:
         if archive not in config.archives:
@@ -268,16 +270,16 @@ label splashscreen_warning:
         "如果继续游玩 [config.name] 将视为你已经通关原游戏。"
         "与此同时，我们将视你为 16 岁以上，心理健康，且同意接受恐怖内容的玩家。"
 
-        if persistent.first_run:
+        if not persistent.first_run:
             menu:
                 "你想要继续吗？"
                 "继续。":
                     if not persistent.recording:
                         scene tos2
                         with Dissolve(1.5)
-                        "再次说明，本 Mod 为 DDLC 中文 Mod 模板的新 Demo。"
-                        "接下来，您将体验到模板的许多特殊功能。"
-                        jump splashwarning_final
+                    "再次说明，本 Mod 为 DDLC 中文 Mod 模板的新 Demo。"
+                    "接下来，您将体验到模板的许多特殊功能。"
+                    jump splashwarning_final
                 "退出。":
                     $ renpy.quit()
         else:
