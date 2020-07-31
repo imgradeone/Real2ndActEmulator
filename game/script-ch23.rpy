@@ -371,9 +371,12 @@ label ch23_end:
     y "就这啊。"
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
-    n 1o "说得好像{i}你{/i} TND 懂一样！" # 爆粗口的 Natsuki 是屑（
-    n 1x "你只关心如何把 [player] 拴在你和那本白癡才会看的书旁边吧。"
-    n 1f "说的是你，{i}还有{/i} Monika！"
+    if persistent.sthu:
+        n 1o "说得好像{i}你{/i}懂一样！"
+        n 1x "你只关心如何把 [player] 拴在你和那本书旁边吧。"
+    else:
+        n 1o "说得好像{i}你{/i} TND 懂一样！" # 爆粗口的 Natsuki 是屑（
+        n 1x "你只关心如何把 [player] 拴在你和那本白癡才会看的书旁边吧。"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
     m 2g "嘿！"
@@ -399,10 +402,16 @@ label ch23_end:
     n 3c "我们可以--"
     show natsuki at t31 zorder 2
     show yuri at f33 zorder 3
-    y 2r "Natsuki，你 TM 闭上你的臭嘴，让他自己做决定好吗？" # 爆粗口的 Yuri 是屑（
+    if persistent.sthu:
+        y 2r "闭嘴！让他自己做决定好吗？"
+    else:
+        y 2r "你 TM 闭上你的臭嘴！让他自己做决定好吗？" # 爆粗口的 Yuri 是屑（
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
-    n 1o "{i}你{/i} TM 才该闭嘴！"
+    if persistent.sthu:
+        n 1o "{i}你{/i}才该闭嘴！"
+    else:
+        n 1o "{i}你{/i} TM 才该闭嘴！"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
     m 1r "哦，我的上帝啊..."
@@ -469,11 +478,14 @@ label ch23_end:
     m "这一定会很有趣的。"
     m "所以周日你方便吗？"
     show natsuki 1e at f31 zorder 3
-    n "你他娘的在逗我吗？" # 爆粗口的 Natsuki 是屑（
+    if persistent.sthu:
+        n "你在逗我吗？"
+    else:
+        n "你他娘的在逗我吗？" # 爆粗口的 Natsuki 是屑（
     n "不公平啦！"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
-    m 2i "Natsuki，这非常公平。"
+    m 2i "Natsuki，这非常公平。" # 对，偷偷改代码作弊特公平，，，
     m "这就是他自己的选择。"
     show monika at t32 zorder 2
     show yuri 3r at f33 zorder 3
@@ -490,10 +502,16 @@ label ch23_end:
     show yuri at f33 zorder 3
     y 2y4 "我又不讲道理了？"
     y 2y3 "啊哈哈哈哈哈！"
-    y "Monika，没想到你这么妄自尊大、自私自利！"
+    if persistent.sthu:
+        y "Monika，我看错你了！"
+    else:
+        y "Monika，没想到你这么妄自尊大、自私自利！"
     y "每次你只要没能参与进来，就把 [player] 从我身边拖走，次次如此。"
     y 1y1 "你是嫉妒吗？"
-    y "还是癫了？"
+    if persistent.sthu:
+        y "还是疯了？"
+    else:
+        y "还是癫了？"
     y 1y3 "还是你对自己的憎恨溢了一地，就开始随便往别人身上泼呢？"
     y 1y4 "这边强烈建议你去试下当晴天娃娃呢。"
     y "对你的精神健康会有 hin 大的帮助。"
@@ -523,8 +541,8 @@ label ch23_end:
     python:
         try: renpy.file(config.basedir + "/have a nice weekend!")
         except: open(config.basedir + "/have a nice weekend!", "w").write("G2pilVJccjJiQZ1poiM3iYZhj3I0IRbvj3wxomnoeOatVHUxZ2ozGKJgjXMzj2LgoOitBOM1dSDzHMatdRpmQZpidNehG29mkTxwmDJbGJxsjnVeQT9mTPSwSAOwnuWhSE50ByMpcuJoqGstJOCxqHCtdvG3HJV0TOGuwOIyoOGhwOHgm2GhlZpyISJik3J/")
-        try: renpy.file(config.basedir + "/have a nice weekend!")
-        except: open(config.basedir + "/have a nice weekend!chs", "w").write("5WqB5Tby5Yq65liD5x6v5TvN55+w6GHB5igd5p2w55yF5zPB6LOM6ibH5kKH77yX5TjV55+e6GTT546h5Hzw54D954Wg6INU5bAG5x2P55qP5jnh6DOu77yX5TjV55+e6GTT6W+P5Z676Qnu5YmB5G+D5G2D55yR5Zfm5AOs77gZ6YVr5qqo5ThA5WuJ5HZq77lf")
+        try: renpy.file(config.basedir + "/have a nice weekend!_chs")
+        except: open(config.basedir + "/have a nice weekend!_chs", "w").write("5WqB5Tby5Yq65liD5x6v5TvN55+w6GHB5igd5p2w55yF5zPB6LOM6ibH5kKH77yX5TjV55+e6GTT546h5Hzw54D954Wg6INU5bAG5x2P55qP5jnh6DOu77yX5TjV55+e6GTT6W+P5Z676Qnu5YmB5G+D5G2D55yR5Zfm5AOs77gZ6YVr5qqo5ThA5WuJ5HZq77lf")
         try: os.remove(config.basedir + "/hxppy thxughts.png")
         except: pass
         try: os.remove(config.basedir + "/CAN YOU HEAR ME.txt")
@@ -569,7 +587,10 @@ label ch23_end:
     y 3y3 "我也不在乎后果了！"
     y "我也不在乎 Monika 有没有在那里偷听了！"
     y 3w "求你了，[player]，请一定要明白我有多爱你啊。"
-    y 3m "我特别爱你，甚至一度偷你的笔去自///慰。"
+    if persistent.sthu:
+        y 3m "我特别爱你，甚至一度偷你的笔去自 X。"
+    else:
+        y 3m "我特别爱你，甚至一度偷你的笔去自///慰。"
     y 3y4 "我只想拉开你的表//皮，在你的身体里游走。"
     y 3y6 "我想让你永远属于我。"
     y "而我也将只属于你。"
@@ -679,7 +700,7 @@ label yuri_kill_3:
     python:
         try: os.remove(config.basedir + "/have a nice weekend!")
         except: pass
-        try: os.remove(config.basedir + "/have a nice weekend!chs")
+        try: os.remove(config.basedir + "/have a nice weekend!_chs")
         except: pass
     $ config.skipping = False
     $ config.allow_skipping = False
@@ -730,9 +751,9 @@ label yuri_kill_3:
     m 2e "我帮你整理一下，好伐？"
     m "给我一点点时间..."
     $ consolehistory = []
-    call updateconsole("os.remove(\"characters/yuri.chr\")", "ACCESS DENIED: No permission in emulator")
+    call updateconsole("os.remove(\"characters/yuri.chr\")", "ACCESS DENIED: No permission")
     pause 1.0
-    call updateconsole("os.remove(\"characters/natsuki.chr\")", "ACCESS DENIED: No permission in emulator")
+    call updateconsole("os.remove(\"characters/natsuki.chr\")", "ACCESS DENIED: No permission")
     pause 1.0
 
     m 2a "可以了。"

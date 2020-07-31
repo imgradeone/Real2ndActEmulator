@@ -203,8 +203,8 @@ image warning:
     "white" with Dissolve(0.5, alpha=True)
     0.5
 
-image tos = "bg/warning.png"
-image tos2 = "bg/warning2.png"
+image tos = "mod_assets/warning_2ndact.png"
+image tos2 = "mod_assets/warning2_2ndact.png"
 
 
 init python:

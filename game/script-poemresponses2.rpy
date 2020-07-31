@@ -116,7 +116,10 @@ label ch22_n_end2:
         show n_rects_ghost1 zorder 4
         show n_rects_ghost2 zorder 4
         show n_rects_ghost3 zorder 4
-    n ghost1 "Yuri 就 TM 一死病娇。"
+    if persistent.sthu:
+        n ghost1 "Yuri 就只会无理智地追你到底而已。"
+    else:
+        n ghost1 "Yuri 就 TM 一死病娇。"
     n "现在这一点特别明显了。"
     n "所以还是陪我玩吧。"
     n "好伐？"
@@ -124,7 +127,10 @@ label ch22_n_end2:
     n "你恨我吗？"
     if not persistent.alt_safe_mode:
         show natsuki_ghost_blood zorder 3
-    n "那，难道你 TM 想让我哭着回家？"
+    if persistent.sthu:
+        n "难道你想让这么{i}可爱{/i}的我哭着回家？"
+    else:
+        n "难道你 TM 想让这么{i}可爱{/i}的我哭着回家？"
     n "文学部是我唯一感觉安全的地方。"
     n "不要毁了它。"
     n "千万不要毁了它。"
@@ -298,7 +304,10 @@ label ch22_n_bad:
         n "呵，果不其然..."
         mc "...？"
         n 2w "[player]，听着。"
-        n "我可不是什么白癡。"
+        if persistent.sthu:
+            n "我可不是什么笨蛋。"
+        else:
+            n "我可不是什么白癡。"
         n 2h "我知道你在 Yuri 身上花了多少时间..."
         n "很明显，你更希望给她留下深刻印象，而不想提高写作水平。"
         n 2w "这属实可悲啊。"
@@ -306,9 +315,14 @@ label ch22_n_bad:
         n "老实说..."
         n "我本以为新加入一个成员可以让大家更多地参与到一起。"
         n 4s "而不是变本加厉地彼此排斥。"
-        n 1u "结果啊，这真 TM 傻逼至极..."
-        n 12c "...听着，老子今天心情不好，而且我现在也不想说话。"
-        n "所以，你赶紧爬吧。"
+        if persistent.sthu:
+            n 1u "结果啊，我真是错的离谱..."
+            n 12c "...听着，今天我心情不好，而且现在不想说话。"
+            n "所以，你赶紧走开吧。"
+        else:
+            n 1u "结果啊，这真 TM 傻逼至极..."
+            n 12c "...听着，老子今天心情不好，而且现在不想说话。"
+            n "所以，你赶紧爬吧。"
         $ skip_poem = True
         return
     
@@ -356,7 +370,7 @@ label ch22_n_med:
         n 4y "啊-啊哈！真高兴看到有人意识到我的阅历了！"
         n "那么，只要你继续练习，也许有一天你也会像我一样好的！"
         mc "那...呃..."
-        "我怀疑 Natsuki 完全误解了我的意思。"
+        "我怀疑 Natsuki 把我的意思误解透了。"
         jump ch22_n_med_shared
 
     #Likes the last one better
@@ -388,7 +402,7 @@ label ch23_n_bad:
         n 5s "但你还是要读我的。"
         n "这是有原因的。"
         n 5x "其实我也不想..."
-        n "但不幸的是，我被逼了。"
+        n "但不幸的是，我是被迫的。"
         n 5h "你...就好好读吧，OK？"
         n "看完你就可以滚了。"
         return
@@ -408,7 +422,7 @@ label ch23_n_bad:
             n 1r "...呃。"
             n 1q "好吧...我猜现在该把我的诗给你看了。"
             n "其实我也不想这么做。"
-            n "但不幸的是，我被逼了。"
+            n "但不幸的是，我是被迫的。"
             n 1h "你...就好好读吧，OK？"
             n "看完你就可以走了。"
             return
@@ -456,17 +470,27 @@ label ch23_n_med:
 label ch23_n_ygave:
     n 1h "纳尼？"
     n "你已经把诗给 Yuri 了？"
-    n 4x "艹！"
-    n "你们两个有病是不是？"
+    if persistent.sthu:
+        n 4x "淦！"
+        n "你们两个怎么了？"
+    else:
+        n 4x "艹！"
+        n "你们两个有病是不是？"
     n 1s "哼..."
-    n "反正老子也不想读。"
+    if persistent.sthu:
+        n "反正我也不想读。"
+    else:
+        n "反正老子也不想读。"
     n 1r "当然，你都不想给我看，这真是让我恼火。"
     n 1x "...呃。"
     n 1q "好吧...不管怎么说，我还是要让你读我的诗。"
     n "我真的很讨厌这种感觉。"
-    n "但不幸的是，我被逼了。"
+    n "但不幸的是，我是被迫的。"
     n 5h "你...就好好读吧，OK？"
-    n "看完你就可以滚了。"
+    if persistent.sthu:
+        n "看完你就可以走了。"
+    else:
+        n "看完你就可以滚了。"
     return
 
 label ch23_n_good:

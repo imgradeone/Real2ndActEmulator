@@ -139,7 +139,7 @@ label yuri_exclusive2_1_ch22:
     $ style.say_dialogue = style.normal
     y "我只是--！{nw}"
     $ style.say_dialogue = style.edited
-    y "我只是{fast}沐浴在你的体温wwwwwwwwwwwwwwww温 温wwwwwwwww体iiiiiiiiiiiiiiiiiiii{nw}"
+    y "我只是{fast}沉浸在你的体温wwwwwwwwwwwwwwww温 温wwwwwwwww体iiiiiiiiiiiiiiiiiiii{nw}"
     $ style.say_dialogue = style.normal
     $ _history_list.pop()
 
@@ -632,7 +632,7 @@ label yuri_exclusive2_2_ch23:
     y "以前没发生过类似的事情...吧？"
     y 2t "我最近有些恍惚..."
     y 3t "希望没有太明显！"
-    y "如果我们才刚刚开始相处你就觉得我古怪的话，我会伤心的..."
+    y "如果我们才刚刚开始相处，你就觉得我古怪的话，我会伤心的..."
     y "我是说..."
     show bg corridor:
         xoffset 0
