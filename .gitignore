@@ -1,4 +1,4 @@
-
+.vscode/settings.json
 .DS_Store
 errors.txt
 *.rpa
@@ -17,3 +17,4 @@ characters/*.chr
 *.swp
 *.ttf
 *.otf
+game/saves/navigation.json
