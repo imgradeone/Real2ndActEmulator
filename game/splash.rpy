@@ -1,11 +1,11 @@
 ## splash screen is first thing that gets shown to player
 init -100 python:
-    if persistent.playthrough >= 1 and not persistent.disable_awful_musics:
-        config.main_menu_music = audio.t4g
     # archive check for mods
     for archive in ['audio','images','fonts']:
         if archive not in config.archives:
             renpy.error("看样子你还没有把 DDLC 游戏的文件复制过去呐。")
+    if persistent.playthrough >= 1 and not persistent.disable_awful_musics:
+        config.main_menu_music = audio.t4g
 
 # disclaimers
 init python:
