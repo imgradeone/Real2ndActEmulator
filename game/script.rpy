@@ -2,8 +2,8 @@
 label start:
     if persistent.sayoricursor:
         $ config.mouse = {"default": [
-							("gui/mouse/s_head.png", 0, 0),
-						 ]}
+                            ("gui/mouse/s_head.png", 0, 0),
+                         ]}
     else:
         $ config.mouse = None
 
