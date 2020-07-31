@@ -7,14 +7,14 @@ define config.name = "全真二周目模拟器"
 define gui.show_name = False
 
 # 版本号
-define config.version = "0.1.0-indev-20200730"
+define config.version = "0.1.0-indev-20200731"
 
 # text placed on about screen
 define gui.about = _("感谢您下载全真二周目模拟器。这是 DDLC 中文 Mod 模板的新 Demo。")
 
 # 构建名，不要使用中文、数字、空格、分隔符，只使用英文
-define build.name = "RealisticActTwoSimulator"
-
+define build.name = "RealActTwoEmulator"
+# 还是用原有的构建名
 # 控制设置菜单中的音量设置显示
 define config.has_sound = True
 define config.has_music = True

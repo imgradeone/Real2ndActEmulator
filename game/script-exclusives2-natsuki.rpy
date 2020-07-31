@@ -81,8 +81,7 @@ label natsuki_exclusive2_1:
     $ style.say_dialogue = style.edited
     # checklater: wdllm vs wdnmd vs wdnlm
     if persistent.sthu:
-        $ ntext = fujaowee(16)
-        n 4x "monika我可qqqqqqqqqqqqqqqq{fast}[ntext]{nw}" # “我可去你的”
+        n 4x "monika我可qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq" # “我可去你的”
     else:
         n 4x "monika我丢雷楼某mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm" # 爆粗口的 Natsuki 是屑（
     $ style.say_dialogue = style.normal

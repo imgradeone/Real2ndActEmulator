@@ -225,7 +225,7 @@ label ch21_end:
     n 1o "唔唔唔...！"
     n "哼唧，你知道吗？！"
     if persistent.sthu:
-        n "某个人啊，自从 [player] 出现，衣服里某两个部位就肿起来了！"
+        n "某个人啊，自从 [player] 出现，衣服里某个部位就大了一圈！"
     else:
         n "某位女士，自从 [player] 出现，欧派就多了一个奇怪的零件！！"
     show yuri 3p at h21
@@ -239,7 +239,7 @@ label ch21_end:
     show yuri 3p at f32 zorder 3
     show natsuki 1e at f33 zorder 3
     if persistent.sthu:
-        ny "你管不着！"
+        ny "不关你事！"
     else:
         ny "关你屁事！"
     show monika at lhide

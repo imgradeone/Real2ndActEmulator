@@ -4,9 +4,9 @@ init -100 python:
     for archive in ['audio','images','fonts']:
         if archive not in config.archives:
             renpy.error("看样子你还没有把 DDLC 游戏的文件复制过去呐。")
-    if persistent.playthrough >= 1 and not persistent.disable_awful_musics:
-        config.main_menu_music = audio.t4g
-
+    # if persistent.playthrough >= 1 and not persistent.disable_awful_music:
+    #     config.main_menu_music = audio.t4g
+    # t4g is too dark for a main menu music
 # disclaimers
 init python:
     menu_trans_time = 1

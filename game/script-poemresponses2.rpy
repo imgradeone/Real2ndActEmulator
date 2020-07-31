@@ -130,7 +130,7 @@ label ch22_n_end2:
     if persistent.sthu:
         n "难道你想让这么{i}可爱{/i}的我哭着回家？"
     else:
-        n "难道你 TM 想让我哭着回家？"
+        n "难道你 TM 想让这么{i}可爱{/i}的我哭着回家？"
     n "文学部是我唯一感觉安全的地方。"
     n "不要毁了它。" # 实际上间接希望文学部有事，，，，
     n "千万不要毁了它。"
@@ -303,7 +303,9 @@ label ch22_n_bad:
         n "呵，果不其然..."
         mc "...？"
         n 2w "[player]，听着。"
-        if not persistent.sthu:
+        if persistent.sthu:
+            n "我可不是什么笨蛋。"
+        else:
             n "我可不是什么白癡。"
         n 2h "我知道你在 Yuri 身上花了多少时间..."
         n "很明显，你更希望给她留下深刻印象，而不想提高写作水平。"
@@ -401,7 +403,9 @@ label ch23_n_bad:
         n 5x "其实我也不想..."
         n "但不幸的是，我是被逼的。"
         n 5h "你...就好好读吧，OK？"
-        if not persistent.sthu:
+        if persistent.sthu:
+            n "看完你就可以走了。"
+        else:
             n "看完你就可以滚了。"
         return
     #Liked one of the other two but not this one
@@ -468,7 +472,10 @@ label ch23_n_med:
 label ch23_n_ygave:
     n 1h "纳尼？"
     n "你已经把诗给 Yuri 了？"
-    if not persistent.sthu:
+    if persistent.sthu:
+        n 4x "淦！"
+        n "你们两个怎么了？"
+    else:
         n 4x "艹！"
         n "你们两个有病是不是？"
     n 1s "哼..."
@@ -479,7 +486,9 @@ label ch23_n_ygave:
     n "我真的很讨厌这种感觉。"
     n "但不幸的是，我是被逼的。"
     n 5h "你...就好好读吧，OK？"
-    if not persistent.sthu:
+    if persistent.sthu:
+        n "看完你就可以走了。"
+    else:
         n "看完你就可以滚了。"
     return
 

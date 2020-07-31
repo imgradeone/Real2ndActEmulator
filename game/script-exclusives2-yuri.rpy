@@ -357,8 +357,6 @@ label yuri_exclusive2_2_ch22:
 
     $ currentpos = 45.264 - (get_pos() / 2.0)
     $ audio.t6r = "<from " + str(currentpos) + " to 39.817 loop 0>bgm/6r.ogg"
-    if persistent.disable_awful_music:
-        show screen notify("为营造游戏气氛，我不能放正常版 BGM，抱歉（（（")
     play music t6r
     show yuri at thide zorder 1
     hide yuri
@@ -630,7 +628,7 @@ label yuri_exclusive2_2_ch23:
     y "以前没发生过类似的事情...吧？"
     y 2t "我最近有些恍惚..."
     y 3t "希望没有太明显！"
-    y "如果我们才刚刚开始相处你就觉得我古怪的话，我会伤心的..."
+    y "如果我们才刚刚开始相处，你就觉得我古怪的话，我会伤心的..."
     y "我是说..."
     show bg corridor:
         xoffset 0

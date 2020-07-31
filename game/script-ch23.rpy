@@ -354,7 +354,10 @@ label ch23_end:
     show monika at t32 zorder 2
     show natsuki at f31 zorder 3
     n 1f "凭什么？！！"
-    n "你 TM 到底想搞什么？"
+    if persistent.sthu:
+        n "你到底想搞什么？"
+    else:
+        n "你 TM 到底想搞什么？"
     show natsuki at t31 zorder 2
     show yuri at f33 zorder 3
     y 3h "我-我觉得 Natsuki 说得没错！"
@@ -404,10 +407,13 @@ label ch23_end:
     if persistent.sthu:
         y 2r "闭嘴！让他自己做决定好吗？"
     else:
-        y 2r "Natsuki，你 TM 闭上你的臭嘴，让他自己做决定好吗？" # 爆粗口的 Yuri 是屑（
+        y 2r "你 TM 闭上你的臭嘴！让他自己做决定好吗？" # 爆粗口的 Yuri 是屑（
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3
-    n 1o "{i}你{/i} TM 才该闭嘴！"
+    if persistent.sthu:
+        n 1o "{i}你{/i}才该闭嘴！"
+    else:
+        n 1o "{i}你{/i} TM 才该闭嘴！"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
     m 1r "哦，我的上帝啊..."
@@ -474,7 +480,7 @@ label ch23_end:
     m "所以周日你方便吗？"
     show natsuki 1e at f31 zorder 3
     if persistent.sthu:
-        n "你这是在逗我吗？"
+        n "你在逗我吗？"
     else:
         n "你他娘的在逗我吗？" # 爆粗口的 Natsuki 是屑（
     n "不公平啦！"
@@ -504,7 +510,9 @@ label ch23_end:
         y "Monika，没想到你这么妄自尊大、自私自利！"
     y "每次你只要没能参与进来，就把 [player] 从我身边拖走，次次如此。"
     y 1y1 "你是嫉妒吗？"
-    if not persistent.sthu:
+    if persistent.sthu:
+        y "还是疯了？"
+    else:
         y "还是癫了？"
     y 1y3 "还是你对自己的憎恨溢了一地，就开始随便往别人身上泼呢？"
     y 1y4 "这边强烈建议你去试下当晴天娃娃呢。"
@@ -581,7 +589,10 @@ label ch23_end:
     y 3y3 "我也不在乎后果了！"
     y "我也不在乎 Monika 有没有在那里偷听了！"
     y 3w "求你了，[player]，请一定要明白我有多爱你啊。"
-    y 3m "我特别爱你，甚至一度偷你的笔去自///慰。"
+    if persistent.sthu:
+        y 3m "我特别爱你，甚至一度偷你的笔去自 X。"
+    else:
+        y 3m "我特别爱你，甚至一度偷你的笔去自///慰。"
     y 3y4 "我只想拉开你的表//皮，在你的身体里游走。"
     y 3y6 "我想让你永远属于我。"
     y "而我也将只属于你。"

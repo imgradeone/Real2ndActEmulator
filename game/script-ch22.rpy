@@ -560,7 +560,10 @@ label ch22_end:
     $ style.say_dialogue = style.edited
     $ currentpos = get_pos() / 2.07
     play music "<from " + str(currentpos) + " loop 1.532>bgm/9g.ogg"
-    y "谁在乎那个死玻璃心小鬼啊？"
+    if persistent.sthu:
+        y "谁在乎那个玻璃心啊？"
+    else:
+        y "谁在乎那个死玻璃心小鬼啊？"
     $ style.say_dialogue = style.normal
     $ currentpos = get_pos() * 2.07
     play music "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
@@ -577,7 +580,10 @@ label ch22_end:
     $ style.say_dialogue = style.edited
     $ currentpos = get_pos() / 2.07
     play music "<from " + str(currentpos) + " loop 1.532>bgm/9g.ogg"
-    y "她就算是自裁了，也不会有人会为她哭。"
+    if persistent.sthu:
+        y "Nobody cares her."
+    else:
+        y "她就算是自裁了，也不会有人会为她哭。"
     $ style.say_dialogue = style.normal
     $ currentpos = get_pos() * 2.07
     stop music

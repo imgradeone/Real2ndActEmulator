@@ -302,13 +302,15 @@ label ch1_n_bad:
         play music "<from " + str(currentpos) + " loop 4.444>bgm/5.ogg"
 
     if persistent.sthu:
-        n 2b "[player]，如果你不想认真对待这个文学部的话，请你出去。"
+        n 2b "[player]，如果你不想认真对待这个文学部的话，请你直接回家。"
     else:
         n 2b "[player]，如果你不想认真对待这个文学部的话，请你直接滚回家。"
     mc "纳-纳尼？？"
     mc "wdnmd..."
     n 42c "哈？你以为我不知道你在瞎写啊？"
-    if not persistent.sthu:
+    if persistent.sthu:
+        n "你觉得我是笨蛋吗？"
+    else:
         n "你觉得我是白癡吗？"
     mc "我又不是作家！"
     mc "可能它不太好，但是没错，我确实努力了。"
