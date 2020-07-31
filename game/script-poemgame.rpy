@@ -572,7 +572,7 @@ label poem(transition=True):
 
     #1/6 chance that we'll see creepy Happy Thoughts pic after the game in Act 2
     if persistent.playthrough == 2 and persistent.seen_eyes == None and renpy.random.randint(0,5) == 0:
-        call grant_achievement_all("今日你迫害 Sayori 了吗（", "POEMGAME_SAYORI_EYES")
+        $ grant_achievement_all("今日你迫害 Sayori 了吗（", "POEMGAME_SAYORI_EYES")
         $ seen_eyes_this_chapter = True
         $ quick_menu = False
         play sound "sfx/eyes.ogg"

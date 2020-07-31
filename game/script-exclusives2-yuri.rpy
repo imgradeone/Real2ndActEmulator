@@ -104,7 +104,7 @@ label yuri_exclusive2_1_ch22:
     mc "其实..."
     mc "我也该开始读这本书了，对吧？"
     play sound "sfx/glitch3.ogg"
-    call grant_achievement_all("七 龙 珠", "URI_DRAGONBALL")#todo
+    $ grant_achievement_all("七 龙 珠", "URI_DRAGONBALL")#todo
     y dragon "吼-吼哇！！GKD！"
     y 3n "我-我的意思是，你也不是非要读它，但是...！"
     mc "啊哈哈，你在说些什么啊？"
@@ -571,7 +571,7 @@ label yuri_exclusive2_2_ch22:
     y 3s "...看着..."
     y "...你。"
     hide yuri
-    call grant_achievement_all("Touch", "YURI_CHEST_TOUCH") # todo
+    $ grant_achievement_all("Touch", "YURI_CHEST_TOUCH") # todo
     show yuri eyes
     pause 3.0
     y "...哈啊..."
@@ -606,7 +606,7 @@ label yuri_exclusive2_2_ch23:
     pause 4.62
     scene bg corridor
     show yuri eyes_base
-    call grant_achievement_all("O w O", "YURI_ODD_EYES") # todo
+    $ grant_achievement_all("O w O", "YURI_ODD_EYES") # todo
     pause 1.0
     show bg glitch:
         yoffset 480 ytile 2

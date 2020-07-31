@@ -265,7 +265,7 @@ label ch1_n_bad:
         $ currentpos = get_pos()
         stop music
         pause 2.0
-        call grant_achievement_all("我 TM 炸开！（物理）", "NEAT_EYEXPLOSION") # todo
+        $ grant_achievement_all("我 TM 炸开！（物理）", "NEAT_EYEXPLOSION") # todo
         play sound "sfx/stab.ogg"
         show n_blackeyes_alt at i11 zorder 3
         show n_eye_alt zorder 3:

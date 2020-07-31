@@ -24,7 +24,7 @@ label ch22_main:
     "我走进教室，迎来的又是那熟悉的一幕。"
     # 1/3 几率，Yuri 崩坏
     if renpy.random.randint(0,2) == 0:
-        call grant_achievement_all("苏 联 解 体", "YURI_YURI_ICE_CREAM") # todo
+        $ grant_achievement_all("苏 联 解 体", "YURI_YURI_ICE_CREAM") # todo
         show yuri half at i11 zorder 2
         show yuri_half2 at i11 zorder 1
     else:
@@ -124,7 +124,7 @@ label ch22_main:
     y 2o "..."
     y "但-但是..."
     if renpy.random.randint(0, 3) == 0:
-        call grant_achievement_all("MOPEMOPE", "MOUTHY_NATSUKI") # todo
+        $ grant_achievement_all("MOPEMOPE", "MOUTHY_NATSUKI") # todo
         $ style.say_dialogue = style.edited
         if not persistent.alt_safe_mode:
             show yuri at t32 zorder 2
@@ -265,7 +265,7 @@ label ch22_main:
             y 3f "别老想着她了。"
             y "她已经习惯被忽视了。"
             y "走，我们去那边。"
-            call grant_achievement_all("一键忽略", "IGNORING_NATSUKI") # todo
+            $ grant_achievement_all("一键忽略", "IGNORING_NATSUKI") # todo
 
             $ style.say_dialogue = style.normal
             window hide(None)
@@ -334,7 +334,7 @@ label ch22_end:
     else:
         pass
     if not faint_effect and renpy.random.randint(0,2) == 0:
-        call grant_achievement_all("死 者 视 角 打 游 戏", "DEAD_SAYORI_GAMEPLAY") # todo
+        $ grant_achievement_all("死 者 视 角 打 游 戏", "DEAD_SAYORI_GAMEPLAY") # todo
         $ faint_effect = True
     else:
         $ faint_effect = None

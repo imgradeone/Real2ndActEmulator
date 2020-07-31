@@ -28,7 +28,7 @@ label ch23_main:
     show screen notify("当前 ch23")
     # 来点更刺激的
     if renpy.random.randint(0,15) == 0:
-        call grant_achievement_all("死 不 瞑 目 沙 师 弟", "SHAMEFUL_HANG")#todo
+        $ grant_achievement_all("死 不 瞑 目 沙 师 弟", "SHAMEFUL_HANG")#todo
         $ quick_menu = False
         scene white
         show noface1
@@ -92,7 +92,7 @@ label ch23_main:
         $ style.say_dialogue = style.edited
         y 1f "没人在乎的。"
         y "你咋不去钻到售货机底下捡捡硬币呢？"
-        call grant_achievement_all("下次一定", "ONE_PRESS_DOUBLEHIT") #todo
+        $ grant_achievement_all("下次一定", "ONE_PRESS_DOUBLEHIT") #todo
         $ style.say_dialogue = style.normal
         show yuri zorder 2 at t32
         show natsuki zorder 3 at f33
@@ -425,7 +425,7 @@ label ch23_end:
     # 我们会强制把你的鼠标挪动 Monika 上。你大可以试试强行选另外两个。
     # 下面是后果。
     if madechoice != "monika":
-        call grant_achievement_all("但是我拒绝！", "JUST_MONIKA")#todo
+        $ grant_achievement_all("但是我拒绝！", "JUST_MONIKA")#todo
         window hide(None)
         $ musicpos = get_pos()
         stop music

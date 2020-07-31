@@ -38,6 +38,8 @@ init python:
             return
         if time <= 0: return
         renpy.pause(time)
+    renpy.not_infinite_loop(60)
+
 
 # 这里包含了 DDLC 游戏的音乐引用
 # 您也可以自行添加音频

@@ -467,9 +467,9 @@ screen navigation():
             if main_menu:
 
                 if persistent.playthrough == 1:
-                    textbutton _("二周目启动sndsdfiusfbsidcsodf") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="请输入你的名字", ok_action=Function(FinishEnterName)))
+                    textbutton _("二周目启动sndsdfiusfbsidcsodf") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="请输入你的名字，仅支持英文字符", ok_action=Function(FinishEnterName)))
                 else:
-                    textbutton _("新游戏") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="请输入你的名字", ok_action=Function(FinishEnterName)))
+                    textbutton _("新游戏") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="请输入你的名字，仅支持英文字符", ok_action=Function(FinishEnterName)))
 
             else:
 
@@ -616,7 +616,7 @@ style main_menu_title:
 screen game_menu_m():
     $ persistent.menu_bg_m = True
     add "mod_assets/menu_bg_m_alt.png" # 血 溅 文 学 部（
-    $ renpy.call_in_new_context("grant_achievement_all", "蓝屏钙 V2", "MONIOS_BSOD") # todo
+    $ renpy.call("grant_achievement_all", "蓝屏钙 V2", "MONIOS_BSOD") # todo
     timer 0.3 action Show(screen="dialog", message="没想到吧，这 2% 的几率被你撞上了 XDD\n该彩蛋不会再次显示。", ok_action=Hide("dialog"))
     timer 0.3 action Hide("game_menu_m")
 

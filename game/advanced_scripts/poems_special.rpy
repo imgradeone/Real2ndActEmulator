@@ -28,7 +28,7 @@ image poem_end = ConditionSwitch(
 
 #Each of these define a label for showing a poem
 label poem_special_1:
-    call grant_achievement_all("叮！您点的晴天娃娃！", "HAPPY_THOUGHTS")
+    $ grant_achievement_all("叮！您点的晴天娃娃！", "HAPPY_THOUGHTS")
     $ quick_menu = False
     play sound page_turn
     show poem_special1 with Dissolve(1.0)
@@ -38,7 +38,7 @@ label poem_special_1:
 
 #All the rest are the same
 label poem_special_2:
-    call grant_achievement_all("CAN YOU HEAR ME?", "HEAR_ME")
+    $ grant_achievement_all("CAN YOU HEAR ME?", "HEAR_ME")
     $ quick_menu = False
     play sound page_turn
     show poem_special2 with Dissolve(1.0)
@@ -47,7 +47,7 @@ label poem_special_2:
     $ quick_menu = True
     return
 label poem_special_3:
-    call grant_achievement_all("这是甚么东西？？？", "WHAT_THE_HELL")
+    $ grant_achievement_all("这是甚么东西？？？", "WHAT_THE_HELL")
     $ quick_menu = False
     play sound page_turn
     show poem_special3 with Dissolve(1.0)
@@ -55,7 +55,7 @@ label poem_special_3:
     $ quick_menu = True
     return
 label poem_special_4:
-    call grant_achievement_all("今天 Yuri 自 wei 了吗（", "SELF_PLEASURE")
+    $ grant_achievement_all("今天 Yuri 自 wei 了吗（", "SELF_PLEASURE")
     $ quick_menu = False
     play sound page_turn
     show poem_special4 with Dissolve(1.0)
@@ -63,7 +63,7 @@ label poem_special_4:
     $ quick_menu = True
     return
 label poem_special_5:
-    call grant_achievement_all("盯着那个黑点，10 秒！！！", "DOT_LOVELETTER")
+    $ grant_achievement_all("盯着那个黑点，10 秒！！！", "DOT_LOVELETTER")
     $ quick_menu = False
     play sound page_turn
     show poem_special5 with Dissolve(1.0)
@@ -71,7 +71,7 @@ label poem_special_5:
     $ quick_menu = True
     return
 label poem_special_6:
-    call grant_achievement_all("世界线错乱", "THE_SCRIPT_DERAIL")
+    $ grant_achievement_all("世界线错乱", "THE_SCRIPT_DERAIL")
     $ quick_menu = False
     play sound page_turn
     show poem_special6 with Dissolve(1.0)
@@ -79,7 +79,7 @@ label poem_special_6:
     $ quick_menu = True
     return
 label poem_special_7:
-    call grant_achievement_all("借 尸 还 魂", "GO_BACK")
+    $ grant_achievement_all("借 尸 还 魂", "GO_BACK")
     $ quick_menu = False
     play sound page_turn
     show poem_special7a as ps with Dissolve(1.0)
@@ -89,7 +89,7 @@ label poem_special_7:
     $ quick_menu = True
     return
 label poem_special_8:
-    call grant_achievement_all("都是桃子（？）", "PEACHES_FULL_SITE")
+    $ grant_achievement_all("都是桃子（？）", "PEACHES_FULL_SITE")
     $ quick_menu = False
     play sound page_turn
     show poem_special8 with Dissolve(1.0)
@@ -97,7 +97,7 @@ label poem_special_8:
     $ quick_menu = True
     return
 label poem_special_9:
-    call grant_achievement_all("拒绝家暴，从我做起", "NATSUKI_PAPA")
+    $ grant_achievement_all("拒绝家暴，从我做起", "NATSUKI_PAPA")
     $ quick_menu = False
     play sound page_turn
     show poem_special9 with Dissolve(1.0)
@@ -105,7 +105,7 @@ label poem_special_9:
     $ quick_menu = True
     return
 label poem_special_10:
-    call grant_achievement_all("adfhsdfkbsbdfaldfbjs", "FRICKING_GIBBERISH")
+    $ grant_achievement_all("adfhsdfkbsbdfaldfbjs", "FRICKING_GIBBERISH")
     $ quick_menu = False
     play sound page_turn
     show poem_special10 with Dissolve(1.0)
@@ -113,7 +113,7 @@ label poem_special_10:
     $ quick_menu = True
     return
 label poem_special_11:
-    call grant_achievement_all("我要退赛", "IWR_QUIT")
+    $ grant_achievement_all("我要退赛", "IWR_QUIT")
     $ quick_menu = False
     play sound page_turn
     show poem_special11 with Dissolve(1.0)
