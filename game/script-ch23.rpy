@@ -377,6 +377,7 @@ label ch23_end:
     else:
         n 1o "说得好像{i}你{/i} TND 懂一样！" # 爆粗口的 Natsuki 是屑（
         n 1x "你只关心如何把 [player] 拴在你和那本白癡才会看的书旁边吧。"
+    n 1f "说的是你，{i}还有{/i} Monika！"
     show natsuki at t31 zorder 2
     show monika at f32 zorder 3
     m 2g "嘿！"
