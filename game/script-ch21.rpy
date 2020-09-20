@@ -258,13 +258,13 @@ label ch21_end:
     show yuri at t21 zorder 2
     show natsuki at f22 zorder 3
     if persistent.sthu:
-        n 4o "{i}又是我了？？？{/i}看看是谁在这里装模装样，你这个欲求不满的家伙！"
+        n 4o "{i}又是我了？？？{/i}看看是谁在这里装模装样，小埃及艳后！" # edgy bitch -> 埃及艳后（
     else:
         n 4o "{i}又是我了？？？{/i}看看现在是谁在逼逼赖赖，你这个欲求不满的死碧池！" # 祖安 Natsuki
     show natsuki at t22 zorder 2
     show yuri at f21 zorder 3
     if persistent.sthu:
-        y "欲求不满...？"
+        y "埃及艳后...？"
     else:
         y "死碧池...？欲求不满...？"
     y 2r "很抱歉，但对于你的心理年龄而言，想要理解我的生活方式可能对你来说太难了！"

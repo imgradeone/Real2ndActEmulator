@@ -16,12 +16,12 @@ init python:
         "请多多支持 Dan 鸽www",
         "Just Monika.",
         "在这里，成就 = 被吓死（",
-        "您有 1/6 的几率在部室的海报上看到你的 DNA。\n如果你看到了这行警告，请加油触发（",
+        # "您有 1/6 的几率在部室的海报上看到你的 DNA。\n如果你看到了这行警告，请加油触发（",
         "Dan 鸽也被自己的游戏吓到过 XD",
-        "我不希望你连“儿童或心理承受能力较弱的人”的心理能被影响几成都搞不懂。",
         "我不希望你是个{i}瞎子{/i}，\n看不懂“本游戏不适合儿童或心理承受能力较弱的人”是什么意思。",
         "管管孩子，救救游戏",
-        "为什么 Sayori 总是被迫害？"
+        "为什么 Sayori 总是被迫害？她明明是天使啊！",
+        ""
     ]
 
 
@@ -335,12 +335,13 @@ label splashscreen:
     $ config.allow_skipping = False
 
     show white
-    $ splash_message = splash_message_default
-    $ renpy.music.play(config.main_menu_music)
+    $ splash_message1 = splash_message_default
+    $ splash_message2 = renpy.random.choice(splash_messages)
 
-    if persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
-        $ splash_message = renpy.random.choice(splash_messages)
-    show splash_warning "[splash_message]" with Dissolve(0.5, alpha=True)
+    show splash_warning "[splash_message1]" with Dissolve(0.5, alpha=True)
+    pause 2.0
+    hide splash_warning with Dissolve(0.5, alpha=True)
+    show splash_warning "[splash_message2]" with Dissolve(0.5, alpha=True)
     pause 2.0
     hide splash_warning with Dissolve(0.5, alpha=True)
     $ config.allow_skipping = True

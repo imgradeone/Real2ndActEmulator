@@ -92,7 +92,7 @@ label ch23_main:
         y 2u "Natsuki..."
         $ style.say_dialogue = style.edited
         y 1f "没人在乎的。"
-        y "你咋不去钻到售货机底下捡捡硬币呢？"
+        y "您咋不试试钻到售货机底下捡捡硬币呢？"
         $ achievement.grant("下次一定")
         show screen notify("达成成就：下次一定")
         $ style.say_dialogue = style.normal
@@ -356,7 +356,10 @@ label ch23_end:
     show monika at t32 zorder 2
     show natsuki at f31 zorder 3
     n 1f "凭什么？！！"
-    n "你 TM 到底想搞什么？"
+    if persistent.sthu:
+        n "你到底想搞什么？"
+    else:
+        n "你 TM 到底想搞什么？"
     show natsuki at t31 zorder 2
     show yuri at f33 zorder 3
     y 3h "我-我觉得 Natsuki 说得没错！"
@@ -395,7 +398,7 @@ label ch23_end:
     show yuri at t33 zorder 2
     show monika at f32 zorder 3
     m 1r "得，得！"
-    m "得！"
+    m "得！！！"
     show monika 1h at t32 zorder 2
     show natsuki at f31 zorder 3
     n 3w "口意..."
@@ -420,7 +423,7 @@ label ch23_end:
     show monika at t32 zorder 2
     show screen notify("我们会强制把你的鼠标挪动 Monika 上。你大可以试试强行选另外两个。")
     python:
-        madechoice = renpy.display_menu([("Natsuki.", "natsuki"), ("Yuri.", "yuri"), ("Monika.", "monika")], screen="rigged_choice")
+        madechoice = renpy.display_menu([("Natsuki。", "natsuki"), ("Yuri。", "yuri"), ("Monika。", "monika")], screen="rigged_choice")
     # 我们会强制把你的鼠标挪动 Monika 上。你大可以试试强行选另外两个。
     # 下面是后果。
     if madechoice != "monika":
@@ -597,7 +600,7 @@ label ch23_end:
     y "而我也将只属于你。"
     y "听上去是不是很棒呢？"
     y 3s "所以，[player]，告诉我。"
-    y "告诉我你想成为我的爱人。"
+    y "告诉我，你想成为我的爱人。"
     y "你接受我的告白吗？"
 
     menu:
@@ -611,8 +614,6 @@ label yuri_kill:
     window hide(None)
     stop music
     pause 1.0
-    # Goodbye
-    # Instead of deleting saves, we'll use after_load label to return to Yuri whenever a save is loaded
     window auto
     $ persistent.yuri_kill = 1
     $ in_yuri_kill = True
@@ -632,7 +633,8 @@ label yuri_kill_1:
     window auto
     $ style.say_dialogue = style.normal
     if persistent.alt_safe_mode:
-        call screen dialog("为响应“清朗”未成年人暑期网络环境专项整治，\nYuri 的自裁动画已跳过。",Return())
+        call screen dialog("为响应“清朗”未成年人暑期网络环境专项整治，\nYuri 的自裁动画已跳过。\n因为如果我放出来了，我就会凉得更快（",Return())
+        call screen dialog("如果你的 DNA 自动脑补了相关画面，也请勿模仿。\n您不应随意注销地球 Online 的帐号。",Return())
         jump yuri_kill_3
     else:
         show screen notify("危险动作 关乎生命 请勿模仿")
@@ -641,14 +643,10 @@ label yuri_kill_1:
         show yuri stab_1
         pause 0.75
         show yuri stab_2
-        show blood:
-            pos (610,485)
         pause 1.25
         show yuri stab_3
         pause 0.75
         show yuri stab_2
-        show blood:
-            pos (610,485)
         show yuri stab_4 with ImageDissolve("images/yuri/stab/4_wipe.png", 0.25)
         pause 1.25
         show yuri stab_5
@@ -656,11 +654,7 @@ label yuri_kill_1:
         show yuri stab_6:
             2.55
             easeout_cubic 0.5 yoffset 300
-        show blood as blood2:
-            pos (635,335)
         pause 2.55
-        hide blood
-        hide blood2
         pause 0.25
         play sound fall
         pause 0.25

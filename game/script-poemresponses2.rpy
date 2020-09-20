@@ -3,7 +3,7 @@ label ch21_y_end:
 
 label ch22_y_end:
     stop music fadeout 2.0
-    call showpoem(poem_y22, music=False, paper="images/bg/poem_y1.jpg", img="yuri 2s")
+    call showpoem(poem_y22, music=False, paper="images/bg/poem_y1.jpg", img="yuri 2s", chinese=False)
     call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
     if _return:
         call showpoem(poem_y22_chs, music=False, paper="images/bg/poem_y1.jpg", img="yuri 2s")
@@ -28,7 +28,7 @@ label ch23_y_end:
     show darkred zorder 5:
         alpha 0
         linear 2.0 alpha 1.0
-    call showpoem(poem_y23, track="bgm/5_yuri2.ogg", revert_music=False, paper="mod_assets/poem_y2_alt.jpg", img="yuri eyes", where=truecenter)
+    call showpoem(poem_y23, track="bgm/5_yuri2.ogg", revert_music=False, paper="mod_assets/poem_y2_alt.jpg", img="yuri eyes", where=truecenter, chinese=False)
     # 现在稿纸已经是血与液的赞歌了，BGM 也诡异了起来
     y "喜欢吗？？"
     y "这可是我为你而写的！"
@@ -60,7 +60,7 @@ label ch22_n_end:
     if n_appeal >= 2:
         jump ch22_n_end2
     else:
-        call showpoem(poem_n2)
+        call showpoem(poem_n2, chinese=False)
         call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
         if _return:
             call showpoem(poem_n2_chs)
@@ -89,7 +89,7 @@ label ch22_n_end:
         n 42c "算了...既然我们分享完了，那你现在可以走了。"
     return
 label ch22_n_end2:
-    call showpoem(poem_n2b, revert_music=False)
+    call showpoem(poem_n2b, revert_music=False, chinese=False)
     call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
     if _return:
         call showpoem(poem_n2b_chs, revert_music=False)
@@ -182,7 +182,7 @@ label ch22_n_end2:
 label ch23_n_end:
     $ natsuki_23 = True
     $ style.say_dialogue = style.normal
-    call showpoem(poem_n23, revert_music=False)
+    call showpoem(poem_n23, revert_music=False, chinese=False)
     call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
     if _return:
         call showpoem(poem_n23_chs, revert_music=False)
@@ -224,13 +224,13 @@ label ch23_n_end:
     return
 
 label ch21_m_end:
-    call showpoem(poem_m21)
+    call showpoem(poem_m21, chinese=False)
     call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
     if _return:
         call showpoem(poem_m21_chs)
     jump ch1_m_end2
 label ch22_m_end:
-    call showpoem(poem_m22, revert_music=False)
+    call showpoem(poem_m22, revert_music=False, chinese=False)
     call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
     if _return:
         call showpoem(poem_m22_chs, revert_music=False)

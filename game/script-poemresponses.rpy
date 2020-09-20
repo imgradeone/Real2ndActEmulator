@@ -126,7 +126,7 @@ label poemresponse_monika:
     return
 
 label ch1_y_end:
-    call showpoem(poem_y1, img="yuri 3t")
+    call showpoem(poem_y1, img="yuri 3t", chinese=False)
     call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
     if _return:
         call showpoem(poem_y1_chs, img="yuri 3t")
@@ -188,7 +188,7 @@ label ch1_y_end:
     return
 
 label ch1_n_end:
-    call showpoem(poem_n1, img="natsuki 2s")
+    call showpoem(poem_n1, img="natsuki 2s", chinese=False)
     call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
     if _return:
         call showpoem(poem_n1_chs, img="natsuki 2s")
@@ -225,7 +225,7 @@ label ch1_n_end:
     return
 
 label ch1_m_end:
-    call showpoem(poem_m1)
+    call showpoem(poem_m1, chinese=False)
     call screen confirm("是否查看中文翻译版？", Return(True), Return(False))
     if _return:
         call showpoem(poem_m1_chs)

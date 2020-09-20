@@ -261,7 +261,7 @@ label ch22_main:
             y 3h "她正在那边看漫画呢。瞧？"
             $ style.say_dialogue = style.edited
             y 3f "别老想着她了。"
-            y "她已经习惯被忽视了。"
+            y "她习惯被别人忽视。"
             y "走，我们去那边。"
             $ achievement.grant("一键忽略")
             show screen notify("达成成就：一键忽略")
