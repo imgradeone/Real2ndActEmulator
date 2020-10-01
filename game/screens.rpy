@@ -1061,14 +1061,14 @@ screen preferences():
                     style "navigation_button"
 
     text tooltip.value:
-        xalign 0.0 yalign 1.0
-        xoffset 300 yoffset -10
+        xalign 1.0 yalign 1.0
+        xoffset 0 yoffset -10
         style "main_menu_version"
 
-    text "版本 [config.version]":
-                xalign 1.0 yalign 1.0
-                xoffset -10 yoffset -10
-                style "main_menu_version"
+    # text "版本 [config.version]":
+    #             xalign 1.0 yalign 1.0
+    #             xoffset -10 yoffset -10
+    #             style "main_menu_version"
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text

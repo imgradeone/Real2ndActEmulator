@@ -21,7 +21,20 @@ init python:
         "我不希望你是个{i}瞎子{/i}，\n看不懂“本游戏不适合儿童或心理承受能力较弱的人”是什么意思。",
         "管管孩子，救救游戏",
         "为什么 Sayori 总是被迫害？她明明是天使啊！",
-        ""
+        "求你开一下设置里的 Sayori 厨模式吧求你了",
+        "败 者 食 尘",
+        "...Haah...",
+        "Beat the Sh!t Out",
+        "Who cares about the obnoxious brat?\n（开始吟唱）",
+        "嘿 Siri，播放睡前金曲（指 t10y（（（",
+        "小 罐 茶 ， 大 师 作\nYuri 代 言 产 品（（（",
+        "据说达成某个成就的概率很低，如果很苦恼，建议多刷几遍（",
+        "如果 MARENOL 这种药真的存在......",
+        "服药过量死人的（",
+        # "Now everyone can be happy.",
+        "PLAY WITH ME 和龇牙结合在一起，就是祖安的极致（（（",
+        "这些 splash messages 即将成为你 Mod 特色（",
+        "I have a pen...........AHAHAHAHA（"
     ]
 
 
