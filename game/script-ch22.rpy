@@ -11,7 +11,6 @@ label ch22_main:
     python:
         try: renpy.file(config.basedir + "/iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt")
         except: open(config.basedir + "/iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt", "wb").write(renpy.file("iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt").read())
-    show screen notify("当前 ch22")
     if persistent.recording:
         scene bg club_day
         with dissolve_scene_half
@@ -561,7 +560,7 @@ label ch22_end:
     if persistent.sthu:
         y "谁在乎那个玻璃心啊？"
     else:
-        y "谁在乎那个死玻璃心小鬼啊？"
+        y "谁在乎那个死玻璃心啊？\nWho cares about the obnoxious brat?"
     $ style.say_dialogue = style.normal
     $ currentpos = get_pos() * 2.07
     play music "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
@@ -579,7 +578,7 @@ label ch22_end:
     $ currentpos = get_pos() / 2.07
     play music "<from " + str(currentpos) + " loop 1.532>bgm/9g.ogg"
     if persistent.sthu:
-        y "Nobody cares her."
+        y "她就一阿卡林。"
     else:
         y "她就算是自裁了，也不会有人会为她哭。"
     $ style.say_dialogue = style.normal
@@ -649,7 +648,7 @@ label ch22_end:
     show monika at t21 zorder 2
     show yuri at f22 zorder 3
     y 1m "OK。"
-    y "我很期待。"
+    y "我很期待呢。"
     y 1a "[player]，那现在走吗？"
     show yuri at t22 zorder 2
     show monika at f21 zorder 3
@@ -674,7 +673,7 @@ label ch22_end:
     
     show monika 2a at t11 zorder 2
     m "pew..."
-    m 2e "最近的事情变得有点麻烦了，不是吗？"
+    m 2e "最近的事情变得有点糟糕了，不是吗？"
     show darkred:
         additive 0.2
         alpha 0
@@ -695,7 +694,7 @@ label ch22_end:
     m "你懂吧？"
     m 1g "但是挺奇怪的，你在这都这么久了，我们几乎都没有单独相处过。"
     m 1n "啊...我..."
-    m "其实只有几天..."
+    m "虽然只有几天..."
     m 1l "抱歉，我不是故意说一些奇怪的话的！"
     m 1e "其实有些事情我早就想和你说了..."
     m "一些只有你才能理解的事情。"

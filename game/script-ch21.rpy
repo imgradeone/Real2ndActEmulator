@@ -1,6 +1,5 @@
 label ch21_main:
     $ chapter = 1
-    show screen notify("当前 ch21")
     if persistent.recording:
         scene bg club_day
         with dissolve_scene_half

@@ -7,7 +7,7 @@ define config.name = "全真二周目模拟器"
 define gui.show_name = False
 
 # 版本号
-define config.version = "0.1.0-indev-20200920"
+define config.version = "0.1.0-indev-20201001"
 
 # text placed on about screen
 define gui.about = _("DDLC 中文 Mod 模板新 Demo\n你体验过无尽的二周目吗？")
@@ -140,12 +140,10 @@ init python:
     # archives to create
     build.archive("scripts", build.name)
     build.archive("mod_assets", build.name)
-    build.archive("submods", build.name)
 
     # folder / files to put in archives
     build.classify("game/mod_assets/**", "mod_assets")
     build.classify("game/gui/**", "mod_assets") # issue #1
-    build.classify("game/submods/**", "submods")
     build.classify('game/**.rpyc', "scripts")
     build.classify('game/advanced_scripts/**', "scripts")
     build.classify('game/iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt', "mod_assets")

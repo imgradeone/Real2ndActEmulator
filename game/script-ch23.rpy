@@ -25,9 +25,7 @@ image noface2:
 # 铁 骨 铮 铮 Sayori（
 
 label ch23_main:
-    show screen notify("当前 ch23")
-    # 来点更刺激的
-    if renpy.random.randint(0,15) == 0:
+    if renpy.random.randint(0,15) == 0 and not persistent.seen_eyes:
         $ achievement.grant("死 不 瞑 目 沙 师 弟")
         show screen notify("达成成就：死 不 瞑 目 沙 师 弟")
         $ quick_menu = False
@@ -507,7 +505,7 @@ label ch23_end:
     y 2y4 "我又不讲道理了？"
     y 2y3 "啊哈哈哈哈哈！"
     if persistent.sthu:
-        y "Monika，我看错你了！"
+        y "Monika，没想到你是这种人！"
     else:
         y "Monika，没想到你这么妄自尊大、自私自利！"
     y "每次你只要没能参与进来，就把 [player] 从我身边拖走，次次如此。"
@@ -517,7 +515,7 @@ label ch23_end:
     else:
         y "还是癫了？"
     y 1y3 "还是你对自己的憎恨溢了一地，就开始随便往别人身上泼呢？"
-    y 1y4 "这边强烈建议你去试下当晴天娃娃呢。"
+    y 1y4 "这边强烈建议你去试下自裁呢。"
     y "对你的精神健康会有 hin 大的帮助。"
     show yuri at t33 zorder 2
     show natsuki at f31 zorder 3

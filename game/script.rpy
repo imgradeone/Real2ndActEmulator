@@ -17,7 +17,7 @@ label start:
             persistent.special_poems[i] = b
             a.remove(b)
 
-    $ persistent.seen_eyes == None
+    $ persistent.seen_eyes == False
     $ persistent.seen_sticker == False
     # 注册成就（原生）
 
