@@ -38,7 +38,6 @@ init 10 python:
     register_achievement_all("下次一定", "ONE_PRESS_DOUBLEHIT", "听到 Yuri 要 Natsuki 钻到售货机底下去捡硬币")
     register_achievement_all("一键忽略", "IGNORING_NATSUKI", "听到 Yuri 说 Natsuki 习惯被")
     register_achievement_all("蓝屏钙 V2", "MONIOS_BSOD", "使你的电脑被 Monika 吓得蓝屏")
-    pass
 
 ## Late overrides
 ## These overrides happen aftre prety much everything else in startup.
