@@ -18,6 +18,8 @@ label start:
     #$ persistent.seen_eyes = None
     #$ persistent.seen_sticker = False
 
+    load_achievements() # real safe
+
     # ID of this playtrhoguh
     $ anticheat = persistent.anticheat
 
@@ -35,11 +37,10 @@ label start:
 
     $ quick_menu = True
     $ style.say_dialogue = style.normal
-    $ in_sayori_kill = None
+    $ in_sayori_kill = None # pre-1.1.1
     $ allow_skipping = True
     $ config.allow_skipping = True
     
-
     # 确定好 label，然后改动下面几行
     if persistent.cleared:
         call gameconsole_intro
