@@ -6,6 +6,8 @@ init -10 python:
     ddmm_rpc_url = "http://127.0.0.1:41420/"
 
     def ddmm_check_online():
+        if not persistent.ddmm_mode:
+            return False
         try:
             request = urllib2.Request(ddmm_rpc_url, json.dumps({"method": "ping"}))
             urllib2.urlopen(request).read()
@@ -14,8 +16,9 @@ init -10 python:
             return False
         return False
 
+    ddmm_online = ddmm_check_online()
     def ddmm_make_request(payload):
-        if ddmm_check_online():
+        if ddmm_online:
             request = urllib2.Request(ddmm_rpc_url, json.dumps(payload))
             urllib2.urlopen(request).read()
 
@@ -27,11 +30,12 @@ init -10 python:
 
     def register_achievement_all(name, id, description):
         achievement.register(name)
-        ddmm_register_achievement(id, name, description)
+        if persistent.ddmm_mode and ddmm_id.strip() != "":
+            ddmm_register_achievement(id, name, description)
         
     def grant_achievement_all(renpy_desc, ddmm_id):
         achievement.grant(renpy_desc)
-        if persistent.ddmm_mode and ddmm_id != "":
+        if persistent.ddmm_mode and ddmm_id.strip() != "":
             ddmm_earn_achievement(ddmm_id)
         renpy.notify("你达成了一个成就。")
 
