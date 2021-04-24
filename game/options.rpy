@@ -63,6 +63,7 @@ default preferences.sfx_volume = 0.75
 #   Linux: $HOME/.renpy/<config.save_directory>
 #
 # must be a literal string
+# DO NOT CHANGE for now for cross-version compatibility
 define config.save_directory = "Real 2nd Act Emulator"
 
 # 任务栏图标
@@ -110,8 +111,6 @@ init python:
             return (width, float(width) / (float(config.screen_width) / float(config.screen_height)))
         else:
             return (float(height) * (float(config.screen_width) / float(config.screen_height)), height)
-
-
 
 # BUILD CONFIG
 

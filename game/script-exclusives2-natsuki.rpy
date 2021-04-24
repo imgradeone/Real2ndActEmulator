@@ -79,9 +79,13 @@ label natsuki_exclusive2_1:
     $ style.say_dialogue = style.normal
     mc "你在这里找什么吗？"
     $ style.say_dialogue = style.edited
-    n 4x "monika我丢雷楼某mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm" # 爆粗口的 Natsuki 是屑（
+    # checklater: wdllm vs wdnmd vs wdnlm
+    if persistent.sthu:
+        n 4x "monika我可qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq" # “我可去你的”
+    else:
+        n 4x "monika我丢雷楼某mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm" # 爆粗口的 Natsuki 是屑（
     $ style.say_dialogue = style.normal
-    $ _history_list[-1].what = "Monika 讨厌鬼..." # 放心，历史记录被我们改了
+    $ _history_list[-1].what = "Monika 这个讨厌鬼..." # 放心，历史记录被我们改了
     n "从来都不把我的东西放回去！"
     n "如果有人老是把你的东西乱放，那整理起来又有什么意义啊？wdnmd！"
     "Natsuki 把书架上的漫画重新插进套装盒中。"
@@ -211,8 +215,11 @@ label natsuki_exclusive2_1:
     n "我是说，我甚至都没法把漫画放在自己房间里..."
 
     $ style.say_dialogue = style.edited
-    n "我爸看到这东西，绝逼把我连翔都 TM 打出来。"
-    # n "My dad would beat the shit out of me if he found this."
+    if persistent.sthu:
+        n "被我爸看到了，估着他心里得想把我打成残疾！"
+    else:
+        n "我爸看到这东西，绝逼把我连翔都 TM 打出来。"
+        # n "My dad would beat the shit out of me if he found this."
     $ style.say_dialogue = style.normal
     $ _history_list[-1].what = "不晓得我爸看到后会是什么感受。"
     n "至少放在部室里挺安全的。"
@@ -268,10 +275,10 @@ label natsuki_exclusive2_1:
 
     $ currentpos = get_pos()
     $ audio.t6g = "<from " + str(currentpos) + " loop 10.893>bgm/6g.ogg"
-    $ achievement.grant("低 级 马 赛 克")
-    show screen notify("达成成就：低 级 马 赛 克")
+    $ grant_achievement_all("低 级 马 赛 克","I_AM_HUNGRY") # todo
     if not persistent.disable_awful_music:
         play music t6g
+    # h u n g r y y y y y y y
     $ ntext = glitchtext(96)
     $ style.say_dialogue = style.edited
     n "{color=#000}[ntext]{/color}"

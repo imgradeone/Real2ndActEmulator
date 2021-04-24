@@ -137,9 +137,8 @@ label ch20_main2:
     play music t3
 
     if renpy.random.randint(0, 2) == 0:
-        $ achievement.grant("卡 姿 兰 大 眼 睛")
-        show screen notify("达成成就：卡 姿 兰 大 眼 睛")
         show monika g1 at l31
+        $ grant_achievement_all("卡 姿 兰 大 眼 睛", "KAMONI_BIG_EYES") # TODO
     else:
         show monika 3b at l31
     m "我回来啦～！"

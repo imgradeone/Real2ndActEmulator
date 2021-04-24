@@ -21,7 +21,7 @@ label fakeintro:
 
     $ s_name = glitchtext(12)
     "她叫 [s_name]，我的邻居，也是我的儿时玩伴。"
-    "你能理解，你不一定会和她交朋友，但你们俩在一起太久了，很多事情就这样顺其自然了的感觉吗？"
+    "你能理解，你不一定会和她交朋友，但你们俩在一起太久了，很多事情就这样顺其自然了的感觉吗？" # fixme
     "我们以前经常这样一起上学，但上了高中以后她睡懒觉的频率就越来越高，之后我也就有点懒得等她了。"
     "但她这样狂追不舍，弄得我好想逃跑。"
     "不过，我也别无选择，只好叹了口气在路口等着好让 [s_name] 赶上我。"
@@ -48,6 +48,6 @@ label fakeintro:
     $ delete_all_saves() # 记忆清除
     $ persistent.playthrough = 2
     $ persistent.anticheat = renpy.random.randint(100000, 999999)
-    $ anticheat = persistent.anticheat
+    $ anticheat = persistent.anticheat # no turning back baby
 
     jump ch20_from_ch10

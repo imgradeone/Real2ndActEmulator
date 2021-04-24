@@ -467,9 +467,9 @@ screen navigation():
             if main_menu:
 
                 if persistent.playthrough == 1:
-                    textbutton _("二周目启动sndsdfiusfbsidcsodf") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                    textbutton _("二周目启动sndsdfiusfbsidcsodf") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="请输入你的名字，仅支持英文字符", ok_action=Function(FinishEnterName)))
                 else:
-                    textbutton _("新游戏") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                    textbutton _("新游戏") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="请输入你的名字，仅支持英文字符", ok_action=Function(FinishEnterName)))
 
             else:
 
@@ -616,8 +616,8 @@ style main_menu_title:
 screen game_menu_m():
     $ persistent.menu_bg_m = True
     add "mod_assets/menu_bg_m_alt.png" # 血 溅 文 学 部（
-    $ achievement.grant("蓝屏钙 V2")
-    timer 0.3 action Show(screen="dialog", message="恭喜你解锁成就：蓝屏钙 V2（\n没想到吧，这 2% 的几率被你撞上了 XDD\n该彩蛋不会再次显示。", ok_action=Hide("dialog"))
+    $ renpy.call("grant_achievement_all", "蓝屏钙 V2", "MONIOS_BSOD") # todo
+    timer 0.3 action Show(screen="dialog", message="没想到吧，这 2% 的几率被你撞上了 XDD\n该彩蛋不会再次显示。", ok_action=Hide("dialog"))
     timer 0.3 action Hide("game_menu_m")
 
 screen game_menu(title, scroll=None):
@@ -930,6 +930,10 @@ style slot_button_text:
     color "#666"
     outlines []
 
+label main_menu_branch_warning:
+    $ invoking_warning_from_main_menu = True
+    call splashscreen_warning
+    return
 
 ## Preferences screen ##########################################################
 ##
@@ -937,6 +941,8 @@ style slot_button_text:
 ## themselves.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
+
+default persistent.sthu = False
 
 screen preferences():
 
@@ -990,6 +996,10 @@ screen preferences():
                         action ToggleField(persistent, "recording")
                         selected persistent.recording
                         hovered tooltip.Action(layout.RECORDING)
+                    textbutton _("削弱严重粗话"): # feels better than blocking
+                        action ToggleField(persistent, "sthu") # Shut The Hell Up
+                        selected persistent.sthu
+                        hovered tooltip.Action(layout.NOT_A_BITCH)
                     textbutton _("启用 DDMM 支持"):
                         action ToggleField(persistent, "ddmm_mode")
                         selected persistent.ddmm_mode
@@ -1057,7 +1067,7 @@ screen preferences():
                     action Function(renpy.call_in_new_context, 'achievements_list')
                     style "navigation_button"
                 textbutton _("重播警告"):
-                    action Function(renpy.call_in_new_context, 'warning2')
+                    action Function(renpy.call_in_new_context, 'main_menu_branch_warning')
                     style "navigation_button"
 
     text tooltip.value:
